@@ -123,9 +123,9 @@ module.exports = window["wp"]["element"];
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-/*!***************************!*\
-  !*** ./blocks/textbox.js ***!
-  \***************************/
+/*!**************************!*\
+  !*** ./blocks/banner.js ***!
+  \**************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -143,10 +143,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.registerBlockType)("respblock/textbox", {
-  title: "PE Textbox",
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_4__.registerBlockType)("respblock/banner", {
+  title: "Banner",
   supports: {
-    align: ["left", "right", "full"]
+    align: ["full"]
   },
   attributes: {
     align: {
@@ -165,7 +165,7 @@ function EditComponent(props) {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "page-banner__content container t-center c-white"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
-    allowedBlocks: ["respblock/genericheading", "respblock/genericbutton"]
+    allowedBlocks: ["ourblocktheme/genericheading", "ourblocktheme/genericbutton"]
   }))));
 }
 function SaveComponent() {
@@ -174,4 +174,4 @@ function SaveComponent() {
 }();
 /******/ })()
 ;
-//# sourceMappingURL=textbox.js.map
+//# sourceMappingURL=banner.js.map

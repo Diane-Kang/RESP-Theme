@@ -1,0 +1,16 @@
+.module-textbox {
+  &.bg-blue {
+    background-color: $color-blue-light;
+    color: $color-white;
+
+    .btn--fill {
+      background-color: $color-white;
+      color: $color-blue-light;
+    }
+
+    .btn--empty {
+      color: $color-white;
+      border: solid 2px $color-white;
+    }
+  }
+}

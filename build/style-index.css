@@ -1,0 +1,226 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./css/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.module {
+  max-width: 1240px;
+  margin: auto;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.5;
+  color: #000;
+}
+
+.heading {
+  font-weight: 900;
+}
+.heading-1 {
+  font-size: 4.768em;
+}
+.heading-2 {
+  font-size: 3.815em;
+}
+.heading-3 {
+  font-size: 3.052em;
+}
+.heading-4 {
+  font-size: 2.441em;
+}
+.heading-5 {
+  font-size: 1.953em;
+}
+.heading-6 {
+  font-size: 1.563em;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+.text-normal {
+  font-size: 1rem;
+}
+.text-bold {
+  font-weight: 700;
+}
+
+.btn {
+  font-size: 1.25em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
+.btn, .btn:link, .btn:visited {
+  padding: 0.9rem 1.5rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.btn--fill {
+  background-color: #009fe3;
+  color: #fff;
+}
+.btn--empty {
+  background-color: none;
+  color: #009fe3;
+  border: solid 2px #009fe3;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
+html,
+body {
+  border: solid 1px red;
+}
+
+.module {
+  border: solid 1px red;
+}
+.module > * {
+  border: solid 1px green;
+}
+
+.module-textbox.bg-blue {
+  background-color: #009fe3;
+  color: #fff;
+}
+.module-textbox.bg-blue .btn--fill {
+  background-color: #fff;
+  color: #009fe3;
+}
+.module-textbox.bg-blue .btn--empty {
+  color: #fff;
+  border: solid 2px #fff;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

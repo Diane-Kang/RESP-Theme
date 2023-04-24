@@ -9,10 +9,10 @@ import {
 import { registerBlockType } from "@wordpress/blocks";
 import { useEffect } from "@wordpress/element";
 
-registerBlockType("respblock/textbox", {
-  title: "PE Textbox",
+registerBlockType("respblock/banner", {
+  title: "Banner",
   supports: {
-    align: ["left", "right", "full"],
+    align: ["full"],
   },
   attributes: {
     align: { type: "string", default: "full" },
@@ -29,8 +29,8 @@ function EditComponent(props) {
         <div className="page-banner__content container t-center c-white">
           <InnerBlocks
             allowedBlocks={[
-              "respblock/genericheading",
-              "respblock/genericbutton",
+              "ourblocktheme/genericheading",
+              "ourblocktheme/genericbutton",
             ]}
           />
         </div>

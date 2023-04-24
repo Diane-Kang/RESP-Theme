@@ -1,0 +1,12 @@
+html,
+body {
+  border: solid 1px red;
+}
+
+.module {
+  border: solid 1px red;
+
+  & > * {
+    border: solid 1px green;
+  }
+}
