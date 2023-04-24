@@ -2,7 +2,8 @@
   "version": 2,
   "settings": {
     "layout": {
-      "contentSize": "1280px"
+      "contentSize": "1280px",
+      "wideSize": "1920px"
     }
   }
 }
