@@ -1,11 +1,9 @@
-
 <?php
+
 $allowedBlocks = [];
 
 define('THEMEPATH', get_template_directory());
 require_once(THEMEPATH . '/jsxblock.php');
-
-
 
 
 //
