@@ -49,10 +49,10 @@ add_action('after_setup_theme', 'university_features');
 function allowedBlockTypes($allowedBlocks)
 {
   global $allowedBlocks;
-  return $allowedBlocks;
+  return ["acf/textbox"];
 }
 
-// add_filter('allowed_block_types_all', 'allowedBlockTypes');
+add_filter('allowed_block_types_all', 'allowedBlockTypes');
 
 add_action('init', 'register_acf_blocks');
 function register_acf_blocks()
