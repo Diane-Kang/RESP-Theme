@@ -18,3 +18,28 @@
 .u-margin-top-huge {
   margin-top: 10rem;
 }
+
+.p {
+  &-top {
+    &--smal {
+      padding-top: rem;
+    }
+    &--normal {
+      padding-top: 3rem;
+    }
+    &--large {
+      padding-top: 5rem;
+    }
+  }
+  &-bottom {
+    &--smal {
+      padding-bottom: 1rem;
+    }
+    &--normal {
+      padding-bottom: 3rem;
+    }
+    &--large {
+      padding-bottom: 5rem;
+    }
+  }
+}

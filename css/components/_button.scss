@@ -34,6 +34,7 @@
   &--fill {
     background-color: $color-blue-light;
     color: $color-white;
+    border: solid 2px $color-blue-light;
   }
   &--empty {
     background-color: none;

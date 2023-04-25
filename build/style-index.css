@@ -56,7 +56,7 @@ body {
 }
 
 .module {
-  max-width: 1240px;
+  max-width: 1140px;
   margin: auto;
 }
 
@@ -68,25 +68,31 @@ body {
   color: #000;
 }
 
-.heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 900;
 }
-.heading-1 {
+
+h1 {
   font-size: 4.768em;
 }
-.heading-2 {
+h2 {
   font-size: 3.815em;
 }
-.heading-3 {
+h3 {
   font-size: 3.052em;
 }
-.heading-4 {
+h4 {
   font-size: 2.441em;
 }
-.heading-5 {
+h5 {
   font-size: 1.953em;
 }
-.heading-6 {
+h6 {
   font-size: 1.563em;
 }
 
@@ -128,6 +134,25 @@ body {
   margin-top: 10rem;
 }
 
+.p-top--smal {
+  padding-top: rem;
+}
+.p-top--normal {
+  padding-top: 3rem;
+}
+.p-top--large {
+  padding-top: 5rem;
+}
+.p-bottom--smal {
+  padding-bottom: 1rem;
+}
+.p-bottom--normal {
+  padding-bottom: 3rem;
+}
+.p-bottom--large {
+  padding-bottom: 5rem;
+}
+
 .btn, .btn:link, .btn:visited {
   padding: 0.9rem 1.5rem;
   display: inline-block;
@@ -155,6 +180,7 @@ body {
 .btn--fill {
   background-color: #009fe3;
   color: #fff;
+  border: solid 2px #009fe3;
 }
 .btn--empty {
   background-color: none;
@@ -210,15 +236,24 @@ body {
   border: solid 1px green;
 }
 
-.module-textbox.bg-blue {
+.module.textbox p,
+.module.textbox a {
+  font-size: 1.25rem;
+}
+.module.textbox .textbox__content > *,
+.module.textbox .textbox__buttons {
+  margin-top: 40px;
+}
+.module.textbox.bg-blue {
   background-color: #009fe3;
   color: #fff;
 }
-.module-textbox.bg-blue .btn--fill {
+.module.textbox.bg-blue .btn--fill {
   background-color: #fff;
   color: #009fe3;
+  border: solid 2px #fff;
 }
-.module-textbox.bg-blue .btn--empty {
+.module.textbox.bg-blue .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
