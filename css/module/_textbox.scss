@@ -12,7 +12,7 @@
   .textbox__buttons {
     grid-column: col-start 1 / col-end 12;
     & > * {
-      max-width: $gird-column-width * 2 + $gutter-vertical;
+      min-width: $gird-column-width * 2 + $gutter-vertical;
     }
     & > *:not(:last-child) {
       margin-right: $gutter-vertical;

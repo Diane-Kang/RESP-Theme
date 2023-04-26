@@ -233,18 +233,6 @@ h6 {
   transform: translateY(0);
 }
 
-html,
-body {
-  border: solid 1px red;
-}
-
-.module {
-  border: solid 1px red;
-}
-.module > * {
-  border: solid 1px green;
-}
-
 .module.textbox {
   display: grid;
   grid-template-columns: [center-start] repeat(12, [col-start] minmax(min-content, 73px) [col-end]) [center-end];
@@ -262,7 +250,7 @@ body {
   grid-column: col-start 1/col-end 12;
 }
 .module.textbox .textbox__buttons > * {
-  max-width: 170px;
+  min-width: 170px;
 }
 .module.textbox .textbox__buttons > *:not(:last-child) {
   margin-right: 24px;
