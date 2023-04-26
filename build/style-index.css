@@ -48,6 +48,7 @@
 html {
   font-size: 16px;
   max-width: 1920px;
+  box-sizing: border-box;
   margin: auto;
 }
 
@@ -55,9 +56,17 @@ body {
   box-sizing: border-box;
 }
 
+#page {
+  display: grid;
+  grid-template-columns: [full-start] minmax(10px, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 95px) [col-end]) [center-end] minmax(10px, 1fr) [full-end];
+}
+
 .module {
-  max-width: 1140px;
-  margin: auto;
+  grid-column: center-start/center-end;
+}
+.module.module-fullwidth {
+  grid-column: full-start/full-end;
+  justify-content: center;
 }
 
 body {
@@ -154,7 +163,7 @@ h6 {
 }
 
 .btn, .btn:link, .btn:visited {
-  padding: 0.9rem 1.5rem;
+  padding: 0.7em 0;
   display: inline-block;
   border-radius: 0.5rem;
   transition: all 0.2s;
@@ -236,9 +245,27 @@ body {
   border: solid 1px green;
 }
 
+.module.textbox {
+  display: grid;
+  grid-template-columns: [center-start] repeat(12, [col-start] minmax(min-content, 73px) [col-end]) [center-end];
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
 .module.textbox p,
 .module.textbox a {
   font-size: 1.25rem;
+}
+.module.textbox .textbox__content {
+  grid-column: col-start 2/col-end 11;
+}
+.module.textbox .textbox__buttons {
+  grid-column: col-start 1/col-end 12;
+}
+.module.textbox .textbox__buttons > * {
+  max-width: 170px;
+}
+.module.textbox .textbox__buttons > *:not(:last-child) {
+  margin-right: 24px;
 }
 .module.textbox .textbox__content > *,
 .module.textbox .textbox__buttons {

@@ -1,7 +1,22 @@
 .module.textbox {
+  @include grid12;
   p,
   a {
     font-size: $font-size-large;
+  }
+
+  .textbox__content {
+    grid-column: col-start 2 / col-end 11;
+  }
+
+  .textbox__buttons {
+    grid-column: col-start 1 / col-end 12;
+    & > * {
+      max-width: $gird-column-width * 2 + $gutter-vertical;
+    }
+    & > *:not(:last-child) {
+      margin-right: $gutter-vertical;
+    }
   }
 
   .textbox__content > *,

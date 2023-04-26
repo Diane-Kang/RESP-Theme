@@ -1,0 +1,26 @@
+// GRID
+$grid-total-width: 1140px;
+$gird-column-width: 73px;
+$gutter-vertical: 24px;
+$gird-column-fullwidth: 95px; //1140/12 = 95
+
+@mixin grid12 {
+  display: grid;
+  grid-template-columns:
+    [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, $gird-column-width) [col-end]
+    )
+    [center-end];
+  column-gap: $gutter-vertical;
+}
+
+@mixin grid12andMargin {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(10px, 1fr) [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, $gird-column-fullwidth) [col-end]
+    )
+    [center-end] minmax(10px, 1fr) [full-end];
+}

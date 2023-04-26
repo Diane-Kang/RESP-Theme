@@ -10,6 +10,7 @@ html {
   // // This defines what 1rem is
   font-size: 16px;
   max-width: $body-max-width;
+  box-sizing: border-box;
   margin: auto;
 }
 
@@ -17,7 +18,15 @@ body {
   box-sizing: border-box;
 }
 
+#page {
+  @include grid12andMargin;
+}
+
 .module {
-  max-width: $content-width-normal;
-  margin: auto;
+  grid-column: center-start / center-end;
+
+  &.module-fullwidth {
+    grid-column: full-start / full-end;
+    justify-content: center;
+  }
 }
