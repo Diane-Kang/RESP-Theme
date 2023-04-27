@@ -57,12 +57,13 @@ $custom_anchor      = get_field('block::cssid');
 $buttonlink1         = get_field('block::textbox:link1');
 $buttonlink2         = get_field('block::textbox:link2');
 
+$box_design         = get_field('block::boxdesign') == "none" ? "" : "module-" .get_field('block::boxdesign');
 
 if (!empty($custom_anchor)) {
   $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
 }
 
-$class_name .= " {$device} {$distance_over} {$distance_under} {$bg_color}";
+$class_name .= " {$box_design} {$device} {$distance_over} {$distance_under} {$bg_color}";
 
 ?>
 

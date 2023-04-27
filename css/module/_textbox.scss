@@ -39,4 +39,19 @@
       border: solid 2px $color-white;
     }
   }
+  &.bg-blue-gradient {
+    background: linear-gradient(180deg, $color-blue-light 0%, $color-blue-dark2 100%);
+    color: $color-white;
+
+    .btn--fill {
+      background-color: $color-white;
+      color: $color-blue-light;
+      border: solid 2px $color-white;
+    }
+
+    .btn--empty {
+      color: $color-white;
+      border: solid 2px $color-white;
+    }
+  }
 }

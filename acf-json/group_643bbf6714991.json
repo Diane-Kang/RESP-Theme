@@ -18,7 +18,8 @@
             },
             "choices": {
                 "none": "None",
-                "blue": "Blau"
+                "blue": "Blau",
+                "blue-gradient": "Farbverlauf-Blau"
             },
             "default_value": "none",
             "return_format": "value",
@@ -72,5 +73,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682404988
+    "modified": 1682589846
 }

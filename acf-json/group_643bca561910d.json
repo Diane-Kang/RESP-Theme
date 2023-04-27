@@ -18,8 +18,7 @@
             },
             "choices": {
                 "none": "Aus",
-                "round": "Rund",
-                "shadow": "Schatten"
+                "fullwidth": "volle Breit"
             },
             "default_value": false,
             "return_format": "value",
@@ -48,5 +47,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682405011
+    "modified": 1682589827
 }

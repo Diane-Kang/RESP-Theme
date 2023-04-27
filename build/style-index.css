@@ -272,5 +272,18 @@ h6 {
   color: #fff;
   border: solid 2px #fff;
 }
+.module.textbox.bg-blue-gradient {
+  background: linear-gradient(180deg, #009fe3 0%, #083F74 100%);
+  color: #fff;
+}
+.module.textbox.bg-blue-gradient .btn--fill {
+  background-color: #fff;
+  color: #009fe3;
+  border: solid 2px #fff;
+}
+.module.textbox.bg-blue-gradient .btn--empty {
+  color: #fff;
+  border: solid 2px #fff;
+}
 
 /*# sourceMappingURL=style-index.css.map*/
