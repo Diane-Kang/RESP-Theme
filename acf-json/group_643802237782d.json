@@ -18,10 +18,10 @@
             },
             "choices": {
                 "small": "klein",
-                "normal": "normal",
-                "large": "groß"
+                "medium": "mittel",
+                "big": "groß"
             },
-            "default_value": "margin-top__normal",
+            "default_value": "small",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -45,10 +45,10 @@
             },
             "choices": {
                 "small": "klein",
-                "normal": "normal",
-                "large": "groß"
+                "medium": "mittel",
+                "big": "groß"
             },
-            "default_value": "normal",
+            "default_value": "small",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -75,5 +75,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682404975
+    "modified": 1683108621
 }

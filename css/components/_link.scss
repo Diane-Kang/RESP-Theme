@@ -2,7 +2,7 @@
 //	Button
 //	================================================
 
-.btn {
+.link {
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -21,25 +21,12 @@
   font-weight: bold;
   cursor: pointer;
 
-  &:hover {
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-  }
+  // &:hover {
+  // }
 
-  &:active,
-  &:focus {
-    outline: none;
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  }
-  &--fill {
-    background-color: $color-blue-light;
-    color: $color-white;
-    border: solid 2px $color-blue-light;
-  }
-  &--empty {
-    background-color: none;
-    color: $color-blue-light;
-    border: solid 2px $color-blue-light;
-  }
+  // &:active,
+  // &:focus {
+  // }
   &--underline {
     background-color: none;
     color: $color-black;

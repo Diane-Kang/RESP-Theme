@@ -24,3 +24,7 @@ $gird-column-fullwidth: 95px; //1140/12 = 95
     )
     [center-end] minmax(10px, 1fr) [full-end];
 }
+
+.grid12 {
+  @include grid12;
+}

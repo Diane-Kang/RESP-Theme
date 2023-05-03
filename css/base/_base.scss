@@ -9,24 +9,27 @@
 html {
   // // This defines what 1rem is
   font-size: 16px;
-  max-width: $body-max-width;
   box-sizing: border-box;
-  margin: auto;
 }
 
 body {
   box-sizing: border-box;
 }
 
-#page {
-  @include grid12andMargin;
+p {
+  padding-bottom: 40px;
 }
 
-.module {
-  grid-column: center-start / center-end;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em auto;
+}
 
-  &.module-fullwidth {
-    grid-column: full-start / full-end;
-    justify-content: center;
-  }
+.container {
+  max-width: 1140px;
+  margin: auto;
 }

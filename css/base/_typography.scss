@@ -5,6 +5,26 @@ body {
   line-height: 1.5;
   color: $color-black;
 }
+
+// FONT
+$font-size-base: 1rem;
+$font-size-large: 1.25rem;
+$font-size-h6: 1.563em;
+$font-size-h5: 1.953em;
+$font-size-h4: 2.441em;
+$font-size-h3: 3.052em;
+$font-size-h2: 3.815em;
+$font-size-h1: 4.768em;
+
+p,
+a {
+  font-size: $font-size-base;
+}
+
+strong {
+  font-size: 1.25em;
+}
+
 h1,
 h2,
 h3,
@@ -14,6 +34,14 @@ h6 {
   font-weight: 900;
 }
 h {
+  &1,
+  &2,
+  &3,
+  &4,
+  &5,
+  &6 {
+    margin: 0.75em auto;
+  }
   &1 {
     font-size: $font-size-h1;
   }
@@ -37,9 +65,6 @@ h {
 .text {
   &-large {
     font-size: $font-size-large;
-  }
-  &-normal {
-    font-size: $font-size-base;
   }
   &-bold {
     font-weight: 700;

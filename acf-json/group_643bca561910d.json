@@ -17,10 +17,10 @@
                 "id": ""
             },
             "choices": {
-                "none": "Aus",
-                "fullwidth": "volle Breit"
+                "fullwidth": "Aus",
+                "box-design": "An"
             },
-            "default_value": false,
+            "default_value": "fullwidth",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -47,5 +47,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682589827
+    "modified": 1683108437
 }

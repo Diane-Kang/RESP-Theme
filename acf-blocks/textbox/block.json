@@ -1,14 +1,22 @@
 {
   "name": "acf/textbox",
-  "title": "ACF/Textbox",
+  "title": "Textbox",
   "description": "A custom textbox block.",
-  "style": [ "file:./textbox.css" ],
+  "style": ["file:./textbox.css"],
   "category": "formatting",
   "icon": "text",
   "keywords": ["text"],
   "acf": {
-      "mode": "preview",
-      "renderTemplate": "textbox.php"
-  }, 
-  "align": [""]
+    "mode": "preview",
+    "renderTemplate": "textbox.php"
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "align": [""]
+  }
 }

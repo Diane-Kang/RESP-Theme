@@ -1,57 +1,51 @@
 .module.textbox {
-  @include grid12;
-  p,
-  a {
-    font-size: $font-size-large;
-  }
-
-  .textbox__content {
+  // structure
+  .textbox__text {
     grid-column: col-start 2 / col-end 11;
   }
-
   .textbox__buttons {
-    grid-column: col-start 1 / col-end 12;
-    & > * {
-      min-width: $gird-column-width * 2 + $gutter-vertical;
-    }
-    & > *:not(:last-child) {
-      margin-right: $gutter-vertical;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    max-width: fit-content;
+    margin: auto;
+    column-gap: 24px;
+    row-gap: 1em;
+    padding-bottom: 1em;
+
+    .link {
+      grid-row: 2;
     }
   }
+}
 
-  .textbox__content > *,
-  .textbox__buttons {
-    margin-top: 40px;
+// background color
+.module.textbox,
+.textbox .container {
+  &.bg-blue,
+  &.bg-blue-gradient {
+    color: $color-white;
+    .btn--fill {
+      background-color: $color-white;
+      color: $color-blue-light;
+      border: solid 2px $color-white;
+    }
+    .btn--empty {
+      color: $color-white;
+      border: solid 2px $color-white;
+    }
+    .link--underline {
+      color: $color-white;
+    }
   }
-
   &.bg-blue {
     background-color: $color-blue-light;
-    color: $color-white;
-
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-      border: solid 2px $color-white;
-    }
-
-    .btn--empty {
-      color: $color-white;
-      border: solid 2px $color-white;
-    }
   }
   &.bg-blue-gradient {
-    background: linear-gradient(180deg, $color-blue-light 0%, $color-blue-dark2 100%);
-    color: $color-white;
-
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-      border: solid 2px $color-white;
-    }
-
-    .btn--empty {
-      color: $color-white;
-      border: solid 2px $color-white;
-    }
+    background: linear-gradient(
+      180deg,
+      $color-blue-light 0%,
+      $color-blue-dark2 100%
+    );
   }
 }

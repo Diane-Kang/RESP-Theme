@@ -21,25 +21,25 @@
 
 .p {
   &-top {
-    &--smal {
-      padding-top: rem;
+    &--small {
+      padding-top: 1.5rem;
     }
-    &--normal {
-      padding-top: 3rem;
+    &--medium {
+      padding-top: 4rem;
     }
-    &--large {
-      padding-top: 5rem;
+    &--big {
+      padding-top: 8rem;
     }
   }
   &-bottom {
-    &--smal {
-      padding-bottom: 1rem;
+    &--small {
+      padding-bottom: 1.5rem;
     }
-    &--normal {
-      padding-bottom: 3rem;
+    &--medium {
+      padding-bottom: 4rem;
     }
-    &--large {
-      padding-bottom: 5rem;
+    &--big {
+      padding-bottom: 8rem;
     }
   }
 }
