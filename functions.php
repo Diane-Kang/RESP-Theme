@@ -35,6 +35,37 @@ function university_features()
 
 add_action('after_setup_theme', 'university_features');
 
+
+
+class ACFBlock
+{
+  public $name;
+
+  function __construct($name)
+  {
+    $this->name = $name;
+    add_action('init', [$this, 'register_acf_blocks']);
+    $this->addBlockarray();
+  }
+
+
+  function register_acf_blocks()
+  {
+    register_block_type(__DIR__ . "/acf-blocks/{$this->name}");
+  }
+
+  function addBlockarray()
+  {
+    global $allowedBlocks;
+    array_push($allowedBlocks, "acf/{$this->name}");
+  }
+}
+new ACFblock("textbox");
+new ACFblock("teasesr");
+
+
+
+
 /**
  * remove all default block types from wordpress
  *
@@ -46,16 +77,12 @@ add_action('after_setup_theme', 'university_features');
  * }\
  * 
  */
+
 function allowedBlockTypes($allowedBlocks)
 {
   global $allowedBlocks;
-  return ["acf/textbox"];
+  array_push($allowedBlocks, "core/spacer");
+  return $allowedBlocks;
 }
 
 add_filter('allowed_block_types_all', 'allowedBlockTypes');
-
-add_action('init', 'register_acf_blocks');
-function register_acf_blocks()
-{
-  register_block_type(__DIR__ . '/acf-blocks/textbox');
-}

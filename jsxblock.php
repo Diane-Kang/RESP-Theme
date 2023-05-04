@@ -43,6 +43,6 @@ class JSXBlock
   }
 }
 
-new JSXBlock('banner', true);
-new JSXBlock('genericheading');
-new JSXBlock('genericbutton');
+// new JSXBlock('banner', true);
+// new JSXBlock('genericheading');
+// new JSXBlock('genericbutton');

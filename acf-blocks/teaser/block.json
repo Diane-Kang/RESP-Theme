@@ -1,0 +1,22 @@
+{
+  "name": "acf/teaser",
+  "title": "Teaser",
+  "description": "Teaser Banner",
+  "style": ["file:./textbox.css"],
+  "category": "formatting",
+  "icon": "text",
+  "keywords": ["text"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "teaser.php"
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full"]
+  }
+}
