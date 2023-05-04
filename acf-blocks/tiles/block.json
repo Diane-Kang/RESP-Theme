@@ -1,0 +1,21 @@
+{
+  "name": "acf/tiles",
+  "title": "Kacheln",
+  "description": "Kacheln",
+  "category": "formatting",
+  "icon": "text",
+  "keywords": ["text", "image"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "tiles.php"
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "align": [""]
+  }
+}

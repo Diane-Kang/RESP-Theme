@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Teaser Banner Block Template.
+ * Textbox Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -33,6 +33,7 @@ $button1type        = get_field('block::buttons:btn1-type');
 $button2link        = get_field('block::buttons:btn2-link');
 $button2type        = get_field('block::buttons:btn2-type');
 
+$custom_anchor      = get_field('block::cssid');
 
 
 if (!empty($custom_anchor)) {
@@ -52,11 +53,10 @@ if ($bg_color != "") {
 }
 
 ?>
-<div <?php echo $anchor; ?> class="module teaser <?php echo $module_classes;  ?>">
+<div <?php echo $anchor; ?> class="module tiles <?php echo $module_classes;  ?>">
   <div class="<?php echo $container_classes; ?>">
-    <div class="teaser__bg-image"></div>
-    <div class="teaser__content">
-      This is Teaser Block
+    <div class="tiles__container">
+      Es ist Kacheln Block
     </div>
   </div>
 </div>
