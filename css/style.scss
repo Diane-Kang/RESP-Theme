@@ -10,8 +10,15 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "template-parts/header";
+
 @import "components/button";
 @import "components/link";
 
 @import "dev/dev";
 @import "module/textbox";
+@import "module/teaser";
+@import "module/imagetext";
+@import "module/tiles";
+
+// placeholder image generator https://placeholderimage.dev/

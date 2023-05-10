@@ -9,22 +9,23 @@ $gird-column-fullwidth: 95px; //1140/12 = 95
   grid-template-columns:
     [center-start] repeat(
       12,
-      [col-start] minmax(min-content, $gird-column-width) [col-end]
+      [col-start] minmax(0px, $gird-column-width) [col-end]
     )
     [center-end];
   column-gap: $gutter-vertical;
-}
-
-@mixin grid12andMargin {
-  display: grid;
-  grid-template-columns:
-    [full-start] minmax(10px, 1fr) [center-start] repeat(
-      12,
-      [col-start] minmax(min-content, $gird-column-fullwidth) [col-end]
-    )
-    [center-end] minmax(10px, 1fr) [full-end];
+  align-items: center;
 }
 
 .grid12 {
   @include grid12;
+}
+
+.grid12-5 {
+  grid-column: span 5;
+}
+.grid12-6 {
+  grid-column: span 6;
+}
+.grid12-7 {
+  grid-column: span 7;
 }

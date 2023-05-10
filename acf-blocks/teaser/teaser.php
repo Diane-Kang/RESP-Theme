@@ -33,14 +33,18 @@ $button1type        = get_field('block::buttons:btn1-type');
 $button2link        = get_field('block::buttons:btn2-link');
 $button2type        = get_field('block::buttons:btn2-type');
 
+$teaser_height      = get_field('block::teaser:height') != "none" ?  get_field('block::teaser:height') : '';
+
+$text_content       = get_field('block::teaser:content');
+$custom_anchor      = get_field('block::cssid');
 
 
 if (!empty($custom_anchor)) {
   $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
 }
 
-$module_classes = "module textbox {$device} ";
-$container_classes = "container {$distance_over} {$distance_under} ";
+$module_classes = "{$device} ";
+$container_classes = "container {$teaser_height} {$distance_over} {$distance_under}";
 
 if ($bg_color != "") {
   if ($box_design == "fullwidth") {
@@ -51,12 +55,36 @@ if ($bg_color != "") {
   }
 }
 
+
 ?>
-<div <?php echo $anchor; ?> class="module teaser <?php echo $module_classes;  ?>">
-  <div class="<?php echo $container_classes; ?>">
-    <div class="teaser__bg-image"></div>
+<div <?php echo $anchor; ?> class="module teaser c-white <?php echo $module_classes;  ?>">
+  <div class="center <?php echo $container_classes; ?>">
+    <div class="teaser__bg-image" style="
+              background-image: linear-gradient(
+                  180deg,
+                  rgba(0, 0, 0, 0.3) 0%,
+                  rgba(0, 0, 0, 0) 100%
+                ),
+                url('/wp-content/themes/RESP-theme/img/RESP-bg-blue-w-pattern.png');
+            "></div>
     <div class="teaser__content">
-      This is Teaser Block
+      <div class="teaser__text grid12 text-center">
+        <h2>h2 Heading</h2>
+        <p>hekfljasd</p>
+      </div>
+      <div class="teaser__buttons">
+        <?php if ($button1link != "") : ?>
+          <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
+        <?php endif; ?>
+        <?php if ($button2link != "") : ?>
+          <?php if ($button2type != "link") : ?>
+            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+          <?php endif; ?>
+          <?php if ($button2type == "link") : ?>
+            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+          <?php endif; ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 </div>

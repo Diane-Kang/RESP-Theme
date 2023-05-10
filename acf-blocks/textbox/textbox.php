@@ -29,13 +29,13 @@ $bg_gradient        = get_field('block::background:gradient');
 $box_design         = get_field('block::boxdesign');
 
 
-$text_content               = get_field('block::textbox:content');
-$custom_anchor      = get_field('block::cssid');
-
 $button1link        = get_field('block::buttons:btn1-link');
 $button1type        = get_field('block::buttons:btn1-type');
 $button2link        = get_field('block::buttons:btn2-link');
 $button2type        = get_field('block::buttons:btn2-type');
+
+$text_content       = get_field('block::textbox:content');
+$custom_anchor      = get_field('block::cssid');
 
 
 

@@ -1,0 +1,38 @@
+.tiles {
+  .container {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    gap: 24px;
+  }
+
+  .tile__wrapper {
+    padding: 10%;
+    display: grid;
+    grid-template-rows: auto minmax(0px, 300px);
+  }
+
+  .image-first {
+    .tile__image {
+      order: 1;
+    }
+    .tile__content {
+      order: 2;
+    }
+  }
+  .text-first {
+    .tile__content {
+      order: 1;
+    }
+    .tile__image {
+      order: 2;
+    }
+  }
+
+  .heading {
+    color: $color-blue-light;
+  }
+  .textbox__buttons {
+    grid-auto-flow: row;
+  }
+}

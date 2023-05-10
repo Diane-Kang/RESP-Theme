@@ -1,8 +1,7 @@
 {
   "name": "acf/teaser",
   "title": "Teaser",
-  "description": "Teaser Banner",
-  "style": ["file:./textbox.css"],
+  "description": "Teaser Block",
   "category": "formatting",
   "icon": "text",
   "keywords": ["text"],

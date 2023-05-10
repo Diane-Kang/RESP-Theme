@@ -1,0 +1,130 @@
+.imagetext {
+  > * > * {
+    grid-row: 1;
+    height: fit-content;
+  }
+  img {
+    width: 100%;
+  }
+
+  .imagetext__textbox h5 {
+    color: $color-blue-light;
+  }
+  .btn,
+  .link {
+    font-size: 1.125em;
+    height: 2.25em;
+  }
+
+  &.bg-blue {
+    background-color: blue;
+    color: $color-white;
+    .btn--fill {
+      background-color: $color-white;
+      color: $color-blue-light;
+      border: solid 2px $color-white;
+    }
+    .btn--empty {
+      color: $color-white;
+      border: solid 2px $color-white;
+    }
+    .link--underline {
+      color: $color-white;
+    }
+
+    &.box-design-on {
+      .container {
+        background-color: blue;
+      }
+      .image-first {
+        .imagetext__image {
+          margin-left: 10%;
+        }
+        .imagetext__textbox {
+          margin-right: 10%;
+        }
+      }
+      .text-first {
+        .imagetext__textbox {
+          margin-left: 10%;
+        }
+        .imagetext__image {
+          margin-right: 10%;
+        }
+      }
+    }
+  }
+
+  .image-first {
+    .imagetext__image {
+      order: 1;
+    }
+    .imagetext__textbox {
+      margin-left: 5%;
+      order: 2;
+    }
+    &.ratio {
+      &--6-6 {
+        .imagetext__image {
+          grid-column: span 6;
+        }
+        .imagetext__textbox {
+          grid-column: span 6;
+        }
+      }
+      &--5-7 {
+        .imagetext__image {
+          grid-column: span 5;
+        }
+        .imagetext__textbox {
+          grid-column: span 7;
+        }
+      }
+      &--7-5 {
+        .imagetext__image {
+          grid-column: span 7;
+        }
+        .imagetext__textbox {
+          grid-column: span 5;
+        }
+      }
+    }
+  }
+
+  .text-first {
+    .imagetext__textbox {
+      margin-left: 0;
+      margin-right: 5%;
+    }
+    &--6-6 {
+      .imagetext {
+        &__textbox {
+          grid-column: 1 / span 6;
+        }
+        &__image {
+          grid-column: span 6 / -1;
+        }
+      }
+    }
+    &--5-7 {
+      .imagetext {
+        &__textbox {
+          grid-column: 1 / span 5;
+        }
+        &__image {
+          grid-column: span 7 / -1;
+        }
+      }
+    }
+    &--7-5 {
+      .imagetext {
+        &__textbox {
+          grid-column: 1 / span 7;
+        }
+        &__image {
+          grid-column: span 5 / -1;
+        }
+      }
+    }
+  }
+}

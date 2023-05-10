@@ -32,6 +32,7 @@ h4,
 h5,
 h6 {
   font-weight: 900;
+  margin: 0;
 }
 h {
   &1,
@@ -40,7 +41,7 @@ h {
   &4,
   &5,
   &6 {
-    margin: 0.75em auto;
+    margin: 0 auto 0.75em auto;
   }
   &1 {
     font-size: $font-size-h1;

@@ -95,6 +95,13 @@
                 "operator": "==",
                 "value": "acf\/textbox"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/teaser"
+            }
         ]
     ],
     "menu_order": 0,
@@ -106,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683131658
+    "modified": 1683741028
 }
