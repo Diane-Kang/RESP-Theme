@@ -11,5 +11,4 @@
 ?>
 
 <?php get_header(); ?>
-<p>page.php</p>
 <?php the_content(); ?>

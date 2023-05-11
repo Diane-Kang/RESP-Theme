@@ -34,8 +34,11 @@ $button2link        = get_field('block::buttons:btn2-link');
 $button2type        = get_field('block::buttons:btn2-type');
 
 $teaser_height      = get_field('block::teaser:height') != "none" ?  get_field('block::teaser:height') : '';
-
+$teaser_textcolor   = get_field('block::teaser:textcolor');
+$teaser_gradient    = get_field('block::teaser:gradient') == "yes" ? "" : "display:none;";
+$image              = get_field('block::teaser:image');
 $text_content       = get_field('block::teaser:content');
+
 $custom_anchor      = get_field('block::cssid');
 
 
@@ -43,7 +46,9 @@ if (!empty($custom_anchor)) {
   $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
 }
 
-$module_classes = "{$device} ";
+$module_classes = "";
+$container_classes = "";
+$module_classes = "{$device} {$teaser_textcolor}";
 $container_classes = "container {$teaser_height} {$distance_over} {$distance_under}";
 
 if ($bg_color != "") {
@@ -57,20 +62,22 @@ if ($bg_color != "") {
 
 
 ?>
-<div <?php echo $anchor; ?> class="module teaser c-white <?php echo $module_classes;  ?>">
+<div <?php echo $anchor; ?> class="module teaser <?php echo $module_classes;  ?>">
   <div class="center <?php echo $container_classes; ?>">
     <div class="teaser__bg-image" style="
+              background-image: url('<?php echo esc_url($image['url']); ?>');
+            "></div>
+    <div class="teaser__bg-gradient" style=" 
+              <?php echo $teaser_gradient ?>
               background-image: linear-gradient(
                   180deg,
                   rgba(0, 0, 0, 0.3) 0%,
                   rgba(0, 0, 0, 0) 100%
-                ),
-                url('/wp-content/themes/RESP-theme/img/RESP-bg-blue-w-pattern.png');
+                )
             "></div>
     <div class="teaser__content">
       <div class="teaser__text grid12 text-center">
-        <h2>h2 Heading</h2>
-        <p>hekfljasd</p>
+        <?php echo $text_content ?>
       </div>
       <div class="teaser__buttons">
         <?php if ($button1link != "") : ?>

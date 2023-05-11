@@ -57,8 +57,21 @@
     right: 0;
     z-index: -2;
   }
+  &__bg-gradient {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
 
-  &.c-white {
+  &.tc--blue-light {
+    color: $color-blue-light;
+  }
+  &.tc--white {
     color: $color-white;
     .btn--fill {
       background-color: $color-white;

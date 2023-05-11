@@ -62,6 +62,7 @@ class ACFBlock
 }
 new ACFblock("textbox");
 new ACFblock("teaser");
+new ACFblock("imagetext");
 new ACFblock("tiles");
 
 

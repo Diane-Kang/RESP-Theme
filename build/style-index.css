@@ -369,19 +369,32 @@ h6 {
   right: 0;
   z-index: -2;
 }
-.teaser.c-white {
+.teaser__bg-gradient {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.teaser.tc--blue-light {
+  color: #009fe3;
+}
+.teaser.tc--white {
   color: #fff;
 }
-.teaser.c-white .btn--fill {
+.teaser.tc--white .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.teaser.c-white .btn--empty {
+.teaser.tc--white .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.teaser.c-white .link--underline {
+.teaser.tc--white .link--underline {
   color: #fff;
 }
 

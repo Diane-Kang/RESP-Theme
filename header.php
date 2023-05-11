@@ -33,8 +33,8 @@
   <!-- Header Before main  -->
   <?php //get_template_part( 'template-parts/header/site-header' ); 
   ?>
-  <header class="Header">
-    <div class="Header__container container container--wide">
+  <header class="header">
+    <div class="header__container container container--wide">
       header
     </div>
   </header>
