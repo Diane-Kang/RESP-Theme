@@ -17,10 +17,10 @@
                 "id": ""
             },
             "choices": {
-                "imagetext": "Image | Text",
-                "textimage": "Text | Image"
+                "image-first": "Image | Text",
+                "text-first": "Text | Image"
             },
-            "default_value": false,
+            "default_value": "image-first",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -43,11 +43,11 @@
                 "id": ""
             },
             "choices": {
-                "50-50": "50 | 50",
-                "30-70": "30 | 70",
-                "70-30": "70 | 30"
+                "6-6": "6 | 6",
+                "5-7": "5 | 7",
+                "7-5": "7 | 5"
             },
-            "default_value": "50-50",
+            "default_value": "6-6",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -94,43 +94,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "<h3>h3 heading<\/h3>\r\n<p>\r\n  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed\r\n  diam nonumy eirmod tempor invidunt ut labore et dolore magna\r\n  aliquyam erat, sed diam voluptua. At vero eos et accusam et\r\n  justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea\r\n  takimata sanctus est Lorem.\r\n<\/p>",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_643adce0ed575",
-            "label": "Button Primärer",
-            "name": "block::imagetext:button",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_643bcb386b76d",
-            "label": "Button Sekundärer",
-            "name": "block::imagetext:button2",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         }
     ],
     "location": [
@@ -151,5 +119,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682401255
+    "modified": 1683797982
 }

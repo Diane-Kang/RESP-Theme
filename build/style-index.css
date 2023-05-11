@@ -74,7 +74,7 @@ body {
   box-sizing: border-box;
 }
 
-p {
+p:not(:last-child) {
   padding-bottom: 40px;
 }
 
@@ -415,7 +415,7 @@ h6 {
   height: 2.25em;
 }
 .imagetext.bg-blue {
-  background-color: blue;
+  background-color: #009fe3;
   color: #fff;
 }
 .imagetext.bg-blue .btn--fill {
@@ -430,20 +430,23 @@ h6 {
 .imagetext.bg-blue .link--underline {
   color: #fff;
 }
-.imagetext.bg-blue.box-design-on .container {
-  background-color: blue;
+.imagetext.bg-blue.box-design {
+  background-color: unset;
 }
-.imagetext.bg-blue.box-design-on .image-first .imagetext__image {
-  margin-left: 10%;
+.imagetext.bg-blue.box-design .container {
+  background-color: #009fe3;
 }
-.imagetext.bg-blue.box-design-on .image-first .imagetext__textbox {
-  margin-right: 10%;
+.imagetext.bg-blue.box-design .image-first .imagetext__image {
+  margin-left: 3rem;
 }
-.imagetext.bg-blue.box-design-on .text-first .imagetext__textbox {
-  margin-left: 10%;
+.imagetext.bg-blue.box-design .image-first .imagetext__textbox {
+  margin-right: 3rem;
 }
-.imagetext.bg-blue.box-design-on .text-first .imagetext__image {
-  margin-right: 10%;
+.imagetext.bg-blue.box-design .text-first .imagetext__textbox {
+  margin-left: 3rem;
+}
+.imagetext.bg-blue.box-design .text-first .imagetext__image {
+  margin-right: 3rem;
 }
 .imagetext .image-first .imagetext__image {
   order: 1;
@@ -474,22 +477,22 @@ h6 {
   margin-left: 0;
   margin-right: 5%;
 }
-.imagetext .text-first--6-6 .imagetext__textbox {
+.imagetext .text-first.ratio--6-6 .imagetext__textbox {
   grid-column: 1/span 6;
 }
-.imagetext .text-first--6-6 .imagetext__image {
+.imagetext .text-first.ratio--6-6 .imagetext__image {
   grid-column: span 6/-1;
 }
-.imagetext .text-first--5-7 .imagetext__textbox {
+.imagetext .text-first.ratio--5-7 .imagetext__textbox {
   grid-column: 1/span 5;
 }
-.imagetext .text-first--5-7 .imagetext__image {
+.imagetext .text-first.ratio--5-7 .imagetext__image {
   grid-column: span 7/-1;
 }
-.imagetext .text-first--7-5 .imagetext__textbox {
+.imagetext .text-first.ratio--7-5 .imagetext__textbox {
   grid-column: 1/span 7;
 }
-.imagetext .text-first--7-5 .imagetext__image {
+.imagetext .text-first.ratio--7-5 .imagetext__image {
   grid-column: span 5/-1;
 }
 

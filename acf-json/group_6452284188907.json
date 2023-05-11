@@ -93,14 +93,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/textbox"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/teaser"
+                "value": "all"
             }
         ]
     ],
@@ -113,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683741028
+    "modified": 1683795838
 }

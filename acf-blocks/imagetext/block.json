@@ -1,0 +1,20 @@
+{
+  "name": "acf/imagetext",
+  "title": "ImageText",
+  "description": "ImageText",
+  "icon": "text",
+  "keywords": ["text", "image"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "imagetext.php"
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "align": [""]
+  }
+}

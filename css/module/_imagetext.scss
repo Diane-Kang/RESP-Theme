@@ -6,7 +6,6 @@
   img {
     width: 100%;
   }
-
   .imagetext__textbox h5 {
     color: $color-blue-light;
   }
@@ -17,7 +16,7 @@
   }
 
   &.bg-blue {
-    background-color: blue;
+    background-color: $color-blue-light;
     color: $color-white;
     .btn--fill {
       background-color: $color-white;
@@ -32,24 +31,25 @@
       color: $color-white;
     }
 
-    &.box-design-on {
+    &.box-design {
+      background-color: unset;
       .container {
-        background-color: blue;
+        background-color: $color-blue-light;
       }
       .image-first {
         .imagetext__image {
-          margin-left: 10%;
+          margin-left: 3rem;
         }
         .imagetext__textbox {
-          margin-right: 10%;
+          margin-right: 3rem;
         }
       }
       .text-first {
         .imagetext__textbox {
-          margin-left: 10%;
+          margin-left: 3rem;
         }
         .imagetext__image {
-          margin-right: 10%;
+          margin-right: 3rem;
         }
       }
     }
@@ -96,33 +96,35 @@
       margin-left: 0;
       margin-right: 5%;
     }
-    &--6-6 {
-      .imagetext {
-        &__textbox {
-          grid-column: 1 / span 6;
-        }
-        &__image {
-          grid-column: span 6 / -1;
-        }
-      }
-    }
-    &--5-7 {
-      .imagetext {
-        &__textbox {
-          grid-column: 1 / span 5;
-        }
-        &__image {
-          grid-column: span 7 / -1;
+    &.ratio {
+      &--6-6 {
+        .imagetext {
+          &__textbox {
+            grid-column: 1 / span 6;
+          }
+          &__image {
+            grid-column: span 6 / -1;
+          }
         }
       }
-    }
-    &--7-5 {
-      .imagetext {
-        &__textbox {
-          grid-column: 1 / span 7;
+      &--5-7 {
+        .imagetext {
+          &__textbox {
+            grid-column: 1 / span 5;
+          }
+          &__image {
+            grid-column: span 7 / -1;
+          }
         }
-        &__image {
-          grid-column: span 5 / -1;
+      }
+      &--7-5 {
+        .imagetext {
+          &__textbox {
+            grid-column: 1 / span 7;
+          }
+          &__image {
+            grid-column: span 5 / -1;
+          }
         }
       }
     }
