@@ -135,22 +135,22 @@ h6 {
 }
 
 h1 {
-  font-size: 4.768em;
-}
-h2 {
   font-size: 3.815em;
 }
-h3 {
+h2 {
   font-size: 3.052em;
 }
-h4 {
+h3 {
   font-size: 2.441em;
 }
-h5 {
+h4 {
   font-size: 1.953em;
 }
-h6 {
+h5 {
   font-size: 1.563em;
+}
+h6 {
+  font-size: 1.25rem;
 }
 
 .text-large {
