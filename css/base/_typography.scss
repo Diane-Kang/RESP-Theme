@@ -7,14 +7,14 @@ body {
 }
 
 // FONT
-$font-size-base: 1rem;
-$font-size-large: 1.25rem;
-$font-size-h6: 1.563em;
-$font-size-h5: 1.953em;
-$font-size-h4: 2.441em;
-$font-size-h3: 3.052em;
-$font-size-h2: 3.815em;
-$font-size-h1: 4.768em;
+$font-size-base: 1rem; //16px
+$font-size-large: 1.25rem; //20px
+$font-size-h6: 1.25rem; //20px
+$font-size-h5: 1.563em; //25px
+$font-size-h4: 1.953em; //31.25px
+$font-size-h3: 2.441em; //39.0625px
+$font-size-h2: 3.052em; //48.8281..px
+$font-size-h1: 3.815em; //61.0351..px
 
 p,
 a {
