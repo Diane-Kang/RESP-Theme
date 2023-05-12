@@ -29,3 +29,13 @@ $gird-column-fullwidth: 95px; //1140/12 = 95
 .grid12-7 {
   grid-column: span 7;
 }
+
+.flex {
+  display: flex;
+  &-col {
+    flex-direction: column;
+  }
+}
+.flexible {
+  flex-grow: 1;
+}

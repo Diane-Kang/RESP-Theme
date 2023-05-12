@@ -1,0 +1,57 @@
+.cardlist {
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  /*Structure*/
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid 1px red;
+
+    &__wrap {
+      &--outer {
+      }
+
+      &--inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 24px;
+      }
+    }
+  }
+
+  .flexible {
+    flex-grow: 1;
+  }
+  /*Card Styling*/
+
+  .card {
+    &__title {
+      color: $color-blue-light;
+      text-align: center;
+      margin: 1em 0 1em 0;
+      * {
+        margin: 0;
+      }
+    }
+
+    &__sub {
+      padding: 0 18px;
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      margin: 1.5em 0 1.5em 0;
+      * {
+        &:first-child {
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+}

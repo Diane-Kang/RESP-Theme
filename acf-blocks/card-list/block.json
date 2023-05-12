@@ -1,5 +1,5 @@
 {
-  "name": "acf/tiles",
+  "name": "acf/cardlist",
   "title": "Kacheln",
   "description": "Kacheln",
   "category": "formatting",
@@ -7,7 +7,7 @@
   "keywords": ["text", "image"],
   "acf": {
     "mode": "preview",
-    "renderTemplate": "tiles.php"
+    "renderTemplate": "card-list.php"
   },
   "attributes": {
     "align": {

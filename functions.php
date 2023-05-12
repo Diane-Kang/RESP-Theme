@@ -63,7 +63,7 @@ class ACFBlock
 new ACFblock("textbox");
 new ACFblock("teaser");
 new ACFblock("imagetext");
-new ACFblock("tiles");
+new ACFblock("card-list");
 
 
 // remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
