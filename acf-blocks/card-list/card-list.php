@@ -5,7 +5,6 @@
  *
  */
 
-
 // Support custom "anchor" values.
 $anchor = '';
 if (!empty($block['anchor'])) {
@@ -19,105 +18,58 @@ $distance_under     = 'p-bottom--' . get_field('block::distance:under');
 
 $bg_color           = get_field('block::background:color') ? 'bg-' . get_field('block::background:color') : "";
 $bg_gradient        = get_field('block::background:gradient');
-$box_design         = get_field('block::boxdesign');
+$box_design         = get_field('block::boxdesign') == "box-design" ? "box-design" : "";
 
-$button1link        = get_field('block::buttons:btn1-link');
-$button1type        = get_field('block::buttons:btn1-type');
-$button2link        = get_field('block::buttons:btn2-link');
-$button2type        = get_field('block::buttons:btn2-type');
-
-if (!empty($button1link)) {
-  $button1link["url"] = "#";
-  $button1link["title"] = "Home";
-}
-if (!empty($button2link)) {
-  $button2link["url"] = "#";
-  $button2link["title"] = "CTA";
-}
-
-
-
-$custom_anchor      = get_field('block::cssid');
+$graphic_type       = get_field('block::card-list:image-type') == "image" ? "" : "graphic-icon";
+$order              = get_field('block::card-list:order');
+$$custom_anchor     = get_field('block::cssid');
 
 
 if (!empty($custom_anchor)) {
   $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
 }
 
-$module_classes = "module {$device} ";
+$module_classes = "module card-list {$order} {$graphic_type} {$bg_color} {$box_design} {$device}";
 $container_classes = "container {$distance_over} {$distance_under} ";
 
-if ($bg_color != "") {
-  if ($box_design == "fullwidth") {
-    $module_classes .= $bg_color;
-  }
-  if ($box_design == "box-design") {
-    $container_classes .= $bg_color;
-  }
-}
-
 ?>
-<div class="module card-list image-first">
-  <div class="container p-top--small p-bottom--small">
-    <div class="card flex">
-      <div class="card--inner flexible flex flex-col">
-        <div class="card__image">
-          <img src="http://reap-theme.local/wp-content/themes/RESP-theme/img/1x1--495x495px.png" alt="" />
-        </div>
-        <div class="card__text-content flexible flex flex-col">
-          <h3 class="heading heading3 text-center">Heading</h3>
-          <div class="text flexible">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              laborum fugit dolores ipsa beatae ullam, nam voluptas ut
-              eveniet atque, aliquid, reprehenderit reiciendis nobis
-              magnam corrupti facere illum consectetur doloribus?
-            </p>
+
+<div class="<?php echo $module_classes; ?>">
+  <div class="<?php echo $container_classes; ?>">
+    <?php if (have_rows('block::card-list:card')) : ?>
+      <?php while (have_rows('block::card-list:card')) : the_row(); ?>
+        <?php if (get_row_layout() == '') : ?>
+          <div class="card flex">
+            <div class="card--inner flex flex-col">
+              <div class="card__image flex">
+                <?php $card_image = get_sub_field('card_image'); ?>
+                <?php if ($card_image) : ?>
+                  <img src="<?php echo esc_url($card_image['url']); ?>" alt="<?php echo esc_attr($card_image['alt']); ?>" />
+                <?php endif; ?>
+              </div>
+              <div class="card__text-content flexible flex flex-col">
+                <h3 class="heading heading3 text-center"><?php the_sub_field('card_title'); ?></h3>
+                <div class="text flexible">
+                  <?php the_sub_field('card_text'); ?>
+                </div>
+                <div class="buttons flex flex-col">
+                  <?php $card_button1 = get_sub_field('card_button1'); ?>
+                  <?php if ($card_button1) : ?>
+                    <a class="btn btn--fill" href="<?php echo esc_url($card_button1['url']); ?>" target="<?php echo esc_attr($card_button1['target']); ?>"><?php echo esc_html($card_button1['title']); ?></a>
+                  <?php endif; ?>
+                  <?php $card_button2 = get_sub_field('card_button2'); ?>
+                  <?php if ($card_button2) : ?>
+                    <a class="btn btn--empty" href="<?php echo esc_url($card_button2['url']); ?>" target="<?php echo esc_attr($card_button2['target']); ?>"><?php echo esc_html($card_button2['title']); ?></a>
+                  <?php endif; ?>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="buttons flex flex-col">
-            <a class="btn btn--fill" href="#">button1</a>
-            <a class="btn btn--empty" href="#">button2</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card flex">
-      <div class="card--inner flexible flex flex-col">
-        <div class="card__image">
-          <img src="http://reap-theme.local/wp-content/themes/RESP-theme/img/1x1--495x495px.png" alt="" />
-        </div>
-        <div class="card__text-content flexible flex flex-col">
-          <h3 class="heading heading3 text-center">Heading</h3>
-          <div class="text flexible">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              laborum fugit dolores ipsa beatae ullam, nam voluptas ut
-              facere illum consectetur doloribus?
-            </p>
-          </div>
-          <div class="buttons flex flex-col">
-            <a class="btn btn--fill" href="#">button1</a>
-            <a class="btn btn--empty" href="#">button2</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card flex">
-      <div class="card--inner flexible flex flex-col">
-        <div class="card__image">
-          <img src="http://reap-theme.local/wp-content/themes/RESP-theme/img/1x1--495x495px.png" alt="" />
-        </div>
-        <div class="card__text-content flexible flex flex-col">
-          <h3 class="heading heading3 text-center">Heading</h3>
-          <div class="text flexible">
-            <p>Lorem consectetur doloribus?</p>
-          </div>
-          <div class="buttons flex flex-col">
-            <a class="btn btn--fill" href="#">button1</a>
-            <a class="btn btn--empty" href="#">button2</a>
-          </div>
-        </div>
-      </div>
-    </div>
+        <?php endif; ?>
+      <?php endwhile; ?>
+    <?php else : ?>
+      <?php // No layouts found 
+      ?>
+    <?php endif; ?>
   </div>
 </div>

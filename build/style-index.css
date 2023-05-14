@@ -80,22 +80,14 @@ html {
   font-size: 16px;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 body {
   box-sizing: border-box;
-}
-
-p:not(:last-child) {
-  padding-bottom: 40px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0.5em auto;
 }
 
 .container {
@@ -242,6 +234,28 @@ h6 {
   text-underline-offset: 8px;
 }
 
+.buttons--wrapper {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  min-width: 324px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: auto;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 1em;
+  padding-bottom: 1em;
+}
+.buttons--wrapper .link {
+  grid-row: 2;
+}
+.buttons--wrapper .btn,
+.buttons--wrapper .link {
+  font-size: 1.125em;
+  height: 2.25em;
+}
+
 .link {
   display: inline-flex;
   position: relative;
@@ -349,36 +363,8 @@ h6 {
 .teaser {
   position: relative;
 }
-.teaser__text > * {
-  grid-column: 1/-1;
-}
-.teaser__text > * h1,
-.teaser__text > * h2,
-.teaser__text > * h3,
-.teaser__text > * h4,
-.teaser__text > * h5,
-.teaser__text > * h6 {
-  margin: 0;
-}
-.teaser__buttons {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  margin: auto;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-  row-gap: 1em;
-  padding-bottom: 1em;
-}
-.teaser__buttons .link {
-  grid-row: 2;
-}
-.teaser__buttons .btn,
-.teaser__buttons .link {
-  font-size: 1.125em;
-  height: 2.25em;
+.teaser__content, .teaser__text {
+  row-gap: 3.5rem;
 }
 .teaser__bg-image {
   opacity: 1;
@@ -418,6 +404,18 @@ h6 {
 }
 .teaser.tc--white .link--underline {
   color: #fff;
+}
+@media only screen and (max-width: 1250px) {
+  .teaser .container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .teaser .buttons--wrapper {
+    grid-auto-flow: row;
+    min-width: 60%;
+  }
 }
 
 .imagetext > * > * {
@@ -565,14 +563,16 @@ h6 {
   width: 100%;
 }
 .card-list .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
+.card-list .card {
+  width: 100%;
+}
 .card-list .card--inner {
   margin: 10%;
-  width: 100%;
+  max-width: 100%;
 }
 .card-list .card__text-content .heading {
   margin: 0.5em 0;
@@ -616,6 +616,9 @@ h6 {
 }
 .card-list.bg-blue .link--underline {
   color: #fff;
+}
+.card-list.graphic-icon .card__image {
+  padding: 20%;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

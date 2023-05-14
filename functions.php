@@ -80,11 +80,12 @@ new ACFblock("card-list");
  * 
  */
 
-function allowedBlockTypes($allowedBlocks)
+function allowedBlockTypes($original_allowedBlocks)
 {
   global $allowedBlocks;
   array_push($allowedBlocks, "core/spacer");
-  return $allowedBlocks;
+  // return $allowedBlocks;
+  return $original_allowedBlocks;
 }
 
 add_filter('allowed_block_types_all', 'allowedBlockTypes');

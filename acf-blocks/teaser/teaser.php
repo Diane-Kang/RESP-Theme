@@ -75,23 +75,26 @@ if ($bg_color != "") {
                   rgba(0, 0, 0, 0) 100%
                 )
             "></div>
-    <div class="teaser__content">
-      <div class="teaser__text grid12 text-center">
+    <div class="teaser__content flex flex-col">
+      <div class="teaser__text text-center flex flex-col">
         <?php echo $text_content ?>
       </div>
-      <div class="teaser__buttons">
-        <?php if ($button1link != "") : ?>
-          <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
-        <?php endif; ?>
-        <?php if ($button2link != "") : ?>
-          <?php if ($button2type != "link") : ?>
-            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+      <?php if (!empty($button1link) && !empty($button2link)) : ?>
+        <!-- only if button exist -->
+        <div class="buttons--wrapper">
+          <?php if ($button1link != "") : ?>
+            <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
           <?php endif; ?>
-          <?php if ($button2type == "link") : ?>
-            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+          <?php if ($button2link != "") : ?>
+            <?php if ($button2type != "link") : ?>
+              <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+            <?php endif; ?>
+            <?php if ($button2type == "link") : ?>
+              <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+            <?php endif; ?>
           <?php endif; ?>
         <?php endif; ?>
-      </div>
+        </div>
     </div>
   </div>
 </div>

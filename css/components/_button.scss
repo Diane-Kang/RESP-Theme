@@ -49,3 +49,25 @@
     text-underline-offset: 8px;
   }
 }
+
+.buttons--wrapper {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  // min-width of a button: 150px
+  min-width: 324px;
+  max-width: fit-content;
+  margin: auto;
+  column-gap: 24px;
+  row-gap: 1em;
+  padding-bottom: 1em;
+
+  .link {
+    grid-row: 2;
+  }
+  .btn,
+  .link {
+    font-size: 1.125em;
+    height: 2.25em;
+  }
+}

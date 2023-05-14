@@ -6,16 +6,15 @@
   "icon": "text",
   "keywords": ["text"],
   "acf": {
-    "mode": "preview",
     "renderTemplate": "teaser.php"
   },
   "attributes": {
     "align": {
       "type": "string",
-      "default": "full"
+      "default": "wide"
     }
   },
   "supports": {
-    "align": ["full"]
+    "align": "false"
   }
 }
