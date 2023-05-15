@@ -29,6 +29,7 @@ $order              = get_field('block::imagetext:position');
 $column             = 'ratio--' . get_field('block::imagetext:column');
 
 $image              = get_field('block::imagetext:image');
+$content_title      = get_field('block::imagetext:title');
 $text_content       = get_field('block::imagetext:text');
 
 
@@ -49,23 +50,27 @@ $container_classes = "container {$distance_over} {$distance_under} grid12 {$orde
     <div class="imagetext__image center">
       <img src="<?php echo esc_url($image['url']); ?>" alt="" />
     </div>
-    <div class="imagetext__textbox">
-      <div class="textbox__text">
+    <div class="imagetext__textbox flex flex-col">
+      <div class="content flex flex-col">
+        <h3 class="heading heading3"><?php echo $content_title ?> </h3>
         <?php echo $text_content ?>
       </div>
-      <div class="teaser__buttons">
-        <?php if ($button1link != "") : ?>
-          <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
-        <?php endif; ?>
-        <?php if ($button2link != "") : ?>
-          <?php if ($button2type != "link") : ?>
-            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+      <?php if (!empty($button1link) || !empty($button1link)) : ?>
+        <!-- only if button exist -->
+        <div class="buttons--wrapper">
+          <?php if ($button1link != "") : ?>
+            <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
           <?php endif; ?>
-          <?php if ($button2type == "link") : ?>
-            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+          <?php if ($button2link != "") : ?>
+            <?php if ($button2type != "link") : ?>
+              <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+            <?php endif; ?>
+            <?php if ($button2type == "link") : ?>
+              <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+            <?php endif; ?>
           <?php endif; ?>
-        <?php endif; ?>
-      </div>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>

@@ -48,7 +48,7 @@ if (!empty($custom_anchor)) {
 
 $module_classes = "";
 $container_classes = "";
-$module_classes = "{$device} {$teaser_textcolor}";
+$module_classes = "module teaser {$device} {$teaser_textcolor}";
 $container_classes = "container {$teaser_height} {$distance_over} {$distance_under}";
 
 if ($bg_color != "") {
@@ -62,7 +62,7 @@ if ($bg_color != "") {
 
 
 ?>
-<div <?php echo $anchor; ?> class="module teaser <?php echo $module_classes;  ?>">
+<div <?php echo $anchor; ?> class="<?php echo $module_classes;  ?>">
   <div class="center <?php echo $container_classes; ?>">
     <div class="teaser__bg-image" style="
               background-image: url('<?php echo esc_url($image['url']); ?>');

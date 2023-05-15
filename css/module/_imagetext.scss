@@ -1,13 +1,7 @@
 .imagetext {
-  > * > * {
-    grid-row: 1;
-    height: fit-content;
-  }
+  // Structure & Spaces(paading margin)
   img {
     width: 100%;
-  }
-  .imagetext__textbox h5 {
-    color: $color-blue-light;
   }
   .btn,
   .link {
@@ -15,9 +9,126 @@
     height: 2.25em;
   }
 
+  .buttons--wrapper {
+    grid-auto-flow: row;
+    margin: unset;
+    min-width: 150px;
+  }
+
+  &__textbox,
+  &__image {
+    grid-row: 1;
+  }
+  &__textbox {
+    row-gap: 2.5rem;
+    .content {
+      row-gap: 1.5rem;
+    }
+  }
+  // Option: image-first / text-first & Ratio
+  .image-first {
+    .imagetext__image {
+      order: 1;
+    }
+    .imagetext__textbox {
+      margin-left: 5%;
+      order: 2;
+    }
+    &.ratio {
+      &--6-6 {
+        .imagetext__image {
+          grid-column: span 6;
+        }
+        .imagetext__textbox {
+          grid-column: span 6;
+        }
+      }
+      &--5-7 {
+        .imagetext__image {
+          grid-column: span 5;
+        }
+        .imagetext__textbox {
+          grid-column: span 7;
+          .buttons--wrapper {
+            grid-auto-flow: column;
+            @media only screen and (max-width: $bp-largest) {
+              grid-auto-flow: row;
+            }
+          }
+        }
+      }
+      &--7-5 {
+        .imagetext__image {
+          grid-column: span 7;
+        }
+        .imagetext__textbox {
+          grid-column: span 5;
+        }
+      }
+    }
+  }
+
+  .text-first {
+    .imagetext__textbox {
+      margin-left: 0;
+      margin-right: 5%;
+      order: 1;
+    }
+    .imagetext__image {
+      order: 2;
+    }
+    &.ratio {
+      &--6-6 {
+        .imagetext {
+          &__textbox {
+            grid-column: span 6;
+          }
+          &__image {
+            grid-column: span 6;
+          }
+        }
+      }
+      &--5-7 {
+        .imagetext {
+          &__textbox {
+            grid-column: span 5;
+          }
+          &__image {
+            grid-column: span 7;
+          }
+        }
+      }
+      &--7-5 {
+        .imagetext {
+          &__textbox {
+            grid-column: span 7;
+            .buttons--wrapper {
+              grid-auto-flow: column;
+              @media only screen and (max-width: $bp-largest) {
+                grid-auto-flow: row;
+              }
+            }
+          }
+          &__image {
+            grid-column: span 5;
+          }
+        }
+      }
+    }
+  }
+
+  // default color
+  .imagetext__textbox .heading {
+    color: $color-blue-light;
+  }
+
+  // Option: background color / box design
   &.bg-blue {
     background-color: $color-blue-light;
     color: $color-white;
+    .heading {
+      color: inherit;
+    }
     .btn--fill {
       background-color: $color-white;
       color: $color-blue-light;
@@ -54,78 +165,27 @@
       }
     }
   }
-
-  .image-first {
-    .imagetext__image {
-      order: 1;
-    }
-    .imagetext__textbox {
-      margin-left: 5%;
-      order: 2;
-    }
-    &.ratio {
-      &--6-6 {
-        .imagetext__image {
-          grid-column: span 6;
-        }
-        .imagetext__textbox {
-          grid-column: span 6;
-        }
+  // Media Queary
+  @media only screen and (max-width: $bp-largest) {
+    .container {
+      @include sidePadding;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5rem;
+      .heading {
+        text-align: center;
       }
-      &--5-7 {
-        .imagetext__image {
-          grid-column: span 5;
-        }
-        .imagetext__textbox {
-          grid-column: span 7;
-        }
+      .buttons--wrapper {
+        grid-auto-flow: row;
+        margin: auto;
+        width: 66.66%;
+        max-width: 300px;
       }
-      &--7-5 {
-        .imagetext__image {
-          grid-column: span 7;
-        }
-        .imagetext__textbox {
-          grid-column: span 5;
-        }
-      }
-    }
-  }
-
-  .text-first {
-    .imagetext__textbox {
-      margin-left: 0;
-      margin-right: 5%;
-    }
-    &.ratio {
-      &--6-6 {
-        .imagetext {
-          &__textbox {
-            grid-column: 1 / span 6;
-          }
-          &__image {
-            grid-column: span 6 / -1;
-          }
-        }
-      }
-      &--5-7 {
-        .imagetext {
-          &__textbox {
-            grid-column: 1 / span 5;
-          }
-          &__image {
-            grid-column: span 7 / -1;
-          }
-        }
-      }
-      &--7-5 {
-        .imagetext {
-          &__textbox {
-            grid-column: 1 / span 7;
-          }
-          &__image {
-            grid-column: span 5 / -1;
-          }
-        }
+      > * {
+        order: unset !important;
+        margin: unset !important;
       }
     }
   }

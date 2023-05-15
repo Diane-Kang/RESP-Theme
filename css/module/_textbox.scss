@@ -62,23 +62,3 @@
     }
   }
 }
-
-background color .module.textbox,
-.textbox .container {
-  &.bg-blue,
-  &.bg-blue-gradient {
-    color: $color-white;
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-      border: solid 2px $color-white;
-    }
-    .btn--empty {
-      color: $color-white;
-      border: solid 2px $color-white;
-    }
-    .link--underline {
-      color: $color-white;
-    }
-  }
-}
