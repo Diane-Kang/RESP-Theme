@@ -24,9 +24,10 @@ $device             = get_field('block::device') == "all" ? '' : 'display--' . g
 $distance_over      = 'p-top--' . get_field('block::distance:over');
 $distance_under     = 'p-bottom--' . get_field('block::distance:under');
 
-$bg_color           = get_field('block::background:color') ? 'bg-' . get_field('block::background:color') : "";
+$bg_color           = get_field('block::background:color') != "none" ? 'bg-' . get_field('block::background:color') : "";
 $bg_gradient        = get_field('block::background:gradient');
-$box_design         = get_field('block::boxdesign');
+$box_design         = get_field('block::boxdesign') == "box-design" ? "box-design" : "";
+
 
 
 $button1link        = get_field('block::buttons:btn1-link');
@@ -43,38 +44,34 @@ if (!empty($custom_anchor)) {
   $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
 }
 
-$module_classes = "module textbox {$device} ";
+$module_classes = "module textbox {$bg_color} {$box_design} {$device} ";
 $container_classes = "container {$distance_over} {$distance_under} ";
 
-if ($bg_color != "") {
-  if ($box_design == "fullwidth") {
-    $module_classes .= $bg_color;
-  }
-  if ($box_design == "box-design") {
-    $container_classes .= $bg_color;
-  }
-}
 
 ?>
-<div <?php echo $anchor; ?> class="module textbox <?php echo $module_classes;  ?>">
-  <div class="<?php echo $container_classes; ?>">
+<div <?php echo $anchor; ?> class="<?php echo $module_classes;  ?>">
+  <div class="<?php echo $container_classes; ?> flex flex-col">
     <div class="textbox__text-container grid12">
-      <div class="textbox__text">
+      <div class="textbox__text flex flex-col">
         <?php echo $text_content; ?>
       </div>
     </div>
-    <div class="textbox__buttons">
-      <?php if ($button1link != "") : ?>
-        <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
-      <?php endif; ?>
-      <?php if ($button2link != "") : ?>
-        <?php if ($button2type != "link") : ?>
-          <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+    <?php if (!empty($button1link) || !empty($button1link)) : ?>
+      <!-- only if button exist -->
+      <div class="buttons--wrapper">
+        <?php if ($button1link != "") : ?>
+          <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
         <?php endif; ?>
-        <?php if ($button2type == "link") : ?>
-          <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+        <?php if ($button2link != "") : ?>
+          <?php if ($button2type != "link") : ?>
+            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+          <?php endif; ?>
+          <?php if ($button2type == "link") : ?>
+            <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
+          <?php endif; ?>
         <?php endif; ?>
-      <?php endif; ?>
-    </div>
+      </div>
+    <?php endif; ?>
   </div>
+</div>
 </div>

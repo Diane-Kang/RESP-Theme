@@ -79,7 +79,7 @@ if ($bg_color != "") {
       <div class="teaser__text text-center flex flex-col">
         <?php echo $text_content ?>
       </div>
-      <?php if (!empty($button1link) && !empty($button2link)) : ?>
+      <?php if (!empty($button1link) || !empty($button1link)) : ?>
         <!-- only if button exist -->
         <div class="buttons--wrapper">
           <?php if ($button1link != "") : ?>
@@ -93,8 +93,8 @@ if ($bg_color != "") {
               <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
             <?php endif; ?>
           <?php endif; ?>
-        <?php endif; ?>
         </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>

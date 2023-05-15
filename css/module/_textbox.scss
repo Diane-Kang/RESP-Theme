@@ -1,28 +1,42 @@
-.module.textbox {
+.textbox {
   // structure
+  .container {
+    row-gap: 2.5rem;
+  }
   .textbox__text {
     grid-column: col-start 2 / col-end 11;
+    row-gap: 2.5rem;
   }
-}
 
-// general textbox style. It is used for another blocks
-.textbox__buttons {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-  max-width: fit-content;
-  margin: auto;
-  column-gap: 24px;
-  row-gap: 1em;
-  padding-bottom: 1em;
-  .link {
-    grid-row: 2;
+  // Option: background color / box design
+
+  &.bg-blue {
+    background: $color-blue-light;
+    &.box-design {
+      background: unset;
+      .container {
+        background: $color-blue-light;
+      }
+    }
   }
-}
+  &.bg-blue-gradient {
+    background: linear-gradient(
+      180deg,
+      $color-blue-light 0%,
+      $color-blue-dark2 100%
+    );
+    &.box-design {
+      background: unset;
+      .container {
+        background: linear-gradient(
+          180deg,
+          $color-blue-light 0%,
+          $color-blue-dark2 100%
+        );
+      }
+    }
+  }
 
-// background color
-.module.textbox,
-.textbox .container {
   &.bg-blue,
   &.bg-blue-gradient {
     color: $color-white;
@@ -39,14 +53,32 @@
       color: $color-white;
     }
   }
-  &.bg-blue {
-    background-color: $color-blue-light;
+
+  // Media Queary
+  @media only screen and (max-width: $bp-smallfont) {
+    .buttons--wrapper {
+      grid-auto-flow: row;
+      min-width: 60%;
+    }
   }
+}
+
+background color .module.textbox,
+.textbox .container {
+  &.bg-blue,
   &.bg-blue-gradient {
-    background: linear-gradient(
-      180deg,
-      $color-blue-light 0%,
-      $color-blue-dark2 100%
-    );
+    color: $color-white;
+    .btn--fill {
+      background-color: $color-white;
+      color: $color-blue-light;
+      border: solid 2px $color-white;
+    }
+    .btn--empty {
+      color: $color-white;
+      border: solid 2px $color-white;
+    }
+    .link--underline {
+      color: $color-white;
+    }
   }
 }
