@@ -27,17 +27,12 @@
 <body <?php body_class(); ?>>
 
   <?php
-  wp_body_open(); //do_action( 'wp_body_open' ); ex add_action( 'wp_body_open', 'google_tags_manager_body_open_scripts' );
+  // wp_body_open(); //do_action( 'wp_body_open' ); ex add_action( 'wp_body_open', 'google_tags_manager_body_open_scripts' );
   ?>
 
   <!-- Header Before main  -->
-  <?php //get_template_part( 'template-parts/header/site-header' ); 
+  <?php get_template_part( 'template-parts/header/header' ); 
   ?>
-  <header class="header">
-    <div class="header__container container container--wide">
-      header
-    </div>
-  </header>
 
-  <!-- main  -->
-  <main class="main">
+<!-- main  -->
+<main class="main">
