@@ -13,7 +13,6 @@ class ACFBlock
 
   function register_acf_blocks()
   {
-    // register_block_type(__DIR__ . "/acf-blocks/{$this->name}");
     register_block_type(THEMEPATH . "/acf-blocks/{$this->name}");
   }
 

@@ -36,6 +36,3 @@
 
   <!-- main  -->
   <main class="main">
-    <!-- Navi text  -->
-    <?php get_template_part('template-parts/navigation/navigation');
-    ?>

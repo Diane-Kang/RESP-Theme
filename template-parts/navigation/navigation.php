@@ -1,7 +1,3 @@
-<?php
-$menu = get_query_var('navigationMenu');
-$class = get_query_var('navigationClass') ?: $menu;
-?>
 <?php //printf('<pre>%s</pre>', print_r(getMenuItems(), 1)); 
 ?>
 <?php

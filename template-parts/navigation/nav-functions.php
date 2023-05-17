@@ -8,22 +8,25 @@ register_nav_menus(array(
   'social' => __('Social', 'reboot')
 ));
 
-function getMenuItems($menu_name = 'primary')
+function getMenu($menu_name = 'primary', $depth = 0)
 {
-
-  $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-  // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
-  $menuID = $menuLocations['primary']; // Get the *primary* menu ID
-  $primaryNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
-  $previous_parent = -1;
-  $string = "";
-  foreach ((array)$primaryNav as $key => $menu_item) {
-    $string .= '<li>' . $menu_item->title . '</li>';
+  // get_nav_menu_locations() : Get our nav locations 
+  // $locations[$menu_name] : check if there is the targeted nav object already;
+  // $menu_name: from register_nav_menus
+  if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+    $nav_arg = array(
+      'theme_location'  => $menu_name,
+      'container'       => 'nav',
+      'container_class' => 'nav',
+      'menu_class'      => 'main-menu',
+      'menu_id'         => '',
+      'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+      'fallback_cb'     => false,
+      'depth'           => $depth,
+      'walker'          => new WPDocs_Walker_Nav_Menu(),
+    );
   }
-
-  return $string;
-  $parent = array();
-  return $parent;
+  return wp_nav_menu($nav_arg);
 }
 
 add_filter('nav_menu_css_class', 'remove_menu_classes', 10, 2);
@@ -126,7 +129,7 @@ class WPDocs_Walker_Nav_Menu extends Walker_Nav_Menu
     $class_names = esc_attr(implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item)));
 
     // don't need class name 
-    $class_names = "";
+    // $class_names = "";
 
     // Build HTML.
     $output .= $indent . '<li class="' . $depth_class_names . ' ' . $class_names . '">';
