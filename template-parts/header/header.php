@@ -4,13 +4,13 @@
       <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="real">
     </div>
     <nav class="nav">
-      <ul class="nav-first">
-        <li><a href="#"><span>Produkte</span> <span class="icon">a</span></a>
+      <ul class="main-menu">
+        <li class="menu-item-has-children"><a href="#"><span>Produkte</span> <span class="icon">a</span></a>
           <!-- First Tier Drop Down -->
-          <ul class="nav-second">
-            <li><a href="#">Markt-Monitor</a>
+          <ul class="sub-menu">
+            <li class="menu-item-has-children"><a href="#">Markt-Monitor</a>
               <!-- Second Tier Drop Down -->
-              <ul class="nav-third">
+              <ul class="sub-menu">
                 <li><a href="#">Funktionen</a></li>
                 <li><a href="#">Referenzen</a></li>
                 <li><a href="#">Preise</a></il>

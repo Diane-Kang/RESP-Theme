@@ -23,7 +23,7 @@
 
   nav {
     // Apply only Top Layer: Produkte Hilfe Unternehmen
-    .nav-first > li {
+    .main-menu > li {
       margin-right: 2.5rem;
       line-height: 50px;
       display: inline-block;
@@ -45,7 +45,7 @@
       }
     }
     // Apply only first dropdown:
-    .nav-second {
+    .sub-menu:first-child {
       margin-top: 1rem;
       left: 0px;
     }
