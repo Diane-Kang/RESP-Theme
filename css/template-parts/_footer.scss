@@ -1,3 +1,41 @@
 .footer {
-  background-color: beige;
+  max-width: $body-max-width;
+  margin: auto;
+  background-color: #eeeeee;
+
+  &__main {
+    background-color: #e3e3e3;
+  }
+  .sitemap {
+    .main-menu {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: $font-size-large;
+      .menu-depth-1 {
+        position: relative;
+        margin-top: 1.5rem;
+        font-size: $font-size-base;
+        &::before {
+          content: "";
+          position: absolute;
+          background: $color-blue-light;
+          height: 4px;
+          border-radius: 10px;
+          width: 100%;
+          top: -1rem;
+        }
+      }
+      .menu-item-depth-0:last-child > a {
+        display: block;
+        min-width: 120px;
+        background: url("/img/EFRE-logo.jpeg") no-repeat;
+        background-size: contain;
+        color: transparent;
+        height: 100%;
+        aspect-ratio: 0.685 /1;
+        min-width: 120px;
+      }
+    }
+  }
 }

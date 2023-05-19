@@ -215,105 +215,6 @@ h6 {
   padding-bottom: 8rem;
 }
 
-.header {
-  width: 100%;
-  max-width: 1920px;
-  padding: 0 2.5rem;
-  align-items: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: black;
-}
-.header--outer {
-  height: 130px;
-}
-.header .logo {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-right: 80px;
-}
-.header .logo img {
-  height: 50px;
-  width: auto;
-}
-.header .nav .main-menu > li {
-  margin-right: 2.5rem;
-  line-height: 50px;
-  display: inline-block;
-  border-bottom: unset;
-}
-.header .nav .main-menu > li > a > span:first-child {
-  display: inline-block;
-  position: relative;
-}
-.header .nav .main-menu > li > a > span:first-child::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #009fe3;
-  height: 4px;
-  border-radius: 10px;
-}
-.header .nav .sub-menu:first-child {
-  margin-top: 1rem;
-  left: 0px;
-}
-.header .nav ul {
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-.header .nav ul li {
-  display: inline-block;
-  padding: 1rem 0px;
-  margin: 0px 1.5em;
-  /* Display Dropdowns on Hover */
-}
-.header .nav ul li a {
-  white-space: nowrap;
-}
-.header .nav ul li:hover > ul {
-  transition-delay: 0s;
-  visibility: inherit;
-}
-.header .nav ul ul {
-  /* Hide Dropdowns by Default */
-  transition: all 0s ease 0.3s; /*delay 1s*/
-  visibility: hidden;
-  position: absolute;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  background-color: white;
-  font-size: 18px;
-  /* Fisrt Tier Dropdown */
-  /* Second, Third and more Tiers	*/
-}
-.header .nav ul ul li {
-  float: none;
-  display: list-item;
-  position: relative;
-  line-height: 1.5em;
-}
-.header .nav ul ul li:not(:last-child) {
-  border-bottom: 1px solid #e3e3e3;
-}
-.header .nav ul ul ul {
-  top: 0px;
-  right: -2em;
-  translate: 100%;
-}
-.header .nav ul ul ul li {
-  position: relative;
-  right: 0;
-}
-.header .header-meta {
-  -moz-column-gap: 3.5rem;
-       column-gap: 3.5rem;
-  margin-left: auto;
-}
-
 .btn {
   display: inline-flex;
   position: relative;
@@ -421,6 +322,144 @@ h6 {
 }
 .border.b--blue {
   border-color: blueviolet;
+}
+
+.header {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 2.5rem;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+}
+.header--outer {
+  height: 130px;
+}
+.header .logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 80px;
+}
+.header .logo img {
+  height: 50px;
+  width: auto;
+}
+.header .nav .main-menu > li {
+  margin-right: 2.5rem;
+  line-height: 50px;
+  display: inline-block;
+  border-bottom: unset;
+}
+.header .nav .main-menu > li > a > span:first-child {
+  display: inline-block;
+  position: relative;
+}
+.header .nav .main-menu > li > a > span:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #009fe3;
+  height: 4px;
+  border-radius: 10px;
+}
+.header .nav .sub-menu:first-child {
+  margin-top: 1rem;
+  left: 0px;
+}
+.header .nav ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.header .nav ul li {
+  display: inline-block;
+  padding: 1rem 0px;
+  margin: 0px 1.5em;
+  /* Display Dropdowns on Hover */
+}
+.header .nav ul li a {
+  white-space: nowrap;
+}
+.header .nav ul li:hover > ul {
+  transition-delay: 0s;
+  visibility: inherit;
+}
+.header .nav ul ul {
+  /* Hide Dropdowns by Default */
+  transition: all 0s ease 0.3s; /*delay 1s*/
+  visibility: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: white;
+  font-size: 18px;
+  /* Fisrt Tier Dropdown */
+  /* Second, Third and more Tiers	*/
+}
+.header .nav ul ul li {
+  float: none;
+  display: list-item;
+  position: relative;
+  line-height: 1.5em;
+}
+.header .nav ul ul li:not(:last-child) {
+  border-bottom: 1px solid #e3e3e3;
+}
+.header .nav ul ul ul {
+  top: 0px;
+  right: -2em;
+  translate: 100%;
+}
+.header .nav ul ul ul li {
+  position: relative;
+  right: 0;
+}
+.header .header-meta {
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+  margin-left: auto;
+}
+
+.footer {
+  max-width: 1920px;
+  margin: auto;
+  background-color: #eeeeee;
+}
+.footer__main {
+  background-color: #e3e3e3;
+}
+.footer .sitemap .main-menu {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.footer .sitemap .main-menu .menu-depth-1 {
+  position: relative;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+.footer .sitemap .main-menu .menu-depth-1::before {
+  content: "";
+  position: absolute;
+  background: #009fe3;
+  height: 4px;
+  border-radius: 10px;
+  width: 100%;
+  top: -1rem;
+}
+.footer .sitemap .main-menu .menu-item-depth-0:last-child > a {
+  display: block;
+  min-width: 120px;
+  background: url(images/EFRE-logo.c805190b.jpeg) no-repeat;
+  background-size: contain;
+  color: transparent;
+  height: 100%;
+  aspect-ratio: 0.685/1;
+  min-width: 120px;
 }
 
 .textbox .container {
