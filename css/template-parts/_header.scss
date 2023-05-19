@@ -1,7 +1,7 @@
 .header {
   // Structure
   width: 100%;
-  max-width: 1920px;
+  max-width: $body-max-width;
   padding: 0 2.5rem;
   align-items: center;
   font-size: 1.25rem;

@@ -10,12 +10,13 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "template-parts/header";
-
 @import "components/button";
 @import "components/link";
 
 @import "dev/dev";
+
+@import "template-parts/header";
+@import "template-parts/footer";
 
 @import "module/textbox";
 @import "module/teaser";
