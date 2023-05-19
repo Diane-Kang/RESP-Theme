@@ -1,12 +1,25 @@
 .footer {
   max-width: $body-max-width;
   margin: auto;
-  background-color: #eeeeee;
-
+  &__newsletter {
+    padding: 3em 0;
+    .container {
+      column-gap: 1.5rem;
+      .text {
+        text-align: right;
+        width: 300px;
+      }
+      .btn {
+        width: 180px;
+      }
+    }
+  }
   &__main {
     background-color: #e3e3e3;
+    border-top: 4px solid $color-blue-light;
   }
   .sitemap {
+    padding: 80px 0;
     .main-menu {
       display: flex;
       justify-content: space-between;
@@ -16,6 +29,8 @@
         position: relative;
         margin-top: 1.5rem;
         font-size: $font-size-base;
+        line-height: 2;
+        // blue line
         &::before {
           content: "";
           position: absolute;
@@ -28,13 +43,47 @@
       }
       .menu-item-depth-0:last-child > a {
         display: block;
+        background: url("/asset/img/EFRE-logo.jpeg") no-repeat;
+        aspect-ratio: 0.685 /1;
         min-width: 120px;
-        background: url("/img/EFRE-logo.jpeg") no-repeat;
         background-size: contain;
         color: transparent;
         height: 100%;
-        aspect-ratio: 0.685 /1;
-        min-width: 120px;
+      }
+    }
+  }
+  .social-media {
+    padding-bottom: 5rem;
+    .main-menu {
+      display: flex;
+      column-gap: 3.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // Media Queary
+  @media only screen and (max-width: $bp-largest) {
+    .container {
+      @include sidePadding;
+    }
+  }
+  @media only screen and (max-width: $bp-tablet) {
+    .sitemap .main-menu {
+      justify-content: space-around;
+      & > li {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+    .footer__newsletter .container {
+      flex-direction: column;
+      row-gap: 1.5rem;
+      .text {
+        text-align: center;
+        width: 300px;
       }
     }
   }

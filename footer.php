@@ -10,15 +10,15 @@
 
 <footer class="footer">
   <div class="footer__newsletter">
-    newsletter
-  </div>
-  <div class="footer__main">
-    <div class="container">
-      <div class="sitemap">
-        <?php getMenu($menu_name = 'footer', $depth = 2); ?>
+    <div class="container center">
+      <div class="text">Jetzt über GeoMap informiert bleiben und unseren Newsletter bestellen!</div>
+      <div class="btn btn--empty"><a href="#">jetzt anmelden</a>
       </div>
     </div>
-    <?php getMenu($menu_name = 'social'); ?>
+  </div>
+  <div class="footer__main">
+    <?php getMenu($menu_name = 'footer', $depth = 2, $nav_class = 'container sitemap'); ?>
+    <?php getMenu($menu_name = 'social', $depth = 0, $nav_class = 'social-media', $container = 'div'); ?>
   </div>
 </footer>
 

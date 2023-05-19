@@ -426,10 +426,27 @@ h6 {
 .footer {
   max-width: 1920px;
   margin: auto;
-  background-color: #eeeeee;
+}
+.footer__newsletter {
+  padding: 3em 0;
+}
+.footer__newsletter .container {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.footer__newsletter .container .text {
+  text-align: right;
+  width: 300px;
+}
+.footer__newsletter .container .btn {
+  width: 180px;
 }
 .footer__main {
   background-color: #e3e3e3;
+  border-top: 4px solid #009fe3;
+}
+.footer .sitemap {
+  padding: 80px 0;
 }
 .footer .sitemap .main-menu {
   display: flex;
@@ -441,6 +458,7 @@ h6 {
   position: relative;
   margin-top: 1.5rem;
   font-size: 1rem;
+  line-height: 2;
 }
 .footer .sitemap .main-menu .menu-depth-1::before {
   content: "";
@@ -453,13 +471,44 @@ h6 {
 }
 .footer .sitemap .main-menu .menu-item-depth-0:last-child > a {
   display: block;
-  min-width: 120px;
   background: url(images/EFRE-logo.c805190b.jpeg) no-repeat;
+  aspect-ratio: 0.685/1;
+  min-width: 120px;
   background-size: contain;
   color: transparent;
   height: 100%;
-  aspect-ratio: 0.685/1;
-  min-width: 120px;
+}
+.footer .social-media {
+  padding-bottom: 5rem;
+}
+.footer .social-media .main-menu {
+  display: flex;
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1250px) {
+  .footer .container {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .footer .sitemap .main-menu {
+    justify-content: space-around;
+  }
+  .footer .sitemap .main-menu > li:nth-child(1), .footer .sitemap .main-menu > li:nth-child(2), .footer .sitemap .main-menu > li:nth-child(3) {
+    display: none;
+  }
+  .footer .footer__newsletter .container {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .footer .footer__newsletter .container .text {
+    text-align: center;
+    width: 300px;
+  }
 }
 
 .textbox .container {

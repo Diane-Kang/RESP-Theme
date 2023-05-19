@@ -5,10 +5,11 @@ register_nav_menus(array(
   'primary' => __('Hauptnavigation', 'reboot'),
   'meta' => __('Meta', 'reboot'),
   'footer' => __('Footer', 'reboot'),
-  'social' => __('Social', 'reboot')
+  'social' => __('Social', 'reboot'),
+  'newsletter' => __('Newsletter', 'reboot')
 ));
 
-function getMenu($menu_name = 'primary', $depth = 0)
+function getMenu($menu_name = 'primary', $depth = 0, $nav_class = '', $container = 'nav')
 {
   // get_nav_menu_locations() : Get our nav locations 
   // $locations[$menu_name] : check if there is the targeted nav object already;
@@ -16,8 +17,8 @@ function getMenu($menu_name = 'primary', $depth = 0)
   if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
     $nav_arg = array(
       'theme_location'  => $menu_name,
-      'container'       => 'nav',
-      'container_class' => 'nav',
+      'container'       => $container,
+      'container_class' => 'nav ' . $nav_class,
       'menu_class'      => 'main-menu',
       'menu_id'         => '',
       'items_wrap'      => '<ul class="%2$s">%3$s</ul>',

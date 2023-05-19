@@ -26,6 +26,8 @@ function resp_theme_features()
 add_action('after_setup_theme', 'resp_theme_features');
 
 
+
+// Font localize
 class local_fonts
 {
   function __construct()
@@ -36,7 +38,7 @@ class local_fonts
   function fonts()
   {
     // Generate correspond fonts.css by https://gwfh.mranftl.com/fonts
-    wp_enqueue_style('fonts_css', get_theme_file_uri('fonts/fonts.css'), array(), 1.0, false);
+    wp_enqueue_style('fonts_css', get_theme_file_uri('asset/fonts/fonts.css'), array(), 1.0, false);
   }
 }
 
