@@ -1,3 +1,16 @@
+@mixin chevron-down-icon {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("/asset/icons/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 0.5rem;
+  transform: translateY(3px);
+}
+
 .header {
   // Structure
   width: 100%;
@@ -7,9 +20,11 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: black;
+  justify-content: space-between;
 
   &--outer {
     height: $header-height;
+    position: relative;
   }
   &--container {
     justify-content: space-between;
@@ -20,16 +35,20 @@
     width: fit-content;
     margin-right: 5vw;
     img {
-      height: 50px;
-      width: auto;
+      max-height: 50px;
     }
+  }
+  // hamburger button
+  .navigation__button {
+    display: none;
   }
 
   .nav {
     // Apply only Top Layer: Produkte Hilfe Unternehmen
     .main-menu > li {
-      // margin-right: 2.5rem;
-      margin-right: 1.5vw;
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+      }
       line-height: 50px;
       display: inline-block;
       // for dropdown
@@ -52,17 +71,9 @@
       }
       // icon
       &.menu-item-has-children > a::after {
-        content: "";
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        background-image: url("/asset/icons/chevron-down.svg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        margin-left: 0.5rem;
-        transform: translateY(3px);
+        @include chevron-down-icon;
       }
+      // shorter underline of there is icon
       &.menu-item-has-children > a::before {
         width: calc(100% - 1.5rem);
       }
@@ -92,6 +103,7 @@
       left: -1.5em;
       /* drop down li, padding, margin, underlin */
       li {
+        min-width: 130px;
         padding: 1rem 0px;
         margin: 0px 1.5em;
         line-height: 1.5em;
@@ -110,13 +122,83 @@
   }
 
   @media only screen and (max-width: $bp-largest) {
-    .nav-button.hamburger {
+    .navigation__button {
       display: block;
-      height: 20px;
-      width: 20px;
     }
     .header--container {
       display: none;
+      position: absolute;
+      max-height: calc(100vh - $header-height);
+      overflow-y: scroll;
+      bottom: 0px;
+      transform: translateY(100%);
+      width: 100%;
+      left: 0px;
+      background-color: white;
+    }
+    .navigation__checkbox:checked ~ .header--container {
+      display: block;
+      padding-bottom: 2.5em;
+    }
+
+    .navigation__checkbox:checked ~ .header--container .nav {
+      padding: 0 2.5rem;
+      ul {
+        flex-direction: column;
+        display: flex;
+      }
+      .main-menu > li {
+        margin-top: 1em;
+        font-size: 20px;
+        &:not(:last-child) {
+          margin-right: unset;
+        }
+        // for dropdown
+        position: unset;
+        // for underline
+        & > a {
+          display: block;
+        }
+        // underline
+        & > a::before {
+          width: 100%;
+          opacity: 1;
+          bottom: 0;
+        }
+        // icon
+        &.menu-item-has-children > a::after {
+          display: none;
+        }
+        .menu-item-has-children > a::before {
+          @include chevron-down-icon;
+          margin-left: unset;
+          margin-right: 0.5rem;
+        }
+      }
+      // Apply only first dropdown:
+      ul.menu-depth-1 {
+        margin-top: unset;
+        /* Hide Dropdowns by Default */
+        transition: all 0s ease 0.3s; /*delay 0.3s to close*/
+        box-shadow: unset;
+        border-radius: unset;
+        background-color: transparent;
+        // related to upper li
+        position: unset;
+        visibility: visible;
+        li {
+          margin: unset;
+        }
+        /* drop down li, padding, margin, underlin */
+      }
+      // hide 3rd level for desktop
+      ul.menu-depth-2 {
+        display: block;
+        font-size: 16px;
+        li {
+          margin-left: 1.5em;
+        }
+      }
     }
   }
 }
