@@ -5,8 +5,7 @@ register_nav_menus(array(
   'primary' => __('Hauptnavigation', 'reboot'),
   'meta' => __('Meta', 'reboot'),
   'footer' => __('Footer', 'reboot'),
-  'social' => __('Social', 'reboot'),
-  'newsletter' => __('Newsletter', 'reboot')
+  'social' => __('Social', 'reboot')
 ));
 
 function getMenu($menu_name = 'primary', $depth = 0, $nav_class = '', $container = 'nav')

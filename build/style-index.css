@@ -336,95 +336,100 @@ h6 {
 .header--outer {
   height: 130px;
 }
+.header--container {
+  justify-content: space-between;
+  flex-grow: 1;
+}
 .header .logo {
   width: -moz-fit-content;
   width: fit-content;
-  margin-right: 80px;
+  margin-right: 5vw;
 }
 .header .logo img {
   height: 50px;
   width: auto;
 }
 .header .nav .main-menu > li {
-  margin-right: 2.5rem;
+  margin-right: 1.5vw;
   line-height: 50px;
-  display: inline-block;
-  border-bottom: unset;
-}
-.header .nav .main-menu > li > a > span:first-child {
   display: inline-block;
   position: relative;
 }
-.header .nav .main-menu > li > a > span:first-child::after {
+.header .nav .main-menu > li > a {
+  position: relative;
+}
+.header .nav .main-menu > li > a::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -0.5em;
   left: 0;
-  right: 0;
+  width: 100%;
   background: #009fe3;
   height: 4px;
   border-radius: 10px;
+  opacity: 0;
 }
-.header .nav .sub-menu:first-child {
-  margin-top: 1rem;
-  left: 0px;
-}
-.header .nav ul {
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-.header .nav ul li {
+.header .nav .main-menu > li.menu-item-has-children > a::after {
+  content: "";
   display: inline-block;
-  padding: 1rem 0px;
-  margin: 0px 1.5em;
-  /* Display Dropdowns on Hover */
+  width: 1rem;
+  height: 1rem;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgogIDxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMS42NDYgNC42NDZhLjUuNSAwIDAgMSAuNzA4IDBMOCAxMC4yOTNsNS42NDYtNS42NDdhLjUuNSAwIDAgMSAuNzA4LjcwOGwtNiA2YS41LjUgMCAwIDEtLjcwOCAwbC02LTZhLjUuNSAwIDAgMSAwLS43MDh6Ii8+Cjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 0.5rem;
+  transform: translateY(3px);
 }
-.header .nav ul li a {
-  white-space: nowrap;
+.header .nav .main-menu > li.menu-item-has-children > a::before {
+  width: calc(100% - 1.5rem);
 }
-.header .nav ul li:hover > ul {
-  transition-delay: 0s;
+.header .nav .main-menu > li:hover > a::before {
+  opacity: 1;
+  transition: 0.5s;
+}
+.header .nav .main-menu > li:hover > ul {
   visibility: inherit;
 }
-.header .nav ul ul {
+.header .nav ul.menu-depth-1 {
+  margin-top: 1rem;
+  font-size: 18px;
   /* Hide Dropdowns by Default */
-  transition: all 0s ease 0.3s; /*delay 1s*/
   visibility: hidden;
-  position: absolute;
+  transition: all 0s ease 0.3s; /*delay 0.3s to close*/
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   background-color: white;
-  font-size: 18px;
-  /* Fisrt Tier Dropdown */
-  /* Second, Third and more Tiers	*/
+  position: absolute;
+  left: -1.5em;
+  /* drop down li, padding, margin, underlin */
 }
-.header .nav ul ul li {
-  float: none;
-  display: list-item;
-  position: relative;
+.header .nav ul.menu-depth-1 li {
+  padding: 1rem 0px;
+  margin: 0px 1.5em;
   line-height: 1.5em;
 }
-.header .nav ul ul li:not(:last-child) {
+.header .nav ul.menu-depth-1 li:not(:last-child) {
   border-bottom: 1px solid #e3e3e3;
 }
-.header .nav ul ul ul {
-  top: 0px;
-  right: -2em;
-  translate: 100%;
+.header .nav ul.menu-depth-1 a {
+  white-space: nowrap;
 }
-.header .nav ul ul ul li {
-  position: relative;
-  right: 0;
+.header .nav ul.menu-depth-2 {
+  display: none;
 }
-.header .header-meta {
-  -moz-column-gap: 3.5rem;
-       column-gap: 3.5rem;
-  margin-left: auto;
+@media only screen and (max-width: 1250px) {
+  .header .nav-button.hamburger {
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .header .header--container {
+    display: none;
+  }
 }
 
 .footer {
-  max-width: 1920px;
   margin: auto;
 }
 .footer__newsletter {
@@ -840,6 +845,31 @@ h6 {
 }
 .card-list.graphic-icon .card__image {
   padding: 20%;
+}
+
+.subnavigation .container {
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+}
+.subnavigation .container a {
+  margin: 2px 2px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+}
+.subnavigation .container a.active {
+  background: #009fe3;
+  color: white;
+}
+.subnavigation .container a.active:hover {
+  background: #0064a3;
+}
+.subnavigation .container a:hover {
+  background: #e3e3e3;
+}
+.subnavigation--mobile {
+  display: none;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

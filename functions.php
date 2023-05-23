@@ -11,6 +11,7 @@ require_once(FUNCTIONSPATH . 'init.php');
 require_once(FUNCTIONSPATH . 'acfblock.php');
 // Add funktions for template building
 require_once(THEMEPATH . '/template-parts/navigation/nav-functions.php');
+require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
 
 
 

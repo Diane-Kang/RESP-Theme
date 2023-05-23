@@ -99,6 +99,11 @@
                 "param": "block",
                 "operator": "!=",
                 "value": "acf\/card-list"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/subnavigation"
             }
         ]
     ],
@@ -111,5 +116,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683896539
+    "modified": 1684747493
 }

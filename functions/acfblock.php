@@ -26,3 +26,4 @@ new ACFblock("textbox");
 new ACFblock("teaser");
 new ACFblock("imagetext");
 new ACFblock("card-list");
+new ACFblock("subnavigation");

@@ -11,10 +11,14 @@
   &--outer {
     height: $header-height;
   }
+  &--container {
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 
   .logo {
     width: fit-content;
-    margin-right: 80px;
+    margin-right: 5vw;
     img {
       height: 50px;
       width: auto;
@@ -24,88 +28,95 @@
   .nav {
     // Apply only Top Layer: Produkte Hilfe Unternehmen
     .main-menu > li {
-      margin-right: 2.5rem;
+      // margin-right: 2.5rem;
+      margin-right: 1.5vw;
       line-height: 50px;
       display: inline-block;
-      border-bottom: unset;
-      & > a > span:first-child {
-        display: inline-block;
+      // for dropdown
+      position: relative;
+      // for underline
+      & > a {
         position: relative;
-        // Underline
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: $color-blue-light;
-          height: 4px;
-          border-radius: 10px;
-        }
+      }
+      // underline
+      & > a::before {
+        content: "";
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+        width: 100%;
+        background: $color-blue-light;
+        height: 4px;
+        border-radius: 10px;
+        opacity: 0;
+      }
+      // icon
+      &.menu-item-has-children > a::after {
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-image: url("/asset/icons/chevron-down.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin-left: 0.5rem;
+        transform: translateY(3px);
+      }
+      &.menu-item-has-children > a::before {
+        width: calc(100% - 1.5rem);
+      }
+      // hover: show underline
+      &:hover > a::before {
+        opacity: 1;
+        transition: 0.5s;
+      }
+      // hover: show sub-menu
+      &:hover > ul {
+        visibility: inherit;
       }
     }
+
     // Apply only first dropdown:
-    .sub-menu:first-child {
+    ul.menu-depth-1 {
       margin-top: 1rem;
-      left: 0px;
-    }
-    ul {
-      padding: 0;
-      margin: 0;
-      position: relative;
+      font-size: 18px;
+      /* Hide Dropdowns by Default */
+      visibility: hidden;
+      transition: all 0s ease 0.3s; /*delay 0.3s to close*/
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      background-color: white;
+      // related to upper li
+      position: absolute;
+      left: -1.5em;
+      /* drop down li, padding, margin, underlin */
       li {
-        display: inline-block;
         padding: 1rem 0px;
         margin: 0px 1.5em;
-        a {
-          white-space: nowrap;
-        }
-        /* Display Dropdowns on Hover */
-        &:hover > ul {
-          // display: inherit;
-          transition-delay: 0s;
-          visibility: inherit;
+        line-height: 1.5em;
+        &:not(:last-child) {
+          border-bottom: 1px solid #e3e3e3;
         }
       }
-
-      ul {
-        /* Hide Dropdowns by Default */
-        // display: none;
-        transition: all 0s ease 0.3s; /*delay 1s*/
-        visibility: hidden;
-        // visibility: visible;
-        position: absolute;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-        border-radius: 8px;
-        background-color: white;
-        font-size: 18px;
-        /* Fisrt Tier Dropdown */
-        li {
-          float: none;
-          display: list-item;
-          position: relative;
-          line-height: 1.5em;
-          &:not(:last-child) {
-            border-bottom: 1px solid #e3e3e3;
-          }
-        }
-        /* Second, Third and more Tiers	*/
-        ul {
-          top: 0px;
-          right: -2em;
-          translate: 100%;
-          // border: solid 1px;
-        }
-        ul li {
-          position: relative;
-          right: 0;
-        }
+      a {
+        white-space: nowrap;
       }
+    }
+    // hide 3rd level for desktop
+    ul.menu-depth-2 {
+      display: none;
     }
   }
 
-  .header-meta {
-    column-gap: 3.5rem;
-    margin-left: auto;
+  @media only screen and (max-width: $bp-largest) {
+    .nav-button.hamburger {
+      display: block;
+      height: 20px;
+      width: 20px;
+    }
+    .header--container {
+      display: none;
+    }
   }
 }
