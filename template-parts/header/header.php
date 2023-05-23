@@ -5,9 +5,9 @@
         <img src="<?php echo get_template_directory_uri(); ?>/asset/img/logo.png" alt="real">
       </a>
     </div>
-    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-    <label for="navi-toggle" class="navigation__button">
-      <span class="navigation__icon">&nbsp;</span>
+    <input type="checkbox" class="hamburger__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="hamburger__button">
+      <span class="hamburger__icon">&nbsp;</span>
     </label>
     <div class="header--container flex">
       <?php getMenu('primary', 3, 'header-main-navi'); ?>
