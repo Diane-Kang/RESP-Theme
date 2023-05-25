@@ -129,11 +129,12 @@
       display: none;
       position: absolute;
       max-height: calc(100vh - $header-height);
-      overflow-y: scroll;
-      bottom: 0px;
-      transform: translateY(100%);
       width: 100%;
       left: 0px;
+      bottom: 0px;
+      transform: translateY(100%);
+      z-index: 1;
+      overflow-y: scroll;
       background-color: white;
     }
     .hamburger__checkbox:checked ~ .header--container {

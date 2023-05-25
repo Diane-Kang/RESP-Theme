@@ -1,0 +1,15 @@
+{
+  "name": "acf/h-line",
+  "title": "Linie",
+  "description": "Holizontale Linie",
+  "category": "design",
+  "icon": "minus",
+  "keywords": ["design", "line", "spacer"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "h-line.php"
+  },
+  "supports": {
+    "align": false
+  }
+}

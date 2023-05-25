@@ -483,11 +483,12 @@ h6 {
     display: none;
     position: absolute;
     max-height: calc(100vh - 130px);
-    overflow-y: scroll;
-    bottom: 0px;
-    transform: translateY(100%);
     width: 100%;
     left: 0px;
+    bottom: 0px;
+    transform: translateY(100%);
+    z-index: 1;
+    overflow-y: scroll;
     background-color: white;
   }
   .header .hamburger__checkbox:checked ~ .header--container {
@@ -998,6 +999,82 @@ h6 {
 }
 .subnavigation--mobile {
   display: none;
+}
+
+.h-line .bg-blue-gradient {
+  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
+}
+.h-line .bg-blue {
+  background-color: #009fe3;
+}
+.h-line .line {
+  grid-column: col-start 2/col-end 11;
+  height: 4px;
+}
+
+.testimonial .container {
+  align-items: start;
+}
+.testimonial .image,
+.testimonial .textbox {
+  grid-row: 1;
+}
+.testimonial .image {
+  grid-column: 2/span 2;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.testimonial .image img {
+  position: absolute;
+  top: 0;
+}
+.testimonial .textbox {
+  margin-left: 40px;
+  grid-column: span 8;
+}
+.testimonial .textbox .quote {
+  font-size: 1.75rem;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  line-height: 1.25;
+}
+.testimonial .textbox .quote::before {
+  content: open-quote;
+}
+.testimonial .textbox .quote::after {
+  content: close-quote;
+}
+.testimonial .textbox .name,
+.testimonial .textbox .role {
+  font-size: 16px;
+}
+.testimonial .small .image {
+  grid-column: 4/span 1;
+}
+.testimonial .small .textbox {
+  grid-column: 5/span 5;
+  margin: unset;
+}
+.testimonial .small .textbox .quote {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.testimonial .text-image .textbox {
+  margin-left: unset;
+  margin-right: 40px;
+  grid-column: 2/span 8;
+}
+.testimonial .text-image .image {
+  grid-column: span 2/-2;
+}
+.testimonial .text-image.small .textbox {
+  grid-column: 4/span 5;
+}
+.testimonial .text-image.small .image {
+  grid-column: 9/span 1;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

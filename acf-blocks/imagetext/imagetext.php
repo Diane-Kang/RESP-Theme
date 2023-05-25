@@ -5,11 +5,18 @@
  *
  */
 
-// Support default anchor.
+// Support custom "anchor" values.
 $anchor = '';
+// From wp default
 if (!empty($block['anchor'])) {
   $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
 }
+// From ACF Block
+$custom_anchor      = get_field('block::cssid');
+if (!empty($custom_anchor)) {
+  $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
+}
+
 
 // // Load values and assign defaults.
 $device             = get_field('block::device') == "all" ? '' : 'display--' . get_field('block::device');
@@ -32,11 +39,6 @@ $image              = get_field('block::imagetext:image');
 $content_title      = get_field('block::imagetext:title');
 $text_content       = get_field('block::imagetext:text');
 
-
-$custom_anchor      = get_field('block::cssid');
-if (!empty($custom_anchor)) {
-  $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
-}
 
 
 $module_classes = "{$device} {$bg_color} {$box_design}";

@@ -104,6 +104,16 @@
                 "param": "block",
                 "operator": "!=",
                 "value": "acf\/subnavigation"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/h-line"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/testimonial"
             }
         ]
     ],
@@ -116,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684747493
+    "modified": 1685004647
 }

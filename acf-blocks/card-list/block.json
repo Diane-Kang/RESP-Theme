@@ -2,9 +2,9 @@
   "name": "acf/card-list",
   "title": "Kacheln",
   "description": "Kacheln",
-  "category": "formatting",
-  "icon": "text",
-  "keywords": ["text", "image"],
+  "category": "",
+  "icon": "columns",
+  "keywords": ["text", "media"],
   "acf": {
     "mode": "preview",
     "renderTemplate": "card-list.php"

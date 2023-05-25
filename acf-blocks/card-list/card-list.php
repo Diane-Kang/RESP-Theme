@@ -7,9 +7,17 @@
 
 // Support custom "anchor" values.
 $anchor = '';
+// From wp default
 if (!empty($block['anchor'])) {
   $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
 }
+// From ACF Block
+$custom_anchor      = get_field('block::cssid');
+if (!empty($custom_anchor)) {
+  $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
+}
+
+
 
 // // Load values and assign defaults.
 $device             = get_field('block::device') == "all" ? '' : 'display--' . get_field('block::device');
@@ -22,7 +30,6 @@ $box_design         = get_field('block::boxdesign') == "box-design" ? "box-desig
 
 $graphic_type       = get_field('block::card-list:image-type') == "image" ? "" : "graphic-icon";
 $order              = get_field('block::card-list:order');
-$$custom_anchor     = get_field('block::cssid');
 
 
 if (!empty($custom_anchor)) {

@@ -2,8 +2,8 @@
   "name": "acf/teaser",
   "title": "Teaser",
   "description": "Teaser Block",
-  "category": "formatting",
-  "icon": "text",
+  "category": "text",
+  "icon": "button",
   "keywords": ["text"],
   "acf": {
     "renderTemplate": "teaser.php"

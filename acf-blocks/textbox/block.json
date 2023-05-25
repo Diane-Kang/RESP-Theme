@@ -1,9 +1,8 @@
 {
   "name": "acf/textbox",
   "title": "Textbox",
-  "description": "A custom textbox block.",
-  "style": ["file:./textbox.css"],
-  "category": "formatting",
+  "description": "Formatted Text Block",
+  "category": "text",
   "icon": "text",
   "keywords": ["text"],
   "acf": {

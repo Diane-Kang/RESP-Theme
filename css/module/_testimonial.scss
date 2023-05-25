@@ -1,0 +1,77 @@
+.testimonial {
+  // Basic structure
+  .container {
+    align-items: start;
+  }
+  .image,
+  .textbox {
+    grid-row: 1;
+  }
+  .image {
+    grid-column: 2 / span 2;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+    }
+  }
+  .textbox {
+    margin-left: 40px;
+    grid-column: span 8;
+    .quote {
+      font-size: 1.75rem;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+      line-height: 1.25;
+      &::before {
+        content: open-quote;
+      }
+      &::after {
+        content: close-quote;
+      }
+    }
+    .name,
+    .role {
+      font-size: 16px;
+    }
+  }
+
+  // option small / big
+  .small {
+    .image {
+      grid-column: 4 / span 1;
+    }
+    .textbox {
+      grid-column: 5 / span 5;
+      margin: unset;
+      .quote {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // option Foto|Zitat / Zitat|Foto
+  .text-image {
+    .textbox {
+      margin-left: unset;
+      margin-right: 40px;
+      grid-column: 2 / span 8;
+    }
+    .image {
+      grid-column: span 2 / -2;
+    }
+    &.small {
+      .textbox {
+        grid-column: 4 / span 5;
+      }
+      .image {
+        grid-column: 9 / span 1;
+      }
+    }
+  }
+}

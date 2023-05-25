@@ -2,7 +2,8 @@
   "name": "acf/subnavigation",
   "title": "Sub Navigation",
   "description": "Sub Navigation",
-  "icon": "text",
+  "category": "widgets",
+  "icon": "editor-insertmore",
   "keywords": ["navi"],
   "acf": {
     "mode": "preview",

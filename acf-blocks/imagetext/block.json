@@ -2,7 +2,7 @@
   "name": "acf/imagetext",
   "title": "ImageText",
   "description": "ImageText",
-  "icon": "text",
+  "icon": "align-left",
   "keywords": ["text", "image"],
   "acf": {
     "mode": "preview",

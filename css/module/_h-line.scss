@@ -1,0 +1,16 @@
+.h-line {
+  .bg-blue-gradient {
+    background: linear-gradient(
+      180deg,
+      $color-blue-light 0%,
+      $color-blue-dark2 100%
+    );
+  }
+  .bg-blue {
+    background-color: $color-blue-light;
+  }
+  .line {
+    grid-column: col-start 2 / col-end 11;
+    height: 4px;
+  }
+}
