@@ -1,25 +1,19 @@
 <?php
-// fontend style
-function resp_theme_style_files()
+// Enqueue style and js
+function resp_theme_files()
 {
   wp_enqueue_style('resp_theme_main_styles', get_theme_file_uri('/build/style-index.css'));
+  // Javascript need to be loaded in footer: last variable need to be true
+  wp_enqueue_script('resp_theme_js', get_template_directory_uri() . '/build/index.js', array(), '', true);
 }
-add_action('wp_enqueue_scripts', 'resp_theme_style_files');
+add_action('wp_enqueue_scripts', 'resp_theme_files');
 
-add_action('enqueue_block_editor_assets', 'tt2test');
-
-function tt2test()
+// Add custom acf block editor(backend) style
+function enqueue_block_editor_custom_files()
 {
-
-  wp_register_style(
-    'tt2test',
-    get_template_directory_uri() . '/build/acf-editor-style.css',
-    array(),
-    'versionstring'
-  );
-
-  wp_enqueue_style('tt2test');
+  wp_enqueue_style('acf-block-editor-style', get_template_directory_uri() . '/css/acf-editor-style.css');
 }
+add_action('enqueue_block_editor_assets', 'enqueue_block_editor_custom_files');
 
 function resp_theme_features()
 {
@@ -54,6 +48,4 @@ class local_fonts
     wp_enqueue_style('fonts_css', get_theme_file_uri('asset/fonts/fonts.css'), array(), 1.0, false);
   }
 }
-
-/* Make hooks accessible for other plugins/themes with given variable */
 new local_fonts();

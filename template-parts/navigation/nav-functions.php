@@ -37,6 +37,7 @@ function remove_menu_classes($classes)
   // List of allowed menu classes
   $allowed =  array(
     'current-menu-item',
+    'current-menu-ancestor',
     'menu-item-has-children',
     'first',
     'last',

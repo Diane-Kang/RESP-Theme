@@ -44,6 +44,9 @@
   }
 
   .nav {
+    a:hover {
+      color: $color-blue-dark;
+    }
     // Apply only Top Layer: Produkte Hilfe Unternehmen
     .main-menu > li {
       &:not(:last-child) {
@@ -64,7 +67,7 @@
         bottom: -0.5em;
         left: 0;
         width: 100%;
-        background: $color-blue-light;
+        background: $color-blue-dark;
         height: 4px;
         border-radius: 10px;
         opacity: 0;
@@ -72,35 +75,58 @@
       // icon
       &.menu-item-has-children > a::after {
         @include chevron-down-icon;
+        transition: all 0.5s;
+      }
+      &.active.menu-item-has-children > a::after {
+        transform: rotate(180deg);
+        transition: all 0.8s;
       }
       // shorter underline of there is icon
       &.menu-item-has-children > a::before {
         width: calc(100% - 1.5rem);
       }
-      // hover: show underline
-      &:hover > a::before {
+      //show underline
+      &.current-menu-ancestor a:before,
+      &.current-menu-item a:before {
         opacity: 1;
-        transition: 0.5s;
       }
-      // hover: show sub-menu
-      &:hover > ul {
+      // with click(js) sub menu open
+      &.active > ul {
         visibility: inherit;
       }
     }
 
     // Apply only first dropdown:
     ul.menu-depth-1 {
-      margin-top: 1rem;
       font-size: 18px;
       /* Hide Dropdowns by Default */
       visibility: hidden;
-      transition: all 0s ease 0.3s; /*delay 0.3s to close*/
+      /* Dropdown box decoration */
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-radius: 8px;
       background-color: white;
       // related to upper li
       position: absolute;
+      margin-top: 1rem;
       left: -1.5em;
+      .current-menu-item,
+      .current-menu-ancestor {
+        a {
+          position: relative;
+        }
+        a::before {
+          display: block;
+          background-color: $color-blue-dark;
+          border-radius: 20px;
+          height: 1rem;
+          width: 3px;
+          content: "";
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: -1rem;
+        }
+      }
       /* drop down li, padding, margin, underlin */
       li {
         min-width: 130px;

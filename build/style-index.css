@@ -329,12 +329,14 @@ h6 {
   width: 30px;
   height: 3px;
   background-color: black;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .hamburger__icon::before, .hamburger__icon::after {
   content: "";
   position: absolute;
   left: 0;
-  transition: all 0.2s;
+  transition: all 0.8s;
 }
 .hamburger__icon::before {
   top: -9px;
@@ -403,6 +405,9 @@ h6 {
 .header .hamburger__button {
   display: none;
 }
+.header .nav a:hover {
+  color: #0064a3;
+}
 .header .nav .main-menu > li {
   line-height: 50px;
   display: inline-block;
@@ -420,7 +425,7 @@ h6 {
   bottom: -0.5em;
   left: 0;
   width: 100%;
-  background: #009fe3;
+  background: #0064a3;
   height: 4px;
   border-radius: 10px;
   opacity: 0;
@@ -436,29 +441,50 @@ h6 {
   background-size: contain;
   margin-left: 0.5rem;
   transform: translateY(3px);
+  transition: all 0.5s;
+}
+.header .nav .main-menu > li.active.menu-item-has-children > a::after {
+  transform: rotate(180deg);
+  transition: all 0.8s;
 }
 .header .nav .main-menu > li.menu-item-has-children > a::before {
   width: calc(100% - 1.5rem);
 }
-.header .nav .main-menu > li:hover > a::before {
+.header .nav .main-menu > li.current-menu-ancestor a:before, .header .nav .main-menu > li.current-menu-item a:before {
   opacity: 1;
-  transition: 0.5s;
 }
-.header .nav .main-menu > li:hover > ul {
+.header .nav .main-menu > li.active > ul {
   visibility: inherit;
 }
 .header .nav ul.menu-depth-1 {
-  margin-top: 1rem;
   font-size: 18px;
   /* Hide Dropdowns by Default */
   visibility: hidden;
-  transition: all 0s ease 0.3s; /*delay 0.3s to close*/
+  /* Dropdown box decoration */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   background-color: white;
   position: absolute;
+  margin-top: 1rem;
   left: -1.5em;
   /* drop down li, padding, margin, underlin */
+}
+.header .nav ul.menu-depth-1 .current-menu-item a,
+.header .nav ul.menu-depth-1 .current-menu-ancestor a {
+  position: relative;
+}
+.header .nav ul.menu-depth-1 .current-menu-item a::before,
+.header .nav ul.menu-depth-1 .current-menu-ancestor a::before {
+  display: block;
+  background-color: #0064a3;
+  border-radius: 20px;
+  height: 1rem;
+  width: 3px;
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: -1rem;
 }
 .header .nav ul.menu-depth-1 li {
   min-width: 130px;

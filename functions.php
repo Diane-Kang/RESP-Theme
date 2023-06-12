@@ -25,7 +25,7 @@ require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
 function allowedBlockTypes($original_allowedBlocks)
 {
   global $allowedBlocks;
-  array_push($allowedBlocks, "core/spacer");
+  array_push($allowedBlocks, "core/spacer", "core/paragraph", "core/heading", "core/columns");
   return $allowedBlocks;
   // return $original_allowedBlocks;
 }
