@@ -32,7 +32,12 @@ ul {
   list-style-type: none;
 }
 
-a {
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
+// only temp Use for dev note
+*:not(.a-deco-active) > a {
   text-decoration: none;
   color: inherit;
 }

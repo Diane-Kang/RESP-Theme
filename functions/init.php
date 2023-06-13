@@ -49,3 +49,24 @@ class local_fonts
   }
 }
 new local_fonts();
+
+
+
+function registerTypeThemeRef()
+{
+  register_post_type(
+    'theme_reference',
+    array(
+      'labels' => array(
+        'name' => __('Theme Ref'),
+        'singular_name' => __('Theme Ref')
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-excerpt-view'
+    )
+  );
+}
+
+add_action('init', 'registerTypeThemeRef');

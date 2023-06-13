@@ -5,7 +5,7 @@ $allowedBlocks = [];
 define('THEMEPATH', get_template_directory());
 define('FUNCTIONSPATH', THEMEPATH . '/functions/');
 
-// initial settings : add css, Lato font localize
+// initial settings : add css, Lato font localize, custom post type: theme reference, 
 require_once(FUNCTIONSPATH . 'init.php');
 // initial settings : acf block register 
 require_once(FUNCTIONSPATH . 'acfblock.php');

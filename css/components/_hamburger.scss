@@ -27,6 +27,11 @@ $hambuger-width: 30px;
       background-color: black;
       transition-duration: 0.5s;
       transition-timing-function: ease-in-out;
+      border-radius: 20px;
+    }
+
+    & {
+      transition-duration: 0.1s;
     }
 
     &::before,
@@ -45,24 +50,24 @@ $hambuger-width: 30px;
     }
   }
 
-  &__button:hover &__icon::before {
-    top: calc(-1 * $hambuger-width * 0.4);
-  }
+  // &__button:hover &__icon::before {
+  //   top: calc(-1 * $hambuger-width * 0.4);
+  // }
 
-  &__button:hover &__icon::after {
-    top: calc($hambuger-width * 0.4);
-  }
+  // &__button:hover &__icon::after {
+  //   top: calc($hambuger-width * 0.4);
+  // }
 
   &__checkbox:checked + &__button &__icon {
     background-color: transparent;
   }
   &__checkbox:checked + &__button &__icon::before {
     top: 0;
-    transform: rotate(135deg);
+    transform: rotate(45deg);
   }
 
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
-    transform: rotate(-135deg);
+    transform: rotate(-45deg);
   }
 }

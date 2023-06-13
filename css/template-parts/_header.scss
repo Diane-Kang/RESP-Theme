@@ -2,13 +2,24 @@
   content: "";
   display: inline-block;
   width: 1rem;
-  height: 1rem;
+  aspect-ratio: 1;
   background-image: url("/asset/icons/chevron-down.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   margin-left: 0.5rem;
   transform: translateY(3px);
+}
+
+@mixin underline {
+  content: "";
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  width: 100%;
+  background: $color-blue-dark;
+  height: 4px;
+  border-radius: 10px;
 }
 
 .header {
@@ -43,7 +54,7 @@
     display: none;
   }
 
-  .nav {
+  .header--container:not(.mobile-navi-open) .nav {
     a:hover {
       color: $color-blue-dark;
     }
@@ -62,14 +73,7 @@
       }
       // underline
       & > a::before {
-        content: "";
-        position: absolute;
-        bottom: -0.5em;
-        left: 0;
-        width: 100%;
-        background: $color-blue-dark;
-        height: 4px;
-        border-radius: 10px;
+        @include underline;
         opacity: 0;
       }
       // icon
@@ -130,12 +134,9 @@
       /* drop down li, padding, margin, underlin */
       li {
         min-width: 130px;
-        padding: 1rem 0px;
+        padding: 0.8rem 0px;
         margin: 0px 1.5em;
         line-height: 1.5em;
-        &:not(:last-child) {
-          border-bottom: 1px solid #e3e3e3;
-        }
       }
       a {
         white-space: nowrap;
@@ -166,64 +167,59 @@
     .hamburger__checkbox:checked ~ .header--container {
       display: block;
       padding-bottom: 2.5em;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
-
-    .hamburger__checkbox:checked ~ .header--container .nav {
+    // .hamburger__checkbox:checked ~ .header--container == .header--container.mobile-navi-open
+    .header--container.mobile-navi-open .nav {
+      font-size: 18px;
+      font-weight: 400;
       padding: 0 2.5rem;
-      ul {
+      ul.main-menu {
         flex-direction: column;
         display: flex;
       }
-      .main-menu > li {
-        margin-top: 1em;
-        font-size: 20px;
-        &:not(:last-child) {
-          margin-right: unset;
-        }
-        // for dropdown
-        position: unset;
-        // for underline
+      li.menu-item-depth-0 {
+        margin-bottom: 3rem;
         & > a {
-          display: block;
-        }
-        // underline
-        & > a::before {
-          width: 100%;
-          opacity: 1;
-          bottom: 0;
-        }
-        // icon
-        &.menu-item-has-children > a::after {
-          display: none;
-        }
-        .menu-item-has-children > a::before {
-          @include chevron-down-icon;
-          margin-left: unset;
-          margin-right: 0.5rem;
+          font-weight: 700;
         }
       }
-      // Apply only first dropdown:
       ul.menu-depth-1 {
-        margin-top: unset;
-        /* Hide Dropdowns by Default */
-        transition: all 0s ease 0.3s; /*delay 0.3s to close*/
-        box-shadow: unset;
-        border-radius: unset;
-        background-color: transparent;
-        // related to upper li
-        position: unset;
-        visibility: visible;
+        margin-left: 1rem;
         li {
-          margin: unset;
+          margin-top: 1rem;
         }
-        /* drop down li, padding, margin, underlin */
+        li.menu-item-has-children {
+          //icon
+          & > a {
+            position: relative;
+            &::before {
+              @include chevron-down-icon;
+              transform: rotate(-90deg) translate(-5px, -1.5rem);
+              position: absolute;
+              left: 0px;
+            }
+          }
+          &.active > ul {
+            display: block;
+          }
+        }
       }
-      // hide 3rd level for desktop
+
       ul.menu-depth-2 {
-        display: block;
-        font-size: 16px;
+        display: none;
         li {
-          margin-left: 1.5em;
+          margin-bottom: 2rem;
+        }
+        li.current-menu-item {
+          & > a {
+            position: relative;
+            &:before {
+              @include underline;
+            }
+          }
         }
       }
     }
