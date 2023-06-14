@@ -641,6 +641,8 @@ h6 {
   height: 100%;
 }
 .footer .social-media {
+  font-size: 35px;
+  color: #4a4a4a;
   padding-bottom: 5rem;
 }
 .footer .social-media .main-menu {
@@ -670,6 +672,13 @@ h6 {
   .footer .footer__newsletter .container .text {
     text-align: center;
     width: 300px;
+  }
+}
+@media only screen and (max-width: 900px) and (max-width: 600px) {
+  .footer .social-media .main-menu {
+    -moz-column-gap: unset;
+         column-gap: unset;
+    justify-content: space-around;
   }
 }
 

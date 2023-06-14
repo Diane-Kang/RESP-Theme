@@ -70,3 +70,12 @@ function registerTypeThemeRef()
 }
 
 add_action('init', 'registerTypeThemeRef');
+
+
+// Load Font Awesome
+add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
+function enqueue_font_awesome()
+{
+  // wp_enqueue_script('font-awesome-svg', get_template_directory_uri() . '/asset/fontawesome-kit-resp/js/all.js');
+  wp_enqueue_style('font-awesome-css', get_template_directory_uri() . '/asset/fontawesome-kit-resp/css/all.css');
+}
