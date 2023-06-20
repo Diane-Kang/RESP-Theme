@@ -12,8 +12,9 @@ require_once(FUNCTIONSPATH . 'acfblock.php');
 // Add funktions for template building
 require_once(THEMEPATH . '/template-parts/navigation/nav-functions.php');
 require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
-
-
+// Theme Feature
+//-- Blog: default editor ignored -> acf would be used 
+add_filter('use_block_editor_for_post', '__return_false', 10);
 
 
 /**

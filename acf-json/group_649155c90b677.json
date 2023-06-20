@@ -1,0 +1,119 @@
+{
+    "key": "group_649155c90b677",
+    "title": "Page: Redirect",
+    "fields": [
+        {
+            "key": "field_649155c9455cf",
+            "label": "Blog Inhalt",
+            "name": "blog_content",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6491564ba18ad": {
+                    "key": "layout_6491564ba18ad",
+                    "name": "heading",
+                    "label": "Heading",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_64915689455d1",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64901e58d6380"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_649178d59cd7c": {
+                    "key": "layout_649178d59cd7c",
+                    "name": "paragraph",
+                    "label": "Paragraph",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_649178e59cd7f",
+                            "label": "Paragraph",
+                            "name": "paragraph",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "Bitte keinen Heading hier verwendet.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1687257131
+}

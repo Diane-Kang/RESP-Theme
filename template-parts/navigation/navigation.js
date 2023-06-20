@@ -18,8 +18,8 @@ export default class Navigation {
       this.toggleSubmenu();
     } else if (this.getWidth() < 1250) {
       this.toggleSubmenu_mobile();
-      this.openNavContainer();
     }
+    this.openNavContainer();
   }
 
   closeAllmenu() {
