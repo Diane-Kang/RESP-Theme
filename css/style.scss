@@ -13,6 +13,8 @@
 @import "components/button";
 @import "components/link";
 @import "components/hamburger";
+@import "components/scrollup";
+@import "components/toggle-btn";
 
 @import "dev/dev";
 
@@ -26,5 +28,8 @@
 @import "module/subnavigation";
 @import "module/h-line";
 @import "module/testimonial";
+@import "module/price-table";
 
+@import "template/single";
+@import "template/cat-archive";
 // placeholder image generator https://placeholderimage.dev/

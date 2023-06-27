@@ -1,0 +1,113 @@
+.price-table {
+  //basic struture
+  .heading1,
+  .block-wrapper {
+    margin: 5rem auto;
+  }
+  .block {
+    width: 100%;
+    height: 100%;
+    // block--label
+    &--label {
+      text-align: left;
+      .btn {
+        visibility: hidden;
+      }
+      ul {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+      }
+      li {
+        position: relative;
+        i {
+          position: absolute;
+          right: 1rem;
+          top: 50%;
+          transform: translate(50%, -50%);
+          font-size: 1.5rem;
+          color: gray;
+          &:hover ~ .info {
+            visibility: visible;
+          }
+        }
+        .info {
+          margin-top: 1em;
+          position: absolute;
+          z-index: 2;
+          background-color: white;
+          line-height: 1.25em;
+          padding: 1rem;
+          box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+          visibility: hidden;
+        }
+      }
+      li::before {
+        content: "";
+        width: 1rem;
+        display: inline-block;
+      }
+    }
+    // block--item
+    &--item {
+      border-radius: 16px;
+      border: 1px solid $color-grey-light;
+      &.highlight {
+        border-color: $color-blue-dark;
+        background-color: $color-blue-light-light;
+        li:not(:last-child) {
+          border-bottom-color: $color-blue-dark;
+        }
+      }
+      li i {
+        font-size: 1.5rem;
+        color: $color-blue-dark;
+      }
+    }
+  }
+  //table structure
+  .table {
+    margin: 2.5rem 1.5rem;
+    .head,
+    .feature {
+      margin-bottom: 2.5rem;
+    }
+    .price {
+      color: $color-blue-dark;
+      &-month {
+        display: none;
+      }
+    }
+    .btn {
+      font-size: 18px;
+      padding: unset;
+    }
+    li {
+      line-height: 3em;
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-light;
+      }
+    }
+  }
+  // Option: Monthly or Yearly
+  .price-monthly {
+    display: none;
+  }
+  .price-yearly {
+    display: block;
+  }
+  &.monthly {
+    .price-monthly {
+      display: block;
+    }
+    .price-yearly {
+      display: none;
+    }
+  }
+  // Media Queary
+  @media only screen and (max-width: $bp-largest) {
+    .container {
+      @include sidePadding;
+    }
+  }
+}

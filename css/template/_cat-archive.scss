@@ -1,0 +1,19 @@
+.category-archive {
+  .category-navi li {
+    width: 25%;
+    text-align: center;
+  }
+  .post-item {
+    grid-column: span 4;
+    width: 100%;
+    height: 100%;
+
+    .thumbnail-wrapper {
+      width: 100%;
+      aspect-ratio: 1/1;
+      img {
+        height: auto;
+      }
+    }
+  }
+}

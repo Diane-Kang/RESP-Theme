@@ -1,0 +1,21 @@
+{
+  "name": "acf/price-table",
+  "title": "Preisliste",
+  "description": "Preisliste",
+  "category": "text",
+  "icon": "text",
+  "keywords": ["text"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "price-table.php"
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "align": [""]
+  }
+}

@@ -10,12 +10,12 @@
  */
 ?>
 
-<!-- Function for Table of Content & Content -->
+<!-- Table of Content & Content -->
 <?php
 
 $toc_headings = array();
 $blog_content = '';
-
+$num_words = 0;
 
 $heading_generic_n = 0;
 if (have_rows('blog_content')) {
@@ -40,14 +40,6 @@ if (have_rows('blog_content')) {
     } elseif (get_row_layout() == 'paragraph') {
       $paragraph = get_sub_field('paragraph');
       $blog_content .= $paragraph;
-    } elseif (get_row_layout() == 'image') {
-      $image = get_sub_field('image');
-      if ($image) {
-        $image_html = '';
-        $image_html .= '
-          <div class="img-container"> <img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" /></div>';
-        $blog_content .= $image_html;
-      }
     }
   }
 }
@@ -73,42 +65,6 @@ function get_toc($toc_headings)
 
 ?>
 
-<!-- Template -->
 <?php get_header(); ?>
-<div class="container blog">
-  <div class="blog--header">
-    <nav class="breadcrumms text-bold">
-      <a href="<?php echo home_url('blog'); ?>">Blog Home</a>
-      <?php $category = get_field('category'); ?>
-      <?php if ($category) : ?>
-        <a href="<?php echo esc_url(get_term_link($category)); ?>"><?php echo esc_html($category->name); ?></a>
-      <?php endif; ?>
-      <span><?php the_title(); ?></span>
-
-    </nav>
-    <div class="blog-meta-data">
-      <div class="date">erstellt am <?php echo get_the_date('d.F.Y'); ?></div>
-      <div class="reading-time">Lesedauer: ca. <?php echo round(str_word_count(preg_replace('#<[^>]+>#', ' ', $blog_content)) / 100); ?> Minute</div>
-    </div>
-    <h1 class="blog-title center"><?php the_title(); ?></h1>
-  </div>
-  <div class="blog--content">
-    <div class="intro grid12">
-      <div class="toc--outter">
-        <?php echo get_toc($toc_headings); ?>
-      </div>
-      <div class="abstrct text-bold"><?php the_excerpt(); ?></div>
-    </div>
-    <div class="content grid12">
-      <div class="content--inner">
-        <?php echo $blog_content ?>
-      </div>
-    </div>
-  </div>
-</div>
-
-<button class="scrollup-button btn btn--fill" id="btnUP" title="Go to top">
-  <i class="fa-solid fa-chevron-up"></i>
-</button>
-
+<?php the_content(); ?>
 <?php get_footer(); ?>

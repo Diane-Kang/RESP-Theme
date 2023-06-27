@@ -10,6 +10,7 @@ html {
   // // This defines what 1rem is
   font-size: 16px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   @media only screen and (max-width: $bp-smallfont) {
     font-size: 14px;
   }
@@ -32,12 +33,7 @@ ul {
   list-style-type: none;
 }
 
-// a {
-//   text-decoration: none;
-//   color: inherit;
-// }
-// only temp Use for dev note
-*:not(.a-deco-active) > a {
+a {
   text-decoration: none;
   color: inherit;
 }

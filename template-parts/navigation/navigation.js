@@ -11,7 +11,10 @@ export default class Navigation {
     this.elements = {
       $main: document.querySelectorAll(".header-main-navi, .header-meta"),
       $body: document.querySelector("body"),
+      $checkbox: document.querySelector("#navi-toggle"),
     };
+    // checkbox need to be unchecked, when the page newly loaded
+    this.elements.$checkbox.checked = false;
 
     // $bp-largest in variable & where hamber icon appears
     if (this.elements.$main.length && this.getWidth() >= 1250) {

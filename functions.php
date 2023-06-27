@@ -14,9 +14,12 @@ require_once(THEMEPATH . '/template-parts/navigation/nav-functions.php');
 require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
 // Theme Feature
 //-- Blog: default editor ignored -> acf would be used 
-add_filter('use_block_editor_for_post', '__return_false', 10);
-
-
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+  if ('post' === $post_type) return false;
+  return $current_status;
+}
 /**
  * remove all default block types from wordpress
  *

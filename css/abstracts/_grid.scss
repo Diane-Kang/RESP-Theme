@@ -20,6 +20,9 @@ $gird-column-fullwidth: 95px; //1140/12 = 95
   @include grid12;
 }
 
+.grid12-3 {
+  grid-column: span 3;
+}
 .grid12-5 {
   grid-column: span 5;
 }
@@ -28,6 +31,9 @@ $gird-column-fullwidth: 95px; //1140/12 = 95
 }
 .grid12-7 {
   grid-column: span 7;
+}
+.grid12-10 {
+  grid-column: 2 / span 10;
 }
 
 .flex {

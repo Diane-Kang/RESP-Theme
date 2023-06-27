@@ -31,14 +31,14 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
   &--fill {
-    background-color: $color-blue-light;
+    background-color: $color-blue-dark;
     color: $color-white;
-    border: solid 2px $color-blue-light;
+    border: solid 2px $color-blue-dark;
   }
   &--empty {
     background-color: none;
-    color: $color-blue-light;
-    border: solid 2px $color-blue-light;
+    color: $color-blue-dark;
+    border: solid 2px $color-blue-dark;
   }
   &--underline {
     background-color: none;

@@ -1,6 +1,6 @@
 {
     "key": "group_649155c90b677",
-    "title": "Page: Redirect",
+    "title": "Blog",
     "fields": [
         {
             "key": "field_649155c9455cf",
@@ -100,20 +100,17 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
         "the_content",
         "discussion",
         "comments",
-        "revisions",
         "author",
         "format",
-        "page_attributes",
-        "featured_image",
+        "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687257131
+    "modified": 1687422021
 }

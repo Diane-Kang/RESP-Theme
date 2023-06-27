@@ -24,7 +24,7 @@ function resp_theme_features()
   * provide it for us.
   */
   add_theme_support('title-tag');
-  // add_theme_support('post-thumbnails');
+  add_theme_support('post-thumbnails');
   // add_image_size('professorLandscape', 400, 260, true);
   //Use frontend style in backend editor
   add_theme_support('editor-styles');

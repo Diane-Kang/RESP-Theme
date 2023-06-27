@@ -226,9 +226,90 @@ class Helper {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
 /* harmony import */ var _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../template-parts/navigation/navigation */ "./template-parts/navigation/navigation.js");
+/* harmony import */ var _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../template-parts/blog/scrollup */ "./template-parts/blog/scrollup.js");
+/* harmony import */ var _pricetoggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pricetoggle */ "./src/pricetoggle.js");
+
+
 
 
 const navigation = new _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const scrollup = new _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const pricetoggle = new _pricetoggle__WEBPACK_IMPORTED_MODULE_3__["default"]();
+
+/***/ }),
+
+/***/ "./src/pricetoggle.js":
+/*!****************************!*\
+  !*** ./src/pricetoggle.js ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ PriceToggle; }
+/* harmony export */ });
+class PriceToggle {
+  // 1. describe and create/initiate our object
+  constructor() {
+    this.elements = {
+      $toggle: document.querySelector("#price-toggle"),
+      $target: document.querySelector(".price-table")
+    };
+    this.elements.$toggle.checked = false;
+    if (this.elements.$toggle) {
+      this.events();
+    }
+  }
+  events() {
+    this.elements.$toggle.addEventListener("change", () => {
+      if (this.elements.$toggle.checked) {
+        this.elements.$target.classList.add("monthly");
+      } else {
+        this.elements.$target.classList.remove("monthly");
+      }
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./template-parts/blog/scrollup.js":
+/*!*****************************************!*\
+  !*** ./template-parts/blog/scrollup.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Scrollup; }
+/* harmony export */ });
+class Scrollup {
+  // 1. describe and create/initiate our object
+  constructor() {
+    this.elements = {
+      $btn: document.querySelector(".scrollup-button")
+    };
+    if (this.elements.$btn) {
+      this.events();
+    }
+  }
+
+  // 2. events
+  events() {
+    window.addEventListener("scroll", e => {
+      this.elements.$btn.style.visibility = window.scrollY > 40 ? "visible" : "hidden";
+    });
+    this.elements.$btn.addEventListener("click", this.scrollToTop);
+  }
+
+  // 3. methods (function, action...)
+  scrollToTop() {
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+}
 
 /***/ }),
 
@@ -255,8 +336,11 @@ class Navigation {
   constructor() {
     this.elements = {
       $main: document.querySelectorAll(".header-main-navi, .header-meta"),
-      $body: document.querySelector("body")
+      $body: document.querySelector("body"),
+      $checkbox: document.querySelector("#navi-toggle")
     };
+    // checkbox need to be unchecked, when the page newly loaded
+    this.elements.$checkbox.checked = false;
 
     // $bp-largest in variable & where hamber icon appears
     if (this.elements.$main.length && this.getWidth() >= 1250) {
