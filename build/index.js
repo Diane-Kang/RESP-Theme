@@ -2,6 +2,83 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./acf-blocks/price-table/price-table.js":
+/*!***********************************************!*\
+  !*** ./acf-blocks/price-table/price-table.js ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ PriceTable; }
+/* harmony export */ });
+class PriceTable {
+  // 1. describe and create/initiate our object
+  constructor() {
+    this.elements = {
+      $price_toggle: document.querySelector("#price-toggle"),
+      $target: document.querySelector(".price-table"),
+      $highlight: document.querySelectorAll(".price-toggle-wrapper > span"),
+      $feature: document.querySelectorAll(".block-wrapper-mobile .feature")
+    };
+    //show the yearly payment option as default
+    this.elements.$price_toggle.checked = false;
+    // Toggle event for yealry/monthly price
+    if (this.elements.$price_toggle) {
+      this.changePrice();
+    }
+    // Toggle event for feature content in mobile screen
+    if (this.elements.$feature) {
+      this.toggleFeature();
+    }
+  }
+  changePrice() {
+    this.elements.$price_toggle.addEventListener("change", () => {
+      if (this.elements.$price_toggle.checked) {
+        this.elements.$target.classList.add("monthly");
+      } else {
+        this.elements.$target.classList.remove("monthly");
+      }
+      // highlight the text of the selected option
+      this.elements.$highlight.forEach($text => {
+        $text.classList.toggle("checked");
+      });
+    });
+  }
+  toggleFeature() {
+    this.elements.$feature.forEach($f => {
+      let $toggle = $f.querySelector(".feature-toggle");
+      $toggle.addEventListener("click", () => {
+        $f.classList.toggle("open");
+      });
+    });
+  }
+}
+
+//Add "mobile" if the screen size is smaller then $
+// window.addEventListener("DOMContentLoaded", function () {
+//   var windowSize = checkWidth();
+
+//   // Execute on load
+//   checkWidth();
+
+//   // Bind event listener to window resize
+//   window.addEventListener("resize", function () {
+//     // remove console.log from production version - useful for while in development
+//     console.log("checkWidth: ", checkWidth() + "px");
+//   });
+
+//   function checkWidth() {
+//     var windowSize =
+//       window.innerWidth ||
+//       document.documentElement.clientWidth ||
+//       document.body.clientWidth;
+//     return windowSize;
+//   }
+// });
+
+/***/ }),
+
 /***/ "./src/helper.js":
 /*!***********************!*\
   !*** ./src/helper.js ***!
@@ -227,49 +304,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
 /* harmony import */ var _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../template-parts/navigation/navigation */ "./template-parts/navigation/navigation.js");
 /* harmony import */ var _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../template-parts/blog/scrollup */ "./template-parts/blog/scrollup.js");
-/* harmony import */ var _pricetoggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pricetoggle */ "./src/pricetoggle.js");
+/* harmony import */ var _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../acf-blocks/price-table/price-table */ "./acf-blocks/price-table/price-table.js");
 
 
 
 
 const navigation = new _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const scrollup = new _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const pricetoggle = new _pricetoggle__WEBPACK_IMPORTED_MODULE_3__["default"]();
-
-/***/ }),
-
-/***/ "./src/pricetoggle.js":
-/*!****************************!*\
-  !*** ./src/pricetoggle.js ***!
-  \****************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ PriceToggle; }
-/* harmony export */ });
-class PriceToggle {
-  // 1. describe and create/initiate our object
-  constructor() {
-    this.elements = {
-      $toggle: document.querySelector("#price-toggle"),
-      $target: document.querySelector(".price-table")
-    };
-    this.elements.$toggle.checked = false;
-    if (this.elements.$toggle) {
-      this.events();
-    }
-  }
-  events() {
-    this.elements.$toggle.addEventListener("change", () => {
-      if (this.elements.$toggle.checked) {
-        this.elements.$target.classList.add("monthly");
-      } else {
-        this.elements.$target.classList.remove("monthly");
-      }
-    });
-  }
-}
+const price_table = new _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__["default"]();
 
 /***/ }),
 

@@ -29,17 +29,19 @@ $container_classes = "container";
 <div <?php echo $anchor; ?> class="<?php echo $module_classes; ?>">
   <div class="<?php echo $container_classes; ?> text-center">
     <h1 class="heading1">TeamProQ Preisliste</h1>
-    <div class="toggle-btn fs--medium">
-      <span>monatlich zahlen</span>
-      <label class="switch">
-        <input type="checkbox" id="price-toggle" />
-        <span class="slider round"></span>
-      </label>
-      <span>jährlich zahlen
+    <div class="price-toggle-wrapper fs--medium">
+      <span>monatlich <span class="tiny-screen-hide">zahlen</span></span>
+      <div class="toggle-btn">
+        <label class="switch">
+          <input type="checkbox" id="price-toggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <span class="checked">jährlich <span class="tiny-screen-hide">zahlen</span>
       </span>
     </div>
     <!-- Desktop Price table -->
-    <div class="block-wrapper grid12" style="display:none;">
+    <div class="block-wrapper grid12">
       <div class="block block--label grid12-3 flex">
         <div class="table flexible flex flex-col">
           <div class="head flexible">
@@ -104,7 +106,7 @@ $container_classes = "container";
         <div class="table flexible flex flex-col">
           <div class="head flexible">
             <h4 class="category">Economy Class</h4>
-            <h4 class="price price-monthly">1.690€</h4>
+            <h4 class="price price-monthly">100€/mon</h4>
             <h4 class="price price-yearly">1.290€</h4>
           </div>
           <div class="feature">
@@ -134,7 +136,7 @@ $container_classes = "container";
         <div class="table flexible flex flex-col">
           <div class="head flexible">
             <h4 class="category">Economy Class</h4>
-            <h4 class="price price-monthly">2.990€</h4>
+            <h4 class="price price-monthly">100€/mon</h4>
             <h4 class="price price-yearly">1.290€</h4>
           </div>
           <div class="feature">
@@ -164,7 +166,7 @@ $container_classes = "container";
         <div class="table flexible flex flex-col">
           <div class="head flexible">
             <h4 class="category">First Clas</h4>
-            <h4 class="price price-monthly">6.990€</h4>
+            <h4 class="price price-monthly">100€/mon</h4>
             <h4 class="price price-yearly">1.290€</h4>
           </div>
           <div class="feature">
@@ -192,18 +194,15 @@ $container_classes = "container";
       </div>
     </div>
     <!-- Mobile Price table -->
-    <div class="block-wrapper-mobile">
+    <div class="block-wrapper block-wrapper-mobile">
       <div class="block block--item">
         <div class="table flex flex-col">
-          <div class="head flexible">
+          <div class="head">
             <h4 class="category">Economy Class</h4>
-            <h4 class="price price-monthly">1.690€</h4>
+            <h4 class="price price-monthly">100€/mon</h4>
             <h4 class="price price-yearly">1.290€</h4>
           </div>
           <div class="feature">
-            <div class="feature--toogle-open">
-              alle Features anzeigen
-            </div>
             <div class="feature-content">
               inklusive der Module <br>
               <span class="text-bold">
@@ -229,11 +228,112 @@ $container_classes = "container";
                 <span class="text-bold">Admin-Schulung:</span><br>empfohlen
               </div>
             </div>
-            <div class="feature--toogle-close">
-              alle Features verbergen
+            <div class="feature-toggle">
+              <span class="feature-toggle--open">
+                alle Features anzeigen <i class="fa-regular fa-chevron-down"></i>
+              </span>
+              <span class="feature-toggle--close">
+                alle Features verbergen <i class="fa-regular fa-chevron-up"></i>
+              </span>
             </div>
           </div>
-          <a href="#" class="btn btn--empty">Economy Class buchen</a>
+          <a href="#">
+            <div class="btn btn--empty">Economy Class buchen</div>
+          </a>
+        </div>
+      </div>
+      <div class="block block--item highlight">
+        <div class="table flex flex-col">
+          <div class="head">
+            <h4 class="category">Economy Class</h4>
+            <h4 class="price price-monthly">100€/mon</h4>
+            <h4 class="price price-yearly">1.290€</h4>
+          </div>
+          <div class="feature">
+            <div class="feature-content">
+              inklusive der Module <br>
+              <span class="text-bold">
+                Verkauf<br>
+                Kontakte<br>
+                Vertrieb: Vertriebsportal<br>
+                Vertrieb: Leadgenerierung<br>
+                Vertrieb: Vertragsabwicklung<br>
+              </span>
+              <div>
+                <span class="text-bold">Speicher:</span><br>10 GB
+              </div>
+              <div>
+                <span class="text-bold">Immobilienberechnung:</span><br>20 Nutzer
+              </div>
+              <div>
+                <span class="text-bold">Support:</span><br>E-Mail & Telefon
+              </div>
+              <div>
+                <span class="text-bold">Einrichtung & Konfiguration:</span><br>obligatorisch
+              </div>
+              <div>
+                <span class="text-bold">Admin-Schulung:</span><br>empfohlen
+              </div>
+            </div>
+            <div class="feature-toggle">
+              <span class="feature-toggle--open">
+                alle Features anzeigen <i class="fa-regular fa-chevron-down"></i>
+              </span>
+              <span class="feature-toggle--close">
+                alle Features verbergen <i class="fa-regular fa-chevron-up"></i>
+              </span>
+            </div>
+          </div>
+          <a href="#">
+            <div class="btn btn--empty">Economy Class buchen</div>
+          </a>
+        </div>
+      </div>
+      <div class="block block--item">
+        <div class="table flex flex-col">
+          <div class="head">
+            <h4 class="category">Economy Class</h4>
+            <h4 class="price price-monthly">100€/mon</h4>
+            <h4 class="price price-yearly">1.290€</h4>
+          </div>
+          <div class="feature">
+            <div class="feature-content">
+              inklusive der Module <br>
+              <span class="text-bold">
+                Verkauf<br>
+                Kontakte<br>
+                Vertrieb: Vertriebsportal<br>
+                Vertrieb: Leadgenerierung<br>
+                Vertrieb: Vertragsabwicklung<br>
+              </span>
+              <div>
+                <span class="text-bold">Speicher:</span><br>10 GB
+              </div>
+              <div>
+                <span class="text-bold">Immobilienberechnung:</span><br>20 Nutzer
+              </div>
+              <div>
+                <span class="text-bold">Support:</span><br>E-Mail & Telefon
+              </div>
+              <div>
+                <span class="text-bold">Einrichtung & Konfiguration:</span><br>obligatorisch
+              </div>
+              <div>
+                <span class="text-bold">Admin-Schulung:</span><br>empfohlen
+              </div>
+            </div>
+            <div class="feature-toggle">
+              <span class="feature-toggle--open">
+                alle Features anzeigen <i class="fa-regular fa-chevron-down"></i>
+              </span>
+              <span class="feature-toggle--close">
+                alle Features verbergen <i class="fa-regular fa-chevron-up"></i>
+              </span>
+            </div>
+          </div>
+          <a href="#">
+            <div class="btn btn--empty">Economy Class buchen</div>
+          </a>
         </div>
       </div>
     </div>

@@ -247,8 +247,13 @@ h6 {
   padding-bottom: 8rem;
 }
 
+@media only screen and (max-width: 400px) {
+  .tiny-screen-hide {
+    display: none;
+  }
+}
 .btn {
-  display: inline-flex;
+  display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -748,6 +753,7 @@ h6 {
 }
 @media only screen and (max-width: 1250px) {
   .footer .container {
+    max-width: unset;
     padding-left: 7%;
     padding-right: 7%;
   }
@@ -880,6 +886,7 @@ h6 {
 }
 @media only screen and (max-width: 1250px) {
   .teaser .container {
+    max-width: unset;
     padding-left: 7%;
     padding-right: 7%;
   }
@@ -1022,6 +1029,7 @@ h6 {
 }
 @media only screen and (max-width: 1250px) {
   .imagetext .container {
+    max-width: unset;
     padding-left: 7%;
     padding-right: 7%;
     max-width: 800px;
@@ -1208,9 +1216,19 @@ h6 {
   grid-column: 9/span 1;
 }
 
+.price-table .block-wrapper-mobile {
+  display: none;
+}
 .price-table .heading1,
 .price-table .block-wrapper {
   margin: 5rem auto;
+}
+.price-table .price-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.price-table .price-toggle-wrapper .checked {
+  color: #0064a3;
 }
 .price-table .block {
   width: 100%;
@@ -1308,8 +1326,52 @@ h6 {
 }
 @media only screen and (max-width: 1250px) {
   .price-table .container {
+    max-width: unset;
     padding-left: 7%;
     padding-right: 7%;
+  }
+  .price-table .block-wrapper {
+    display: none;
+  }
+  .price-table .block-wrapper-mobile {
+    display: block;
+  }
+  .price-table .block-wrapper .block:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  .price-table .table .price {
+    color: inherit;
+    font-size: 20px;
+  }
+  .price-table .feature-content,
+  .price-table .feature-toggle--close {
+    display: none;
+    margin-top: 1rem;
+  }
+  .price-table .feature.open .feature-content,
+  .price-table .feature.open .feature-toggle--close {
+    display: block;
+  }
+  .price-table .feature.open .feature-toggle--open {
+    display: none;
+  }
+  .price-table .feature {
+    font-size: 18px;
+  }
+  .price-table .feature-content > *:not(:first-child) {
+    margin-top: 1em;
+  }
+  .price-table .feature-toggle {
+    color: #0064a3;
+    -webkit-text-decoration: underline solid 2px;
+            text-decoration: underline solid 2px;
+    font-weight: 700;
+    text-underline-offset: 4px;
+  }
+  .price-table .table .btn {
+    max-width: 350px;
+    padding: unset;
+    margin: auto;
   }
 }
 
@@ -1385,6 +1447,7 @@ h6 {
 }
 @media only screen and (max-width: 1250px) {
   .blog.container {
+    max-width: unset;
     padding-left: 7%;
     padding-right: 7%;
   }

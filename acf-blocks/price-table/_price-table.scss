@@ -1,8 +1,18 @@
 .price-table {
+  .block-wrapper-mobile {
+    display: none;
+  }
   //basic struture
   .heading1,
   .block-wrapper {
     margin: 5rem auto;
+  }
+  .price-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    .checked {
+      color: $color-blue-dark;
+    }
   }
   .block {
     width: 100%;
@@ -108,6 +118,54 @@
   @media only screen and (max-width: $bp-largest) {
     .container {
       @include sidePadding;
+    }
+    .block-wrapper {
+      display: none;
+      &-mobile {
+        display: block;
+      }
+      .block:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .table .price {
+      color: inherit;
+      font-size: 20px;
+    }
+    // default
+    .feature-content,
+    .feature-toggle--close {
+      display: none;
+      margin-top: 1rem;
+    }
+    //open the dropdown
+    .feature.open {
+      .feature-content,
+      .feature-toggle--close {
+        display: block;
+      }
+      .feature-toggle--open {
+        display: none;
+      }
+    }
+    //feature style
+    .feature {
+      font-size: 18px;
+    }
+    .feature-content > *:not(:first-child) {
+      margin-top: 1em;
+    }
+    .feature-toggle {
+      color: $color-blue-dark;
+      text-decoration: underline solid 2px;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+    //button style
+    .table .btn {
+      max-width: 350px;
+      padding: unset;
+      margin: auto;
     }
   }
 }
