@@ -12,40 +12,28 @@
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
 
-
-// Support custom "anchor" values.
-$anchor = '';
-if (!empty($block['anchor'])) {
-  $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
-}
-
 // // Load values and assign defaults.
-$device             = get_field('block::device') == "all" ? '' : 'display--' . get_field('block::device');
-$distance_over      = 'p-top--' . get_field('block::distance:over');
-$distance_under     = 'p-bottom--' . get_field('block::distance:under');
-
-$bg_color           = get_field('block::background:color') != "none" ? 'bg-' . get_field('block::background:color') : "";
-$bg_gradient        = get_field('block::background:gradient');
-$box_design         = get_field('block::boxdesign') == "box-design" ? "box-design" : "";
 
 
 
-$button1link        = get_field('block::buttons:btn1-link');
-$button1type        = get_field('block::buttons:btn1-type');
-$button2link        = get_field('block::buttons:btn2-link');
-$button2type        = get_field('block::buttons:btn2-type');
+$button1 = get_field('button1');
+if ($button1) {
+  $button1link        = $button1['block::buttons:btn1-link'];
+  $button1type        = $button1['block::buttons:btn1-type'];
+}
+$button2 = get_field('button2');
+if ($button2) {
+  $button2link        = $button2['block::buttons:btn2-link'];
+  $button2type        = $button2['block::buttons:btn2-type'];
+}
 
 $text_content       = get_field('block::textbox:content');
-$custom_anchor      = get_field('block::cssid');
 
 
+require(get_template_directory() . '/acf-blocks/module-classes.php');
 
-if (!empty($custom_anchor)) {
-  $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
-}
-
-$module_classes = "module textbox {$bg_color} {$box_design} {$device} ";
-$container_classes = "container {$distance_over} {$distance_under} ";
+$module_classes = "module textbox" . $module_classes;
+$container_classes = "container" . $container_classes;
 
 
 ?>
@@ -56,7 +44,7 @@ $container_classes = "container {$distance_over} {$distance_under} ";
         <?php echo $text_content; ?>
       </div>
     </div>
-    <?php if (!empty($button1link) || !empty($button1link)) : ?>
+    <?php if (!empty($button1) || !empty($button2)) : ?>
       <!-- only if button exist -->
       <div class="buttons--wrapper">
         <?php if ($button1link != "") : ?>
@@ -73,5 +61,4 @@ $container_classes = "container {$distance_over} {$distance_under} ";
       </div>
     <?php endif; ?>
   </div>
-</div>
 </div>

@@ -3,11 +3,11 @@
     "title": "Block: Price-Table",
     "fields": [
         {
-            "key": "field_649488216536e",
+            "key": "field_649c031dd76a8",
             "label": "",
             "name": "",
             "aria-label": "",
-            "type": "clone",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,13 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_6438069586bba"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "message": "<h5>Preisliste<\/h5>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -43,5 +39,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687456115
+    "modified": 1687958128
 }

@@ -1,0 +1,14 @@
+{
+  "name": "acf/booking",
+  "title": "Extra Buchen",
+  "description": "weitere Module und Dienstleistungen",
+  "category": "",
+  "icon": "plus",
+  "keywords": [""],
+  "acf": {
+    "renderTemplate": "booking.php"
+  },
+  "supports": {
+    "align": [""]
+  }
+}

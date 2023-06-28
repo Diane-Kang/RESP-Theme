@@ -40,25 +40,3 @@ export default class PriceTable {
     });
   }
 }
-
-//Add "mobile" if the screen size is smaller then $
-// window.addEventListener("DOMContentLoaded", function () {
-//   var windowSize = checkWidth();
-
-//   // Execute on load
-//   checkWidth();
-
-//   // Bind event listener to window resize
-//   window.addEventListener("resize", function () {
-//     // remove console.log from production version - useful for while in development
-//     console.log("checkWidth: ", checkWidth() + "px");
-//   });
-
-//   function checkWidth() {
-//     var windowSize =
-//       window.innerWidth ||
-//       document.documentElement.clientWidth ||
-//       document.body.clientWidth;
-//     return windowSize;
-//   }
-// });

@@ -41,6 +41,11 @@
                 "param": "block",
                 "operator": "!=",
                 "value": "acf\/subnavigation"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/price-table"
             }
         ]
     ],
@@ -50,8 +55,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684747510
+    "modified": 1687959983
 }
