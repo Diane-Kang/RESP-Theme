@@ -12,10 +12,14 @@
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
 
-// // Load values and assign defaults.
+// Get values from ACF Fields
 
+// Common definition of $anchor, $module_classes, $container_classes
+require(get_template_directory() . '/acf-blocks/module-classes.php');
+array_unshift($a_module_classes, "module", "textbox");
+array_unshift($a_container_classes, "container");
 
-
+// Buttons 
 $button1 = get_field('button1');
 if ($button1) {
   $button1link        = $button1['block::buttons:btn1-link'];
@@ -26,19 +30,15 @@ if ($button2) {
   $button2link        = $button2['block::buttons:btn2-link'];
   $button2type        = $button2['block::buttons:btn2-type'];
 }
-
+// Content
 $text_content       = get_field('block::textbox:content');
 
 
-require(get_template_directory() . '/acf-blocks/module-classes.php');
-
-$module_classes = "module textbox" . $module_classes;
-$container_classes = "container" . $container_classes;
 
 
 ?>
-<div <?php echo $anchor; ?> class="<?php echo $module_classes;  ?>">
-  <div class="<?php echo $container_classes; ?> flex flex-col">
+<div <?php echo $anchor; ?> class="<?php echo implode(" ", $a_module_classes);  ?>">
+  <div class="<?php echo implode(" ", $a_container_classes); ?> flex flex-col">
     <div class="textbox__text-container grid12">
       <div class="textbox__text flex flex-col">
         <?php echo $text_content; ?>

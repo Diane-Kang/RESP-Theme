@@ -33,3 +33,61 @@
   }
   background-repeat: $repeat;
 }
+
+@mixin bg-feature($target, $font-color-w-bg: $color-white) {
+  // Option: background color / box design
+  // bg-color :
+  //.bg-blue
+  //.bg-blue-light
+  //.bg--blue-gradient
+  // box-design target: .container
+  // when the bg exit:
+  // font-color: $color-white;
+  &.box-design #{$target} {
+    border-radius: 8px;
+  }
+  &.bg--none.box-design #{$target} {
+    border: 1px solid $color-grey-light;
+  }
+
+  &.bg--blue {
+    &:not(.box-design),
+    &.box-design #{$target} {
+      background-color: $color-blue-light;
+    }
+  }
+
+  &.bg--blue-dark {
+    &:not(.box-design),
+    &.box-design #{$target} {
+      background-color: $color-blue-dark;
+    }
+  }
+  &.bg--blue-gradient {
+    &:not(.box-design),
+    &.box-design #{$target} {
+      background: linear-gradient(
+        180deg,
+        $color-blue-light 0%,
+        $color-blue-dark2 100%
+      );
+    }
+  }
+  &.bg--blue,
+  &.bg--blue-dark,
+  &.bg--blue-gradient {
+    color: $font-color-w-bg;
+    .btn--fill {
+      background-color: $font-color-w-bg;
+      color: $color-blue-light;
+      border: solid 2px $font-color-w-bg;
+    }
+    .btn--empty {
+      color: $font-color-w-bg;
+      border: solid 2px $font-color-w-bg;
+    }
+    .link--underline {
+      color: $font-color-w-bg;
+    }
+  }
+}

@@ -7,52 +7,8 @@
     grid-column: col-start 2 / col-end 11;
     row-gap: 2.5rem;
   }
-
-  // Option: background color / box design
-
-  &.bg-blue {
-    background: $color-blue-light;
-    &.box-design {
-      background: unset;
-      .container {
-        background: $color-blue-light;
-      }
-    }
-  }
-  &.bg-blue-gradient {
-    background: linear-gradient(
-      180deg,
-      $color-blue-light 0%,
-      $color-blue-dark2 100%
-    );
-    &.box-design {
-      background: unset;
-      .container {
-        background: linear-gradient(
-          180deg,
-          $color-blue-light 0%,
-          $color-blue-dark2 100%
-        );
-      }
-    }
-  }
-
-  &.bg-blue,
-  &.bg-blue-gradient {
-    color: $color-white;
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-      border: solid 2px $color-white;
-    }
-    .btn--empty {
-      color: $color-white;
-      border: solid 2px $color-white;
-    }
-    .link--underline {
-      color: $color-white;
-    }
-  }
+  //background & Box-design options with button color changes
+  @include bg-feature(".container");
 
   // Media Queary
   @media only screen and (max-width: $bp-smallfont) {

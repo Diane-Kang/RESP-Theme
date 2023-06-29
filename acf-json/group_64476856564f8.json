@@ -70,7 +70,7 @@
             "name": "block::textbox:content",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Möglichst kein h1-Tag verwenden. Verwenden Sie den h1-Tag nur, wenn Sie sicher sind, dass es kein anderes h1-Tag auf der Seite gibt.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -78,10 +78,10 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "<h1 style=\"text-align: center;\">Heading(h1)<\/h1>\r\n<strong>(paragraph\/bold)Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<\/strong>\r\n\r\n(paragraph)Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "default_value": "<h2 style=\"text-align: center;\">Heading(h2)<\/h2>\r\n<strong>(paragraph\/bold)Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<\/strong>\r\n\r\n(paragraph)Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0
         }
     ],
@@ -103,5 +103,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687961869
+    "modified": 1688030647
 }

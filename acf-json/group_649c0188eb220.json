@@ -126,7 +126,8 @@
             "choices": {
                 "none": "Transparent",
                 "blue": "Blau",
-                "blue-gradient": "Farbverlauf-Blau"
+                "blue-dark": "dunkel Blau",
+                "blue-gradient": "Farbverlauf Blau"
             },
             "default_value": "none",
             "return_format": "value",
@@ -187,5 +188,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687960272
+    "modified": 1688027746
 }

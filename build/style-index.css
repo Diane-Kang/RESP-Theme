@@ -789,37 +789,34 @@ h6 {
   grid-column: col-start 2/col-end 11;
   row-gap: 2.5rem;
 }
-.textbox.bg-blue {
-  background: #009fe3;
+.textbox.box-design .container {
+  border-radius: 8px;
 }
-.textbox.bg-blue.box-design {
-  background: unset;
+.textbox.bg--none.box-design .container {
+  border: 1px solid #e3e3e3;
 }
-.textbox.bg-blue.box-design .container {
-  background: #009fe3;
+.textbox.bg--blue:not(.box-design), .textbox.bg--blue.box-design .container {
+  background-color: #009fe3;
 }
-.textbox.bg-blue-gradient {
+.textbox.bg--blue-dark:not(.box-design), .textbox.bg--blue-dark.box-design .container {
+  background-color: #0064a3;
+}
+.textbox.bg--blue-gradient:not(.box-design), .textbox.bg--blue-gradient.box-design .container {
   background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
 }
-.textbox.bg-blue-gradient.box-design {
-  background: unset;
-}
-.textbox.bg-blue-gradient.box-design .container {
-  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
-}
-.textbox.bg-blue, .textbox.bg-blue-gradient {
+.textbox.bg--blue, .textbox.bg--blue-dark, .textbox.bg--blue-gradient {
   color: #fff;
 }
-.textbox.bg-blue .btn--fill, .textbox.bg-blue-gradient .btn--fill {
+.textbox.bg--blue .btn--fill, .textbox.bg--blue-dark .btn--fill, .textbox.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.textbox.bg-blue .btn--empty, .textbox.bg-blue-gradient .btn--empty {
+.textbox.bg--blue .btn--empty, .textbox.bg--blue-dark .btn--empty, .textbox.bg--blue-gradient .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.textbox.bg-blue .link--underline, .textbox.bg-blue-gradient .link--underline {
+.textbox.bg--blue .link--underline, .textbox.bg--blue-dark .link--underline, .textbox.bg--blue-gradient .link--underline {
   color: #fff;
 }
 @media only screen and (max-width: 600px) {
