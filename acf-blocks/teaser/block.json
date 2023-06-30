@@ -2,19 +2,14 @@
   "name": "acf/teaser",
   "title": "Teaser",
   "description": "Teaser Block",
-  "category": "text",
+  "category": "",
   "icon": "button",
-  "keywords": ["text"],
+  "keywords": [""],
   "acf": {
     "renderTemplate": "teaser.php"
   },
-  "attributes": {
-    "align": {
-      "type": "string",
-      "default": "wide"
-    }
-  },
   "supports": {
-    "align": [""]
+    "align": [""],
+    "customClassName": false
   }
 }

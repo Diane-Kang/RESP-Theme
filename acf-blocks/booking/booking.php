@@ -11,43 +11,49 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-// Create id attribute allowing for custom "anchor" value.
-$id = 'booking-' . $block['id'];
-if (!empty($block['anchor'])) {
-  $id = $block['anchor'];
-}
 
-// Create class attribute allowing for custom "className" and "align" values.
-$classes = 'block-booking';
-if (!empty($block['className'])) {
-  $classes .= ' ' . $block['className'];
-}
-if (!empty($block['align'])) {
-  $classes .= ' align' . $block['align'];
-}
+// Get values from ACF Fields 
+
+// Common definition of $anchor, $module_classes, $container_classes
+require(get_template_directory() . '/acf-blocks/module-classes.php');
+array_unshift($module_classes, "module", "booking");
+array_unshift($container_classes, "container");
+
+
+
 ?>
-
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
-  <?php if (have_rows('buchen_option')) : ?>
-    <?php while (have_rows('buchen_option')) : the_row(); ?>
-      <?php if (have_rows('offer')) : ?>
-        <?php while (have_rows('offer')) : the_row(); ?>
-          <?php $grafik = get_sub_field('grafik'); ?>
-          <?php if ($grafik) : ?>
-            <img src="<?php echo esc_url($grafik['url']); ?>" alt="<?php echo esc_attr($grafik['alt']); ?>" />
-          <?php endif; ?>
-          <?php if (have_rows('text')) : ?>
-            <?php while (have_rows('text')) : the_row(); ?>
-              <?php the_sub_field('title'); ?>
-              <?php the_sub_field('paragraph'); ?>
-              <?php the_sub_field('price'); ?>
-            <?php endwhile; ?>
-          <?php endif; ?>
-        <?php endwhile; ?>
-      <?php endif; ?>
-    <?php endwhile; ?>
-  <?php else : ?>
-    <?php // No rows found 
-    ?>
-  <?php endif; ?>
+<div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
+  <div class="<?php echo implode(" ", $container_classes); ?>">
+    <?php if (have_rows('buchen_option')) : ?>
+      <?php while (have_rows('buchen_option')) : the_row(); ?>
+        <?php if (have_rows('offer')) : ?>
+          <?php while (have_rows('offer')) : the_row(); ?>
+            <div class="block">
+              <div class="block-inner">
+                <div class="image">
+                  <?php $grafik = get_sub_field('grafik'); ?>
+                  <img src="<?php echo esc_url($grafik['url']); ?>" alt="<?php echo esc_attr($grafik['alt']); ?>" />
+                </div>
+                <div class="content">
+                  <?php $text = get_sub_field('text'); ?>
+                  <h4 class="title">
+                    <?php echo $text["title"] ?>
+                  </h4>
+                  <div class="paragraph">
+                    <?php echo $text["paragraph"] ?>
+                  </div>
+                  <h4 class="price">
+                    <?php echo $text["price"] ?> €
+                  </h4>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; ?>
+        <?php endif; ?>
+      <?php endwhile; ?>
+    <?php else : ?>
+      <?php // No rows found 
+      ?>
+    <?php endif; ?>
+  </div>
 </div>

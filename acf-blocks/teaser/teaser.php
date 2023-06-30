@@ -1,82 +1,56 @@
 <?php
 
 /**
- * Teaser Banner Block Template.
+ * Block template file: teaser.php
+ *
+ * Teaser Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
- * @param   bool $is_preview True during backend preview render.
- * @param   int $post_id The post ID the block is rendering content against.
- *          This is either the post ID currently being displayed inside a query loop,
- *          or the post ID of the post hosting this block.
- * @param   array $context The context provided to the block by the post or it's parent block.
+ * @param   bool $is_preview True during AJAX preview.
+ * @param   (int|string) $post_id The post ID this block is saved to.
  */
-
-
 // Support custom "anchor" values.
-$anchor = '';
-if (!empty($block['anchor'])) {
-  $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
+
+// Common definition of $anchor, $module_classes, $container_classes
+require(get_template_directory() . '/acf-blocks/module-classes.php');
+array_unshift($module_classes, "module", "teaser");
+array_unshift($container_classes, "container");
+
+// Buttons 
+$button1 = get_field('button1');
+if ($button1) {
+  $button1link        = $button1['block::buttons:btn1-link'];
+  $button1type        = $button1['block::buttons:btn1-type'];
+}
+$button2 = get_field('button2');
+if ($button2) {
+  $button2link        = $button2['block::buttons:btn2-link'];
+  $button2type        = $button2['block::buttons:btn2-type'];
 }
 
-// // Load values and assign defaults.
-$device             = get_field('block::device') == "all" ? '' : 'display--' . get_field('block::device');
-$distance_over      = 'p-top--' . get_field('block::distance:over');
-$distance_under     = 'p-bottom--' . get_field('block::distance:under');
-
-$bg_color           = get_field('block::background:color') ? 'bg-' . get_field('block::background:color') : "";
-$bg_gradient        = get_field('block::background:gradient');
-$box_design         = get_field('block::boxdesign');
-
-$button1link        = get_field('block::buttons:btn1-link');
-$button1type        = get_field('block::buttons:btn1-type');
-$button2link        = get_field('block::buttons:btn2-link');
-$button2type        = get_field('block::buttons:btn2-type');
-
+// Teaser block options 
 $teaser_height      = get_field('block::teaser:height') != "none" ?  get_field('block::teaser:height') : '';
 $teaser_textcolor   = get_field('block::teaser:textcolor');
-$teaser_gradient    = get_field('block::teaser:gradient') == "yes" ? "" : "display:none;";
+// Teaser background Image 
 $image              = get_field('block::teaser:image');
+$image_url          = $image ? esc_url($image['url']) : NULL;
+// Teaser text content
 $text_content       = get_field('block::teaser:content');
 
-$custom_anchor      = get_field('block::cssid');
-
-
-if (!empty($custom_anchor)) {
-  $anchor = 'id="' . esc_attr($custom_anchor) . '" ';
-}
-
-$module_classes = "";
-$container_classes = "";
-$module_classes = "module teaser {$device} {$teaser_textcolor}";
-$container_classes = "container {$teaser_height} {$distance_over} {$distance_under}";
-
-if ($bg_color != "") {
-  if ($box_design == "fullwidth") {
-    $module_classes .= $bg_color;
-  }
-  if ($box_design == "box-design") {
-    $container_classes .= $bg_color;
-  }
-}
+array_push($module_classes,  $teaser_textcolor);
+array_push($container_classes,  $teaser_height);
 
 
 ?>
-<div <?php echo $anchor; ?> class="<?php echo $module_classes;  ?>">
-  <div class="center <?php echo $container_classes; ?>">
+<div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
+  <div class="<?php echo implode(" ", $container_classes); ?>">
     <div class="teaser__bg-image" style="
-              background-image: url('<?php echo esc_url($image['url']); ?>');
+              background-image: url('<?php echo $image_url; ?>');
             "></div>
-    <div class="teaser__bg-gradient" style=" 
-              <?php echo $teaser_gradient ?>
-              background-image: linear-gradient(
-                  180deg,
-                  rgba(0, 0, 0, 0.3) 0%,
-                  rgba(0, 0, 0, 0) 100%
-                )
-            "></div>
-    <div class="teaser__content flex flex-col">
-      <div class="teaser__text text-center flex flex-col">
+    <div class="teaser__bg-gradient"></div>
+    <div class="teaser__content">
+      <div class="teaser__text text-center">
         <?php echo $text_content ?>
       </div>
       <?php if (!empty($button1link) || !empty($button1link)) : ?>

@@ -3,6 +3,115 @@
     "title": "Block: Teaser",
     "fields": [
         {
+            "key": "field_649d5c210f2ef",
+            "label": "Block Name:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>Teaser<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_649d5c8b0f2f0",
+            "label": "Block: common Components",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_649c0189425b6",
+                "field_649c331c826ad",
+                "field_649c3359826ae",
+                "field_649c33eb2b046"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_649d5d2257128",
+            "label": "spacer",
+            "name": "placeholder",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_646f21853532d"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_649d5d7d666b0",
+            "label": "Block: common Buttons - All",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_649c380deb6f5"
+            ],
+            "display": "seamless",
+            "layout": "row",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_649d5dba724b1",
+            "label": "spacer2",
+            "name": "placeholder_copy",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_646f21853532d"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_6458bcc89e825",
             "label": "Höhe",
             "name": "block::teaser:height",
@@ -57,32 +166,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_645bd9e6c8c92",
-            "label": "Farbeverlauf",
-            "name": "block::teaser:gradient",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "yes": "ja",
-                "no": "nein"
-            },
-            "default_value": "no",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_645bddedd39e5",
             "label": "Bild",
             "name": "block::teaser:image",
@@ -113,7 +196,7 @@
             "name": "block::teaser:content",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "Text wird immer zentriert.",
+            "instructions": "Möglichst kein h1-Tag verwenden. Verwenden Sie den h1-Tag nur, wenn Sie sicher sind, dass es kein anderes h1-Tag auf der Seite gibt.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -124,7 +207,7 @@
             "default_value": "<h2>Heading(h2)<\/h2>\r\n<strong>(paragraph\/bold)et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<\/strong>\r\n\r\n(paragraph)Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0
         }
     ],
@@ -146,5 +229,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683794920
+    "modified": 1688042175
 }

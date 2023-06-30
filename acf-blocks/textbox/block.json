@@ -2,20 +2,14 @@
   "name": "acf/textbox",
   "title": "Textbox",
   "description": "Formatted Text Block",
-  "category": "text",
+  "category": "",
   "icon": "text",
-  "keywords": ["text"],
+  "keywords": [""],
   "acf": {
-    "mode": "preview",
     "renderTemplate": "textbox.php"
   },
-  "attributes": {
-    "align": {
-      "type": "string",
-      "default": "wide"
-    }
-  },
   "supports": {
-    "align": [""]
+    "align": [""],
+    "customClassName": false
   }
 }

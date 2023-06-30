@@ -34,6 +34,16 @@
   background-repeat: $repeat;
 }
 
+@mixin flex($dir, $gap: unset) {
+  display: flex;
+  flex-direction: $dir;
+  @if $dir == column {
+    row-gap: $gap;
+  } @else if $dir == row {
+    column-gap: $gap;
+  }
+}
+
 @mixin bg-feature($target, $font-color-w-bg: $color-white) {
   // Option: background color / box design
   // bg-color :
@@ -46,10 +56,9 @@
   &.box-design #{$target} {
     border-radius: 8px;
   }
-  &.bg--none.box-design #{$target} {
-    border: 1px solid $color-grey-light;
+  &.box-design.bg--none #{$target} {
+    border: 1px solid $color-gray-light;
   }
-
   &.bg--blue {
     &:not(.box-design),
     &.box-design #{$target} {
@@ -90,4 +99,21 @@
       color: $font-color-w-bg;
     }
   }
+  // Media Queary
+  @media only screen and (max-width: $bp-largest) {
+    &.box-design #{$target} {
+      margin-left: 3%;
+      margin-right: 3%;
+      & > * {
+        margin-left: -3%;
+        margin-right: -3%;
+      }
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,21 +1,12 @@
-.height {
-  &--90vh {
-    height: calc(90vh - #{$header-height});
-  }
-  &--75vh {
-    height: calc(75vh - #{$header-height});
-  }
-  &--50vh {
-    height: calc(50vh - #{$header-height});
-  }
-}
-
 .teaser {
   // structure
   position: relative;
+  .container {
+    @include flex-center;
+  }
   &__content,
   &__text {
-    row-gap: 3.5rem;
+    @include flex(column, 3.5rem);
   }
 
   // color, background image
@@ -40,7 +31,27 @@
     right: 0;
     z-index: -1;
   }
+  //Gradient Option
+  &.bg-g--top-gray {
+    .teaser__bg-gradient {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+  &.bg-g--bottom-gray {
+    .teaser__bg-gradient {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
 
+  //teaser text color
   &.tc--blue-light {
     color: $color-blue-light;
   }
@@ -60,6 +71,18 @@
     }
   }
 
+  // Height Option
+  .height {
+    &--90vh {
+      height: calc(90vh - #{$header-height});
+    }
+    &--75vh {
+      height: calc(75vh - #{$header-height});
+    }
+    &--50vh {
+      height: calc(50vh - #{$header-height});
+    }
+  }
   // Media Queary
   @media only screen and (max-width: $bp-largest) {
     .container {

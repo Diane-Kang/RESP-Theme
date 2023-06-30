@@ -1,0 +1,58 @@
+.booking {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .block-inner {
+    display: grid;
+    padding: 1.5rem;
+    display: flex;
+  }
+  .block {
+    border-radius: 16px;
+    border: 1px solid var(--common-gray-light, #e3e3e3);
+    background: var(--common-white, #fff);
+    width: calc(50% - 12px);
+    &-inner {
+      height: 200px;
+    }
+  }
+  $image-size: 20%;
+  .image {
+    width: $image-size;
+    margin-right: 1.5rem;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .content {
+    width: calc(100% - $image-size - 1.5rem);
+    height: 100%;
+    @include flex(column, 0.5rem);
+    .paragraph {
+      line-height: 1.2em;
+      flex-grow: 1;
+    }
+    .price {
+      text-align: right;
+      color: $color-blue-dark;
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    .container {
+      @include sidePadding;
+      @include flex(column, 1.5rem);
+      .block {
+        margin: auto;
+        max-width: 600px;
+        width: unset;
+      }
+    }
+  }
+  @media only screen and (max-width: $bp-smallfont) {
+    .block-inner {
+      height: 180px;
+    }
+  }
+}

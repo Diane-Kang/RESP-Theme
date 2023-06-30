@@ -61,7 +61,7 @@
     // block--item
     &--item {
       border-radius: 16px;
-      border: 1px solid $color-grey-light;
+      border: 1px solid $color-gray-light;
       &.highlight {
         border-color: $color-blue-dark;
         background-color: $color-blue-light-light;
@@ -95,7 +95,7 @@
     li {
       line-height: 3em;
       &:not(:last-child) {
-        border-bottom: 1px solid $color-grey-light;
+        border-bottom: 1px solid $color-gray-light;
       }
     }
   }

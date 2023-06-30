@@ -1,0 +1,67 @@
+.faq {
+  //basic structure
+  .entry {
+    &-wrapper {
+      padding: 1rem 0px;
+    }
+    position: relative;
+    padding: 1.5rem;
+    border-top: 1px solid $color-gray-light;
+  }
+  .entry:last-child {
+    border-bottom: 1px solid $color-gray-light;
+  }
+  .faq-toggle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    strong {
+      font-size: inherit;
+    }
+    a {
+      text-decoration: underline solid 1px;
+      transition: text-decoration 0.2s ease-in-out;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  .faq-question {
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      i {
+        margin-left: 1em;
+        font-size: 24px;
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  // Open the acodian
+  .faq-toggle:checked ~ .faq-answer {
+    max-height: unset;
+    padding-top: 1.5rem;
+  }
+  .faq-toggle:checked ~ .faq-question-wrapper i {
+    // transform: rotate(180deg);
+    transform: scaleY(-1);
+  }
+  //background & Box-design options with button color changes
+  @include bg-feature(".container");
+}

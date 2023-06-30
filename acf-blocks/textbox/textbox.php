@@ -12,12 +12,12 @@
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
 
-// Get values from ACF Fields
+// Get values from ACF Fields 
 
 // Common definition of $anchor, $module_classes, $container_classes
 require(get_template_directory() . '/acf-blocks/module-classes.php');
-array_unshift($a_module_classes, "module", "textbox");
-array_unshift($a_container_classes, "container");
+array_unshift($module_classes, "module", "textbox");
+array_unshift($container_classes, "container");
 
 // Buttons 
 $button1 = get_field('button1');
@@ -37,10 +37,10 @@ $text_content       = get_field('block::textbox:content');
 
 
 ?>
-<div <?php echo $anchor; ?> class="<?php echo implode(" ", $a_module_classes);  ?>">
-  <div class="<?php echo implode(" ", $a_container_classes); ?> flex flex-col">
-    <div class="textbox__text-container grid12">
-      <div class="textbox__text flex flex-col">
+<div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
+  <div class="<?php echo implode(" ", $container_classes); ?>">
+    <div class="textbox__text-container">
+      <div class="textbox__text">
         <?php echo $text_content; ?>
       </div>
     </div>

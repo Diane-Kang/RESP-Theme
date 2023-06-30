@@ -9,6 +9,7 @@
     "renderTemplate": "booking.php"
   },
   "supports": {
-    "align": [""]
+    "align": [""],
+    "customClassName": false
   }
 }

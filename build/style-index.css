@@ -782,17 +782,26 @@ h6 {
   }
 }
 
-.textbox .container {
+.textbox .container,
+.textbox .textbox__text {
+  display: flex;
+  flex-direction: column;
   row-gap: 2.5rem;
 }
 .textbox .textbox__text {
   grid-column: col-start 2/col-end 11;
-  row-gap: 2.5rem;
+}
+.textbox .textbox__text-container {
+  display: grid;
+  grid-template-columns: [center-start] repeat(12, [col-start] minmax(0px, 73px) [col-end]) [center-end];
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  align-items: center;
 }
 .textbox.box-design .container {
   border-radius: 8px;
 }
-.textbox.bg--none.box-design .container {
+.textbox.box-design.bg--none .container {
   border: 1px solid #e3e3e3;
 }
 .textbox.bg--blue:not(.box-design), .textbox.bg--blue.box-design .container {
@@ -819,6 +828,16 @@ h6 {
 .textbox.bg--blue .link--underline, .textbox.bg--blue-dark .link--underline, .textbox.bg--blue-gradient .link--underline {
   color: #fff;
 }
+@media only screen and (max-width: 1250px) {
+  .textbox.box-design .container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .textbox.box-design .container > * {
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+}
 @media only screen and (max-width: 600px) {
   .textbox .buttons--wrapper {
     grid-auto-flow: row;
@@ -826,20 +845,17 @@ h6 {
   }
 }
 
-.height--90vh {
-  height: calc(90vh - 130px);
-}
-.height--75vh {
-  height: calc(75vh - 130px);
-}
-.height--50vh {
-  height: calc(50vh - 130px);
-}
-
 .teaser {
   position: relative;
 }
+.teaser .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .teaser__content, .teaser__text {
+  display: flex;
+  flex-direction: column;
   row-gap: 3.5rem;
 }
 .teaser__bg-image {
@@ -863,6 +879,12 @@ h6 {
   right: 0;
   z-index: -1;
 }
+.teaser.bg-g--top-gray .teaser__bg-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.teaser.bg-g--bottom-gray .teaser__bg-gradient {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
 .teaser.tc--blue-light {
   color: #009fe3;
 }
@@ -881,6 +903,15 @@ h6 {
 .teaser.tc--white .link--underline {
   color: #fff;
 }
+.teaser .height--90vh {
+  height: calc(90vh - 130px);
+}
+.teaser .height--75vh {
+  height: calc(75vh - 130px);
+}
+.teaser .height--50vh {
+  height: calc(50vh - 130px);
+}
 @media only screen and (max-width: 1250px) {
   .teaser .container {
     max-width: unset;
@@ -892,6 +923,168 @@ h6 {
   .teaser .buttons--wrapper {
     grid-auto-flow: row;
     min-width: 60%;
+  }
+}
+
+.booking .container {
+  display: flex;
+  justify-content: space-between;
+}
+.booking .block-inner {
+  display: grid;
+  padding: 1.5rem;
+  display: flex;
+}
+.booking .block {
+  border-radius: 16px;
+  border: 1px solid var(--common-gray-light, #e3e3e3);
+  background: var(--common-white, #fff);
+  width: calc(50% - 12px);
+}
+.booking .block-inner {
+  height: 200px;
+}
+.booking .image {
+  width: 20%;
+  margin-right: 1.5rem;
+}
+.booking .image img {
+  border-radius: 50%;
+}
+.booking .content {
+  width: calc(80% - 1.5rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.booking .content .paragraph {
+  line-height: 1.2em;
+  flex-grow: 1;
+}
+.booking .content .price {
+  text-align: right;
+  color: #0064a3;
+}
+@media only screen and (max-width: 1250px) {
+  .booking .container {
+    max-width: unset;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  .booking .container .block {
+    margin: auto;
+    max-width: 600px;
+    width: unset;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .booking .block-inner {
+    height: 180px;
+  }
+}
+
+.faq .entry {
+  position: relative;
+  padding: 1.5rem;
+  border-top: 1px solid #e3e3e3;
+}
+.faq .entry-wrapper {
+  padding: 1rem 0px;
+}
+.faq .entry:last-child {
+  border-bottom: 1px solid #e3e3e3;
+}
+.faq .faq-toggle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+.faq .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.faq .faq-answer strong {
+  font-size: inherit;
+}
+.faq .faq-answer a {
+  -webkit-text-decoration: underline solid 1px;
+          text-decoration: underline solid 1px;
+  transition: -webkit-text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+}
+.faq .faq-answer a:hover {
+  text-decoration: none;
+}
+.faq .faq-question {
+  font-size: 20px;
+  font-weight: 700;
+}
+.faq .faq-question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq .faq-question-wrapper i {
+  margin-left: 1em;
+  font-size: 24px;
+  transition: transform 0.4s ease-in-out;
+}
+.faq .faq-toggle:checked ~ .faq-answer {
+  max-height: unset;
+  padding-top: 1.5rem;
+}
+.faq .faq-toggle:checked ~ .faq-question-wrapper i {
+  transform: scaleY(-1);
+}
+.faq.box-design .container {
+  border-radius: 8px;
+}
+.faq.box-design.bg--none .container {
+  border: 1px solid #e3e3e3;
+}
+.faq.bg--blue:not(.box-design), .faq.bg--blue.box-design .container {
+  background-color: #009fe3;
+}
+.faq.bg--blue-dark:not(.box-design), .faq.bg--blue-dark.box-design .container {
+  background-color: #0064a3;
+}
+.faq.bg--blue-gradient:not(.box-design), .faq.bg--blue-gradient.box-design .container {
+  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
+}
+.faq.bg--blue, .faq.bg--blue-dark, .faq.bg--blue-gradient {
+  color: #fff;
+}
+.faq.bg--blue .btn--fill, .faq.bg--blue-dark .btn--fill, .faq.bg--blue-gradient .btn--fill {
+  background-color: #fff;
+  color: #009fe3;
+  border: solid 2px #fff;
+}
+.faq.bg--blue .btn--empty, .faq.bg--blue-dark .btn--empty, .faq.bg--blue-gradient .btn--empty {
+  color: #fff;
+  border: solid 2px #fff;
+}
+.faq.bg--blue .link--underline, .faq.bg--blue-dark .link--underline, .faq.bg--blue-gradient .link--underline {
+  color: #fff;
+}
+@media only screen and (max-width: 1250px) {
+  .faq.box-design .container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .faq.box-design .container > * {
+    margin-left: -3%;
+    margin-right: -3%;
   }
 }
 

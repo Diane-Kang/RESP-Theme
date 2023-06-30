@@ -31,3 +31,4 @@ new ACFblock("h-line");
 new ACFblock("testimonial");
 new ACFblock("price-table");
 new ACFblock("booking");
+new ACFblock("faq");

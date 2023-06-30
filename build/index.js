@@ -21,10 +21,10 @@ class PriceTable {
       $highlight: document.querySelectorAll(".price-toggle-wrapper > span"),
       $feature: document.querySelectorAll(".block-wrapper-mobile .feature")
     };
-    //show the yearly payment option as default
-    this.elements.$price_toggle.checked = false;
     // Toggle event for yealry/monthly price
     if (this.elements.$price_toggle) {
+      //show the yearly payment option as default
+      this.elements.$price_toggle.checked = false;
       this.changePrice();
     }
     // Toggle event for feature content in mobile screen

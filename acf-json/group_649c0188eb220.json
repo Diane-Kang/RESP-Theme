@@ -143,7 +143,7 @@
             "name": "block::background:gradient",
             "aria-label": "",
             "type": "select",
-            "instructions": "top to bottom, gray to white -> background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%);",
+            "instructions": "Diese Option funktioniert nur mit Modul: Teaser",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -188,5 +188,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688027746
+    "modified": 1688134858
 }

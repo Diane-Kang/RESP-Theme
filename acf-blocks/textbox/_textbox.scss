@@ -1,12 +1,16 @@
 .textbox {
   // structure
-  .container {
-    row-gap: 2.5rem;
+  .container,
+  .textbox__text {
+    @include flex(column, 2.5rem);
   }
   .textbox__text {
+    &-container {
+      @include grid12;
+    }
     grid-column: col-start 2 / col-end 11;
-    row-gap: 2.5rem;
   }
+
   //background & Box-design options with button color changes
   @include bg-feature(".container");
 

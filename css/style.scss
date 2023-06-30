@@ -21,14 +21,17 @@
 @import "template-parts/header";
 @import "template-parts/footer";
 
-@import "module/textbox";
-@import "module/teaser";
+// @import "module/price-table";
+@import "../acf-blocks/textbox/textbox";
+@import "../acf-blocks/teaser/teaser";
+@import "../acf-blocks/booking/booking";
+@import "../acf-blocks/faq/faq";
+
 @import "module/imagetext";
 @import "module/card-list";
 @import "module/subnavigation";
 @import "module/h-line";
 @import "module/testimonial";
-// @import "module/price-table";
 @import "../acf-blocks/price-table/price-table";
 
 @import "template/single";
