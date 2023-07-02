@@ -1,7 +1,10 @@
 .imagetext {
   // Structure & Spaces(paading margin)
+  @include flex-center;
+
   img {
     width: 100%;
+    border-radius: 8px;
   }
   .btn,
   .link {
@@ -117,54 +120,13 @@
     }
   }
 
-  // default color
-  .imagetext__textbox .heading {
-    color: $color-blue-light;
-  }
-
   // Option: background color / box design
-  &.bg-blue {
-    background-color: $color-blue-light;
-    color: $color-white;
-    .heading {
-      color: inherit;
-    }
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-      border: solid 2px $color-white;
-    }
-    .btn--empty {
-      color: $color-white;
-      border: solid 2px $color-white;
-    }
-    .link--underline {
-      color: $color-white;
-    }
-
-    &.box-design {
-      background-color: unset;
-      .container {
-        background-color: $color-blue-light;
-      }
-      .image-first {
-        .imagetext__image {
-          margin-left: 3rem;
-        }
-        .imagetext__textbox {
-          margin-right: 3rem;
-        }
-      }
-      .text-first {
-        .imagetext__textbox {
-          margin-left: 3rem;
-        }
-        .imagetext__image {
-          margin-right: 3rem;
-        }
-      }
-    }
+  @include bg-feature(".container");
+  &.box-design .container {
+    padding-left: 3%;
+    padding-right: 3%;
   }
+
   // Media Queary
   @media only screen and (max-width: $bp-largest) {
     .container {

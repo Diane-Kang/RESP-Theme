@@ -3,6 +3,68 @@
     "title": "Block: imagetext",
     "fields": [
         {
+            "key": "field_649fef383c651",
+            "label": "Block Name:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>Bild-Text<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_649fef783c652",
+            "label": "Block: common Components - All",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_649c0188eb220"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_649fef9ed22bc",
+            "label": "Block: common Buttons - All",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_649c380deb6f5"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_643adb4ded573",
             "label": "Position",
             "name": "block::imagetext:position",
@@ -81,8 +143,8 @@
             "name": "block::imagetext:image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
-            "required": 0,
+            "instructions": "Bild: 16×9 ratio, required min resolution: 655px * 468.44px",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
@@ -116,8 +178,8 @@
             },
             "default_value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.",
             "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
+            "toolbar": "basic",
+            "media_upload": 0,
             "delay": 0
         }
     ],
@@ -139,5 +201,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684133940
+    "modified": 1688214932
 }

@@ -1,20 +1,15 @@
 {
   "name": "acf/imagetext",
-  "title": "ImageText",
-  "description": "ImageText",
+  "title": "Bild Text",
+  "description": "Bild-Text",
+  "category": "",
   "icon": "align-left",
   "keywords": ["text", "image"],
   "acf": {
-    "mode": "preview",
     "renderTemplate": "imagetext.php"
   },
-  "attributes": {
-    "align": {
-      "type": "string",
-      "default": "wide"
-    }
-  },
   "supports": {
-    "align": [""]
+    "align": [""],
+    "customClassName": false
   }
 }

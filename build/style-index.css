@@ -1088,8 +1088,14 @@ h6 {
   }
 }
 
+.imagetext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .imagetext img {
   width: 100%;
+  border-radius: 8px;
 }
 .imagetext .btn,
 .imagetext .link {
@@ -1177,45 +1183,49 @@ h6 {
 .imagetext .text-first.ratio--7-5 .imagetext__image {
   grid-column: span 5;
 }
-.imagetext .imagetext__textbox .heading {
-  color: #009fe3;
+.imagetext.box-design .container {
+  border-radius: 8px;
 }
-.imagetext.bg-blue {
+.imagetext.box-design.bg--none .container {
+  border: 1px solid #e3e3e3;
+}
+.imagetext.bg--blue:not(.box-design), .imagetext.bg--blue.box-design .container {
   background-color: #009fe3;
+}
+.imagetext.bg--blue-dark:not(.box-design), .imagetext.bg--blue-dark.box-design .container {
+  background-color: #0064a3;
+}
+.imagetext.bg--blue-gradient:not(.box-design), .imagetext.bg--blue-gradient.box-design .container {
+  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
+}
+.imagetext.bg--blue, .imagetext.bg--blue-dark, .imagetext.bg--blue-gradient {
   color: #fff;
 }
-.imagetext.bg-blue .heading {
-  color: inherit;
-}
-.imagetext.bg-blue .btn--fill {
+.imagetext.bg--blue .btn--fill, .imagetext.bg--blue-dark .btn--fill, .imagetext.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.imagetext.bg-blue .btn--empty {
+.imagetext.bg--blue .btn--empty, .imagetext.bg--blue-dark .btn--empty, .imagetext.bg--blue-gradient .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.imagetext.bg-blue .link--underline {
+.imagetext.bg--blue .link--underline, .imagetext.bg--blue-dark .link--underline, .imagetext.bg--blue-gradient .link--underline {
   color: #fff;
 }
-.imagetext.bg-blue.box-design {
-  background-color: unset;
+@media only screen and (max-width: 1250px) {
+  .imagetext.box-design .container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .imagetext.box-design .container > * {
+    margin-left: -3%;
+    margin-right: -3%;
+  }
 }
-.imagetext.bg-blue.box-design .container {
-  background-color: #009fe3;
-}
-.imagetext.bg-blue.box-design .image-first .imagetext__image {
-  margin-left: 3rem;
-}
-.imagetext.bg-blue.box-design .image-first .imagetext__textbox {
-  margin-right: 3rem;
-}
-.imagetext.bg-blue.box-design .text-first .imagetext__textbox {
-  margin-left: 3rem;
-}
-.imagetext.bg-blue.box-design .text-first .imagetext__image {
-  margin-right: 3rem;
+.imagetext.box-design .container {
+  padding-left: 3%;
+  padding-right: 3%;
 }
 @media only screen and (max-width: 1250px) {
   .imagetext .container {
