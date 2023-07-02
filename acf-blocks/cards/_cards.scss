@@ -1,7 +1,8 @@
-.card-list {
+.cards {
   // Structure & Spaces(paading margin)
   img {
     width: 100%;
+    border-radius: 8px;
   }
   .container {
     display: flex;
@@ -25,6 +26,13 @@
       }
     }
   }
+  //slide
+  overflow-x: scroll;
+  @include hide-scrollbar;
+
+  .container {
+    width: 1140px;
+  }
 
   // Option: image-first / text-first
   &.image-first {
@@ -45,30 +53,33 @@
   }
 
   // Option: background color / box design
-  &.bg-blue {
-    background-color: $color-blue-light;
+  //background & Box-design options with button color changes
+  @include bg-feature(".card");
 
-    &.box-design {
-      background-color: unset;
-      .card {
-        background-color: $color-blue-light;
-      }
-    }
+  // &.bg-blue {
+  //   background-color: $color-blue-light;
 
-    color: $color-white;
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-      border: solid 2px $color-white;
-    }
-    .btn--empty {
-      color: $color-white;
-      border: solid 2px $color-white;
-    }
-    .link--underline {
-      color: $color-white;
-    }
-  }
+  //   &.box-design {
+  //     background-color: unset;
+  //     .card {
+  //       background-color: $color-blue-light;
+  //     }
+  //   }
+
+  //   color: $color-white;
+  //   .btn--fill {
+  //     background-color: $color-white;
+  //     color: $color-blue-light;
+  //     border: solid 2px $color-white;
+  //   }
+  //   .btn--empty {
+  //     color: $color-white;
+  //     border: solid 2px $color-white;
+  //   }
+  //   .link--underline {
+  //     color: $color-white;
+  //   }
+  // }
 
   // Optio: Graphic Type: Image(default) / Icon
   &.graphic-icon {

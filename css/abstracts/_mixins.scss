@@ -99,21 +99,19 @@
       color: $font-color-w-bg;
     }
   }
-  // Media Queary
-  @media only screen and (max-width: $bp-largest) {
-    &.box-design #{$target} {
-      margin-left: 3%;
-      margin-right: 3%;
-      & > * {
-        margin-left: -3%;
-        margin-right: -3%;
-      }
-    }
-  }
 }
 
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin hide-scrollbar {
+  //disable scrollbar
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }

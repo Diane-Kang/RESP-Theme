@@ -2,3 +2,7 @@
   visibility: hidden;
   height: 10px;
 }
+
+.module {
+  display: block !important;
+}

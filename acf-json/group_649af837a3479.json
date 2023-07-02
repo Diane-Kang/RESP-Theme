@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_649c328b7f7f8",
-            "label": "",
+            "label": "Block Name:",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -187,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687958187
+    "modified": 1688280194
 }

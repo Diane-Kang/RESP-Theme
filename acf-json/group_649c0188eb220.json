@@ -18,8 +18,8 @@
             },
             "choices": {
                 "all": "mobile, tablet and desktop",
-                "mobile": "mobile only",
-                "desktop": "tablet and desktop only"
+                "mobile": "mobile &tablet only",
+                "desktop": "desktop only"
             },
             "default_value": "all",
             "return_format": "value",
@@ -188,5 +188,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688134858
+    "modified": 1688305793
 }

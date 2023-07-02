@@ -1,0 +1,16 @@
+{
+  "name": "acf/cards",
+  "title": "Kacheln",
+  "description": "Kacheln Block",
+  "category": "",
+  "icon": "columns",
+  "keywords": ["text", "media"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "cards.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

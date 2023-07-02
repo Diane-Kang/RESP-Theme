@@ -126,6 +126,17 @@
     padding-left: 3%;
     padding-right: 3%;
   }
+  // Media Queary
+  @media only screen and (max-width: $bp-largest) {
+    &.box-design .container {
+      margin-left: 3%;
+      margin-right: 3%;
+      & > * {
+        margin-left: -3%;
+        margin-right: -3%;
+      }
+    }
+  }
 
   // Media Queary
   @media only screen and (max-width: $bp-largest) {

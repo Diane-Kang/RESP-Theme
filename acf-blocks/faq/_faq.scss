@@ -64,4 +64,15 @@
   }
   //background & Box-design options with button color changes
   @include bg-feature(".container");
+  // Media Queary
+  @media only screen and (max-width: $bp-largest) {
+    &.box-design .container {
+      margin-left: 3%;
+      margin-right: 3%;
+      & > * {
+        margin-left: -3%;
+        margin-right: -3%;
+      }
+    }
+  }
 }

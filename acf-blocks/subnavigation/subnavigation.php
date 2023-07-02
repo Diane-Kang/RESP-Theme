@@ -11,28 +11,20 @@ if (get_field('block::subnavi:type') == 'subpages') {
   $type = "customlinks";
 }
 
-
 $items = getSubNavigationItems($type, $parentId, get_the_ID());
+
 ?>
 <?php if ($items) : ?>
-  <span class="Anchor" data-id="navigation"></span>
-  <div class="module subnavigation">
+  <!-- <span class="Anchor" data-id="navigation"></span> -->
+  <div class="subnavi-sticky-marker"></div>
+  <div class="module subnavigation display--desktop ">
     <div class="container">
-      <nav class="subnavigation--desktop flex">
+      <nav>
         <?php foreach ($items as $item) : ?>
           <?php $link = $item['link'] . ($type === "nav" ? "#navigation" : ""); ?>
           <a href="<?= $link; ?>" class="<?= $item['active'] ? ' active' : ''; ?>"><?= $item['title']; ?></a>
         <?php endforeach; ?>
       </nav>
-
-      <div class="subnavigation--mobile">
-        <select class="Select__input">
-          <?php foreach ($items as $item) : ?>
-            <?php $link = $item['link'] . ($type === "nav" ? "#navigation" : ""); ?>
-            <option value="<?= $link ?>" <?= $item['active'] ? ' selected' : ''; ?>><?= $item['title']; ?></option>
-          <?php endforeach; ?>
-        </select>
-      </div>
     </div>
   </div>
 <?php endif; ?>
