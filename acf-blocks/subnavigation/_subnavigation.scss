@@ -4,7 +4,7 @@
     nav {
       display: flex;
       border-radius: 8px;
-      background: #e5f5ff;
+      background: $color-blue-light-light;
       line-height: 2.5em;
       font-size: 20px;
     }
@@ -45,7 +45,7 @@
     background-color: white;
     .container {
       max-width: unset;
-      background-color: #e5f5ff;
+      background-color: $color-blue-light-light;
     }
     nav {
       max-width: 1140px;

@@ -125,7 +125,7 @@
             },
             "choices": {
                 "none": "Transparent",
-                "blue": "Blau",
+                "blue-light": "hell Blau",
                 "blue-dark": "dunkel Blau",
                 "blue-gradient": "Farbverlauf Blau"
             },
@@ -188,5 +188,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688305793
+    "modified": 1688309807
 }

@@ -6,6 +6,7 @@
   "icon": "align-left",
   "keywords": ["text", "image"],
   "acf": {
+    "mode": "edit",
     "renderTemplate": "imagetext.php"
   },
   "supports": {

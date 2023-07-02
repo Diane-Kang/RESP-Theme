@@ -3,6 +3,7 @@
   height: 10px;
 }
 
+/* regardless the .device--dektop or .device--mobile, module need to be always appearing in Editor(backend) */
 .module {
   display: block !important;
 }

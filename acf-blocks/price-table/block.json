@@ -6,9 +6,11 @@
   "icon": "text",
   "keywords": ["text"],
   "acf": {
+    "mode": "edit",
     "renderTemplate": "price-table.php"
   },
   "supports": {
-    "align": [""]
+    "align": [""],
+    "customClassName": false
   }
 }

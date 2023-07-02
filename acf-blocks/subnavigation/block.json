@@ -6,16 +6,11 @@
   "icon": "editor-insertmore",
   "keywords": ["navi"],
   "acf": {
-    "mode": "preview",
+    "mode": "edit",
     "renderTemplate": "subnavigation.php"
   },
-  "attributes": {
-    "align": {
-      "type": "string",
-      "default": "wide"
-    }
-  },
   "supports": {
-    "align": [""]
+    "align": [""],
+    "customClassName": false
   }
 }

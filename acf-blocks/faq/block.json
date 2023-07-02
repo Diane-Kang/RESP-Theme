@@ -6,6 +6,7 @@
   "icon": "format-chat",
   "keywords": [""],
   "acf": {
+    "mode": "edit",
     "renderTemplate": "faq.php"
   },
   "supports": {

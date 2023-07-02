@@ -1,0 +1,22 @@
+.h-line {
+  //Structure
+  .container {
+    @include grid12;
+  }
+  .line {
+    grid-column: col-start 2 / col-end 11;
+    height: 4px;
+    border-radius: 8px;
+    &.blue-light {
+      background-color: $color-blue-light;
+    }
+    &.blue-dark {
+      background-color: $color-blue-dark;
+    }
+    &.blue-dark2 {
+      background-color: $color-blue-dark2;
+    }
+  }
+  //background & Box-design options with button color changes
+  @include bg-feature(".container");
+}

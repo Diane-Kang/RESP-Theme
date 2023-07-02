@@ -59,7 +59,7 @@
   &.box-design.bg--none #{$target} {
     border: 1px solid $color-gray-light;
   }
-  &.bg--blue {
+  &.bg--blue-light {
     &:not(.box-design),
     &.box-design #{$target} {
       background-color: $color-blue-light;
@@ -82,7 +82,7 @@
       );
     }
   }
-  &.bg--blue,
+  &.bg--blue-light,
   &.bg--blue-dark,
   &.bg--blue-gradient {
     color: $font-color-w-bg;

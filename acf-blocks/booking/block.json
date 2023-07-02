@@ -6,6 +6,7 @@
   "icon": "plus",
   "keywords": [""],
   "acf": {
+    "mode": "edit",
     "renderTemplate": "booking.php"
   },
   "supports": {

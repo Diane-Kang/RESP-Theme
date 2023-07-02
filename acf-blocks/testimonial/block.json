@@ -6,10 +6,11 @@
   "icon": "format-quote",
   "keywords": ["text", "media"],
   "acf": {
-    "mode": "preview",
+    "mode": "edit",
     "renderTemplate": "testimonial.php"
   },
   "supports": {
-    "align": false
+    "align": false,
+    "customClassName": false
   }
 }

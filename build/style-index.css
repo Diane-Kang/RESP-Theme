@@ -815,7 +815,7 @@ h6 {
 .textbox.box-design.bg--none .container {
   border: 1px solid #e3e3e3;
 }
-.textbox.bg--blue:not(.box-design), .textbox.bg--blue.box-design .container {
+.textbox.bg--blue-light:not(.box-design), .textbox.bg--blue-light.box-design .container {
   background-color: #009fe3;
 }
 .textbox.bg--blue-dark:not(.box-design), .textbox.bg--blue-dark.box-design .container {
@@ -824,19 +824,19 @@ h6 {
 .textbox.bg--blue-gradient:not(.box-design), .textbox.bg--blue-gradient.box-design .container {
   background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
 }
-.textbox.bg--blue, .textbox.bg--blue-dark, .textbox.bg--blue-gradient {
+.textbox.bg--blue-light, .textbox.bg--blue-dark, .textbox.bg--blue-gradient {
   color: #fff;
 }
-.textbox.bg--blue .btn--fill, .textbox.bg--blue-dark .btn--fill, .textbox.bg--blue-gradient .btn--fill {
+.textbox.bg--blue-light .btn--fill, .textbox.bg--blue-dark .btn--fill, .textbox.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.textbox.bg--blue .btn--empty, .textbox.bg--blue-dark .btn--empty, .textbox.bg--blue-gradient .btn--empty {
+.textbox.bg--blue-light .btn--empty, .textbox.bg--blue-dark .btn--empty, .textbox.bg--blue-gradient .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.textbox.bg--blue .link--underline, .textbox.bg--blue-dark .link--underline, .textbox.bg--blue-gradient .link--underline {
+.textbox.bg--blue-light .link--underline, .textbox.bg--blue-dark .link--underline, .textbox.bg--blue-gradient .link--underline {
   color: #fff;
 }
 @media only screen and (max-width: 600px) {
@@ -1054,7 +1054,7 @@ h6 {
 .faq.box-design.bg--none .container {
   border: 1px solid #e3e3e3;
 }
-.faq.bg--blue:not(.box-design), .faq.bg--blue.box-design .container {
+.faq.bg--blue-light:not(.box-design), .faq.bg--blue-light.box-design .container {
   background-color: #009fe3;
 }
 .faq.bg--blue-dark:not(.box-design), .faq.bg--blue-dark.box-design .container {
@@ -1063,19 +1063,19 @@ h6 {
 .faq.bg--blue-gradient:not(.box-design), .faq.bg--blue-gradient.box-design .container {
   background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
 }
-.faq.bg--blue, .faq.bg--blue-dark, .faq.bg--blue-gradient {
+.faq.bg--blue-light, .faq.bg--blue-dark, .faq.bg--blue-gradient {
   color: #fff;
 }
-.faq.bg--blue .btn--fill, .faq.bg--blue-dark .btn--fill, .faq.bg--blue-gradient .btn--fill {
+.faq.bg--blue-light .btn--fill, .faq.bg--blue-dark .btn--fill, .faq.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.faq.bg--blue .btn--empty, .faq.bg--blue-dark .btn--empty, .faq.bg--blue-gradient .btn--empty {
+.faq.bg--blue-light .btn--empty, .faq.bg--blue-dark .btn--empty, .faq.bg--blue-gradient .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.faq.bg--blue .link--underline, .faq.bg--blue-dark .link--underline, .faq.bg--blue-gradient .link--underline {
+.faq.bg--blue-light .link--underline, .faq.bg--blue-dark .link--underline, .faq.bg--blue-gradient .link--underline {
   color: #fff;
 }
 @media only screen and (max-width: 1250px) {
@@ -1190,7 +1190,7 @@ h6 {
 .imagetext.box-design.bg--none .container {
   border: 1px solid #e3e3e3;
 }
-.imagetext.bg--blue:not(.box-design), .imagetext.bg--blue.box-design .container {
+.imagetext.bg--blue-light:not(.box-design), .imagetext.bg--blue-light.box-design .container {
   background-color: #009fe3;
 }
 .imagetext.bg--blue-dark:not(.box-design), .imagetext.bg--blue-dark.box-design .container {
@@ -1199,19 +1199,19 @@ h6 {
 .imagetext.bg--blue-gradient:not(.box-design), .imagetext.bg--blue-gradient.box-design .container {
   background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
 }
-.imagetext.bg--blue, .imagetext.bg--blue-dark, .imagetext.bg--blue-gradient {
+.imagetext.bg--blue-light, .imagetext.bg--blue-dark, .imagetext.bg--blue-gradient {
   color: #fff;
 }
-.imagetext.bg--blue .btn--fill, .imagetext.bg--blue-dark .btn--fill, .imagetext.bg--blue-gradient .btn--fill {
+.imagetext.bg--blue-light .btn--fill, .imagetext.bg--blue-dark .btn--fill, .imagetext.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.imagetext.bg--blue .btn--empty, .imagetext.bg--blue-dark .btn--empty, .imagetext.bg--blue-gradient .btn--empty {
+.imagetext.bg--blue-light .btn--empty, .imagetext.bg--blue-dark .btn--empty, .imagetext.bg--blue-gradient .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.imagetext.bg--blue .link--underline, .imagetext.bg--blue-dark .link--underline, .imagetext.bg--blue-gradient .link--underline {
+.imagetext.bg--blue-light .link--underline, .imagetext.bg--blue-dark .link--underline, .imagetext.bg--blue-gradient .link--underline {
   color: #fff;
 }
 .imagetext.box-design .container {
@@ -1308,7 +1308,7 @@ h6 {
 .cards.box-design.bg--none .card {
   border: 1px solid #e3e3e3;
 }
-.cards.bg--blue:not(.box-design), .cards.bg--blue.box-design .card {
+.cards.bg--blue-light:not(.box-design), .cards.bg--blue-light.box-design .card {
   background-color: #009fe3;
 }
 .cards.bg--blue-dark:not(.box-design), .cards.bg--blue-dark.box-design .card {
@@ -1317,19 +1317,19 @@ h6 {
 .cards.bg--blue-gradient:not(.box-design), .cards.bg--blue-gradient.box-design .card {
   background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
 }
-.cards.bg--blue, .cards.bg--blue-dark, .cards.bg--blue-gradient {
+.cards.bg--blue-light, .cards.bg--blue-dark, .cards.bg--blue-gradient {
   color: #fff;
 }
-.cards.bg--blue .btn--fill, .cards.bg--blue-dark .btn--fill, .cards.bg--blue-gradient .btn--fill {
+.cards.bg--blue-light .btn--fill, .cards.bg--blue-dark .btn--fill, .cards.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
   border: solid 2px #fff;
 }
-.cards.bg--blue .btn--empty, .cards.bg--blue-dark .btn--empty, .cards.bg--blue-gradient .btn--empty {
+.cards.bg--blue-light .btn--empty, .cards.bg--blue-dark .btn--empty, .cards.bg--blue-gradient .btn--empty {
   color: #fff;
   border: solid 2px #fff;
 }
-.cards.bg--blue .link--underline, .cards.bg--blue-dark .link--underline, .cards.bg--blue-gradient .link--underline {
+.cards.bg--blue-light .link--underline, .cards.bg--blue-dark .link--underline, .cards.bg--blue-gradient .link--underline {
   color: #fff;
 }
 .cards.graphic-icon .card__image {
@@ -1383,15 +1383,56 @@ h6 {
   margin: auto;
 }
 
-.h-line .bg-blue-gradient {
-  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
-}
-.h-line .bg-blue {
-  background-color: #009fe3;
+.h-line .container {
+  display: grid;
+  grid-template-columns: [center-start] repeat(12, [col-start] minmax(0px, 73px) [col-end]) [center-end];
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  align-items: center;
 }
 .h-line .line {
   grid-column: col-start 2/col-end 11;
   height: 4px;
+  border-radius: 8px;
+}
+.h-line .line.blue-light {
+  background-color: #009fe3;
+}
+.h-line .line.blue-dark {
+  background-color: #0064a3;
+}
+.h-line .line.blue-dark2 {
+  background-color: #083f74;
+}
+.h-line.box-design .container {
+  border-radius: 8px;
+}
+.h-line.box-design.bg--none .container {
+  border: 1px solid #e3e3e3;
+}
+.h-line.bg--blue-light:not(.box-design), .h-line.bg--blue-light.box-design .container {
+  background-color: #009fe3;
+}
+.h-line.bg--blue-dark:not(.box-design), .h-line.bg--blue-dark.box-design .container {
+  background-color: #0064a3;
+}
+.h-line.bg--blue-gradient:not(.box-design), .h-line.bg--blue-gradient.box-design .container {
+  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
+}
+.h-line.bg--blue-light, .h-line.bg--blue-dark, .h-line.bg--blue-gradient {
+  color: #fff;
+}
+.h-line.bg--blue-light .btn--fill, .h-line.bg--blue-dark .btn--fill, .h-line.bg--blue-gradient .btn--fill {
+  background-color: #fff;
+  color: #009fe3;
+  border: solid 2px #fff;
+}
+.h-line.bg--blue-light .btn--empty, .h-line.bg--blue-dark .btn--empty, .h-line.bg--blue-gradient .btn--empty {
+  color: #fff;
+  border: solid 2px #fff;
+}
+.h-line.bg--blue-light .link--underline, .h-line.bg--blue-dark .link--underline, .h-line.bg--blue-gradient .link--underline {
+  color: #fff;
 }
 
 .testimonial .container {

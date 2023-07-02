@@ -6,10 +6,11 @@
   "icon": "minus",
   "keywords": ["design", "line", "spacer"],
   "acf": {
-    "mode": "preview",
+    "mode": "edit",
     "renderTemplate": "h-line.php"
   },
   "supports": {
-    "align": false
+    "align": false,
+    "customClassName": false
   }
 }

@@ -6,6 +6,7 @@
   "icon": "button",
   "keywords": [""],
   "acf": {
+    "mode": "edit",
     "renderTemplate": "teaser.php"
   },
   "supports": {

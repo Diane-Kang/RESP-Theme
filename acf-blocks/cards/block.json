@@ -6,7 +6,7 @@
   "icon": "columns",
   "keywords": ["text", "media"],
   "acf": {
-    "mode": "preview",
+    "mode": "edit",
     "renderTemplate": "cards.php"
   },
   "supports": {

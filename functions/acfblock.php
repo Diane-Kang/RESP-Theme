@@ -28,6 +28,7 @@ new ACFblock("imagetext");
 new ACFblock("cards");
 new ACFblock("subnavigation");
 new ACFblock("h-line");
+
 new ACFblock("testimonial");
 new ACFblock("price-table");
 new ACFblock("booking");
