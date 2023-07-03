@@ -32,10 +32,10 @@ array_push($container_classes, $order, $size);
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
   <div class="<?php echo implode(" ", $container_classes); ?>">
 
-    <div class="image center">
+    <div class="image">
       <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
     </div>
-    <div class="textbox flex flex-col">
+    <div class="textbox">
       <div class="quote"><?php echo $quote; ?></div>
       <div class="name text-bold"><?php echo $name; ?></div>
       <div class="role"><?php echo $jobposition; ?> bei Firma <?php echo $company; ?></div>

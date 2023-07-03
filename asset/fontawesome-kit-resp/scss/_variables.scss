@@ -48,10 +48,16 @@ $fa-stack-z-index       : auto !default;
 $fa-font-display        : block !default;
 $fa-font-path           : "../webfonts" !default;
 
+$fa-var-arrow-left: \f060;
+$fa-var-arrow-right: \f061;
 $fa-var-chevron-down: \f078;
 $fa-var-chevron-left: \f053;
 $fa-var-chevron-right: \f054;
 $fa-var-chevron-up: \f077;
+$fa-var-circle-check: \f058;
+$fa-var-check-circle: \f058;
+$fa-var-circle-info: \f05a;
+$fa-var-info-circle: \f05a;
 $fa-var-facebook: \f09a;
 $fa-var-instagram: \f16d;
 $fa-var-linkedin: \f08c;
@@ -65,10 +71,16 @@ $fa-var-twitter: \f099;
 $fa-var-youtube: \f167;
 
 $fa-icons: (
+  "arrow-left": $fa-var-arrow-left,
+  "arrow-right": $fa-var-arrow-right,
   "chevron-down": $fa-var-chevron-down,
   "chevron-left": $fa-var-chevron-left,
   "chevron-right": $fa-var-chevron-right,
   "chevron-up": $fa-var-chevron-up,
+  "circle-check": $fa-var-circle-check,
+  "check-circle": $fa-var-check-circle,
+  "circle-info": $fa-var-circle-info,
+  "info-circle": $fa-var-info-circle,
   "facebook": $fa-var-facebook,
   "instagram": $fa-var-instagram,
   "linkedin": $fa-var-linkedin,

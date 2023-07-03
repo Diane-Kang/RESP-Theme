@@ -17,6 +17,7 @@
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    @include flex-center;
     img {
       position: absolute;
       top: 0;
@@ -25,6 +26,7 @@
   .textbox {
     margin-left: 40px;
     grid-column: span 8;
+    @include flex(column);
     .quote {
       font-size: 1.75rem;
       font-style: italic;
