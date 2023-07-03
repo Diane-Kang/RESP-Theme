@@ -21,7 +21,6 @@
 @import "template-parts/header";
 @import "template-parts/footer";
 
-// @import "module/price-table";
 @import "../acf-blocks/textbox/textbox";
 @import "../acf-blocks/teaser/teaser";
 @import "../acf-blocks/booking/booking";
@@ -30,8 +29,7 @@
 @import "../acf-blocks/cards/cards";
 @import "../acf-blocks/subnavigation/subnavigation";
 @import "../acf-blocks/h-line/h-line";
-
-@import "module/testimonial";
+@import "../acf-blocks/testimonial/testimonial";
 @import "../acf-blocks/price-table/price-table";
 
 @import "template/single";

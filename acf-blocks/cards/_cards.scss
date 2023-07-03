@@ -56,31 +56,6 @@
   //background & Box-design options with button color changes
   @include bg-feature(".card");
 
-  // &.bg-blue {
-  //   background-color: $color-blue-light;
-
-  //   &.box-design {
-  //     background-color: unset;
-  //     .card {
-  //       background-color: $color-blue-light;
-  //     }
-  //   }
-
-  //   color: $color-white;
-  //   .btn--fill {
-  //     background-color: $color-white;
-  //     color: $color-blue-light;
-  //     border: solid 2px $color-white;
-  //   }
-  //   .btn--empty {
-  //     color: $color-white;
-  //     border: solid 2px $color-white;
-  //   }
-  //   .link--underline {
-  //     color: $color-white;
-  //   }
-  // }
-
   // Optio: Graphic Type: Image(default) / Icon
   &.graphic-icon {
     .card__image {

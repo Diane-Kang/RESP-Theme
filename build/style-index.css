@@ -1435,8 +1435,18 @@ h6 {
   color: #fff;
 }
 
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .testimonial .container {
   align-items: start;
+  display: grid;
+  grid-template-columns: [center-start] repeat(12, [col-start] minmax(0px, 73px) [col-end]) [center-end];
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  align-items: center;
 }
 .testimonial .image,
 .testimonial .textbox {
@@ -1474,16 +1484,48 @@ h6 {
 .testimonial .textbox .role {
   font-size: 16px;
 }
+.testimonial .small {
+  max-width: 558px;
+}
 .testimonial .small .image {
-  grid-column: 4/span 1;
+  grid-column: 2/span 2;
 }
 .testimonial .small .textbox {
-  grid-column: 5/span 5;
   margin: unset;
 }
 .testimonial .small .textbox .quote {
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+.testimonial.box-design .container {
+  border-radius: 8px;
+}
+.testimonial.box-design.bg--none .container {
+  border: 1px solid #e3e3e3;
+}
+.testimonial.bg--blue-light:not(.box-design), .testimonial.bg--blue-light.box-design .container {
+  background-color: #009fe3;
+}
+.testimonial.bg--blue-dark:not(.box-design), .testimonial.bg--blue-dark.box-design .container {
+  background-color: #0064a3;
+}
+.testimonial.bg--blue-gradient:not(.box-design), .testimonial.bg--blue-gradient.box-design .container {
+  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
+}
+.testimonial.bg--blue-light, .testimonial.bg--blue-dark, .testimonial.bg--blue-gradient {
+  color: #fff;
+}
+.testimonial.bg--blue-light .btn--fill, .testimonial.bg--blue-dark .btn--fill, .testimonial.bg--blue-gradient .btn--fill {
+  background-color: #fff;
+  color: #009fe3;
+  border: solid 2px #fff;
+}
+.testimonial.bg--blue-light .btn--empty, .testimonial.bg--blue-dark .btn--empty, .testimonial.bg--blue-gradient .btn--empty {
+  color: #fff;
+  border: solid 2px #fff;
+}
+.testimonial.bg--blue-light .link--underline, .testimonial.bg--blue-dark .link--underline, .testimonial.bg--blue-gradient .link--underline {
+  color: #fff;
 }
 .testimonial .text-image .textbox {
   margin-left: unset;
@@ -1498,6 +1540,56 @@ h6 {
 }
 .testimonial .text-image.small .image {
   grid-column: 9/span 1;
+}
+@media only screen and (max-width: 1250px) {
+  .testimonial.box-design .container:not(.small) {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .testimonial.box-design .container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .testimonial .container:not(.small) {
+    max-width: 558px;
+    margin: 0px 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .testimonial .container:not(.small) .image {
+    width: 170px;
+  }
+  .testimonial .container:not(.small) .textbox {
+    margin: 0 3%;
+    text-align: center;
+  }
+  .testimonial .container:not(.small) .textbox .quote {
+    font-size: 20px;
+  }
+  .testimonial .container:not(.small) .textbox .name {
+    font-size: 14px;
+  }
+  .testimonial .container:not(.small) .textbox .role {
+    font-size: 12px;
+  }
+  .testimonial .container.small {
+    display: flex;
+    padding: 48px 40px;
+  }
+  .testimonial .container.small .image {
+    width: 80px;
+    margin-right: 24px;
+    align-self: start;
+  }
+  .testimonial .container.small .textbox {
+    width: calc(100% - 104px);
+  }
+  .testimonial .container.small .textbox .role {
+    font-size: 14px;
+  }
 }
 
 .price-table .block-wrapper-mobile {

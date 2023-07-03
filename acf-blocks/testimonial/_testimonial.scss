@@ -1,8 +1,11 @@
 .testimonial {
+  @include flex-center;
   // Basic structure
   .container {
     align-items: start;
+    @include grid12;
   }
+
   .image,
   .textbox {
     grid-row: 1;
@@ -39,14 +42,14 @@
       font-size: 16px;
     }
   }
-
   // option small / big
   .small {
+    max-width: 558px;
     .image {
-      grid-column: 4 / span 1;
+      grid-column: 2 / span 2;
     }
     .textbox {
-      grid-column: 5 / span 5;
+      // grid-column: 5 / span 5;
       margin: unset;
       .quote {
         font-size: 1rem;
@@ -54,6 +57,9 @@
       }
     }
   }
+
+  //background color
+  @include bg-feature(".container");
 
   // option Foto|Zitat / Zitat|Foto
   .text-image {
@@ -71,6 +77,55 @@
       }
       .image {
         grid-column: 9 / span 1;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    &.box-design .container:not(.small) {
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+  }
+  @media only screen and (max-width: $bp-tablet) {
+    &.box-design .container {
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    .container:not(.small) {
+      max-width: 558px;
+      margin: 0px 5%;
+      @include flex(column, 40px);
+      .image {
+        width: 170px;
+      }
+      .textbox {
+        margin: 0 3%;
+        text-align: center;
+        .quote {
+          font-size: 20px;
+        }
+        .name {
+          font-size: 14px;
+        }
+        .role {
+          font-size: 12px;
+        }
+      }
+    }
+    .container.small {
+      display: flex;
+      padding: 48px 40px;
+      .image {
+        width: 80px;
+        margin-right: 24px;
+        align-self: start;
+      }
+      .textbox {
+        width: calc(100% - 104px);
+        .role {
+          font-size: 14px;
+        }
       }
     }
   }
