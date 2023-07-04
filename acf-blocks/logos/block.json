@@ -1,0 +1,16 @@
+{
+  "name": "acf/logos",
+  "title": "Icons",
+  "description": "Icons Block",
+  "category": "",
+  "icon": "ellipsis",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "logos.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

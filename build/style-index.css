@@ -100,6 +100,10 @@ body {
   box-sizing: border-box;
 }
 
+.module {
+  margin: 2rem auto;
+}
+
 .container {
   max-width: 1140px;
   margin: auto;
@@ -827,6 +831,9 @@ h6 {
 .textbox.bg--blue-light, .textbox.bg--blue-dark, .textbox.bg--blue-gradient {
   color: #fff;
 }
+.textbox.bg--blue-light .text, .textbox.bg--blue-dark .text, .textbox.bg--blue-gradient .text {
+  color: #fff;
+}
 .textbox.bg--blue-light .btn--fill, .textbox.bg--blue-dark .btn--fill, .textbox.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
@@ -1066,6 +1073,9 @@ h6 {
 .faq.bg--blue-light, .faq.bg--blue-dark, .faq.bg--blue-gradient {
   color: #fff;
 }
+.faq.bg--blue-light .text, .faq.bg--blue-dark .text, .faq.bg--blue-gradient .text {
+  color: #fff;
+}
 .faq.bg--blue-light .btn--fill, .faq.bg--blue-dark .btn--fill, .faq.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
@@ -1202,6 +1212,9 @@ h6 {
 .imagetext.bg--blue-light, .imagetext.bg--blue-dark, .imagetext.bg--blue-gradient {
   color: #fff;
 }
+.imagetext.bg--blue-light .text, .imagetext.bg--blue-dark .text, .imagetext.bg--blue-gradient .text {
+  color: #fff;
+}
 .imagetext.bg--blue-light .btn--fill, .imagetext.bg--blue-dark .btn--fill, .imagetext.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
@@ -1320,6 +1333,9 @@ h6 {
 .cards.bg--blue-light, .cards.bg--blue-dark, .cards.bg--blue-gradient {
   color: #fff;
 }
+.cards.bg--blue-light .text, .cards.bg--blue-dark .text, .cards.bg--blue-gradient .text {
+  color: #fff;
+}
 .cards.bg--blue-light .btn--fill, .cards.bg--blue-dark .btn--fill, .cards.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
@@ -1422,6 +1438,9 @@ h6 {
 .h-line.bg--blue-light, .h-line.bg--blue-dark, .h-line.bg--blue-gradient {
   color: #fff;
 }
+.h-line.bg--blue-light .text, .h-line.bg--blue-dark .text, .h-line.bg--blue-gradient .text {
+  color: #fff;
+}
 .h-line.bg--blue-light .btn--fill, .h-line.bg--blue-dark .btn--fill, .h-line.bg--blue-gradient .btn--fill {
   background-color: #fff;
   color: #009fe3;
@@ -1519,6 +1538,9 @@ h6 {
   background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
 }
 .testimonial.bg--blue-light, .testimonial.bg--blue-dark, .testimonial.bg--blue-gradient {
+  color: #fff;
+}
+.testimonial.bg--blue-light .text, .testimonial.bg--blue-dark .text, .testimonial.bg--blue-gradient .text {
   color: #fff;
 }
 .testimonial.bg--blue-light .btn--fill, .testimonial.bg--blue-dark .btn--fill, .testimonial.bg--blue-gradient .btn--fill {
@@ -1755,6 +1777,85 @@ h6 {
     max-width: 350px;
     padding: unset;
     margin: auto;
+  }
+}
+
+.logos .container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.logos .image-wrapper {
+  width: 198px;
+  height: 107px;
+  padding: 16px 24px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logos .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.logos .textbox-wrapper {
+  margin-top: 32px;
+  text-align: center;
+}
+.logos .textbox-wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #083f74;
+}
+.logos.box-design .container {
+  border-radius: 8px;
+}
+.logos.box-design.bg--none .container {
+  border: 1px solid #e3e3e3;
+}
+.logos.bg--blue-light:not(.box-design), .logos.bg--blue-light.box-design .container {
+  background-color: #009fe3;
+}
+.logos.bg--blue-dark:not(.box-design), .logos.bg--blue-dark.box-design .container {
+  background-color: #0064a3;
+}
+.logos.bg--blue-gradient:not(.box-design), .logos.bg--blue-gradient.box-design .container {
+  background: linear-gradient(180deg, #009fe3 0%, #083f74 100%);
+}
+.logos.bg--blue-light, .logos.bg--blue-dark, .logos.bg--blue-gradient {
+  color: #fff;
+}
+.logos.bg--blue-light .text, .logos.bg--blue-dark .text, .logos.bg--blue-gradient .text {
+  color: #fff;
+}
+.logos.bg--blue-light .btn--fill, .logos.bg--blue-dark .btn--fill, .logos.bg--blue-gradient .btn--fill {
+  background-color: #fff;
+  color: #009fe3;
+  border: solid 2px #fff;
+}
+.logos.bg--blue-light .btn--empty, .logos.bg--blue-dark .btn--empty, .logos.bg--blue-gradient .btn--empty {
+  color: #fff;
+  border: solid 2px #fff;
+}
+.logos.bg--blue-light .link--underline, .logos.bg--blue-dark .link--underline, .logos.bg--blue-gradient .link--underline {
+  color: #fff;
+}
+@media only screen and (max-width: 1250px) {
+  .logos.box-design .container {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 

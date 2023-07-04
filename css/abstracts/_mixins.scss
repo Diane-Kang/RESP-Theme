@@ -86,6 +86,9 @@
   &.bg--blue-dark,
   &.bg--blue-gradient {
     color: $font-color-w-bg;
+    .text {
+      color: $font-color-w-bg;
+    }
     .btn--fill {
       background-color: $font-color-w-bg;
       color: $color-blue-light;

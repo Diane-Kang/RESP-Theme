@@ -1,0 +1,44 @@
+.logos {
+  .container {
+    @include flex(row, 24px);
+    row-gap: 40px;
+    width: fit-content;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image-wrapper {
+    width: 198px;
+    height: 107px;
+    padding: 16px 24px;
+    background: white;
+    border-radius: 8px;
+    @include flex-center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .textbox-wrapper {
+    margin-top: 32px;
+    text-align: center;
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      color: $color-blue-dark2;
+    }
+  }
+
+  //background & Box-design options with button color changes
+  @include bg-feature(".container");
+  @media only screen and (max-width: $bp-largest) {
+    &.box-design .container {
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+  }
+}
