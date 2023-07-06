@@ -1,0 +1,15 @@
+{
+    "name": "acf/contact",
+    "title": "Kontakt",
+    "description": "",
+    "category": "",
+    "icon": "phone",
+    "keywords": [""],
+    "acf": {
+      "mode": "edit",
+      "renderTemplate": "contact.php"
+    },
+    "supports": {
+      "align": [""]
+    }
+  }

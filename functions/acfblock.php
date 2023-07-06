@@ -33,3 +33,4 @@ new ACFblock("price-table");
 new ACFblock("booking");
 new ACFblock("faq");
 new ACFBlock("logos");
+new ACFBlock("contact");

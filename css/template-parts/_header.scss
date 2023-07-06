@@ -54,6 +54,7 @@
     display: none;
   }
 
+  // desktop Navi
   .header--container:not(.mobile-navi-open) .nav {
     a:hover {
       color: $color-blue-dark;
@@ -97,6 +98,7 @@
       // with click(js) sub menu open
       &.active > ul {
         visibility: inherit;
+        z-index: 2;
       }
     }
 

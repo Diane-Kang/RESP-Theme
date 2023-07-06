@@ -567,6 +567,7 @@ h6 {
 }
 .header .header--container:not(.mobile-navi-open) .nav .main-menu > li.active > ul {
   visibility: inherit;
+  z-index: 2;
 }
 .header .header--container:not(.mobile-navi-open) .nav ul.menu-depth-1 {
   font-size: 18px;
@@ -1853,6 +1854,45 @@ h6 {
     margin-left: 3%;
     margin-right: 3%;
   }
+}
+
+.contact .container {
+  background: #e3e3e3;
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.contact .profilbild_wrapper {
+  grid-column: 1/4;
+}
+.contact .profilbild {
+  border-radius: 50%;
+}
+.contact .details {
+  grid-column: 4/12;
+  padding: 0 36px;
+}
+.contact h4 {
+  color: #0064a3;
+  font-size: 24px;
+  font-weight: 700;
+}
+.contact .rolle, .contact .email, .contact .telefon, .contact .fa-linkedin {
+  color: #4a4a4a;
+}
+.contact .rolle {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 1.6em;
+}
+.contact .email {
+  display: block;
+  padding-bottom: 0em;
+  font-size: 16px;
+}
+.contact .fa-linkedin {
+  font-size: 30px;
 }
 
 .blog {
