@@ -1856,43 +1856,69 @@ h6 {
   }
 }
 
-.contact .container {
+.contact .container--inner {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
   background: #e3e3e3;
-  padding: 2em;
+  padding: 40px;
   border-radius: 8px;
-  max-width: 650px;
-  margin: 0 auto;
+  max-width: 750px;
+  flex-grow: 1;
+  margin: 2%;
 }
 .contact .profilbild_wrapper {
-  grid-column: 1/4;
+  max-width: 228px;
 }
 .contact .profilbild {
   border-radius: 50%;
 }
 .contact .details {
-  grid-column: 4/12;
-  padding: 0 36px;
+  padding: 24px 0px 24px 40px;
 }
 .contact h4 {
   color: #0064a3;
   font-size: 24px;
   font-weight: 700;
 }
-.contact .rolle, .contact .email, .contact .telefon, .contact .fa-linkedin {
+.contact .rolle,
+.contact .email,
+.contact .telefon,
+.contact .fa-linkedin {
   color: #4a4a4a;
 }
 .contact .rolle {
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 1.6em;
+  padding-bottom: 40px;
 }
 .contact .email {
   display: block;
-  padding-bottom: 0em;
+  padding-bottom: 0.5em;
   font-size: 16px;
 }
 .contact .fa-linkedin {
   font-size: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .contact .container--inner {
+    max-width: 400px;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  .contact .container--inner .profilbild_wrapper {
+    width: 225px;
+    aspect-ratio: 1/1;
+  }
+  .contact .container--inner .details {
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
 .blog {

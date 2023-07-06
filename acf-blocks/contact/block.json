@@ -1,15 +1,15 @@
 {
-    "name": "acf/contact",
-    "title": "Kontakt",
-    "description": "",
-    "category": "",
-    "icon": "phone",
-    "keywords": [""],
-    "acf": {
-      "mode": "edit",
-      "renderTemplate": "contact.php"
-    },
-    "supports": {
-      "align": [""]
-    }
+  "name": "acf/contact",
+  "title": "Kontakt",
+  "description": "Kontakt Block",
+  "category": "",
+  "icon": "phone",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "contact.php"
+  },
+  "supports": {
+    "align": [""]
   }
+}
