@@ -213,7 +213,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_6452284188907"
+                                "group_649c380deb6f5"
                             ],
                             "display": "group",
                             "layout": "row",
@@ -244,5 +244,5 @@
     "active": true,
     "description": "Für 3 oder 4 Kacheln",
     "show_in_rest": 0,
-    "modified": 1688282946
+    "modified": 1688648245
 }

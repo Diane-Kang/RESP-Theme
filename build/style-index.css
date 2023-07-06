@@ -1307,6 +1307,7 @@ h6 {
   order: 2;
 }
 .cards.text-first .card__image {
+  margin-top: 24px;
   order: 2;
 }
 .cards.text-first .card__text-content {

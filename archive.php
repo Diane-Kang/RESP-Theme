@@ -7,9 +7,9 @@
  */
 
 //  we force to have only category archive
-if (!is_category()) {
-  wp_redirect('/blog/', 301);
-}
+// if (!is_category()) {
+//   wp_redirect('/blog/', 301);
+// }
 
 ?>
 
@@ -40,9 +40,11 @@ if (!is_category()) {
 
     <?php
 
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 12,
+      'paged' => $paged,
+      // 'posts_per_page' => 3,
       'cat' => get_cat_ID(single_cat_title('', false))
     );
 
@@ -75,9 +77,25 @@ if (!is_category()) {
         </div>
       <?php } ?>
     </div>
+    <!-- pagination -->
+    <?php
+
+    $total_pages = $custom_query->max_num_pages;
+    $big = 999999999; // need an unlikely integer
+
+    if ($total_pages > 1) {
+      $current_page = max(1, get_query_var('paged'));
+
+      echo paginate_links(array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => $current_page,
+        'total' => $total_pages,
+      ));
+    }
+    ?>
   </div>
 
-  <?php echo paginate_links(); ?>
   <?php wp_reset_postdata(); ?>
 </div>
 <?php get_footer(); ?>

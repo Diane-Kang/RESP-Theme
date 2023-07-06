@@ -34,10 +34,11 @@
     </div>
 
     <?php
-    // wp_list_categories();
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 12,
+      'paged' => $paged,
+      // 'posts_per_page' => 3,
     );
 
     $custom_query = new WP_Query($args);
@@ -69,6 +70,22 @@
         </div>
       <?php } ?>
     </div>
+    <!-- pagination -->
+    <?php
+    $total_pages = $custom_query->max_num_pages;
+    $big = 999999999; // need an unlikely integer
+
+    if ($total_pages > 1) {
+      $current_page = max(1, get_query_var('paged'));
+
+      echo paginate_links(array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => $current_page,
+        'total' => $total_pages,
+      ));
+    }
+    ?>
   </div>
 
   <?php echo paginate_links(); ?>

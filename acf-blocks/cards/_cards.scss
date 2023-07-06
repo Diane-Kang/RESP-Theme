@@ -45,6 +45,7 @@
   }
   &.text-first {
     .card__image {
+      margin-top: 24px;
       order: 2;
     }
     .card__text-content {

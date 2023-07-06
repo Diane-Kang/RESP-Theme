@@ -30,12 +30,14 @@ function prefix_disable_gutenberg($current_status, $post_type)
  * @link https://rudrastyh.com/gutenberg/remove-default-blocks.html
  */
 
-function allowedBlockTypes($original_allowedBlocks)
+function allowedBlockTypes($original_allowedBlocks, $post)
 {
   global $allowedBlocks;
-  array_push($allowedBlocks, "core/spacer", "core/paragraph", "core/heading", "core/columns");
+
+  if ($post->post_type === 'theme_reference') {
+    array_push($allowedBlocks, "core/spacer", "core/paragraph", "core/heading", "core/columns");
+  }
   return $allowedBlocks;
-  // return $original_allowedBlocks;
 }
 
-add_filter('allowed_block_types_all', 'allowedBlockTypes');
+add_filter('allowed_block_types', 'allowedBlockTypes', 10, 2);

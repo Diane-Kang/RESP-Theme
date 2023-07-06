@@ -37,11 +37,12 @@ array_push($module_classes, $graphic_type, $order);
                 <?php echo $content["paragraph"]; ?>
               </div>
               <!-- only if button exist -->
-              <?php $buttons = $content["buttons"] ?>
-              <?php $button1link = $buttons["block::buttons:btn1-link"] ?>
-              <?php $button1type = $buttons["block::buttons:btn1-type"] ?>
-              <?php $button2link = $buttons["block::buttons:btn2-link"] ?>
-              <?php $button2type = $buttons["block::buttons:btn2-type"] ?>
+              <?php $buttons = $content["buttons"]; ?>
+              <?php $button1link = $buttons["button1"]["block::buttons:btn1-link"]; ?>
+              <?php $button1type = $buttons["button1"]["block::buttons:btn1-type"]; ?>
+              <?php $button2link = $buttons["button2"]["block::buttons:btn2-link"]; ?>
+              <?php $button2type = $buttons["button2"]["block::buttons:btn2-type"]; ?>
+
               <?php if (!empty($button1link) || !empty($button1link)) : ?>
                 <div class="buttons flex flex-col">
                   <?php if ($button1link != "") : ?>
