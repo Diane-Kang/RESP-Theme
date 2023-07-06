@@ -25,8 +25,10 @@ function getMenu($menu_name = 'primary', $depth = 0, $nav_class = '', $container
       'depth'           => $depth,
       'walker'          => new WPDocs_Walker_Nav_Menu(),
     );
+    return wp_nav_menu($nav_arg);
+  } else {
+    return "check your menu";
   }
-  return wp_nav_menu($nav_arg);
 }
 
 add_filter('nav_menu_css_class', 'remove_menu_classes', 10, 2);

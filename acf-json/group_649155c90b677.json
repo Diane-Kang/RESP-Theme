@@ -1,7 +1,47 @@
 {
     "key": "group_649155c90b677",
-    "title": "Blog",
+    "title": "Blog\/Posts - content",
     "fields": [
+        {
+            "key": "field_64a50fb41157f",
+            "label": "Teaser text",
+            "name": "teaser_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Der Text wird auf Blog index Seite auftauchen.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua....",
+            "maxlength": 240,
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_64a5122648dc8",
+            "label": "Intro text",
+            "name": "intro_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Neben Inhaltsverzeichnis",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
         {
             "key": "field_649155c9455cf",
             "label": "Blog Inhalt",
@@ -24,11 +64,11 @@
                     "display": "table",
                     "sub_fields": [
                         {
-                            "key": "field_64915689455d1",
-                            "label": "Heading",
+                            "key": "field_64a3e343fe790",
+                            "label": "Überschrift",
                             "name": "heading",
                             "aria-label": "",
-                            "type": "clone",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -37,13 +77,57 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "clone": [
-                                "group_64901e58d6380"
-                            ],
-                            "display": "seamless",
                             "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
+                            "sub_fields": [
+                                {
+                                    "key": "field_64a3e35bfe791",
+                                    "label": "Überschrift",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "80",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "heading",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_64a3e37cfe792",
+                                    "label": "Tag",
+                                    "name": "tag",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "h2": "h2",
+                                        "h3": "h3",
+                                        "h4": "h4",
+                                        "h5": "h5"
+                                    },
+                                    "default_value": "h2",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -61,7 +145,7 @@
                             "name": "paragraph",
                             "aria-label": "",
                             "type": "wysiwyg",
-                            "instructions": "Bitte keinen Heading hier verwendet.",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -71,7 +155,7 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "full",
+                            "toolbar": "basic",
                             "media_upload": 1,
                             "delay": 0
                         }
@@ -101,6 +185,7 @@
     "instruction_placement": "label",
     "hide_on_screen": [
         "the_content",
+        "excerpt",
         "discussion",
         "comments",
         "author",
@@ -112,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687422021
+    "modified": 1688540796
 }

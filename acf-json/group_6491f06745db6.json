@@ -1,6 +1,6 @@
 {
     "key": "group_6491f06745db6",
-    "title": "Blog : Category",
+    "title": "Blog\/Posts - kategorie",
     "fields": [
         {
             "key": "field_6491f0673eafd",
@@ -44,5 +44,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687359233
+    "modified": 1688539932
 }

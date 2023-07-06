@@ -526,11 +526,17 @@ readers do not read off random characters that represent icons */
 .fa-chevron-up::before { content: "\f077"; }
 .fa-circle-check::before { content: "\f058"; }
 .fa-circle-info::before { content: "\f05a"; }
+.fa-close::before { content: "\f00d"; }
 .fa-facebook::before { content: "\f09a"; }
+.fa-filter::before { content: "\f0b0"; }
 .fa-info-circle::before { content: "\f05a"; }
 .fa-instagram::before { content: "\f16d"; }
 .fa-linkedin::before { content: "\f08c"; }
+.fa-multiply::before { content: "\f00d"; }
+.fa-remove::before { content: "\f00d"; }
+.fa-times::before { content: "\f00d"; }
 .fa-twitter::before { content: "\f099"; }
+.fa-xmark::before { content: "\f00d"; }
 .fa-youtube::before { content: "\f167"; }
 
 .sr-only,

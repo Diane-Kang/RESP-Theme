@@ -22,9 +22,9 @@ if (have_rows('blog_content')) {
   while (have_rows('blog_content')) {
     the_row();
     if (get_row_layout() == 'heading') {
-
-      $h_tag = get_sub_field('block::heading:tag');
-      $title_text = get_sub_field('block::heading:text');
+      $heading = get_sub_field('heading');
+      $h_tag = $heading['tag'];
+      $title_text = $heading['text'];
       // Add id for the h2 heading
       if ($h_tag == 'h2') {
         $heading_generic_id = 'ToC-ref-' . $heading_generic_n;
@@ -93,13 +93,13 @@ function get_toc($toc_headings)
     <h1 class="blog-title center"><?php the_title(); ?></h1>
   </div>
   <div class="blog--content">
-    <div class="intro grid12">
+    <div class="intro">
       <div class="toc--outter">
         <?php echo get_toc($toc_headings); ?>
       </div>
-      <div class="abstrct text-bold"><?php the_excerpt(); ?></div>
+      <div class="abstrct"><?php the_field('intro_text'); ?></div>
     </div>
-    <div class="content grid12">
+    <div class="content">
       <div class="content--inner">
         <?php echo $blog_content ?>
       </div>

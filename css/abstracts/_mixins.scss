@@ -16,8 +16,8 @@
 // side padding for small screen
 @mixin sidePadding {
   max-width: unset;
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 @mixin bg($src, $repeat: no-repeat, $pos: null, $color: null, $size: null) {

@@ -36,12 +36,12 @@
 }
 
 @media only screen and (min-width: $bp-largest) {
-  .module.display--mobile {
+  .display--mobile {
     display: none;
   }
 }
 @media only screen and (max-width: calc( $bp-largest - 1px)) {
-  .module.display--desktop {
+  .display--desktop {
     display: none;
   }
 }

@@ -1,19 +1,191 @@
 .category-archive {
-  .category-navi li {
-    width: 25%;
-    text-align: center;
+  .category-navi.display--desktop {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+    background: $color-gray-light;
+    line-height: 2.5em;
+    font-size: 20px;
+    a {
+      margin: 2px 2px;
+      text-align: center;
+      flex: 1;
+      position: relative;
+      font-weight: 700;
+
+      // underline
+      &::after {
+        content: "";
+        height: 4px;
+        width: 100px;
+        position: absolute;
+        background-color: $color-blue-dark;
+        visibility: hidden;
+        transform: translate(-50%, 50%);
+        left: 50%;
+        bottom: 0;
+      }
+      &.current-category::after {
+        visibility: visible;
+      }
+      &:hover {
+        color: $color-blue-dark;
+      }
+    }
   }
+  .category-navi.display--mobile {
+    display: none;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    .checkbox {
+      display: none;
+    }
+    label .current-category {
+      position: relative;
+      padding-left: 40px;
+      background: $color-gray-light;
+      line-height: 2.5em;
+      border-radius: 8px;
+      i {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translate(50%, -50%);
+        &.fa-xmark {
+          visibility: hidden;
+        }
+      }
+    }
+    .options {
+      width: 100%;
+      border: 1px solid var(--common-gray-light, #e3e3e3);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      padding: 33px 24px;
+      // hide
+      visibility: hidden;
+      position: absolute;
+      background: white;
+      z-index: 2;
+      a {
+        line-height: 1em;
+        padding-left: 16px;
+        position: relative;
+        &:hover {
+          color: $color-blue-dark;
+        }
+        &::before {
+          content: "";
+          margin-right: 16px;
+          margin-left: -16px;
+          height: 1em;
+          width: 4px;
+          background: $color-blue-dark;
+          border-radius: 8px;
+          position: absolute;
+          visibility: hidden;
+        }
+      }
+    }
+
+    .checkbox:checked {
+      & ~ .options {
+        visibility: visible;
+        a.current-category::before {
+          visibility: visible;
+        }
+      }
+      + label .current-category {
+        .fa-xmark {
+          visibility: visible;
+        }
+        .fa-filter {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  .heading1 {
+    margin: 5rem auto;
+  }
+  .intro {
+    @include font(L, 700);
+    &-wrapper {
+      margin-bottom: 5rem;
+    }
+  }
+
   .post-item {
+    &-list {
+      @include flex(row, 24px);
+      row-gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     grid-column: span 4;
     width: 100%;
     height: 100%;
+    border: solid 2px $color-gray-light;
+    border-radius: 8px;
+    width: 364px;
+    @include flex(column);
+    overflow: hidden;
 
     .thumbnail-wrapper {
       width: 100%;
       aspect-ratio: 1/1;
+      @include flex-center;
       img {
         height: auto;
       }
+    }
+    .content-wrapper {
+      padding: 40px 32px;
+      .teaser {
+        height: 180px;
+      }
+      .title {
+        font-size: 25px;
+        font-weight: 900;
+      }
+      .text {
+        font-size: 1rem;
+        margin-top: 24px;
+      }
+      .cta {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        margin-top: 40px;
+        a {
+          color: $color-blue-dark;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    .container {
+      @include sidePadding;
+    }
+  }
+  @media only screen and (max-width: $bp-tablet) {
+    .category-navi.display--desktop {
+      display: none;
+    }
+    .category-navi.display--mobile {
+      display: block;
+    }
+  }
+  @media only screen and (max-width: $bp-smallfont) {
+    .post-item .content-wrapper .teaser {
+      height: 150px;
     }
   }
 }

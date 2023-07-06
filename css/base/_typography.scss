@@ -59,10 +59,6 @@ h {
   }
 }
 
-strong {
-  font-size: 1.25em;
-}
-
 h1,
 h2,
 h3,
@@ -125,4 +121,24 @@ h6 {
       font-size: $font-size-h6;
     }
   }
+}
+
+@mixin font($size, $weight: 400) {
+  @if $size == base {
+    font-size: 16px;
+    @media only screen and (max-width: $bp-smallfont) {
+      font-size: 14px;
+    }
+  } @else if $size == L {
+    font-size: 20px;
+    @media only screen and (max-width: $bp-smallfont) {
+      font-size: 18px;
+    }
+  } @else if $size == XL {
+    font-size: 24px;
+    @media only screen and (max-width: $bp-smallfont) {
+      font-size: 22px;
+    }
+  }
+  font-weight: $weight;
 }
