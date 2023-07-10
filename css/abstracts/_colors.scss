@@ -1,0 +1,153 @@
+// COLORS
+$c-blue-middle: #005b94;
+$c-blue-dark: #002f4d;
+$c-blue-light: #e5f5ff;
+
+$c-green-middle: #256827;
+$c-green-dark: #143815;
+$c-green-light: #ecf8ed;
+
+$c-orange-middle: #e58a00;
+$c-orange-dark: #a25706;
+$c-orange-light: #ffebcc;
+
+$c-red-middle: #c2242e;
+$c-red-dark: #561014;
+$c-red-light: #fbe9eb;
+
+//text
+$c-gray-middle: #4d4d4d;
+$c-gray-dark: #262626;
+$c-gray-light: #f2f2f2;
+
+$c-white: #fff;
+
+@mixin button_color($c-btn-fill, $c-btn-fill-text, $c-btn-hover) {
+  .btn {
+    &--fill {
+      background-color: $c-btn-fill;
+      color: $c-btn-fill-text;
+      &:hover {
+        background-color: $c-btn-hover;
+      }
+    }
+    &--empty {
+      color: $c-btn-fill;
+      outline-color: $c-btn-fill;
+      &:hover {
+        color: $c-btn-hover;
+        outline-color: $c-btn-hover;
+      }
+    }
+  }
+  .link--underline {
+    color: $c-btn-fill;
+    &:hover {
+      color: $c-btn-hover;
+    }
+  }
+}
+
+$color-system: (
+  none: (
+    bg-color: none,
+    font-color: $c-gray-dark,
+    c-btn-fill: $c-green-middle,
+    c-btn-fill-text: $c-white,
+    c-btn-hover: $c-green-dark,
+    c-borderline: $c-gray-light,
+  ),
+  blue-light: (
+    bg-color: $c-blue-light,
+    font-color: $c-gray-dark,
+    c-btn-fill: $c-green-middle,
+    c-btn-fill-text: $c-white,
+    c-btn-hover: $c-green-dark,
+    c-borderline: $c-blue-middle,
+  ),
+  green-light: (
+    bg-color: $c-green-light,
+    font-color: $c-gray-dark,
+    c-btn-fill: $c-green-middle,
+    c-btn-fill-text: $c-white,
+    c-btn-hover: $c-green-dark,
+    c-borderline: $c-green-middle,
+  ),
+  gray-light: (
+    bg-color: $c-gray-light,
+    font-color: $c-gray-dark,
+    c-btn-fill: $c-green-middle,
+    c-btn-fill-text: $c-white,
+    c-btn-hover: $c-green-dark,
+    c-borderline: $c-gray-middle,
+  ),
+  orange-light: (
+    bg-color: $c-orange-light,
+    font-color: $c-gray-dark,
+    c-btn-fill: $c-orange-middle,
+    c-btn-fill-text: $c-white,
+    c-btn-hover: $c-orange-dark,
+    c-borderline: $c-orange-middle,
+  ),
+  red-light: (
+    bg-color: $c-red-light,
+    font-color: $c-gray-dark,
+    c-btn-fill: $c-red-middle,
+    c-btn-fill-text: $c-white,
+    c-btn-hover: $c-red-dark,
+    c-borderline: $c-red-middle,
+  ),
+  blue-middle: (
+    bg-color: $c-blue-middle,
+    font-color: $c-white,
+    c-btn-fill: $c-white,
+    c-btn-fill-text: $c-blue-middle,
+    c-btn-hover: $c-gray-light,
+    c-borderline: $c-blue-middle,
+  ),
+  blue-dark: (
+    bg-color: $c-blue-dark,
+    font-color: $c-white,
+    c-btn-fill: $c-white,
+    c-btn-fill-text: $c-blue-dark,
+    c-btn-hover: $c-gray-light,
+    c-borderline: $c-blue-dark,
+  ),
+);
+@each $label, $map in $color-system {
+  .module {
+    &:not(.box-design).bg--#{$label},
+    &.box-design.bg--#{$label} .container {
+      color: map-get($map, font-color);
+      $c-btn-fill: map-get($map, c-btn-fill);
+      $c-btn-fill-text: map-get($map, c-btn-fill-text);
+      $c-btn-hover: map-get($map, c-btn-hover);
+      @include button_color($c-btn-fill, $c-btn-fill-text, $c-btn-hover);
+    }
+
+    &:not(.box-design) {
+      &.bg--#{$label} {
+        background-color: map-get($map, bg-color);
+      }
+    }
+    &.box-design {
+      &.bg--#{$label} .bd-box {
+        border-radius: 8px;
+        border: 2px solid map-get($map, c-borderline);
+        background-color: map-get($map, bg-color);
+      }
+    }
+  }
+}
+
+// COLORS  --- Old
+$color-blue-light-light: #e5f5ff;
+$color-blue-light: #009fe3; //Blau hell
+$color-blue-dark: #0064a3; // Blau mittel
+$color-blue-dark2: #083f74; // Blau dunkel
+
+$color-gray-dark: #4a4a4a;
+$color-gray-light: #e3e3e3;
+
+$color-white: #fff;
+$color-black: #000;

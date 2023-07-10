@@ -1,5 +1,5 @@
 // @import "normalize.css";
-
+@import "abstracts/colors";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -33,6 +33,7 @@
 @import "../acf-blocks/price-table/price-table";
 @import "../acf-blocks/logos/logos";
 @import "../acf-blocks/contact/contact";
+@import "../acf-blocks/color-test/color-test";
 
 @import "template/single";
 @import "template/cat-archive";

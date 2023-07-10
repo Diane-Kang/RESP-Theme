@@ -26,7 +26,8 @@ $company            = get_field('block::testimonial:company');
 $quote              = get_field('block::testimonial:quote');
 
 
-array_push($container_classes, $order, $size);
+array_push($container_classes, $order, $size, "bd-box");
+
 ?>
 
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">

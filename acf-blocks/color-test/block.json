@@ -1,0 +1,16 @@
+{
+  "name": "acf/color-test",
+  "title": "Color test",
+  "description": "This is for checking color palette",
+  "category": "",
+  "icon": "columns",
+  "keywords": ["test"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "color-test.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

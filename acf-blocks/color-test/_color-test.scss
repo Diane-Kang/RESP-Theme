@@ -1,0 +1,9 @@
+.color-test {
+  .buttons {
+    @include flex(row, 100px);
+    justify-content: space-around;
+    & > * {
+      flex: 1;
+    }
+  }
+}

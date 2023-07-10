@@ -146,7 +146,7 @@ array_unshift($container_classes, "container");
               <li>empfohlen</li>
             </ul>
           </div>
-          <a href="#" class="btn btn--empty">Economy Class buchen</a>
+          <a href="#" class="btn btn--empty">Business Class buchen</a>
         </div>
       </div>
       <div class="block block--item  grid12-3 flex">

@@ -10,28 +10,25 @@
   }
   .card {
     width: 100%;
+    display: flex;
   }
   .card--inner {
     margin: 10%;
     max-width: 100%;
+    @include flex(column, 24px);
   }
   .card__text-content {
+    text-align: center;
     .heading {
-      margin: 0.5em 0;
+      margin-bottom: 0.5em;
+      font-size: 39.063px;
     }
     .buttons {
-      margin: 1.5em 0;
+      margin-top: 1.5em;
       *:first-child {
         margin-bottom: 1em;
       }
     }
-  }
-  //slide
-  overflow-x: scroll;
-  @include hide-scrollbar;
-
-  .container {
-    width: 1140px;
   }
 
   // Option: image-first / text-first
@@ -45,7 +42,6 @@
   }
   &.text-first {
     .card__image {
-      margin-top: 24px;
       order: 2;
     }
     .card__text-content {
@@ -53,14 +49,18 @@
     }
   }
 
-  // Option: background color / box design
-  //background & Box-design options with button color changes
-  @include bg-feature(".card");
-
   // Optio: Graphic Type: Image(default) / Icon
   &.graphic-icon {
     .card__image {
       padding: 20%;
     }
+  }
+
+  //slide
+  overflow-x: scroll;
+  @include hide-scrollbar;
+
+  .container {
+    width: 1140px;
   }
 }

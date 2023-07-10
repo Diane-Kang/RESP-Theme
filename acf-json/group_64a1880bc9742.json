@@ -59,11 +59,14 @@
                 "id": ""
             },
             "choices": {
-                "blue-light": "hell Blau",
-                "blue-dark": "dunkel Blau",
-                "blue-dark2": "dunkeler Blau"
+                "blue-middle": "Blau (mittel)",
+                "blue-dark": "Blau (dunkel)",
+                "green-middle": "grün (mittel)",
+                "orange-middle": "orange (mittel)",
+                "red-middle": "rot (mittel)",
+                "gray-middle": "grau (mittel)"
             },
-            "default_value": "blue-light",
+            "default_value": "blue-middle",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -112,5 +115,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688309541
+    "modified": 1688994443
 }

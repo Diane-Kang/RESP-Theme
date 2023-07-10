@@ -2,7 +2,6 @@
   //structure
   .container--inner {
     @include flex(row, 24px);
-    background: $color-gray-light;
     padding: 40px;
     border-radius: 8px;
     max-width: 750px;
@@ -23,16 +22,9 @@
   }
 
   h4 {
-    color: $color-blue-dark;
+    color: $c-blue-dark;
     font-size: 24px;
     font-weight: 700;
-  }
-
-  .rolle,
-  .email,
-  .telefon,
-  .fa-linkedin {
-    color: $color-gray-dark;
   }
 
   .rolle {

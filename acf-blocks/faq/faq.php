@@ -15,7 +15,7 @@
 // Common definition of $anchor, $module_classes, $container_classes
 require(get_template_directory() . '/acf-blocks/module-classes.php');
 array_unshift($module_classes, "module", "faq");
-array_unshift($container_classes, "container");
+array_unshift($container_classes, "container bd-box");
 ?>
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
   <div class="<?php echo implode(" ", $container_classes); ?> grid12">

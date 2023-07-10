@@ -33,7 +33,7 @@ $image              = get_field('block::imagetext:image');
 $content_title      = get_field('block::imagetext:title');
 $text_content       = get_field('block::imagetext:text');
 
-array_push($container_classes, "grid12", $order,  $column);
+array_push($container_classes, $order,  $column, "bd-box");
 
 
 ?>

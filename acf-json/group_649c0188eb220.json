@@ -48,7 +48,7 @@
                 "medium": "mittel",
                 "big": "groß"
             },
-            "default_value": "small",
+            "default_value": "medium",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -75,7 +75,7 @@
                 "medium": "mittel",
                 "big": "groß"
             },
-            "default_value": "small",
+            "default_value": "medium",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -124,10 +124,14 @@
                 "id": ""
             },
             "choices": {
-                "none": "Transparent",
-                "blue-light": "hell Blau",
-                "blue-dark": "dunkel Blau",
-                "blue-gradient": "Farbverlauf Blau"
+                "none": "transparent",
+                "blue-light": "blau (hell)",
+                "blue-middle": "blau (mittel)",
+                "blue-dark": "blau (dunkel)",
+                "green-light": "grün (hell)",
+                "orange-light": "orange (hell)",
+                "red-light": "rot (hell)",
+                "gray-light": "grau (hell)"
             },
             "default_value": "none",
             "return_format": "value",
@@ -188,5 +192,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688309807
+    "modified": 1688992630
 }

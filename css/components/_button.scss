@@ -15,35 +15,41 @@
   outline: 0;
   text-decoration: none;
   color: inherit;
-  border: solid 0.25px black;
-  box-shadow: 0 3px 10px rgba(27, 26, 27, 0.2);
+  // border: solid 0.25px black;
+  // box-shadow: 0 3px 10px rgba(27, 26, 27, 0.2);
   font-size: 1.25em;
   font-weight: bold;
   cursor: pointer;
 
-  &:hover {
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-  }
-
-  &:active,
-  &:focus {
-    outline: none;
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  }
   &--fill {
-    background-color: $color-blue-dark;
+    background-color: $c-green-middle;
     color: $color-white;
-    border: solid 2px $color-blue-dark;
+    &:hover {
+      background-color: $c-green-dark;
+    }
   }
   &--empty {
     background-color: none;
-    color: $color-blue-dark;
-    border: solid 2px $color-blue-dark;
+    color: $c-green-middle;
+    outline-offset: -2px;
+    outline: solid 2px $c-green-middle;
+    &:hover {
+      color: $c-green-dark;
+      outline-color: $c-green-dark;
+    }
   }
+  // &--underline {
+  //   background-color: none;
+  //   color: $color-black;
+  //   box-shadow: none;
+  //   text-decoration: underline;
+  //   text-underline-offset: 8px;
+  // }
+}
+.link {
   &--underline {
     background-color: none;
     color: $color-black;
-    border: none;
     box-shadow: none;
     text-decoration: underline;
     text-underline-offset: 8px;

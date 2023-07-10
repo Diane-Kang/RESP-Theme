@@ -11,11 +11,5 @@
 ?>
 
 <?php get_header(); ?>
-<?php if (is_front_page()) : ?>
-  <div class="container">
-    <?php the_content(); ?>
-  </div>
-<?php else : ?>
-  <?php the_content(); ?>
-<?php endif; ?>
+<?php the_content(); ?>
 <?php get_footer(); ?>

@@ -1,6 +1,9 @@
 .imagetext {
   // Structure & Spaces(paading margin)
   @include flex-center;
+  .container {
+    @include grid12;
+  }
 
   img {
     width: 100%;
@@ -120,13 +123,14 @@
     }
   }
 
-  // Option: background color / box design
-  @include bg-feature(".container");
+  //box design
   &.box-design .container {
     padding-left: 3%;
     padding-right: 3%;
   }
   //space between box-design and screen
+
+  // Media Queary
   @media only screen and (max-width: $bp-largest) {
     &.box-design .container {
       margin-left: 3%;
@@ -136,12 +140,8 @@
         margin-right: -3%;
       }
     }
-  }
-
-  // Media Queary
-  @media only screen and (max-width: $bp-largest) {
     .container {
-      @include sidePadding;
+      @include sidePaddingBig;
       max-width: 800px;
       margin: auto;
       display: flex;

@@ -22,17 +22,17 @@ array_push($module_classes, $graphic_type, $order);
   <div class="<?php echo implode(" ", $container_classes); ?>">
     <?php if (have_rows('block::cards:card')) : ?>
       <?php while (have_rows('block::cards:card')) : the_row(); ?>
-        <div class="card flex">
-          <div class="card--inner flex flex-col">
-            <div class="card__image flex">
-              <?php $card_image = get_sub_field('card_image'); ?>
-              <?php if ($card_image) : ?>
+        <div class="card bd-box">
+          <div class="card--inner">
+            <?php $card_image = get_sub_field('card_image'); ?>
+            <?php if ($card_image) : ?>
+              <div class="card__image flex">
                 <img src="<?php echo esc_url($card_image['url']); ?>" alt="<?php echo esc_attr($card_image['alt']); ?>" />
-              <?php endif; ?>
-            </div>
+              </div>
+            <?php endif; ?>
             <div class="card__text-content flexible flex flex-col">
               <?php $content = get_sub_field('content'); ?>
-              <h3 class="heading heading3 text-center"><?php echo $content["title"] ?></h3>
+              <h4 class="heading"><?php echo $content["title"] ?></h4>
               <div class="text flexible">
                 <?php echo $content["paragraph"]; ?>
               </div>

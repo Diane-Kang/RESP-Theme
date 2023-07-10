@@ -33,7 +33,7 @@ $linkedin         = get_field('linkedin');
 ?>
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
   <div class="<?php echo implode(" ", $container_classes); ?> center">
-    <div class="container--inner">
+    <div class="container--inner bd-box">
       <div class="profilbild_wrapper">
         <img class="profilbild" src="<?php echo esc_url($profilbild['url']); ?>" alt="<?php echo $name; ?>" />
       </div>

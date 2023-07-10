@@ -7,14 +7,11 @@
 }
 
 html {
-  // // This defines what 1rem is
-  font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  @media only screen and (max-width: $bp-smallfont) {
-    font-size: 14px;
-  }
+  //Remove Gray Highlight When Tapping Links in Mobile Safari
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
