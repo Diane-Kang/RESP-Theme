@@ -46,6 +46,7 @@ class local_fonts
   {
     // Generate correspond fonts.css by https://gwfh.mranftl.com/fonts
     wp_enqueue_style('fonts_css', get_theme_file_uri('asset/fonts/fonts.css'), array(), 1.0, false);
+    // Font awesome icon as font 
   }
 }
 new local_fonts();

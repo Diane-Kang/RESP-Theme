@@ -169,7 +169,54 @@
       }
     }
   }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    margin: 5rem 0;
+    position: relative;
 
+    *::after,
+    *::before {
+      font-family: "Font Awesome 6 Pro";
+      display: inline-block;
+    }
+
+    .prev.page-numbers {
+      position: absolute;
+      left: 0;
+      &::before {
+        padding-right: 10px;
+        content: "\f060";
+      }
+    }
+    .next.page-numbers {
+      position: absolute;
+      right: 0;
+      margin-left: auto;
+      &::after {
+        padding-left: 10px;
+        content: "\f061";
+      }
+    }
+    .page-numbers:not(.prev):not(.next) {
+      width: 32px;
+      padding: 4px 0;
+      text-align: center;
+    }
+    .page-numbers.current {
+      background: $c-gray-light;
+      border-radius: 4px;
+    }
+    .next.page-numbers,
+    .prev.page-numbers {
+      color: $c-blue-middle;
+      text-decoration: underline;
+      text-underline-offset: 0.3em;
+      font-weight: 700;
+    }
+  }
   @media only screen and (max-width: $bp-largest) {
     .container {
       @include sidePadding;

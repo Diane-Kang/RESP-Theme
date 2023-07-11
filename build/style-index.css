@@ -2273,6 +2273,53 @@ h6 {
 .category-archive .post-item .content-wrapper .cta a {
   color: #0064a3;
 }
+.category-archive .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  margin: 5rem 0;
+  position: relative;
+}
+.category-archive .pagination *::after,
+.category-archive .pagination *::before {
+  font-family: "Font Awesome 6 Pro";
+  display: inline-block;
+}
+.category-archive .pagination .prev.page-numbers {
+  position: absolute;
+  left: 0;
+}
+.category-archive .pagination .prev.page-numbers::before {
+  padding-right: 10px;
+  content: "\f060";
+}
+.category-archive .pagination .next.page-numbers {
+  position: absolute;
+  right: 0;
+  margin-left: auto;
+}
+.category-archive .pagination .next.page-numbers::after {
+  padding-left: 10px;
+  content: "\f061";
+}
+.category-archive .pagination .page-numbers:not(.prev):not(.next) {
+  width: 32px;
+  padding: 4px 0;
+  text-align: center;
+}
+.category-archive .pagination .page-numbers.current {
+  background: #f2f2f2;
+  border-radius: 4px;
+}
+.category-archive .pagination .next.page-numbers,
+.category-archive .pagination .prev.page-numbers {
+  color: #005b94;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  font-weight: 700;
+}
 @media only screen and (max-width: 1250px) {
   .category-archive .container {
     max-width: unset;

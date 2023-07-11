@@ -78,24 +78,28 @@
       <?php } ?>
     </div>
     <!-- pagination -->
-    <?php
+    <div class="pagination">
+      <?php
 
-    $total_pages = $custom_query->max_num_pages;
-    $big = 999999999; // need an unlikely integer
+      $total_pages = $custom_query->max_num_pages;
+      $big = 999999999; // need an unlikely integer
 
-    if ($total_pages > 1) {
-      $current_page = max(1, get_query_var('paged'));
+      if ($total_pages > 1) {
+        $current_page = max(1, get_query_var('paged'));
 
-      echo paginate_links(array(
-        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-        'format' => '?paged=%#%',
-        'current' => $current_page,
-        'total' => $total_pages,
-      ));
-    }
-    ?>
+        echo paginate_links(array(
+          'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+          'format' => '?paged=%#%',
+          'current' => $current_page,
+          'total' => $total_pages,
+          'prev_text'          => __('vorige'),
+          'next_text'          => __('nächste'),
+        ));
+      }
+      ?>
+    </div>
+
   </div>
-
   <?php wp_reset_postdata(); ?>
 </div>
 <?php get_footer(); ?>
