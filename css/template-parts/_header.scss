@@ -225,4 +225,10 @@
       }
     }
   }
+  @media only screen and (max-width: $bp-last) {
+    padding: 0 1rem;
+    .logo {
+      margin-right: 10vw;
+    }
+  }
 }

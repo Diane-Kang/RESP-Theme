@@ -1028,6 +1028,14 @@ h6 {
     border-radius: 10px;
   }
 }
+@media only screen and (max-width: 400px) {
+  .header {
+    padding: 0 1rem;
+  }
+  .header .logo {
+    margin-right: 10vw;
+  }
+}
 
 .footer {
   margin: auto;
