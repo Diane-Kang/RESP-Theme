@@ -51,23 +51,36 @@
     }
   }
 
-  //teaser text color
-  &.tc--blue-light {
-    color: $color-blue-light;
-  }
-  &.tc--white {
-    color: $color-white;
-    .btn--fill {
-      background-color: $color-white;
-      color: $color-blue-light;
-    }
-    .btn--empty {
-      color: $color-white;
-      outline: solid 2px $color-white;
-      outline-offset: -2px;
-    }
-    .link--underline {
-      color: $color-white;
+  // $c-blue-middle: #005b94;
+  // $c-blue-dark: #002f4d;
+  // $c-blue-light: #e5f5ff;
+  // $c-gray-dark: #262626;
+  //   blue-middle : blau (mittel)
+  // blue-dark : blau (dunkel)
+  // gray-light : grau (hell)
+  // white : weis
+  $teaser-color-system: (
+    blue-middle: (
+      f-color: $c-blue-middle,
+    ),
+    blue-dark: (
+      f-color: $c-blue-dark,
+    ),
+    gray-dark: (
+      f-color: $c-gray-dark,
+    ),
+    white: (
+      f-color: $c-white,
+    ),
+  );
+
+  @each $label, $map in $teaser-color-system {
+    .fc--#{$label} {
+      color: map-get($map, f-color);
+
+      @if $label == white {
+        @include button_color($c-white, $c-gray-dark, $c-gray-light);
+      }
     }
   }
 

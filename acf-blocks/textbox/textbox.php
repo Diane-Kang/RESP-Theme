@@ -17,7 +17,7 @@
 // Common definition of $anchor, $module_classes, $container_classes
 require(get_template_directory() . '/acf-blocks/module-classes.php');
 array_unshift($module_classes, "module", "textbox");
-array_unshift($container_classes, "container");
+array_unshift($container_classes, "container", "bd-box");
 
 // Buttons 
 $button1 = get_field('button1');
@@ -38,7 +38,7 @@ $text_content       = get_field('block::textbox:content');
 
 ?>
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
-  <div class="<?php echo implode(" ", $container_classes); ?> bd-box">
+  <div class="<?php echo implode(" ", $container_classes); ?>">
     <div class="textbox__text-container">
       <div class="textbox__text">
         <?php echo $text_content; ?>

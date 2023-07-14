@@ -36,8 +36,6 @@
             },
             "clone": [
                 "field_649c0189425b6",
-                "field_649c331c826ad",
-                "field_649c3359826ae",
                 "field_649c33eb2b046"
             ],
             "display": "seamless",
@@ -154,10 +152,12 @@
                 "id": ""
             },
             "choices": {
-                "tc--white": "weiß",
-                "tc--blue-light": "hellblau"
+                "gray-dark": "grau (dunkel) - default fontfarbe",
+                "blue-middle": "blau (mittel)",
+                "blue-dark": "blau (dunkel)",
+                "white": "weis"
             },
-            "default_value": "tc--blue-light",
+            "default_value": "gray-dark",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -229,5 +229,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688042175
+    "modified": 1689331813
 }

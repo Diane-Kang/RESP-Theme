@@ -117,8 +117,15 @@ $color-system: (
 @each $label, $map in $color-system {
   .module {
     &:not(.box-design).bg--#{$label},
-    &.box-design.bg--#{$label} .container {
-      color: map-get($map, font-color);
+    &.box-design.bg--#{$label} .bd-box {
+      &,
+      h2,
+      h3,
+      h4,
+      h5,
+      .title {
+        color: map-get($map, font-color);
+      }
       $c-btn-fill: map-get($map, c-btn-fill);
       $c-btn-fill-text: map-get($map, c-btn-fill-text);
       $c-btn-hover: map-get($map, c-btn-hover);

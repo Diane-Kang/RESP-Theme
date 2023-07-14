@@ -1,28 +1,38 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./css/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
-.module:not(.box-design).bg--none, .module.box-design.bg--none .container {
+.module:not(.box-design).bg--none,
+.module:not(.box-design).bg--none h2,
+.module:not(.box-design).bg--none h3,
+.module:not(.box-design).bg--none h4,
+.module:not(.box-design).bg--none h5,
+.module:not(.box-design).bg--none .title, .module.box-design.bg--none .bd-box,
+.module.box-design.bg--none .bd-box h2,
+.module.box-design.bg--none .bd-box h3,
+.module.box-design.bg--none .bd-box h4,
+.module.box-design.bg--none .bd-box h5,
+.module.box-design.bg--none .bd-box .title {
   color: #262626;
 }
-.module:not(.box-design).bg--none .btn--fill, .module.box-design.bg--none .container .btn--fill {
+.module:not(.box-design).bg--none .btn--fill, .module.box-design.bg--none .bd-box .btn--fill {
   background-color: #256827;
   color: #fff;
 }
-.module:not(.box-design).bg--none .btn--fill:hover, .module.box-design.bg--none .container .btn--fill:hover {
+.module:not(.box-design).bg--none .btn--fill:hover, .module.box-design.bg--none .bd-box .btn--fill:hover {
   background-color: #143815;
 }
-.module:not(.box-design).bg--none .btn--empty, .module.box-design.bg--none .container .btn--empty {
+.module:not(.box-design).bg--none .btn--empty, .module.box-design.bg--none .bd-box .btn--empty {
   color: #256827;
   outline-color: #256827;
 }
-.module:not(.box-design).bg--none .btn--empty:hover, .module.box-design.bg--none .container .btn--empty:hover {
+.module:not(.box-design).bg--none .btn--empty:hover, .module.box-design.bg--none .bd-box .btn--empty:hover {
   color: #143815;
   outline-color: #143815;
 }
-.module:not(.box-design).bg--none .link--underline, .module.box-design.bg--none .container .link--underline {
+.module:not(.box-design).bg--none .link--underline, .module.box-design.bg--none .bd-box .link--underline {
   color: #256827;
 }
-.module:not(.box-design).bg--none .link--underline:hover, .module.box-design.bg--none .container .link--underline:hover {
+.module:not(.box-design).bg--none .link--underline:hover, .module.box-design.bg--none .bd-box .link--underline:hover {
   color: #143815;
 }
 .module:not(.box-design).bg--none {
@@ -34,28 +44,38 @@
   background-color: none;
 }
 
-.module:not(.box-design).bg--blue-light, .module.box-design.bg--blue-light .container {
+.module:not(.box-design).bg--blue-light,
+.module:not(.box-design).bg--blue-light h2,
+.module:not(.box-design).bg--blue-light h3,
+.module:not(.box-design).bg--blue-light h4,
+.module:not(.box-design).bg--blue-light h5,
+.module:not(.box-design).bg--blue-light .title, .module.box-design.bg--blue-light .bd-box,
+.module.box-design.bg--blue-light .bd-box h2,
+.module.box-design.bg--blue-light .bd-box h3,
+.module.box-design.bg--blue-light .bd-box h4,
+.module.box-design.bg--blue-light .bd-box h5,
+.module.box-design.bg--blue-light .bd-box .title {
   color: #262626;
 }
-.module:not(.box-design).bg--blue-light .btn--fill, .module.box-design.bg--blue-light .container .btn--fill {
+.module:not(.box-design).bg--blue-light .btn--fill, .module.box-design.bg--blue-light .bd-box .btn--fill {
   background-color: #256827;
   color: #fff;
 }
-.module:not(.box-design).bg--blue-light .btn--fill:hover, .module.box-design.bg--blue-light .container .btn--fill:hover {
+.module:not(.box-design).bg--blue-light .btn--fill:hover, .module.box-design.bg--blue-light .bd-box .btn--fill:hover {
   background-color: #143815;
 }
-.module:not(.box-design).bg--blue-light .btn--empty, .module.box-design.bg--blue-light .container .btn--empty {
+.module:not(.box-design).bg--blue-light .btn--empty, .module.box-design.bg--blue-light .bd-box .btn--empty {
   color: #256827;
   outline-color: #256827;
 }
-.module:not(.box-design).bg--blue-light .btn--empty:hover, .module.box-design.bg--blue-light .container .btn--empty:hover {
+.module:not(.box-design).bg--blue-light .btn--empty:hover, .module.box-design.bg--blue-light .bd-box .btn--empty:hover {
   color: #143815;
   outline-color: #143815;
 }
-.module:not(.box-design).bg--blue-light .link--underline, .module.box-design.bg--blue-light .container .link--underline {
+.module:not(.box-design).bg--blue-light .link--underline, .module.box-design.bg--blue-light .bd-box .link--underline {
   color: #256827;
 }
-.module:not(.box-design).bg--blue-light .link--underline:hover, .module.box-design.bg--blue-light .container .link--underline:hover {
+.module:not(.box-design).bg--blue-light .link--underline:hover, .module.box-design.bg--blue-light .bd-box .link--underline:hover {
   color: #143815;
 }
 .module:not(.box-design).bg--blue-light {
@@ -67,28 +87,38 @@
   background-color: #e5f5ff;
 }
 
-.module:not(.box-design).bg--green-light, .module.box-design.bg--green-light .container {
+.module:not(.box-design).bg--green-light,
+.module:not(.box-design).bg--green-light h2,
+.module:not(.box-design).bg--green-light h3,
+.module:not(.box-design).bg--green-light h4,
+.module:not(.box-design).bg--green-light h5,
+.module:not(.box-design).bg--green-light .title, .module.box-design.bg--green-light .bd-box,
+.module.box-design.bg--green-light .bd-box h2,
+.module.box-design.bg--green-light .bd-box h3,
+.module.box-design.bg--green-light .bd-box h4,
+.module.box-design.bg--green-light .bd-box h5,
+.module.box-design.bg--green-light .bd-box .title {
   color: #262626;
 }
-.module:not(.box-design).bg--green-light .btn--fill, .module.box-design.bg--green-light .container .btn--fill {
+.module:not(.box-design).bg--green-light .btn--fill, .module.box-design.bg--green-light .bd-box .btn--fill {
   background-color: #256827;
   color: #fff;
 }
-.module:not(.box-design).bg--green-light .btn--fill:hover, .module.box-design.bg--green-light .container .btn--fill:hover {
+.module:not(.box-design).bg--green-light .btn--fill:hover, .module.box-design.bg--green-light .bd-box .btn--fill:hover {
   background-color: #143815;
 }
-.module:not(.box-design).bg--green-light .btn--empty, .module.box-design.bg--green-light .container .btn--empty {
+.module:not(.box-design).bg--green-light .btn--empty, .module.box-design.bg--green-light .bd-box .btn--empty {
   color: #256827;
   outline-color: #256827;
 }
-.module:not(.box-design).bg--green-light .btn--empty:hover, .module.box-design.bg--green-light .container .btn--empty:hover {
+.module:not(.box-design).bg--green-light .btn--empty:hover, .module.box-design.bg--green-light .bd-box .btn--empty:hover {
   color: #143815;
   outline-color: #143815;
 }
-.module:not(.box-design).bg--green-light .link--underline, .module.box-design.bg--green-light .container .link--underline {
+.module:not(.box-design).bg--green-light .link--underline, .module.box-design.bg--green-light .bd-box .link--underline {
   color: #256827;
 }
-.module:not(.box-design).bg--green-light .link--underline:hover, .module.box-design.bg--green-light .container .link--underline:hover {
+.module:not(.box-design).bg--green-light .link--underline:hover, .module.box-design.bg--green-light .bd-box .link--underline:hover {
   color: #143815;
 }
 .module:not(.box-design).bg--green-light {
@@ -100,28 +130,38 @@
   background-color: #ecf8ed;
 }
 
-.module:not(.box-design).bg--gray-light, .module.box-design.bg--gray-light .container {
+.module:not(.box-design).bg--gray-light,
+.module:not(.box-design).bg--gray-light h2,
+.module:not(.box-design).bg--gray-light h3,
+.module:not(.box-design).bg--gray-light h4,
+.module:not(.box-design).bg--gray-light h5,
+.module:not(.box-design).bg--gray-light .title, .module.box-design.bg--gray-light .bd-box,
+.module.box-design.bg--gray-light .bd-box h2,
+.module.box-design.bg--gray-light .bd-box h3,
+.module.box-design.bg--gray-light .bd-box h4,
+.module.box-design.bg--gray-light .bd-box h5,
+.module.box-design.bg--gray-light .bd-box .title {
   color: #262626;
 }
-.module:not(.box-design).bg--gray-light .btn--fill, .module.box-design.bg--gray-light .container .btn--fill {
+.module:not(.box-design).bg--gray-light .btn--fill, .module.box-design.bg--gray-light .bd-box .btn--fill {
   background-color: #256827;
   color: #fff;
 }
-.module:not(.box-design).bg--gray-light .btn--fill:hover, .module.box-design.bg--gray-light .container .btn--fill:hover {
+.module:not(.box-design).bg--gray-light .btn--fill:hover, .module.box-design.bg--gray-light .bd-box .btn--fill:hover {
   background-color: #143815;
 }
-.module:not(.box-design).bg--gray-light .btn--empty, .module.box-design.bg--gray-light .container .btn--empty {
+.module:not(.box-design).bg--gray-light .btn--empty, .module.box-design.bg--gray-light .bd-box .btn--empty {
   color: #256827;
   outline-color: #256827;
 }
-.module:not(.box-design).bg--gray-light .btn--empty:hover, .module.box-design.bg--gray-light .container .btn--empty:hover {
+.module:not(.box-design).bg--gray-light .btn--empty:hover, .module.box-design.bg--gray-light .bd-box .btn--empty:hover {
   color: #143815;
   outline-color: #143815;
 }
-.module:not(.box-design).bg--gray-light .link--underline, .module.box-design.bg--gray-light .container .link--underline {
+.module:not(.box-design).bg--gray-light .link--underline, .module.box-design.bg--gray-light .bd-box .link--underline {
   color: #256827;
 }
-.module:not(.box-design).bg--gray-light .link--underline:hover, .module.box-design.bg--gray-light .container .link--underline:hover {
+.module:not(.box-design).bg--gray-light .link--underline:hover, .module.box-design.bg--gray-light .bd-box .link--underline:hover {
   color: #143815;
 }
 .module:not(.box-design).bg--gray-light {
@@ -133,28 +173,38 @@
   background-color: #f2f2f2;
 }
 
-.module:not(.box-design).bg--orange-light, .module.box-design.bg--orange-light .container {
+.module:not(.box-design).bg--orange-light,
+.module:not(.box-design).bg--orange-light h2,
+.module:not(.box-design).bg--orange-light h3,
+.module:not(.box-design).bg--orange-light h4,
+.module:not(.box-design).bg--orange-light h5,
+.module:not(.box-design).bg--orange-light .title, .module.box-design.bg--orange-light .bd-box,
+.module.box-design.bg--orange-light .bd-box h2,
+.module.box-design.bg--orange-light .bd-box h3,
+.module.box-design.bg--orange-light .bd-box h4,
+.module.box-design.bg--orange-light .bd-box h5,
+.module.box-design.bg--orange-light .bd-box .title {
   color: #262626;
 }
-.module:not(.box-design).bg--orange-light .btn--fill, .module.box-design.bg--orange-light .container .btn--fill {
+.module:not(.box-design).bg--orange-light .btn--fill, .module.box-design.bg--orange-light .bd-box .btn--fill {
   background-color: #e58a00;
   color: #fff;
 }
-.module:not(.box-design).bg--orange-light .btn--fill:hover, .module.box-design.bg--orange-light .container .btn--fill:hover {
+.module:not(.box-design).bg--orange-light .btn--fill:hover, .module.box-design.bg--orange-light .bd-box .btn--fill:hover {
   background-color: #a25706;
 }
-.module:not(.box-design).bg--orange-light .btn--empty, .module.box-design.bg--orange-light .container .btn--empty {
+.module:not(.box-design).bg--orange-light .btn--empty, .module.box-design.bg--orange-light .bd-box .btn--empty {
   color: #e58a00;
   outline-color: #e58a00;
 }
-.module:not(.box-design).bg--orange-light .btn--empty:hover, .module.box-design.bg--orange-light .container .btn--empty:hover {
+.module:not(.box-design).bg--orange-light .btn--empty:hover, .module.box-design.bg--orange-light .bd-box .btn--empty:hover {
   color: #a25706;
   outline-color: #a25706;
 }
-.module:not(.box-design).bg--orange-light .link--underline, .module.box-design.bg--orange-light .container .link--underline {
+.module:not(.box-design).bg--orange-light .link--underline, .module.box-design.bg--orange-light .bd-box .link--underline {
   color: #e58a00;
 }
-.module:not(.box-design).bg--orange-light .link--underline:hover, .module.box-design.bg--orange-light .container .link--underline:hover {
+.module:not(.box-design).bg--orange-light .link--underline:hover, .module.box-design.bg--orange-light .bd-box .link--underline:hover {
   color: #a25706;
 }
 .module:not(.box-design).bg--orange-light {
@@ -166,28 +216,38 @@
   background-color: #ffebcc;
 }
 
-.module:not(.box-design).bg--red-light, .module.box-design.bg--red-light .container {
+.module:not(.box-design).bg--red-light,
+.module:not(.box-design).bg--red-light h2,
+.module:not(.box-design).bg--red-light h3,
+.module:not(.box-design).bg--red-light h4,
+.module:not(.box-design).bg--red-light h5,
+.module:not(.box-design).bg--red-light .title, .module.box-design.bg--red-light .bd-box,
+.module.box-design.bg--red-light .bd-box h2,
+.module.box-design.bg--red-light .bd-box h3,
+.module.box-design.bg--red-light .bd-box h4,
+.module.box-design.bg--red-light .bd-box h5,
+.module.box-design.bg--red-light .bd-box .title {
   color: #262626;
 }
-.module:not(.box-design).bg--red-light .btn--fill, .module.box-design.bg--red-light .container .btn--fill {
+.module:not(.box-design).bg--red-light .btn--fill, .module.box-design.bg--red-light .bd-box .btn--fill {
   background-color: #c2242e;
   color: #fff;
 }
-.module:not(.box-design).bg--red-light .btn--fill:hover, .module.box-design.bg--red-light .container .btn--fill:hover {
+.module:not(.box-design).bg--red-light .btn--fill:hover, .module.box-design.bg--red-light .bd-box .btn--fill:hover {
   background-color: #561014;
 }
-.module:not(.box-design).bg--red-light .btn--empty, .module.box-design.bg--red-light .container .btn--empty {
+.module:not(.box-design).bg--red-light .btn--empty, .module.box-design.bg--red-light .bd-box .btn--empty {
   color: #c2242e;
   outline-color: #c2242e;
 }
-.module:not(.box-design).bg--red-light .btn--empty:hover, .module.box-design.bg--red-light .container .btn--empty:hover {
+.module:not(.box-design).bg--red-light .btn--empty:hover, .module.box-design.bg--red-light .bd-box .btn--empty:hover {
   color: #561014;
   outline-color: #561014;
 }
-.module:not(.box-design).bg--red-light .link--underline, .module.box-design.bg--red-light .container .link--underline {
+.module:not(.box-design).bg--red-light .link--underline, .module.box-design.bg--red-light .bd-box .link--underline {
   color: #c2242e;
 }
-.module:not(.box-design).bg--red-light .link--underline:hover, .module.box-design.bg--red-light .container .link--underline:hover {
+.module:not(.box-design).bg--red-light .link--underline:hover, .module.box-design.bg--red-light .bd-box .link--underline:hover {
   color: #561014;
 }
 .module:not(.box-design).bg--red-light {
@@ -199,28 +259,38 @@
   background-color: #fbe9eb;
 }
 
-.module:not(.box-design).bg--blue-middle, .module.box-design.bg--blue-middle .container {
+.module:not(.box-design).bg--blue-middle,
+.module:not(.box-design).bg--blue-middle h2,
+.module:not(.box-design).bg--blue-middle h3,
+.module:not(.box-design).bg--blue-middle h4,
+.module:not(.box-design).bg--blue-middle h5,
+.module:not(.box-design).bg--blue-middle .title, .module.box-design.bg--blue-middle .bd-box,
+.module.box-design.bg--blue-middle .bd-box h2,
+.module.box-design.bg--blue-middle .bd-box h3,
+.module.box-design.bg--blue-middle .bd-box h4,
+.module.box-design.bg--blue-middle .bd-box h5,
+.module.box-design.bg--blue-middle .bd-box .title {
   color: #fff;
 }
-.module:not(.box-design).bg--blue-middle .btn--fill, .module.box-design.bg--blue-middle .container .btn--fill {
+.module:not(.box-design).bg--blue-middle .btn--fill, .module.box-design.bg--blue-middle .bd-box .btn--fill {
   background-color: #fff;
   color: #005b94;
 }
-.module:not(.box-design).bg--blue-middle .btn--fill:hover, .module.box-design.bg--blue-middle .container .btn--fill:hover {
+.module:not(.box-design).bg--blue-middle .btn--fill:hover, .module.box-design.bg--blue-middle .bd-box .btn--fill:hover {
   background-color: #f2f2f2;
 }
-.module:not(.box-design).bg--blue-middle .btn--empty, .module.box-design.bg--blue-middle .container .btn--empty {
+.module:not(.box-design).bg--blue-middle .btn--empty, .module.box-design.bg--blue-middle .bd-box .btn--empty {
   color: #fff;
   outline-color: #fff;
 }
-.module:not(.box-design).bg--blue-middle .btn--empty:hover, .module.box-design.bg--blue-middle .container .btn--empty:hover {
+.module:not(.box-design).bg--blue-middle .btn--empty:hover, .module.box-design.bg--blue-middle .bd-box .btn--empty:hover {
   color: #f2f2f2;
   outline-color: #f2f2f2;
 }
-.module:not(.box-design).bg--blue-middle .link--underline, .module.box-design.bg--blue-middle .container .link--underline {
+.module:not(.box-design).bg--blue-middle .link--underline, .module.box-design.bg--blue-middle .bd-box .link--underline {
   color: #fff;
 }
-.module:not(.box-design).bg--blue-middle .link--underline:hover, .module.box-design.bg--blue-middle .container .link--underline:hover {
+.module:not(.box-design).bg--blue-middle .link--underline:hover, .module.box-design.bg--blue-middle .bd-box .link--underline:hover {
   color: #f2f2f2;
 }
 .module:not(.box-design).bg--blue-middle {
@@ -232,28 +302,38 @@
   background-color: #005b94;
 }
 
-.module:not(.box-design).bg--blue-dark, .module.box-design.bg--blue-dark .container {
+.module:not(.box-design).bg--blue-dark,
+.module:not(.box-design).bg--blue-dark h2,
+.module:not(.box-design).bg--blue-dark h3,
+.module:not(.box-design).bg--blue-dark h4,
+.module:not(.box-design).bg--blue-dark h5,
+.module:not(.box-design).bg--blue-dark .title, .module.box-design.bg--blue-dark .bd-box,
+.module.box-design.bg--blue-dark .bd-box h2,
+.module.box-design.bg--blue-dark .bd-box h3,
+.module.box-design.bg--blue-dark .bd-box h4,
+.module.box-design.bg--blue-dark .bd-box h5,
+.module.box-design.bg--blue-dark .bd-box .title {
   color: #fff;
 }
-.module:not(.box-design).bg--blue-dark .btn--fill, .module.box-design.bg--blue-dark .container .btn--fill {
+.module:not(.box-design).bg--blue-dark .btn--fill, .module.box-design.bg--blue-dark .bd-box .btn--fill {
   background-color: #fff;
   color: #002f4d;
 }
-.module:not(.box-design).bg--blue-dark .btn--fill:hover, .module.box-design.bg--blue-dark .container .btn--fill:hover {
+.module:not(.box-design).bg--blue-dark .btn--fill:hover, .module.box-design.bg--blue-dark .bd-box .btn--fill:hover {
   background-color: #f2f2f2;
 }
-.module:not(.box-design).bg--blue-dark .btn--empty, .module.box-design.bg--blue-dark .container .btn--empty {
+.module:not(.box-design).bg--blue-dark .btn--empty, .module.box-design.bg--blue-dark .bd-box .btn--empty {
   color: #fff;
   outline-color: #fff;
 }
-.module:not(.box-design).bg--blue-dark .btn--empty:hover, .module.box-design.bg--blue-dark .container .btn--empty:hover {
+.module:not(.box-design).bg--blue-dark .btn--empty:hover, .module.box-design.bg--blue-dark .bd-box .btn--empty:hover {
   color: #f2f2f2;
   outline-color: #f2f2f2;
 }
-.module:not(.box-design).bg--blue-dark .link--underline, .module.box-design.bg--blue-dark .container .link--underline {
+.module:not(.box-design).bg--blue-dark .link--underline, .module.box-design.bg--blue-dark .bd-box .link--underline {
   color: #fff;
 }
-.module:not(.box-design).bg--blue-dark .link--underline:hover, .module.box-design.bg--blue-dark .container .link--underline:hover {
+.module:not(.box-design).bg--blue-dark .link--underline:hover, .module.box-design.bg--blue-dark .bd-box .link--underline:hover {
   color: #f2f2f2;
 }
 .module:not(.box-design).bg--blue-dark {
@@ -1109,23 +1189,38 @@ h6 {
 .teaser.bg-g--bottom-gray .teaser__bg-gradient {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
-.teaser.tc--blue-light {
-  color: #009fe3;
+.teaser .fc--blue-middle {
+  color: #005b94;
 }
-.teaser.tc--white {
+.teaser .fc--blue-dark {
+  color: #002f4d;
+}
+.teaser .fc--gray-dark {
+  color: #262626;
+}
+.teaser .fc--white {
   color: #fff;
 }
-.teaser.tc--white .btn--fill {
+.teaser .fc--white .btn--fill {
   background-color: #fff;
-  color: #009fe3;
+  color: #262626;
 }
-.teaser.tc--white .btn--empty {
-  color: #fff;
-  outline: solid 2px #fff;
-  outline-offset: -2px;
+.teaser .fc--white .btn--fill:hover {
+  background-color: #f2f2f2;
 }
-.teaser.tc--white .link--underline {
+.teaser .fc--white .btn--empty {
   color: #fff;
+  outline-color: #fff;
+}
+.teaser .fc--white .btn--empty:hover {
+  color: #f2f2f2;
+  outline-color: #f2f2f2;
+}
+.teaser .fc--white .link--underline {
+  color: #fff;
+}
+.teaser .fc--white .link--underline:hover {
+  color: #f2f2f2;
 }
 .teaser .height--90vh {
   height: calc(90vh - 130px);
@@ -1422,11 +1517,6 @@ h6 {
   }
 }
 
-.cards {
-  overflow-x: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
 .cards img {
   width: 100%;
   border-radius: 8px;
@@ -1438,6 +1528,7 @@ h6 {
 }
 .cards .card {
   width: 100%;
+  scroll-snap-align: start;
   display: flex;
 }
 .cards .card--inner {
@@ -1475,11 +1566,23 @@ h6 {
 .cards.graphic-icon .card__image {
   padding: 20%;
 }
-.cards::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-.cards .container {
-  width: 1140px;
+@media only screen and (max-width: 940px) {
+  .cards .container {
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cards .container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  .cards .card {
+    min-width: 300px;
+  }
+  .cards .card:last-child {
+    margin-right: 80vw;
+  }
 }
 
 .subnavigation .container nav {

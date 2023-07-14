@@ -10,6 +10,7 @@
   }
   .card {
     width: 100%;
+    scroll-snap-align: start;
     display: flex;
   }
   .card--inner {
@@ -56,11 +57,19 @@
     }
   }
 
-  //slide
-  overflow-x: scroll;
-  @include hide-scrollbar;
+  @media only screen and (max-width: 940px) {
+    .container {
+      overflow-x: scroll;
+      @include hide-scrollbar;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
 
-  .container {
-    width: 1140px;
+    .card {
+      min-width: 300px;
+      &:last-child {
+        margin-right: 80vw;
+      }
+    }
   }
 }

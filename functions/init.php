@@ -4,7 +4,7 @@ function resp_theme_files()
 {
   wp_enqueue_style('resp_theme_main_styles', get_theme_file_uri('/build/style-index.css'));
   // Javascript need to be loaded in footer: last variable need to be true
-  wp_enqueue_script('resp_theme_js', get_template_directory_uri() . '/build/index.js', array('jquery'), '', true);
+  wp_enqueue_script('resp_theme_js', get_template_directory_uri() . '/build/index.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'resp_theme_files');
 
@@ -28,7 +28,6 @@ function resp_theme_features()
   // add_image_size('professorLandscape', 400, 260, true);
   //Use frontend style in backend editor
   add_theme_support('editor-styles');
-  add_editor_style(array('build/style-index.css', 'build/acf-editor-style.css'));
 }
 add_action('after_setup_theme', 'resp_theme_features');
 

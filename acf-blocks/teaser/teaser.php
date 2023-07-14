@@ -31,15 +31,15 @@ if ($button2) {
 
 // Teaser block options 
 $teaser_height      = get_field('block::teaser:height') != "none" ?  get_field('block::teaser:height') : '';
-$teaser_textcolor   = get_field('block::teaser:textcolor');
+$teaser_textcolor   = "fc--" . get_field('block::teaser:textcolor');
 // Teaser background Image 
 $image              = get_field('block::teaser:image');
 $image_url          = $image ? esc_url($image['url']) : NULL;
 // Teaser text content
 $text_content       = get_field('block::teaser:content');
 
-array_push($module_classes,  $teaser_textcolor);
-array_push($container_classes,  $teaser_height);
+array_push($module_classes);
+array_push($container_classes,  $teaser_height, $teaser_textcolor);
 
 
 ?>
