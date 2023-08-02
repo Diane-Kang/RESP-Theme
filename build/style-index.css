@@ -1626,13 +1626,13 @@ h6 {
 }
 .subnavigation.sticky {
   position: fixed;
+  z-index: 20;
   top: 0;
   width: 100%;
-  padding: 30px 0px;
-  background-color: white;
+  background-color: #fff;
+  box-shadow: 0 0 0.3rem 1.5rem #fff;
 }
 .subnavigation.sticky .container {
-  max-width: unset;
   background-color: #e5f5ff;
 }
 .subnavigation.sticky nav {
@@ -1807,7 +1807,6 @@ h6 {
 .price-table .block-wrapper-mobile {
   display: none;
 }
-.price-table .heading1,
 .price-table .block-wrapper {
   margin: 5rem auto;
   text-align: center;

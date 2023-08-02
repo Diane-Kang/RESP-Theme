@@ -7,3 +7,8 @@
 .module {
   display: block !important;
 }
+
+.block-editor-block-list__block {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

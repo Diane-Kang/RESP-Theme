@@ -12,6 +12,7 @@ add_action('wp_enqueue_scripts', 'resp_theme_files');
 function enqueue_block_editor_custom_files()
 {
   wp_enqueue_style('acf-block-editor-style', get_template_directory_uri() . '/css/acf-editor-style.css');
+  wp_enqueue_style('resp_theme_main_styles', get_theme_file_uri('/build/style-index.css'));
 }
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_custom_files');
 

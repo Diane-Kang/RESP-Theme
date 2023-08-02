@@ -39,12 +39,12 @@
   //Sticky
   &.sticky {
     position: fixed;
+    z-index:$h-z-index-default;
     top: 0;
     width: 100%;
-    padding: 30px 0px;
-    background-color: white;
+    background-color: $c-bg-white;
+    box-shadow: 0 0 0.3rem 1.5rem $c-bg-white;
     .container {
-      max-width: unset;
       background-color: $color-blue-light-light;
     }
     nav {

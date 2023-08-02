@@ -27,41 +27,7 @@ class Slider {
   }
 
   // 2. events
-  event() {
-    // observer. not seeing $subnavi -> add class sticky on module
-    //if (no more showing $subnavi){
-    // this.sticky_feature();
-    // }
-    //   let observer = new IntersectionObserver((entries) => {
-    //     entries.forEach((entry) => {
-    //       console.log(entry);
-    //       if (entry.isIntersecting) {
-    //         this.sticky_off();
-    //       } else {
-    //         this.sticky_on();
-    //       }
-    //     });
-    //   });
-    //   observer.observe(this.elements.$target);
-    console.log('some');
-    // $.noConflict();
-    //  $("html").on("swipeleft", function(){
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("html").on("swipeleft", function () {
-      console.log("jQuery is still working!");
-      alert('Hallo Diane');
-    });
-    //pondo sudo if swipe or click dot {
-    //    do this;
-    //}
-  }
-
-  // 3. methods (function, action...)
-  sticky_on() {
-    this.elements.$card.classList.add("someclass");
-  }
-  sticky_off() {
-    this.elements.$card.classList.remove("someclass");
-  }
+  event() {}
 }
 
 /***/ }),
@@ -80,15 +46,19 @@ class PriceTable {
   // 1. describe and create/initiate our object
   constructor() {
     this.elements = {
+      $module_pricetable: document.querySelectorAll(".module.price-table"),
       $price_toggle: document.querySelector("#price-toggle"),
       $target: document.querySelector(".price-table"),
       $highlight: document.querySelectorAll(".price-toggle-wrapper > span"),
       $feature: document.querySelectorAll(".block-wrapper-mobile .feature")
     };
     // Toggle event for yealry/monthly price
-    if (this.elements.$price_toggle) {
+    if (this.elements.$module_pricetable) {
       //show the yearly payment option as default
-      this.elements.$price_toggle.checked = false;
+      this.elements.$module_pricetable.forEach($table => {
+        $table.querySelector("#price-toggle").checked = false;
+      });
+      // this.elements.$price_toggle.checked = false;
       this.changePrice();
     }
     // Toggle event for feature content in mobile screen
@@ -97,15 +67,19 @@ class PriceTable {
     }
   }
   changePrice() {
-    this.elements.$price_toggle.addEventListener("change", () => {
-      if (this.elements.$price_toggle.checked) {
-        this.elements.$target.classList.add("monthly");
-      } else {
-        this.elements.$target.classList.remove("monthly");
-      }
-      // highlight the text of the selected option
-      this.elements.$highlight.forEach($text => {
-        $text.classList.toggle("checked");
+    this.elements.$module_pricetable.forEach($table => {
+      let $toggle = $table.querySelector("#price-toggle");
+      let $highlight = $table.querySelectorAll(".price-toggle-wrapper > span");
+      $toggle.addEventListener("change", () => {
+        if ($toggle.checked) {
+          $table.classList.add("monthly");
+        } else {
+          $table.classList.remove("monthly");
+        }
+        // highlight the text of the selected option
+        $highlight.forEach($text => {
+          $text.classList.toggle("checked");
+        });
       });
     });
   }
@@ -138,20 +112,15 @@ class SubNavigation {
       $subnavi: document.querySelector(".subnavigation"),
       $target: document.querySelector(".subnavi-sticky-marker")
     };
-    if (this.elements.$subnavi) {
+    if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
       this.event();
     }
   }
 
   // 2. events
   event() {
-    // observer. not seeing $subnavi -> add class sticky on module
-    //if (no more showing $subnavi){
-    // this.sticky_feature();
-    // }
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log(entry);
         if (entry.isIntersecting) {
           this.sticky_off();
         } else {

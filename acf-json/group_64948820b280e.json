@@ -19,6 +19,32 @@
             "message": "<h5>Preisliste<\/h5>",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_64c8d4d49b73f",
+            "label": "Preisliste von:",
+            "name": "block::price-table:option",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "tpq": "TeamProQ",
+                "geomap": "GeoMap"
+            },
+            "default_value": "tpq",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -39,5 +65,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687958128
+    "modified": 1690883833
 }

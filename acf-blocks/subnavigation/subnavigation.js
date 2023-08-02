@@ -5,20 +5,15 @@ export default class SubNavigation {
       $subnavi: document.querySelector(".subnavigation"),
       $target: document.querySelector(".subnavi-sticky-marker"),
     };
-    if (this.elements.$subnavi) {
+    if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
       this.event();
     }
   }
 
   // 2. events
   event() {
-    // observer. not seeing $subnavi -> add class sticky on module
-    //if (no more showing $subnavi){
-    // this.sticky_feature();
-    // }
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           this.sticky_off();
         } else {

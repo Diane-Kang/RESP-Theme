@@ -39,7 +39,7 @@ array_push($container_classes, $order, $size, "bd-box");
     <div class="textbox">
       <div class="quote"><?php echo $quote; ?></div>
       <div class="name text-bold"><?php echo $name; ?></div>
-      <div class="role"><?php echo $jobposition; ?> bei Firma <?php echo $company; ?></div>
+      <div class="role"><?php echo $jobposition; ?> bei <?php echo $company; ?></div>
     </div>
 
   </div>

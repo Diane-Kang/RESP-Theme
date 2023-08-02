@@ -172,7 +172,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "heading",
+                            "default_value": "heading(h3)",
                             "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
@@ -180,8 +180,8 @@
                         },
                         {
                             "key": "field_64a1206fb15e0",
-                            "label": "Absatz",
-                            "name": "paragraph",
+                            "label": "Absatz(backup)",
+                            "name": "paragraph-backup",
                             "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
@@ -199,6 +199,26 @@
                             "new_lines": ""
                         },
                         {
+                            "key": "field_64ca3c696b10d",
+                            "label": "Absatz",
+                            "name": "paragraph",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
                             "key": "field_64a1208ab15e1",
                             "label": "Buttons",
                             "name": "buttons",
@@ -213,7 +233,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_649c380deb6f5"
+                                "group_6452284188907"
                             ],
                             "display": "group",
                             "layout": "row",
@@ -244,5 +264,5 @@
     "active": true,
     "description": "Für 3 oder 4 Kacheln",
     "show_in_rest": 0,
-    "modified": 1688991257
+    "modified": 1690975463
 }

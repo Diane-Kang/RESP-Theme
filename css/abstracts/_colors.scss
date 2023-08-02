@@ -22,6 +22,9 @@ $c-gray-light: #f2f2f2;
 
 $c-white: #fff;
 
+//background color
+$c-bg-white:$c-white;
+
 @mixin button_color($c-btn-fill, $c-btn-fill-text, $c-btn-hover) {
   .btn {
     &--fill {
