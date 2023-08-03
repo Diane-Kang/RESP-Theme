@@ -6,8 +6,10 @@ export default class SubNavigation {
       $subnavi_sticky: document.querySelector(".subnavigation.sticky"),
       $target: document.querySelector(".subnavi-sticky-marker"),
     };
-    if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
-      this.event();
+    if (this.elements.$subnavi) {
+      if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
+        this.event();
+      }
     }
   }
 
@@ -16,7 +18,7 @@ export default class SubNavigation {
   event() {
     let options = {
       root: null,
-      rootMargin: "-32px 0px 0px 0px",
+      // rootMargin: "32px 0px 0px 0px",
     };
     let callback = (entries) => {
       entries.forEach((entry) => {

@@ -113,8 +113,10 @@ class SubNavigation {
       $subnavi_sticky: document.querySelector(".subnavigation.sticky"),
       $target: document.querySelector(".subnavi-sticky-marker")
     };
-    if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
-      this.event();
+    if (this.elements.$subnavi) {
+      if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
+        this.event();
+      }
     }
   }
 
@@ -122,9 +124,10 @@ class SubNavigation {
 
   event() {
     let options = {
-      root: null,
-      rootMargin: "-32px 0px 0px 0px"
+      root: null
+      // rootMargin: "32px 0px 0px 0px",
     };
+
     let callback = entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

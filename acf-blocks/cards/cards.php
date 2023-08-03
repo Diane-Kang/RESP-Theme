@@ -22,7 +22,7 @@ array_push($module_classes, $graphic_type, $order);
   <div class="<?php echo implode(" ", $container_classes); ?>">
     <?php if (have_rows('block::cards:card')) : ?>
       <?php while (have_rows('block::cards:card')) : the_row(); ?>
-        <div class="card bd-box">
+        <div class="card">
           <div class="card--inner">
             <?php $card_image = get_sub_field('card_image'); ?>
             <?php if ($card_image) : ?>
