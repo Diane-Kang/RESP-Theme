@@ -17,6 +17,7 @@ $items = getSubNavigationItems($type, $parentId, get_the_ID());
 <?php if ($items) : ?>
   <!-- <span class="Anchor" data-id="navigation"></span> -->
   <div class="subnavi-sticky-marker"></div>
+
   <div class="module subnavigation display--desktop ">
     <div class="container">
       <nav>
@@ -27,6 +28,7 @@ $items = getSubNavigationItems($type, $parentId, get_the_ID());
       </nav>
     </div>
   </div>
+  <div class="subnavi-placeholder"></div>
 <?php endif; ?>
 
 <?php

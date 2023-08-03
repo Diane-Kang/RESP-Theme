@@ -1,9 +1,5 @@
 .cards {
   // Structure & Spaces(paading margin)
-  img {
-    width: 100%;
-    border-radius: 8px;
-  }
   .container {
     display: flex;
     column-gap: 24px;
@@ -17,6 +13,14 @@
     margin: 10%;
     max-width: 100%;
     @include flex(column, 24px);
+  }
+  .card__image {
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    aspect-ratio: 1/1;
   }
   .card__text-content {
     text-align: center;

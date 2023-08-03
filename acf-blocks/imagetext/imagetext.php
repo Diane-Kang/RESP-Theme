@@ -46,7 +46,11 @@ array_push($container_classes, $order,  $column, "bd-box");
     <div class="imagetext__textbox flex flex-col">
       <div class="content flex flex-col">
         <h3 class="heading heading3"><?php echo $content_title ?> </h3>
-        <?php echo $text_content ?>
+        <?php if (!empty($text_content)) : ?>
+          <div class="text-editor">
+            <?php echo $text_content ?>
+          </div>
+        <?php endif; ?>
       </div>
       <?php if (!empty($button1) || !empty($button2)) : ?>
         <!-- only if button exist -->

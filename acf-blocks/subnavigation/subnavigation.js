@@ -3,6 +3,7 @@ export default class SubNavigation {
   constructor() {
     this.elements = {
       $subnavi: document.querySelector(".subnavigation"),
+      $subnavi_sticky: document.querySelector(".subnavigation.sticky"),
       $target: document.querySelector(".subnavi-sticky-marker"),
     };
     if (window.getComputedStyle(this.elements.$subnavi).display != "none") {
@@ -11,8 +12,13 @@ export default class SubNavigation {
   }
 
   // 2. events
+
   event() {
-    let observer = new IntersectionObserver((entries) => {
+    let options = {
+      root: null,
+      rootMargin: "-32px 0px 0px 0px",
+    };
+    let callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           this.sticky_off();
@@ -20,7 +26,8 @@ export default class SubNavigation {
           this.sticky_on();
         }
       });
-    });
+    };
+    let observer = new IntersectionObserver(callback, options);
     observer.observe(this.elements.$target);
   }
 

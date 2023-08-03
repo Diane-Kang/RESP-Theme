@@ -37,13 +37,14 @@
     }
   }
   //Sticky
+
   &.sticky {
     position: fixed;
-    z-index:$h-z-index-default;
+    z-index: $h-z-index-default;
     top: 0;
     width: 100%;
     background-color: $c-bg-white;
-    box-shadow: 0 0 0.3rem 1.5rem $c-bg-white;
+    box-shadow: 0 0 0.3rem 2.5rem $c-bg-white;
     .container {
       background-color: $color-blue-light-light;
     }
@@ -52,4 +53,11 @@
       margin: auto;
     }
   }
+}
+.subnavi-placeholder {
+  height: 56px;
+  display: none;
+}
+.subnavigation.sticky + .subnavi-placeholder {
+  display: block;
 }

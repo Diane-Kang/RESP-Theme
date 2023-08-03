@@ -34,14 +34,20 @@ array_push($module_classes, $graphic_type, $order);
               <?php $content = get_sub_field('content'); ?>
               <h4 class="heading"><?php echo $content["title"] ?></h4>
               <div class="text flexible">
-                <?php echo $content["paragraph"]; ?>
+                <?php if (!empty($content["paragraph"])) : ?>
+                  <div class="text-editor">
+                    <?php echo $content["paragraph"]; ?>
+                  </div>
+                <?php endif; ?>
               </div>
               <!-- only if button exist -->
-              <?php $buttons = $content["buttons"]; ?>
-              <?php $button1link = $buttons["button1"]["block::buttons:btn1-link"]; ?>
-              <?php $button1type = $buttons["button1"]["block::buttons:btn1-type"]; ?>
-              <?php $button2link = $buttons["button2"]["block::buttons:btn2-link"]; ?>
-              <?php $button2type = $buttons["button2"]["block::buttons:btn2-type"]; ?>
+              <?php if (!empty($content["buttons"])) {
+                $buttons = $content["buttons"];
+                $button1link = $buttons["button1"]["block::buttons:btn1-link"];
+                $button1type = $buttons["button1"]["block::buttons:btn1-type"];
+                $button2link = $buttons["button2"]["block::buttons:btn2-link"];
+                $button2type = $buttons["button2"]["block::buttons:btn2-type"];
+              } ?>
 
               <?php if (!empty($button1link) || !empty($button1link)) : ?>
                 <div class="buttons flex flex-col">
