@@ -3,6 +3,10 @@ $c-blue-middle: #005b94;
 $c-blue-dark: #002f4d;
 $c-blue-light: #e5f5ff;
 
+$color-blue-light: #009fe3; //Blau hell
+$color-blue-dark: #0064a3; // Blau mittel
+$color-blue-dark2: #083f74; // Blau dunkel
+
 $c-green-middle: #256827;
 $c-green-dark: #143815;
 $c-green-light: #ecf8ed;
@@ -23,7 +27,7 @@ $c-gray-light: #f2f2f2;
 $c-white: #fff;
 
 //background color
-$c-bg-white:$c-white;
+$c-bg-white: $c-white;
 
 @mixin button_color($c-btn-fill, $c-btn-fill-text, $c-btn-hover) {
   .btn {
@@ -151,10 +155,6 @@ $color-system: (
 }
 
 // COLORS  --- Old
-$color-blue-light-light: #e5f5ff;
-$color-blue-light: #009fe3; //Blau hell
-$color-blue-dark: #0064a3; // Blau mittel
-$color-blue-dark2: #083f74; // Blau dunkel
 
 $color-gray-dark: #4a4a4a;
 $color-gray-light: #e3e3e3;

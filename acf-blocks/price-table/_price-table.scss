@@ -64,7 +64,7 @@
       border: 1px solid $color-gray-light;
       &.highlight {
         border-color: $color-blue-dark;
-        background-color: $color-blue-light-light;
+        background-color: $c-blue-light;
         li:not(:last-child) {
           border-bottom-color: $color-blue-dark;
         }

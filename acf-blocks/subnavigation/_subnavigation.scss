@@ -4,14 +4,14 @@
   position: sticky;
   top: 2em;
   box-shadow: 0 0 1.5em 2em $c-bg-white;
+  background-color: $c-bg-white;
   z-index: $h-z-index-default;
 
   .container {
-    background-color: $color-white;
     nav {
       display: flex;
       border-radius: 8px;
-      background: $color-blue-light-light;
+      background: $c-blue-light;
       line-height: 2.5em;
       font-size: 20px;
     }
@@ -29,7 +29,7 @@
         height: 4px;
         width: 100px;
         position: absolute;
-        background-color: $color-blue-dark;
+        background-color: $c-blue-dark;
         visibility: hidden;
         transform: translate(-50%, 50%);
         left: 50%;
@@ -39,7 +39,7 @@
         visibility: visible;
       }
       &:hover {
-        color: $color-blue-dark;
+        color: $c-blue-dark;
       }
     }
   }

@@ -60,10 +60,11 @@
             },
             "choices": {
                 "blue-middle": "Blau (mittel)",
-                "blue-dark": "Blau (dunkel)",
+                "blue-dark": "blau (dunkel)",
                 "green-middle": "grün (mittel)",
                 "orange-middle": "orange (mittel)",
                 "red-middle": "rot (mittel)",
+                "gray-light": "grau (hell)",
                 "gray-middle": "grau (mittel)"
             },
             "default_value": "blue-middle",
@@ -115,5 +116,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688994443
+    "modified": 1691518515
 }

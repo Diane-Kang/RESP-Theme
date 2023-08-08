@@ -11,6 +11,7 @@
     "green-middle": $c-green-middle,
     "orange-middle": $c-orange-middle,
     "red-middle": $c-red-middle,
+    "gray-light": $c-gray-light,
     "gray-middle": $c-gray-middle,
   );
 
@@ -24,7 +25,7 @@
 
   .line {
     grid-column: col-start 2 / col-end 11;
-    height: 4px;
+    height: 1px;
     border-radius: 8px;
   }
 }

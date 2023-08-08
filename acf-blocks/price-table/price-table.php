@@ -38,46 +38,91 @@ $option              = get_field('block::price-table:option');
             <div class="feature">
               <ul>
                 <li>Anzahl Nutzer
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit jedem Paket bekommen Sie eine unbegrenzte Anzahl an Nutzeraccounts für alle Module, außer bei der Immobilienberechnung.
+                  </div>
                 </li>
                 <li>Verkauf
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem Modul Verkauf haben Sie alle erforderlichen Verkaufsdaten auf einen Blick. Nutzen Sie das Online-Reservierungs- und Verkaufsmanagement in Echtzeit für alle Beteiligten im Immobilienvertrieb.
+                  </div>
                 </li>
                 <li>Kontakte
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem Modul Kontakte verwalten Sie Kundendaten effizient: Adressen, Notizen, Wiedervorlagen, Termine und Dateien werden im Kontaktmanagement entsprechend zugeordnet.
+                  </div>
                 </li>
                 <li>Vertrieb: Vertriebsportal
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem Vertriebsportal können Sie Ihre Angebote schnell und einfach im Internet präsentieren - inkl. internem Vertriebsbereich, passend zu Ihrer Corporate Identity.
+                  </div>
                 </li>
                 <li>Vertrieb: Leadgenerierung
                 </li>
                 <li>Vertrieb: Vertragsabwicklung
                 </li>
-                <li>Dateien<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Dateien
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.
+                  </div>
                 </li>
-                <li>Speicherplatz<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Speicherplatz
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit jedem Paket bekommen Sie den jeweils angegebenen Speicherplatz. Zusätzlicher Speicher kann jederzeit hinzugebucht werden.
+                  </div>
                 </li>
-                <li>Immobilienberechnungen<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Immobilienberechnungen
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem Modul Berechnungen erstellen Sie überzeugende Immobilienberechnungen für das Investment Ihrer Kunden - inkl. automatischer Aktualisierung rechtlicher Rahmenbedingungen.
+                  </div>
                 </li>
-                <li>Provision<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Provision
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem Modul Provision erstellen Sie qualifizierte und digitale Provisionsabrechnungen an den Auftraggeber oder die eigenen Vermittler.
+                  </div>
                 </li>
-                <li>Dashboard<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Dashboard
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Das Modul Dashboard ermöglicht Ihnen den stets klaren Überblick über aktuelle Verkaufs- und Reservierungsstände durch übersichtliche Diagramme.
+                  </div>
                 </li>
-                <li>Vermietung<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Vermietung
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Das Modul Vermietung bietet ein effizientes Reservierungs- und Vertragsmanagement für Erst- und Folgevermietungen mit Echtzeit-Übersicht über vermietete, reservierte und freie Einheiten.
+                  </div>
                 </li>
-                <li>Mängelmanagement<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Mängelmanagement
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem Mängelmanagement erfassen Sie Mängel, binden Gewerke ein und setzen Fristen. Alle Änderungen werden dabei lückenlos im Verlaufsprotokoll dokumentiert.
+                  </div>
                 </li>
                 <li>Support<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                  <div class="info">
+                    Erleben Sie erstklassigen Support! Unser Team steht Ihnen jederzeit per E-Mail und/oder per Telefon zur Seite, um Ihre Fragen zu beantworten und Probleme zu lösen.
+                  </div>
                 </li>
-                <li>Einrichtung & Konfiguration<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Einrichtung & Konfiguration
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Mit dem TeamProQ-Setup stellen wir Ihnen die gewünschten Module bereit und richten die Arbeitsplattform gemeinsam mit Ihnen ein.
+                  </div>
                 </li>
-                <li>Admin Schulung<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Admin Schulung
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Unser Support-Team steht Ihnen mit einer Administrationsschulung und erweitertem Support im ersten Monat zur Seite.
+                  </div>
                 </li>
               </ul>
             </div>
@@ -344,53 +389,101 @@ $option              = get_field('block::price-table:option');
             </div>
             <div class="feature">
               <ul>
-                <li>Anzahl Lizenzen<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Anzahl Lizenzen
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Bitte beachten Sie, dass pro Paket nur ein Nutzer mit einer E-Mail-Adresse zugelassen ist. Jeder Lizenzinhaber erhält individuellen Zugang zu unserem Service und seinen Funktionen.
+                  </div>
                 </li>
-                <li>PLZ Gebiete inkl.<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>PLZ Gebiete inkl.
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Erkunden Sie unterschiedliche Funktionsumfänge, je nach Lizenzart und individuellen Anforderungen. Wählen Sie zwischen Bundesländer-Ebene, deutschlandweitem oder gesamtem DACH-Raum.
+                  </div>
                 </li>
-                <li>Marktdaten<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Marktdaten
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Greifen Sie auf zahlreiche duplikatsbereinigte, täglich aktualisierte und historische Angebotsdaten zu.
+                  </div>
                 </li>
-                <li>Suchprofile<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Suchprofile
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Speichern Sie Ihre Suchkriterien ganz einfach in eigenen Suchprofilen ab und sparen Sie sich somit bei der nächsten Recherche ganz viel Zeit.
+                  </div>
                 </li>
-                <li>Suchprofile teilen<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Suchprofile teilen
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Richten Sie Ihre gespeicherten Suchprofile für Dritte ein und informieren Sie auf diese Weise automatisch per E-Mail Ihre Kunden über interessante Angebote.
+                  </div>
                 </li>
-                <li>Suchfilter<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Suchfilter
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Kommen Sie um ein Vielfaches schneller zum Ergebnis mithilfe von verschiedenen Filterkriterien wie Ortsnavigation, Angebots- und Objektart, Baujahr, Energiestandards und mehr.
+                  </div>
                 </li>
-                <li>Standortanalyse<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Standortanalyse
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Erstellen Sie mit wenigen Klicks tagesaktuelle Standortanalysen, basierend auf amtlichen Statistiken und Vergleichsobjekten, und laden Sie individuelle PDF-Exposés herunter.
+                  </div>
                 </li>
-                <li>Angebotsverlauf<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Angebotsverlauf
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Verfolgen Sie den Angebotsverlauf und informieren Sie sich über die Entwicklung einzelner Angebote, einschließlich Preisänderungen und mehr.
+                  </div>
                 </li>
-                <li>Historische Daten<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Historische Daten
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Erhalten Sie Zugang zu umfassenden historischen Angebotsdaten und Verlaufsentwicklungen für den gesamten DACH-Raum seit dem Jahr 2015.
+                  </div>
                 </li>
-                <li>Zwangsversteigerungen<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Zwangsversteigerungen
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Bleiben Sie auf dem Laufenden über die neuesten Zwangsversteigerungen von Immobilien und Grundstücken.
+                  </div>
                 </li>
-                <li>Bauprojekte<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Bauprojekte
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Entdecken Sie Neubau- und Sanierungsprojekte aller Angebotsarten mit detaillierten Informationen zu den Projekten und beteiligten Unternehmen.
+                  </div>
                 </li>
-                <li>Sonderkarten & POI<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Sonderkarten & POI
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Greifen Sie auf umfangreiches Kartenmaterial, wie zum Beispiel Bebauungspläne, zurück, um die Bedingungen an Ihrem Standort auf einen Blick zu sehen.
+                  </div>
                 </li>
-                <li>Portfolio Analyse<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Portfolio Analyse
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Bewerten Sie Ihr eigenes Immobilienportfolio, um fundierte und datenbasierte Entscheidungen über Ihre Investitionen zu treffen.
+                  </div>
                 </li>
-                <li>Vorkenntnisprüfung<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Vorkenntnisprüfung
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Erstellen Sie Ihre digitale Vorkenntnisprüfung im Ankaufsprozess mit kartenbasierter Darstellung und lückenloser Dokumentation.
+                  </div>
                 </li>
-                <li>Anbieter Datenbank<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Anbieter Datenbank
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Behalten Sie Ihre Konkurrenz im Auge mit Informationen zu aktuellen Anbietern, Bauvorhaben und Marktbewegungen.
+                  </div>
                 </li>
-                <li>Support<i class="fa-regular fa-circle-info"></i>
-                  <div class="info">Das Modul Dateien ermöglicht das Speichern von Dateien auf der TeamProQ-Arbeitsplattform. Stellen Sie Dateien aller Formate passwortgeschützt online zur Verfügung – weltweit und jederzeit.</div>
+                <li>Support
+                  <i class="fa-regular fa-circle-info"></i>
+                  <div class="info">
+                    Erleben Sie erstklassigen Support! Unser Team steht Ihnen jederzeit per E-Mail und/oder per Telefon zur Seite, um Ihre Fragen zu beantworten und Probleme zu lösen.
+                  </div>
                 </li>
               </ul>
             </div>
