@@ -1608,9 +1608,20 @@ h6 {
   }
 }
 
+.subnavigation {
+  margin: 3em auto;
+  position: sticky;
+  top: 2em;
+  box-shadow: 0 0 1.5em 2em #fff;
+  z-index: 20;
+}
+.subnavigation .container {
+  background-color: #fff;
+}
 .subnavigation .container nav {
   display: flex;
   border-radius: 8px;
+  background: #e5f5ff;
   line-height: 2.5em;
   font-size: 20px;
 }
@@ -1637,27 +1648,6 @@ h6 {
 }
 .subnavigation .container a:hover {
   color: #0064a3;
-}
-.subnavigation.sticky {
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 0 0.3rem 2.5rem #fff;
-}
-.subnavigation.sticky nav {
-  max-width: 1140px;
-  margin: auto;
-}
-
-.subnavi-placeholder {
-  height: 56px;
-  display: none;
-}
-
-.subnavigation.sticky + .subnavi-placeholder {
-  display: block;
 }
 
 .h-line .container {

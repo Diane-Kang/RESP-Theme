@@ -28,7 +28,6 @@ $items = getSubNavigationItems($type, $parentId, get_the_ID());
       </nav>
     </div>
   </div>
-  <div class="subnavi-placeholder"></div>
 <?php endif; ?>
 
 <?php
