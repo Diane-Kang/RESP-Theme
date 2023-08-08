@@ -44,8 +44,8 @@ $text_content       = get_field('block::textbox:content');
         <?php echo $text_content; ?>
       </div>
     </div>
-    <?php if (!empty($button1) || !empty($button2)) : ?>
-      <!-- only if button exist -->
+    <!-- only if button exist -->
+    <?php if (!empty($button1link) || !empty($button2link)) : ?>
       <div class="buttons--wrapper">
         <?php if ($button1link != "") : ?>
           <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
