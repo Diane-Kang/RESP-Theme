@@ -5,7 +5,10 @@ $allowedBlocks = [];
 define('THEMEPATH', get_template_directory());
 define('FUNCTIONSPATH', THEMEPATH . '/functions/');
 
-// initial settings : add css, Lato font localize, custom post type: theme reference, fontawsome
+// initial settings : 
+// - warning message for required pluginadd 
+// - css, Lato font localize, 
+// - custom post type: theme reference, fontawsome
 require_once(FUNCTIONSPATH . 'init.php');
 // acf block helper functions
 // require_once(FUNCTIONSPATH . 'acfblock-helper.php');

@@ -11,7 +11,7 @@
   }
   .card--inner {
     margin: 10%;
-    max-width: 100%;
+    width: 100%;
     @include flex(column, 24px);
   }
   .card__image {

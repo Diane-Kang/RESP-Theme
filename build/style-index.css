@@ -1551,7 +1551,7 @@ h6 {
 }
 .cards .card--inner {
   margin: 10%;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -1611,7 +1611,6 @@ h6 {
 .subnavigation .container nav {
   display: flex;
   border-radius: 8px;
-  background: #e5f5ff;
   line-height: 2.5em;
   font-size: 20px;
 }
@@ -1646,9 +1645,6 @@ h6 {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 0 0.3rem 2.5rem #fff;
-}
-.subnavigation.sticky .container {
-  background-color: #e5f5ff;
 }
 .subnavigation.sticky nav {
   max-width: 1140px;

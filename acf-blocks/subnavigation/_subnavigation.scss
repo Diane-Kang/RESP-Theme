@@ -4,7 +4,7 @@
     nav {
       display: flex;
       border-radius: 8px;
-      background: $color-blue-light-light;
+      // background: $color-blue-light-light;
       line-height: 2.5em;
       font-size: 20px;
     }
@@ -45,9 +45,9 @@
     width: 100%;
     background-color: $c-bg-white;
     box-shadow: 0 0 0.3rem 2.5rem $c-bg-white;
-    .container {
-      background-color: $color-blue-light-light;
-    }
+    // .container {
+    //   background-color: $color-blue-light-light;
+    // }
     nav {
       max-width: 1140px;
       margin: auto;
