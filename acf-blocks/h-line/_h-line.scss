@@ -1,7 +1,7 @@
 .h-line {
   //Structure
   .container {
-    @include grid12;
+    width: 100%;
   }
 
   // line color
@@ -24,7 +24,6 @@
   }
 
   .line {
-    grid-column: col-start 2 / col-end 11;
     height: 1px;
     border-radius: 8px;
   }

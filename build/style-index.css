@@ -1270,6 +1270,8 @@ h6 {
 .booking .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
 }
 .booking .block-inner {
   display: grid;
@@ -1283,7 +1285,7 @@ h6 {
   width: calc(50% - 12px);
 }
 .booking .block-inner {
-  height: 200px;
+  height: 230px;
 }
 .booking .image {
   width: 20%;
@@ -1649,11 +1651,7 @@ h6 {
 }
 
 .h-line .container {
-  display: grid;
-  grid-template-columns: [center-start] repeat(12, [col-start] minmax(0px, 73px) [col-end]) [center-end];
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-  align-items: center;
+  width: 100%;
 }
 .h-line .line.blue-middle {
   background-color: #005b94;
@@ -1677,7 +1675,6 @@ h6 {
   background-color: #4d4d4d;
 }
 .h-line .line {
-  grid-column: col-start 2/col-end 11;
   height: 1px;
   border-radius: 8px;
 }

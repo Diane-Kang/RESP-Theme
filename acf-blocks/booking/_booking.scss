@@ -2,6 +2,8 @@
   .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
   }
   .block-inner {
     display: grid;
@@ -14,7 +16,7 @@
     background: var(--common-white, #fff);
     width: calc(50% - 12px);
     &-inner {
-      height: 200px;
+      height: 230px;
     }
   }
   $image-size: 20%;
