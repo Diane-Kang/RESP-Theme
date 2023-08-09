@@ -164,7 +164,7 @@ $option              = get_field('block::price-table:option');
             <div class="head flexible">
               <h4 class="category">Business Class</h4>
               <h4 class="price price-monthly">329 €</h4>
-              <h4 class="price price-yearly">2.990 €</h4>
+              <h4 class="price price-yearly">3.290 €</h4>
             </div>
             <div class="feature">
               <ul>
@@ -193,8 +193,8 @@ $option              = get_field('block::price-table:option');
           <div class="table flexible flex flex-col">
             <div class="head flexible">
               <h4 class="category">First Class</h4>
-              <h4 class="price price-monthly">100 €</h4>
-              <h4 class="price price-yearly">1.290 €</h4>
+              <h4 class="price price-monthly">699 €</h4>
+              <h4 class="price price-yearly">6.990 €</h4>
             </div>
             <div class="feature">
               <ul>
@@ -271,7 +271,7 @@ $option              = get_field('block::price-table:option');
             <div class="head">
               <h4 class="category">Business Class</h4>
               <h4 class="price price-monthly">329 €</h4>
-              <h4 class="price price-yearly">2.990 €</h4>
+              <h4 class="price price-yearly">3.290 €</h4>
             </div>
             <div class="feature">
               <div class="feature-content">
