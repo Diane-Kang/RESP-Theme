@@ -1,0 +1,16 @@
+{
+  "name": "acf/icontext",
+  "title": "Icon-Text",
+  "description": "Icon-Text Block",
+  "category": "",
+  "icon": "list-view",
+  "keywords": ["text", "media"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "icontext.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

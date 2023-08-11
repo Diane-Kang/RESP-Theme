@@ -1,0 +1,52 @@
+.icontext {
+  // Structure & Spaces(paading margin)
+
+  .card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__image {
+      width: 10%;
+    }
+    &__text {
+      width: calc(90% - $colunm-gap);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // options
+  .left {
+    order: 1;
+  }
+  .right {
+    order: 2;
+  }
+  &-align-center {
+    .card {
+      align-items: center;
+    }
+  }
+  &-align-top {
+    .card {
+      align-items: start;
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    .container {
+      @include sidePaddingBig;
+      max-width: 1140px;
+    }
+    .card {
+      &__image {
+        width: 15%;
+      }
+      &__text {
+        width: calc(85% - $colunm-gap);
+      }
+    }
+  }
+}

@@ -34,5 +34,6 @@ new ACFblock("booking");
 new ACFblock("faq");
 new ACFBlock("logos");
 new ACFBlock("contact");
+new ACFBlock("icontext");
 
 new ACFBlock("color-test");

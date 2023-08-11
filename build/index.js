@@ -2,36 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./acf-blocks/cards/slide.js":
-/*!***********************************!*\
-  !*** ./acf-blocks/cards/slide.js ***!
-  \***********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ Slider; }
-/* harmony export */ });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-
-class Slider {
-  // 1. describe and create/initiate our object
-  constructor() {
-    this.elements = {
-      $card: document.querySelector(".module.cards")
-    };
-    if (this.elements.$card != null) {
-      this.event();
-    }
-  }
-
-  // 2. events
-  event() {}
-}
-
-/***/ }),
-
 /***/ "./acf-blocks/price-table/price-table.js":
 /*!***********************************************!*\
   !*** ./acf-blocks/price-table/price-table.js ***!
@@ -321,8 +291,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../template-parts/navigation/navigation */ "./template-parts/navigation/navigation.js");
 /* harmony import */ var _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../template-parts/blog/scrollup */ "./template-parts/blog/scrollup.js");
 /* harmony import */ var _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../acf-blocks/price-table/price-table */ "./acf-blocks/price-table/price-table.js");
-/* harmony import */ var _acf_blocks_cards_slide__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../acf-blocks/cards/slide */ "./acf-blocks/cards/slide.js");
-
 
 
 
@@ -330,7 +298,6 @@ __webpack_require__.r(__webpack_exports__);
 const navigation = new _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const scrollup = new _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const price_table = new _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__["default"]();
-const slider = new _acf_blocks_cards_slide__WEBPACK_IMPORTED_MODULE_4__["default"]();
 
 /***/ }),
 
@@ -507,16 +474,6 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ }),
-
-/***/ "jquery":
-/*!*************************!*\
-  !*** external "jQuery" ***!
-  \*************************/
-/***/ (function(module) {
-
-module.exports = window["jQuery"];
-
 /***/ })
 
 /******/ 	});
@@ -580,18 +537,6 @@ module.exports = window["jQuery"];
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
 /******/ 		};
 /******/ 	}();
 /******/ 	
