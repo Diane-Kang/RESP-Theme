@@ -9,7 +9,7 @@
       width: 10%;
     }
     &__text {
-      width: calc(90% - $colunm-gap);
+      width: calc(90% - $colunm-gap--big);
     }
 
     &:not(:last-child) {
@@ -45,7 +45,7 @@
         width: 15%;
       }
       &__text {
-        width: calc(85% - $colunm-gap);
+        width: calc(85% - $colunm-gap--small);
       }
     }
   }

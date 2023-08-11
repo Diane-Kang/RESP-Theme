@@ -2116,7 +2116,7 @@ a {
   width: 10%;
 }
 .icontext .card__text {
-  width: calc(90% - 2rem);
+  width: calc(90% - 4rem);
 }
 .icontext .card:not(:last-child) {
   margin-bottom: 2rem;
