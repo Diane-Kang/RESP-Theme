@@ -1,7 +1,6 @@
 .textbox {
   // structure
-  .container,
-  .textbox__text {
+  .container {
     @include flex(column, 2.5rem);
   }
   .textbox__text {

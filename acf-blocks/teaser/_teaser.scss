@@ -1,12 +1,9 @@
 .teaser {
+  text-align: center;
   // structure
   position: relative;
   .container {
     @include flex-center;
-  }
-  &__content,
-  &__text {
-    @include flex(column, 3.5rem);
   }
 
   // color, background image
@@ -19,7 +16,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -2;
+    z-index: $m-z-index-default;
   }
   &__bg-gradient {
     background-size: cover;
@@ -29,7 +26,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: $m-z-index-1;
+  }
+  &__content {
+    z-index: $m-z-index-2;
+    @include flex(column, 2.5rem);
   }
   //Gradient Option
   &.bg-g--top-gray {

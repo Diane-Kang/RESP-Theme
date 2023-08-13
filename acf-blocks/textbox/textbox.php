@@ -40,7 +40,7 @@ $text_content       = get_field('block::textbox:content');
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
   <div class="<?php echo implode(" ", $container_classes); ?>">
     <div class="textbox__text-container">
-      <div class="textbox__text">
+      <div class="textbox__text editor-content">
         <?php echo $text_content; ?>
       </div>
     </div>

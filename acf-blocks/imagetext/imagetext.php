@@ -44,16 +44,13 @@ array_push($container_classes, $order,  $column, "bd-box");
       <img src="<?php echo esc_url($image['url']); ?>" alt="" />
     </div>
     <div class="imagetext__textbox flex flex-col">
-      <div class="content flex flex-col">
-        <h3 class="heading heading3"><?php echo $content_title ?> </h3>
-        <?php if (!empty($text_content)) : ?>
-          <div class="text-editor">
-            <?php echo $text_content ?>
-          </div>
-        <?php endif; ?>
-      </div>
-      <?php if (!empty($button1) || !empty($button2)) : ?>
-        <!-- only if button exist -->
+      <?php if (!empty($text_content)) : ?>
+        <div class="editor-content">
+          <?php echo $text_content ?>
+        </div>
+      <?php endif; ?>
+      <!-- only if button exist -->
+      <?php if (!empty($button1link) || !empty($button2link)) : ?>
         <div class="buttons--wrapper">
           <?php if ($button1link != "") : ?>
             <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>

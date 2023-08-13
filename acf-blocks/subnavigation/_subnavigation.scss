@@ -44,3 +44,10 @@
     }
   }
 }
+
+//subnavi not shwoing up with small screen
+@media only screen and (max-width: $bp-last) {
+  .tiny-screen-hide {
+    display: none;
+  }
+}

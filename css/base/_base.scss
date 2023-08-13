@@ -17,10 +17,6 @@ html {
 body {
   box-sizing: border-box;
 }
-
-p {
-  margin-bottom: $font-size-base;
-}
 .module {
   // margin: 2rem auto;
   scroll-margin-top: 2rem;
@@ -43,11 +39,7 @@ a {
   color: inherit;
 }
 
-.text-editor {
-  & > * {
-    margin: 1rem auto;
-  }
-
+.editor-content {
   ul {
     list-style: disc;
   }

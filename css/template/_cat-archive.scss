@@ -115,7 +115,8 @@
     margin: 5rem auto;
   }
   .intro {
-    @include font(L, 700);
+    font-size: $font-size-medium;
+    font-weight: 700;
     &-wrapper {
       margin-bottom: 5rem;
     }

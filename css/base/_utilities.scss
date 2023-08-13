@@ -12,6 +12,9 @@
 
 .p {
   &-top {
+    &--null {
+      padding-top: 0px;
+    }
     &--small {
       padding-top: 1.5rem;
     }
@@ -23,6 +26,9 @@
     }
   }
   &-bottom {
+    &--null {
+      padding-top: 0px;
+    }
     &--small {
       padding-bottom: 1.5rem;
     }
@@ -46,8 +52,6 @@
   }
 }
 
-@media only screen and (max-width: $bp-last) {
-  .tiny-screen-hide {
-    display: none;
-  }
+.display--none {
+  display: none;
 }

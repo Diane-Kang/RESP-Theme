@@ -50,7 +50,7 @@ array_push($container_classes,  $teaser_height, $teaser_textcolor);
             "></div>
     <div class="teaser__bg-gradient"></div>
     <div class="teaser__content">
-      <div class="teaser__text text-center">
+      <div class="teaser__text editor-content">
         <?php echo $text_content ?>
       </div>
       <?php if (!empty($button1link) || !empty($button1link)) : ?>

@@ -17,9 +17,10 @@
                 "id": ""
             },
             "choices": {
-                "all": "mobile, tablet and desktop",
-                "mobile": "mobile &tablet only",
-                "desktop": "desktop only"
+                "all": "alle mobile, tablet and desktop",
+                "mobile": "nur mobile & tablet",
+                "desktop": "nur desktop",
+                "none": "versteckt im Frontend"
             },
             "default_value": "all",
             "return_format": "value",
@@ -44,6 +45,7 @@
                 "id": ""
             },
             "choices": {
+                "none": "null(0px)",
                 "small": "klein",
                 "medium": "mittel",
                 "big": "groß"
@@ -71,6 +73,7 @@
                 "id": ""
             },
             "choices": {
+                "none": "null(0px)",
                 "small": "klein",
                 "medium": "mittel",
                 "big": "groß"
@@ -192,5 +195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688992630
+    "modified": 1691943527
 }

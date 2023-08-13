@@ -97,7 +97,7 @@
       // with click(js) sub menu open
       &.active > ul {
         visibility: inherit;
-        z-index: 2;
+        z-index: $h-z-index-default;
       }
     }
 
@@ -161,7 +161,7 @@
       left: 0px;
       bottom: 0px;
       transform: translateY(100%);
-      z-index: 3;
+      z-index: $h-z-index-1;
       overflow-y: scroll;
       background-color: white;
     }

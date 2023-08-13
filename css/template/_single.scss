@@ -38,7 +38,8 @@
         border-radius: 8px;
       }
       &-title {
-        @include font(L, 700);
+        font-size: $font-size-medium;
+        font-weight: 700;
       }
       ul {
         margin-left: 1.5rem;
@@ -48,7 +49,8 @@
     .abstrct {
       grid-column: 4/-2;
       padding-left: 2rem;
-      @include font(L, 700);
+      font-size: $font-size-medium;
+      font-weight: 700;
     }
 
     .content {

@@ -119,11 +119,11 @@
         },
         {
             "key": "field_6461d4a43ff0c",
-            "label": "Titel",
+            "label": "Titel(backup)",
             "name": "block::imagetext:title",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Bitte verwenden Sie den Texteditor mit entsprechendem Header-Tag.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -131,7 +131,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "heading(h3)",
+            "default_value": "Benutz Inhalt",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -178,7 +178,7 @@
             },
             "default_value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.",
             "tabs": "all",
-            "toolbar": "basic",
+            "toolbar": "full",
             "media_upload": 0,
             "delay": 0
         }
@@ -201,5 +201,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688214932
+    "modified": 1691945535
 }

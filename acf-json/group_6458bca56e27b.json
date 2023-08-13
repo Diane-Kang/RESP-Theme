@@ -36,6 +36,8 @@
             },
             "clone": [
                 "field_649c0189425b6",
+                "field_649c331c826ad",
+                "field_649c3359826ae",
                 "field_649c33eb2b046"
             ],
             "display": "seamless",
@@ -115,7 +117,7 @@
             "name": "block::teaser:height",
             "aria-label": "",
             "type": "select",
-            "instructions": "",
+            "instructions": "Nur bei der Option \"(S) Passend zum Inhalt\" wird der obere Abstand \/ der untere Abstand verwendet.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -229,5 +231,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689331813
+    "modified": 1691943967
 }
