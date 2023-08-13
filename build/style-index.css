@@ -2096,7 +2096,6 @@ a {
   border-radius: 8px;
   max-width: 750px;
   flex-grow: 1;
-  margin: 2%;
 }
 .contact .profilbild_wrapper {
   max-width: 228px;
@@ -2109,8 +2108,10 @@ a {
 .contact .details {
   padding: 24px 0px 24px 40px;
 }
-.contact .name {
+.contact.bg-none .name {
   color: #002f4d;
+}
+.contact .name {
   font-size: 1.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
