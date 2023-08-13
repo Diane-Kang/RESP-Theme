@@ -2,6 +2,7 @@
   //structure
   .container--inner {
     @include flex(row, 24px);
+    align-items: center;
     padding: 40px;
     border-radius: 8px;
     max-width: 750px;
@@ -11,6 +12,7 @@
 
   .profilbild_wrapper {
     max-width: 228px;
+    height: fit-content;
   }
 
   .profilbild {

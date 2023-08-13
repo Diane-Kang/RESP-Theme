@@ -2091,6 +2091,7 @@ a {
   flex-direction: row;
   -moz-column-gap: 24px;
        column-gap: 24px;
+  align-items: center;
   padding: 40px;
   border-radius: 8px;
   max-width: 750px;
@@ -2099,6 +2100,8 @@ a {
 }
 .contact .profilbild_wrapper {
   max-width: 228px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .contact .profilbild {
   border-radius: 50%;
