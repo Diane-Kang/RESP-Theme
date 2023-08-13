@@ -11,15 +11,18 @@
   transform: translateY(3px);
 }
 
-@mixin underline {
-  content: "";
-  position: absolute;
-  bottom: -0.5em;
-  left: 0;
-  width: 100%;
-  background: $color-blue-dark;
-  height: 4px;
-  border-radius: 10px;
+@mixin underline-before {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    width: 100%;
+    background: $color-blue-dark;
+    height: 4px;
+    border-radius: 10px;
+  }
 }
 
 .header {
@@ -69,12 +72,10 @@
       position: relative;
       // for underline
       & > a {
-        position: relative;
-      }
-      // underline
-      & > a::before {
-        @include underline;
-        opacity: 0;
+        @include underline-before;
+        &:before {
+          opacity: 0;
+        }
       }
       // icon
       &.menu-item-has-children > a::after {
@@ -187,10 +188,14 @@
           font-weight: 700;
         }
       }
+
       ul.menu-depth-1 {
         margin-left: 1rem;
         li {
           margin-top: 1rem;
+        }
+        li.current-menu-item a {
+          @include underline-before;
         }
         li.menu-item-has-children {
           //icon
@@ -216,10 +221,7 @@
         }
         li.current-menu-item {
           & > a {
-            position: relative;
-            &:before {
-              @include underline;
-            }
+            @include underline-before;
           }
         }
       }

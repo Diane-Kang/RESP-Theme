@@ -224,7 +224,7 @@
             "label": "Zitat",
             "name": "block::testimonial:quote",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -235,9 +235,9 @@
             },
             "default_value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
             "maxlength": "",
+            "rows": 4,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
         }
     ],
     "location": [
@@ -258,5 +258,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688373787
+    "modified": 1691946631
 }

@@ -36,9 +36,9 @@ array_push($container_classes, $order, $size, "bd-box");
     <div class="image">
       <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
     </div>
-    <div class="textbox">
+    <div class="content">
       <div class="quote"><?php echo $quote; ?></div>
-      <div class="name text-bold"><?php echo $name; ?></div>
+      <div class="name"><?php echo $name; ?></div>
       <div class="role"><?php echo $jobposition; ?> bei <?php echo $company; ?></div>
     </div>
 

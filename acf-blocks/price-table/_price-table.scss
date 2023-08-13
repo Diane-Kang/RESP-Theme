@@ -36,8 +36,11 @@
           transform: translate(50%, -50%);
           font-size: 1.5rem;
           color: gray;
-          &:hover ~ .info {
-            visibility: visible;
+          &:hover {
+            color: $color-blue-dark;
+            & ~ .info {
+              visibility: visible;
+            }
           }
         }
         .info {
@@ -82,12 +85,19 @@
     .feature {
       margin-bottom: 2.5rem;
     }
+    .feature-label,
+    .category,
+    .price {
+      font-weight: 900;
+      font-size: $font-size-h3;
+    }
     .price {
       color: $color-blue-dark;
       &-month {
         display: none;
       }
     }
+
     .btn {
       font-size: 18px;
       padding: unset;

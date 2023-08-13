@@ -454,6 +454,9 @@ body {
 .fs--h3 {
   font-size: 22.5px;
 }
+.fs--h2 {
+  font-size: 22.5px;
+}
 
 h1 {
   font-size: 40.5px;
@@ -547,6 +550,9 @@ small,
     font-size: 1rem;
   }
   h6 {
+    font-size: 1rem;
+  }
+  p {
     font-size: 1rem;
   }
 }
@@ -919,7 +925,7 @@ a {
 .header .header--container:not(.mobile-navi-open) .nav .main-menu > li > a {
   position: relative;
 }
-.header .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before {
+.header .header--container:not(.mobile-navi-open) .nav .main-menu > li > a:before {
   content: "";
   position: absolute;
   bottom: -0.5em;
@@ -928,6 +934,8 @@ a {
   background: #0064a3;
   height: 4px;
   border-radius: 10px;
+}
+.header .header--container:not(.mobile-navi-open) .nav .main-menu > li > a:before {
   opacity: 0;
 }
 .header .header--container:not(.mobile-navi-open) .nav .main-menu > li.menu-item-has-children > a::after {
@@ -1042,6 +1050,19 @@ a {
   }
   .header .header--container.mobile-navi-open .nav ul.menu-depth-1 li {
     margin-top: 1rem;
+  }
+  .header .header--container.mobile-navi-open .nav ul.menu-depth-1 li.current-menu-item a {
+    position: relative;
+  }
+  .header .header--container.mobile-navi-open .nav ul.menu-depth-1 li.current-menu-item a:before {
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    width: 100%;
+    background: #0064a3;
+    height: 4px;
+    border-radius: 10px;
   }
   .header .header--container.mobile-navi-open .nav ul.menu-depth-1 li.menu-item-has-children > a {
     position: relative;
@@ -1351,6 +1372,7 @@ a {
 .booking .content .price {
   text-align: right;
   color: #0064a3;
+  font-weight: 900;
 }
 @media only screen and (max-width: 1250px) {
   .booking .container {
@@ -1630,7 +1652,7 @@ a {
   order: 1;
 }
 .cards.graphic-icon .card__image {
-  padding: 20%;
+  padding: 0 20%;
 }
 @media only screen and (max-width: 940px) {
   .cards .container {
@@ -1739,7 +1761,7 @@ a {
   align-items: center;
 }
 .testimonial .image,
-.testimonial .textbox {
+.testimonial .content {
   grid-row: 1;
 }
 .testimonial .image {
@@ -1757,28 +1779,32 @@ a {
   position: absolute;
   top: 0;
 }
-.testimonial .textbox {
+.testimonial .content {
   margin-left: 40px;
   grid-column: span 8;
   display: flex;
   flex-direction: column;
   row-gap: unset;
 }
-.testimonial .textbox .quote {
-  font-size: 1.75rem;
+.testimonial .content .quote {
+  font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 2.5rem;
   line-height: 1.25;
 }
-.testimonial .textbox .quote::before {
+.testimonial .content .quote::before {
   content: open-quote;
 }
-.testimonial .textbox .quote::after {
+.testimonial .content .quote::after {
   content: close-quote;
 }
-.testimonial .textbox .name,
-.testimonial .textbox .role {
-  font-size: 16px;
+.testimonial .content .name {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.testimonial .content .role {
+  font-size: 1rem;
+  font-weight: 400;
 }
 .testimonial .small {
   max-width: 558px;
@@ -1786,14 +1812,14 @@ a {
 .testimonial .small .image {
   grid-column: 2/span 2;
 }
-.testimonial .small .textbox {
+.testimonial .small .content {
   margin: unset;
 }
-.testimonial .small .textbox .quote {
+.testimonial .small .content .quote {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-.testimonial .text-image .textbox {
+.testimonial .text-image .content {
   margin-left: unset;
   margin-right: 40px;
   grid-column: 2/span 8;
@@ -1801,7 +1827,7 @@ a {
 .testimonial .text-image .image {
   grid-column: span 2/-2;
 }
-.testimonial .text-image.small .textbox {
+.testimonial .text-image.small .content {
   grid-column: 4/span 5;
 }
 .testimonial .text-image.small .image {
@@ -1828,18 +1854,9 @@ a {
   .testimonial .container:not(.small) .image {
     width: 170px;
   }
-  .testimonial .container:not(.small) .textbox {
+  .testimonial .container:not(.small) .content {
     margin: 0 3%;
     text-align: center;
-  }
-  .testimonial .container:not(.small) .textbox .quote {
-    font-size: 20px;
-  }
-  .testimonial .container:not(.small) .textbox .name {
-    font-size: 14px;
-  }
-  .testimonial .container:not(.small) .textbox .role {
-    font-size: 12px;
   }
   .testimonial .container.small {
     display: flex;
@@ -1850,10 +1867,10 @@ a {
     margin-right: 24px;
     align-self: start;
   }
-  .testimonial .container.small .textbox {
+  .testimonial .container.small .content {
     width: calc(100% - 104px);
   }
-  .testimonial .container.small .textbox .role {
+  .testimonial .container.small .content .role {
     font-size: 14px;
   }
 }
@@ -1897,6 +1914,9 @@ a {
   font-size: 1.5rem;
   color: gray;
 }
+.price-table .block--label li i:hover {
+  color: #0064a3;
+}
 .price-table .block--label li i:hover ~ .info {
   visibility: visible;
 }
@@ -1937,6 +1957,12 @@ a {
 .price-table .table .head,
 .price-table .table .feature {
   margin-bottom: 2.5rem;
+}
+.price-table .table .feature-label,
+.price-table .table .category,
+.price-table .table .price {
+  font-weight: 900;
+  font-size: 22.5px;
 }
 .price-table .table .price {
   color: #0064a3;
@@ -2047,12 +2073,10 @@ a {
      object-fit: contain;
 }
 .logos .textbox-wrapper {
-  margin-top: 32px;
   text-align: center;
 }
 .logos .textbox-wrapper .title {
-  font-size: 24px;
-  font-weight: 700;
+  font-weight: 900;
   color: #083f74;
 }
 @media only screen and (max-width: 1250px) {
@@ -2082,22 +2106,15 @@ a {
 .contact .details {
   padding: 24px 0px 24px 40px;
 }
-.contact h4 {
+.contact .name {
   color: #002f4d;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
 }
-.contact .rolle {
-  font-size: 20px;
-  font-weight: 700;
-  padding-bottom: 40px;
-}
-.contact .email {
-  display: block;
-  padding-bottom: 0.5em;
-  font-size: 16px;
-}
-.contact .fa-linkedin {
+.contact .social {
+  display: inline-block;
+  margin-top: 20px;
   font-size: 30px;
 }
 @media only screen and (max-width: 600px) {

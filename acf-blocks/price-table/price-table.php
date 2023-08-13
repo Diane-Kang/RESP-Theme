@@ -33,7 +33,7 @@ $option              = get_field('block::price-table:option');
         <div class="block block--label grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h5>Features</h5>
+              <div class="feature-label">Features</div>
             </div>
             <div class="feature">
               <ul>
@@ -132,9 +132,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h4 class="category">Economy Class</h4>
-              <h4 class="price price-monthly">169 €</h4>
-              <h4 class="price price-yearly">1.690 €</h4>
+              <div class="category">Economy Class</div>
+              <div class="price price-monthly">169 €</div>
+              <div class="price price-yearly">1.690 €</div>
             </div>
             <div class="feature">
               <ul>
@@ -162,9 +162,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item highlight grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h4 class="category">Business Class</h4>
-              <h4 class="price price-monthly">329 €</h4>
-              <h4 class="price price-yearly">3.290 €</h4>
+              <div class="category">Business Class</div>
+              <div class="price price-monthly">329 €</div>
+              <div class="price price-yearly">3.290 €</div>
             </div>
             <div class="feature">
               <ul>
@@ -192,9 +192,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item  grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h4 class="category">First Class</h4>
-              <h4 class="price price-monthly">699 €</h4>
-              <h4 class="price price-yearly">6.990 €</h4>
+              <div class="category">First Class</div>
+              <div class="price price-monthly">699 €</div>
+              <div class="price price-yearly">6.990 €</div>
             </div>
             <div class="feature">
               <ul>
@@ -225,9 +225,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item">
           <div class="table flex flex-col">
             <div class="head">
-              <h4 class="category">Economy Class</h4>
-              <h4 class="price price-monthly">169 €</h4>
-              <h4 class="price price-yearly">1.690 €</h4>
+              <div class="category">Economy Class</div>
+              <div class="price price-monthly">169 €</div>
+              <div class="price price-yearly">1.690 €</div>
             </div>
             <div class="feature">
               <div class="feature-content">
@@ -269,9 +269,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item highlight">
           <div class="table flex flex-col">
             <div class="head">
-              <h4 class="category">Business Class</h4>
-              <h4 class="price price-monthly">329 €</h4>
-              <h4 class="price price-yearly">3.290 €</h4>
+              <div class="category">Business Class</div>
+              <div class="price price-monthly">329 €</div>
+              <div class="price price-yearly">3.290 €</div>
             </div>
             <div class="feature">
               <div class="feature-content">
@@ -316,9 +316,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item">
           <div class="table flex flex-col">
             <div class="head">
-              <h4 class="category">First Class</h4>
-              <h4 class="price price-monthly">699 €</h4>
-              <h4 class="price price-yearly">6.990 €</h4>
+              <div class="category">First Class</div>
+              <div class="price price-monthly">699 €</div>
+              <div class="price price-yearly">6.990 €</div>
             </div>
             <div class="feature">
               <div class="feature-content">
@@ -385,7 +385,7 @@ $option              = get_field('block::price-table:option');
         <div class="block block--label grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h5>Features</h5>
+              <div class="feature-label">Features</div>
             </div>
             <div class="feature">
               <ul>
@@ -493,9 +493,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h4 class="category">Economy Class</h4>
-              <h4 class="price price-monthly">19 €</h4>
-              <h4 class="price price-yearly">190 €</h4>
+              <div class="category">Economy Class</div>
+              <div class="price price-monthly">19 €</div>
+              <div class="price price-yearly">190 €</div>
             </div>
             <div class="feature">
               <ul>
@@ -523,9 +523,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item highlight grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h4 class="category">Business Class</h4>
-              <h4 class="price price-monthly">99 €</h4>
-              <h4 class="price price-yearly">990 €</h4>
+              <div class="category">Business Class</div>
+              <div class="price price-monthly">99 €</div>
+              <div class="price price-yearly">990 €</div>
             </div>
             <div class="feature">
               <ul>
@@ -553,9 +553,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item  grid12-3 flex">
           <div class="table flexible flex flex-col">
             <div class="head flexible">
-              <h4 class="category">First Class</h4>
-              <h4 class="price price-monthly">299 €</h4>
-              <h4 class="price price-yearly">2.990 €</h4>
+              <div class="category">First Class</div>
+              <div class="price price-monthly">299 €</div>
+              <div class="price price-yearly">2.990 €</div>
             </div>
             <div class="feature">
               <ul>
@@ -586,9 +586,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item">
           <div class="table flex flex-col">
             <div class="head">
-              <h4 class="category">Economy Class</h4>
-              <h4 class="price price-monthly">19 €</h4>
-              <h4 class="price price-yearly">190 €</h4>
+              <div class="category">Economy Class</div>
+              <div class="price price-monthly">19 €</div>
+              <div class="price price-yearly">190 €</div>
             </div>
             <div class="feature">
               <div class="feature-content">
@@ -625,9 +625,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item highlight">
           <div class="table flex flex-col">
             <div class="head">
-              <h4 class="category">Business Class</h4>
-              <h4 class="price price-monthly"> 99€</h4>
-              <h4 class="price price-yearly"> 990€</h4>
+              <div class="category">Business Class</div>
+              <div class="price price-monthly"> 99€</div>
+              <div class="price price-yearly"> 990€</div>
             </div>
             <div class="feature">
               <div class="feature-content">
@@ -682,9 +682,9 @@ $option              = get_field('block::price-table:option');
         <div class="block block--item">
           <div class="table flex flex-col">
             <div class="head">
-              <h4 class="category">First Class</h4>
-              <h4 class="price price-monthly">299 €</h4>
-              <h4 class="price price-yearly">2.990 €</h4>
+              <div class="category">First Class</div>
+              <div class="price price-monthly">299 €</div>
+              <div class="price price-yearly">2.990 €</div>
             </div>
             <div class="feature">
               <div class="feature-content">

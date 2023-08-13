@@ -21,6 +21,30 @@
             "esc_html": 0
         },
         {
+            "key": "field_64d912d36d93f",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_649c0189425b6",
+                "field_649c331c826ad",
+                "field_649c3359826ae"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_649afa9903ba6",
             "label": "Buchen Option",
             "name": "buchen_option",
@@ -187,5 +211,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688280194
+    "modified": 1691947854
 }

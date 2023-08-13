@@ -42,9 +42,9 @@ array_unshift($container_classes, "container");
                   <div class="paragraph">
                     <?php echo $text["paragraph"] ?>
                   </div>
-                  <h4 class="price">
+                  <div class="price fs--h2">
                     <?php echo $text["price"] ?> €
-                  </h4>
+                  </div>
                 </div>
               </div>
             </div>

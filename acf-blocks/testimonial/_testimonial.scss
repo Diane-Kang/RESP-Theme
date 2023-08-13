@@ -7,7 +7,7 @@
   }
 
   .image,
-  .textbox {
+  .content {
     grid-row: 1;
   }
   .image {
@@ -23,12 +23,12 @@
       top: 0;
     }
   }
-  .textbox {
+  .content {
     margin-left: 40px;
     grid-column: span 8;
     @include flex(column);
     .quote {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       font-style: italic;
       margin-bottom: 2.5rem;
       line-height: 1.25;
@@ -39,9 +39,13 @@
         content: close-quote;
       }
     }
-    .name,
+    .name {
+      font-size: 1rem;
+      font-weight: 900;
+    }
     .role {
-      font-size: 16px;
+      font-size: 1rem;
+      font-weight: 400;
     }
   }
   // option small / big
@@ -50,7 +54,7 @@
     .image {
       grid-column: 2 / span 2;
     }
-    .textbox {
+    .content {
       // grid-column: 5 / span 5;
       margin: unset;
       .quote {
@@ -62,7 +66,7 @@
 
   // option Foto|Zitat / Zitat|Foto
   .text-image {
-    .textbox {
+    .content {
       margin-left: unset;
       margin-right: 40px;
       grid-column: 2 / span 8;
@@ -71,7 +75,7 @@
       grid-column: span 2 / -2;
     }
     &.small {
-      .textbox {
+      .content {
         grid-column: 4 / span 5;
       }
       .image {
@@ -98,18 +102,9 @@
       .image {
         width: 170px;
       }
-      .textbox {
+      .content {
         margin: 0 3%;
         text-align: center;
-        .quote {
-          font-size: 20px;
-        }
-        .name {
-          font-size: 14px;
-        }
-        .role {
-          font-size: 12px;
-        }
       }
     }
     .container.small {
@@ -120,7 +115,7 @@
         margin-right: 24px;
         align-self: start;
       }
-      .textbox {
+      .content {
         width: calc(100% - 104px);
         .role {
           font-size: 14px;

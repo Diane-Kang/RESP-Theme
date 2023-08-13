@@ -38,9 +38,9 @@ $linkedin         = get_field('linkedin');
         <img class="profilbild" src="<?php echo esc_url($profilbild['url']); ?>" alt="<?php echo $name; ?>" />
       </div>
       <div class="details">
-        <h4 class="name">
+        <p class="name">
           <?php echo $name; ?>
-        </h4>
+        </p>
         <p class="rolle">
           <?php echo $rolle; ?>
         </p>

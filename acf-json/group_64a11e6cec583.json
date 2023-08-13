@@ -157,6 +157,7 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_64a11e6cf2cda",
                     "sub_fields": [
                         {
                             "key": "field_64a12053b15df",
@@ -215,7 +216,7 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "basic",
-                            "media_upload": 1,
+                            "media_upload": 0,
                             "delay": 0
                         },
                         {
@@ -240,8 +241,7 @@
                             "prefix_label": 0,
                             "prefix_name": 0
                         }
-                    ],
-                    "parent_repeater": "field_64a11e6cf2cda"
+                    ]
                 }
             ]
         }
@@ -264,5 +264,5 @@
     "active": true,
     "description": "Für 3 oder 4 Kacheln",
     "show_in_rest": 0,
-    "modified": 1690975463
+    "modified": 1691946704
 }
