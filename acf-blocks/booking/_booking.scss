@@ -30,7 +30,7 @@
   .content {
     width: calc(100% - $image-size - 1.5rem);
     height: 100%;
-    @include flex(column, 0.5rem);
+    @include flex(column);
     .paragraph {
       line-height: 1.2em;
       flex-grow: 1;
