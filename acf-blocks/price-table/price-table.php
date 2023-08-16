@@ -566,8 +566,8 @@ $option              = get_field('block::price-table:option');
                 </span>
               </div>
             </div>
-            <a href="#">
-              <div class="btn btn--empty">Economy Class buchen</div>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true">
+              <div class="btn btn--fill">Economy Class buchen</div>
             </a>
           </div>
         </div>
@@ -623,8 +623,8 @@ $option              = get_field('block::price-table:option');
                 </span>
               </div>
             </div>
-            <a href="#">
-              <div class="btn btn--empty">Business Class buchen</div>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true">
+              <div class="btn btn--fill">Business Class buchen</div>
             </a>
           </div>
         </div>
@@ -692,8 +692,8 @@ $option              = get_field('block::price-table:option');
                 </span>
               </div>
             </div>
-            <a href="#">
-              <div class="btn btn--empty">First Class buchen</div>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true">
+              <div class="btn btn--fill">First Class buchen</div>
             </a>
           </div>
         </div>
