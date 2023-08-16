@@ -14,6 +14,7 @@ array_unshift($container_classes, "container");
 $option              = get_field('block::price-table:option');
 
 ?>
+<!-- TPQ Price Table -->
 <?php if ($option == 'tpq') : ?>
   <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
     <div class="<?php echo implode(" ", $container_classes); ?>">
@@ -55,15 +56,11 @@ $option              = get_field('block::price-table:option');
                     Mit dem Modul Kontakte verwalten Sie Kundendaten effizient: Adressen, Notizen, Wiedervorlagen, Termine und Dateien werden im Kontaktmanagement entsprechend zugeordnet.
                   </div>
                 </li>
-                <li>Vertrieb: Vertriebsportal
+                <li>Vertrieb
                   <i class="fa-regular fa-circle-info"></i>
                   <div class="info">
                     Mit dem Vertriebsportal können Sie Ihre Angebote schnell und einfach im Internet präsentieren - inkl. internem Vertriebsbereich, passend zu Ihrer Corporate Identity.
                   </div>
-                </li>
-                <li>Vertrieb: Leadgenerierung
-                </li>
-                <li>Vertrieb: Vertragsabwicklung
                 </li>
                 <li>Dateien
                   <i class="fa-regular fa-circle-info"></i>
@@ -112,21 +109,8 @@ $option              = get_field('block::price-table:option');
                     Erleben Sie erstklassigen Support! Unser Team steht Ihnen jederzeit per E-Mail und/oder per Telefon zur Seite, um Ihre Fragen zu beantworten und Probleme zu lösen.
                   </div>
                 </li>
-                <li>Einrichtung & Konfiguration
-                  <i class="fa-regular fa-circle-info"></i>
-                  <div class="info">
-                    Mit dem TeamProQ-Setup stellen wir Ihnen die gewünschten Module bereit und richten die Arbeitsplattform gemeinsam mit Ihnen ein.
-                  </div>
-                </li>
-                <li>Admin Schulung
-                  <i class="fa-regular fa-circle-info"></i>
-                  <div class="info">
-                    Unser Support-Team steht Ihnen mit einer Administrationsschulung und erweitertem Support im ersten Monat zur Seite.
-                  </div>
-                </li>
               </ul>
             </div>
-            <a href="#" class="btn btn-info btn-round"></a>
           </div>
         </div>
         <div class="block block--item grid12-3 flex">
@@ -143,8 +127,6 @@ $option              = get_field('block::price-table:option');
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li>&nbsp;</li>
                 <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
                 <li>5 GB</li>
                 <li>1 Nutzer</li>
                 <li>&nbsp;</li>
@@ -152,11 +134,9 @@ $option              = get_field('block::price-table:option');
                 <li>&nbsp;</li>
                 <li>&nbsp;</li>
                 <li>E-Mail</li>
-                <li>obligatorisch</li>
-                <li>empfohlen</li>
               </ul>
             </div>
-            <a href="#" class="btn btn--empty">Economy Class buchen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
           </div>
         </div>
         <div class="block block--item highlight grid12-3 flex">
@@ -172,8 +152,6 @@ $option              = get_field('block::price-table:option');
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li><i class="fa-solid fa-circle-check"></i></li>
-                <li><i class="fa-solid fa-circle-check"></i></li>
-                <li><i class="fa-solid fa-circle-check"></i></li>
                 <li>&nbsp;</li>
                 <li>10 GB</li>
                 <li>20 Nutzer</li>
@@ -182,11 +160,9 @@ $option              = get_field('block::price-table:option');
                 <li>&nbsp;</li>
                 <li>&nbsp;</li>
                 <li>E-Mail & Telefon</li>
-                <li>obligatorisch</li>
-                <li>empfohlen</li>
               </ul>
             </div>
-            <a href="#" class="btn btn--empty">Business Class buchen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
           </div>
         </div>
         <div class="block block--item  grid12-3 flex">
@@ -203,20 +179,16 @@ $option              = get_field('block::price-table:option');
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li><i class="fa-solid fa-circle-check"></i></li>
-                <li><i class="fa-solid fa-circle-check"></i></li>
-                <li><i class="fa-solid fa-circle-check"></i></li>
                 <li>20 GB</li>
                 <li>50 Nutzer</li>
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li><i class="fa-solid fa-circle-check"></i></li>
                 <li>&nbsp;</li>
                 <li>&nbsp;</li>
-                <li>Persönlicher Ansprechpartner</li>
-                <li>obligatorisch</li>
-                <li>empfohlen</li>
+                <li>E-Mail & Telefon</li>
               </ul>
             </div>
-            <a href="#" class="btn btn--empty">First Class buchen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
           </div>
         </div>
       </div>
@@ -245,12 +217,6 @@ $option              = get_field('block::price-table:option');
                 <div>
                   <span class="text-bold">Support:</span><br>E-Mail
                 </div>
-                <div>
-                  <span class="text-bold">Einrichtung & Konfiguration:</span><br>obligatorisch
-                </div>
-                <div>
-                  <span class="text-bold">Admin-Schulung:</span><br>empfohlen
-                </div>
               </div>
               <div class="feature-toggle">
                 <span class="feature-toggle--open">
@@ -261,8 +227,8 @@ $option              = get_field('block::price-table:option');
                 </span>
               </div>
             </div>
-            <a href="#">
-              <div class="btn btn--empty">Economy Class buchen</div>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/">
+              <div class="btn btn--fill">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -279,9 +245,7 @@ $option              = get_field('block::price-table:option');
                 <span class="text-bold">
                   Verkauf<br>
                   Kontakte<br>
-                  Vertrieb: Vertriebsportal<br>
-                  Vertrieb: Leadgenerierung<br>
-                  Vertrieb: Vertragsabwicklung<br>
+                  Vertrieb<br>
                 </span>
                 <div>
                   <span class="text-bold">Speicher:</span><br>10 GB
@@ -291,12 +255,6 @@ $option              = get_field('block::price-table:option');
                 </div>
                 <div>
                   <span class="text-bold">Support:</span><br>E-Mail & Telefon
-                </div>
-                <div>
-                  <span class="text-bold">Einrichtung & Konfiguration:</span><br>obligatorisch
-                </div>
-                <div>
-                  <span class="text-bold">Admin-Schulung:</span><br>empfohlen
                 </div>
               </div>
               <div class="feature-toggle">
@@ -308,8 +266,8 @@ $option              = get_field('block::price-table:option');
                 </span>
               </div>
             </div>
-            <a href="#">
-              <div class="btn btn--empty">Business Class buchen</div>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/">
+              <div class="btn btn--fill">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -326,9 +284,7 @@ $option              = get_field('block::price-table:option');
                 <span class="text-bold">
                   Verkauf<br>
                   Kontakte<br>
-                  Vertrieb: Vertriebsportal<br>
-                  Vertrieb: Leadgenerierung<br>
-                  Vertrieb: Vertragsabwicklung<br>
+                  Vertrieb<br>
                   Dateien<br>
                   Provision<br>
                   Dashboard<br>
@@ -340,13 +296,7 @@ $option              = get_field('block::price-table:option');
                   <span class="text-bold">Immobilienberechnung:</span><br>50 Nutzer
                 </div>
                 <div>
-                  <span class="text-bold">Support:</span><br>Persönlicher Ansprechpartner
-                </div>
-                <div>
-                  <span class="text-bold">Einrichtung & Konfiguration:</span><br>obligatorisch
-                </div>
-                <div>
-                  <span class="text-bold">Admin-Schulung:</span><br>empfohlen
+                  <span class="text-bold">Support:</span><br>E-Mail & Telefon
                 </div>
               </div>
               <div class="feature-toggle">
@@ -358,8 +308,8 @@ $option              = get_field('block::price-table:option');
                 </span>
               </div>
             </div>
-            <a href="#">
-              <div class="btn btn--empty">First Class buchen</div>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/">
+              <div class="btn btn--fill">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -487,7 +437,6 @@ $option              = get_field('block::price-table:option');
                 </li>
               </ul>
             </div>
-            <a href="#" class="btn btn-info btn-round"></a>
           </div>
         </div>
         <div class="block block--item grid12-3 flex">
@@ -517,7 +466,7 @@ $option              = get_field('block::price-table:option');
                 <li>Email</li>
               </ul>
             </div>
-            <a href="#" class="btn btn--empty">Economy Class buchen</a>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill">Economy Class buchen</a>
           </div>
         </div>
         <div class="block block--item highlight grid12-3 flex">
@@ -547,7 +496,7 @@ $option              = get_field('block::price-table:option');
                 <li>Email & Telefon</li>
               </ul>
             </div>
-            <a href="#" class="btn btn--empty">Business Class buchen</a>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill">Business Class buchen</a>
           </div>
         </div>
         <div class="block block--item  grid12-3 flex">
@@ -577,7 +526,7 @@ $option              = get_field('block::price-table:option');
                 <li>Email & Telefon</li>
               </ul>
             </div>
-            <a href="#" class="btn btn--empty">First Class buchen</a>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill">First Class buchen</a>
           </div>
         </div>
       </div>

@@ -10,15 +10,19 @@ define('FUNCTIONSPATH', THEMEPATH . '/functions/');
 // - css, Lato font localize, 
 // - custom post type: theme reference, fontawsome
 require_once(FUNCTIONSPATH . 'init.php');
-// acf block helper functions
-// require_once(FUNCTIONSPATH . 'acfblock-helper.php');
+
 // initial settings : acf block register 
 require_once(FUNCTIONSPATH . 'acfblock.php');
+
+// acf block helper functions
+require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
+require_once(THEMEPATH . '/acf-blocks/acflink.php');
+// require_once(FUNCTIONSPATH . 'acfblock-helper.php');
+
 // Add funktions to build templates
 require_once(THEMEPATH . '/template-parts/navigation/nav-functions.php');
 require_once(THEMEPATH . '/template-parts/archive-helper.php');
-// Add funktions to build modules
-require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
+
 // Theme Feature
 //-- Blog: default editor ignored -> acf would be used 
 add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);

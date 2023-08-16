@@ -52,17 +52,8 @@ array_push($container_classes, $order,  $column, "bd-box");
       <!-- only if button exist -->
       <?php if (!empty($button1link) || !empty($button2link)) : ?>
         <div class="buttons--wrapper">
-          <?php if ($button1link != "") : ?>
-            <a href="<?php echo esc_url(parse_url($button1link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button1type ?>" target="<?php echo $button1link["target"] ?>"> <?php echo $button1link["title"] ?> </a>
-          <?php endif; ?>
-          <?php if ($button2link != "") : ?>
-            <?php if ($button2type != "link") : ?>
-              <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="btn btn--<?php echo $button2type ?>" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
-            <?php endif; ?>
-            <?php if ($button2type == "link") : ?>
-              <a href="<?php echo esc_url(parse_url($button2link["url"], PHP_URL_PATH)); ?>" class="link link--underline" target="<?php echo $button2link["target"] ?>"> <?php echo $button2link["title"] ?> </a>
-            <?php endif; ?>
-          <?php endif; ?>
+          <?php echo acf_relative_path($button1link, $button1type); ?>
+          <?php echo acf_relative_path($button2link, $button2type); ?>
         </div>
       <?php endif; ?>
     </div>
