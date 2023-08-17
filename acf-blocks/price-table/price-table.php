@@ -137,7 +137,7 @@ $option              = get_field('block::price-table:option');
                 <li>E-Mail</li>
               </ul>
             </div>
-            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--empty" target="_blank">Jetzt testen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--empty">Jetzt testen</a>
           </div>
         </div>
         <div class="block block--item highlight grid12-3 flex">
@@ -163,7 +163,7 @@ $option              = get_field('block::price-table:option');
                 <li>E-Mail & Telefon</li>
               </ul>
             </div>
-            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill" target="_blank">Jetzt testen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
           </div>
         </div>
         <div class="block block--item  grid12-3 flex">
@@ -189,7 +189,7 @@ $option              = get_field('block::price-table:option');
                 <li>E-Mail & Telefon</li>
               </ul>
             </div>
-            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--empty" target="_blank">Jetzt testen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--empty">Jetzt testen</a>
           </div>
         </div>
       </div>
@@ -229,7 +229,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="/produkte/arbeitsplattform/jetzt-testen/">
-              <div class="btn btn--empty" target="_blank">Jetzt testen</div>
+              <div class="btn btn--empty">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -268,7 +268,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="/produkte/arbeitsplattform/jetzt-testen/">
-              <div class="btn btn--fill" target="_blank">Jetzt testen</div>
+              <div class="btn btn--fill">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -310,7 +310,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="/produkte/arbeitsplattform/jetzt-testen/">
-              <div class="btn btn--empty" target="_blank">Jetzt testen</div>
+              <div class="btn btn--empty">Jetzt testen</div>
             </a>
           </div>
         </div>
