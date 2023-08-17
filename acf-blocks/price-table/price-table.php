@@ -111,6 +111,7 @@ $option              = get_field('block::price-table:option');
                 </li>
               </ul>
             </div>
+            <span class="btn placeholder"></span>
           </div>
         </div>
         <div class="block block--item grid12-3 flex">
@@ -136,7 +137,7 @@ $option              = get_field('block::price-table:option');
                 <li>E-Mail</li>
               </ul>
             </div>
-            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--empty" target="_blank">Jetzt testen</a>
           </div>
         </div>
         <div class="block block--item highlight grid12-3 flex">
@@ -162,7 +163,7 @@ $option              = get_field('block::price-table:option');
                 <li>E-Mail & Telefon</li>
               </ul>
             </div>
-            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill" target="_blank">Jetzt testen</a>
           </div>
         </div>
         <div class="block block--item  grid12-3 flex">
@@ -188,7 +189,7 @@ $option              = get_field('block::price-table:option');
                 <li>E-Mail & Telefon</li>
               </ul>
             </div>
-            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--fill">Jetzt testen</a>
+            <a href="/produkte/arbeitsplattform/jetzt-testen/" class="btn btn--empty" target="_blank">Jetzt testen</a>
           </div>
         </div>
       </div>
@@ -228,7 +229,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="/produkte/arbeitsplattform/jetzt-testen/">
-              <div class="btn btn--fill">Jetzt testen</div>
+              <div class="btn btn--empty" target="_blank">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -267,7 +268,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="/produkte/arbeitsplattform/jetzt-testen/">
-              <div class="btn btn--fill">Jetzt testen</div>
+              <div class="btn btn--fill" target="_blank">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -309,7 +310,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="/produkte/arbeitsplattform/jetzt-testen/">
-              <div class="btn btn--fill">Jetzt testen</div>
+              <div class="btn btn--empty" target="_blank">Jetzt testen</div>
             </a>
           </div>
         </div>
@@ -437,6 +438,7 @@ $option              = get_field('block::price-table:option');
                 </li>
               </ul>
             </div>
+            <span class="btn placeholder"></span>
           </div>
         </div>
         <div class="block block--item grid12-3 flex">
@@ -466,7 +468,7 @@ $option              = get_field('block::price-table:option');
                 <li>Email</li>
               </ul>
             </div>
-            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill">Economy Class buchen</a>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--empty" target="_blank">Economy Class buchen</a>
           </div>
         </div>
         <div class="block block--item highlight grid12-3 flex">
@@ -496,7 +498,7 @@ $option              = get_field('block::price-table:option');
                 <li>Email & Telefon</li>
               </ul>
             </div>
-            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill">Business Class buchen</a>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill" target="_blank">Business Class buchen</a>
           </div>
         </div>
         <div class="block block--item  grid12-3 flex">
@@ -526,7 +528,7 @@ $option              = get_field('block::price-table:option');
                 <li>Email & Telefon</li>
               </ul>
             </div>
-            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--fill">First Class buchen</a>
+            <a href="https://app.geomap.immo/dashboard?upgrade=true" class="btn btn--empty" target="_blank">First Class buchen</a>
           </div>
         </div>
       </div>
@@ -567,7 +569,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="https://app.geomap.immo/dashboard?upgrade=true">
-              <div class="btn btn--fill">Economy Class buchen</div>
+              <div class="btn btn--empty" target="_blank">Economy Class buchen</div>
             </a>
           </div>
         </div>
@@ -624,7 +626,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="https://app.geomap.immo/dashboard?upgrade=true">
-              <div class="btn btn--fill">Business Class buchen</div>
+              <div class="btn btn--fill" target="_blank">Business Class buchen</div>
             </a>
           </div>
         </div>
@@ -693,7 +695,7 @@ $option              = get_field('block::price-table:option');
               </div>
             </div>
             <a href="https://app.geomap.immo/dashboard?upgrade=true">
-              <div class="btn btn--fill">First Class buchen</div>
+              <div class="btn btn--empty" target="_blank">First Class buchen</div>
             </a>
           </div>
         </div>
