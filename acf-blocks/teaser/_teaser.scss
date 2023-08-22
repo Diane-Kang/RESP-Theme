@@ -17,6 +17,9 @@
     left: 0;
     right: 0;
     z-index: $m-z-index-default;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   &__bg-gradient {
     background-size: cover;

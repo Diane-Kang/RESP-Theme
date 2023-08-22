@@ -60,7 +60,9 @@ function pe_theme_features()
   */
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
-  add_image_size('logo-150', 150, 0, false);
+  add_image_size('logo-150', 150, 150, false);
+  add_image_size('cardimage-200', 200, 200, false);
+  add_image_size('medium-500', 500, 0, false);
 
   // Editor style. add custom acf-aditor css and front end style https://www.billerickson.net/getting-your-theme-ready-for-gutenberg/
   add_theme_support('editor-styles');
@@ -68,6 +70,7 @@ function pe_theme_features()
   add_editor_style(get_theme_file_uri('/build/style-index.css'));
 }
 add_action('after_setup_theme', 'pe_theme_features');
+
 
 
 

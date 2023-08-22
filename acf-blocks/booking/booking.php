@@ -33,7 +33,7 @@ array_unshift($container_classes, "container");
                 <div class="image">
                   <?php $grafik = get_sub_field('grafik'); ?>
                   <?php if ($grafik) : ?>
-                    <?php echo wp_get_attachment_image($grafik, array('100', '100')); ?>
+                    <?php echo wp_get_attachment_image($grafik, 'logo-150'); ?>
                   <?php endif ?>
                 </div>
                 <div class="content">

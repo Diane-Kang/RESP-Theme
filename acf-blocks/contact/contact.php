@@ -35,7 +35,9 @@ $linkedin         = get_field('linkedin');
   <div class="<?php echo implode(" ", $container_classes); ?> center">
     <div class="container--inner bd-box">
       <div class="profilbild_wrapper">
-        <img class="profilbild" src="<?php echo esc_url($profilbild['url']); ?>" alt="<?php echo $name; ?>" />
+        <?php if ($profilbild) : ?>
+          <?php echo wp_get_attachment_image($profilbild, 'medium', false, ['class' => 'profilbild']); ?>
+        <?php endif ?>
       </div>
       <div class="details">
         <p class="name">
