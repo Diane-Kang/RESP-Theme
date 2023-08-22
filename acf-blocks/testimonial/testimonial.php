@@ -34,7 +34,7 @@ array_push($container_classes, $order, $size, "bd-box");
   <div class="<?php echo implode(" ", $container_classes); ?>">
 
     <div class="image">
-      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+      <?php echo wp_get_attachment_image($image); ?>
     </div>
     <div class="content">
       <div class="quote"><?php echo $quote; ?></div>

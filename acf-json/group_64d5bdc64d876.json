@@ -131,7 +131,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "id",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -183,7 +183,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Für 3 oder 4 Kacheln",
+    "description": "",
     "show_in_rest": 0,
-    "modified": 1691732401
+    "modified": 1692695274
 }

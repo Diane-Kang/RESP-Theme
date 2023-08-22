@@ -60,7 +60,7 @@ function pe_theme_features()
   */
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
-  // add_image_size('professorLandscape', 400, 260, true);
+  add_image_size('logo-150', 150, 0, false);
 
   // Editor style. add custom acf-aditor css and front end style https://www.billerickson.net/getting-your-theme-ready-for-gutenberg/
   add_theme_support('editor-styles');

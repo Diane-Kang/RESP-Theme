@@ -23,7 +23,7 @@ array_unshift($container_classes, "container", "bd-box");
           <div class="image-wrapper">
             <?php $image = get_sub_field('image'); ?>
             <?php if ($image) : ?>
-              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+              <?php echo wp_get_attachment_image($image, 'logo-150'); ?>
             <?php endif; ?>
           </div>
           <?php if (have_rows('textbox')) : ?>

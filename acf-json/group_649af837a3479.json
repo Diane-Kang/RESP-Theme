@@ -81,6 +81,7 @@
                         "id": ""
                     },
                     "layout": "table",
+                    "parent_repeater": "field_649afa9903ba6",
                     "sub_fields": [
                         {
                             "key": "field_649b25c003ba8",
@@ -96,7 +97,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
+                            "return_format": "id",
                             "library": "all",
                             "min_width": "",
                             "min_height": "",
@@ -187,8 +188,7 @@
                                 }
                             ]
                         }
-                    ],
-                    "parent_repeater": "field_649afa9903ba6"
+                    ]
                 }
             ]
         }
@@ -211,5 +211,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691947854
+    "modified": 1692693276
 }

@@ -28,7 +28,7 @@ array_push($module_classes, $align);
           <?php $card_image = get_sub_field('icon'); ?>
           <?php if ($card_image) : ?>
             <div class="card__image flex <?php echo ($order == 'left') ? 'left' : 'right'; ?>">
-              <img src="<?php echo esc_url($card_image['url']); ?>" alt="<?php echo esc_attr($card_image['alt']); ?>" />
+              <?php echo wp_get_attachment_image($card_image); ?>
             </div>
           <?php endif; ?>
           <div class="card__text <?php echo ($order == 'left') ? 'right' : 'left'; ?>">

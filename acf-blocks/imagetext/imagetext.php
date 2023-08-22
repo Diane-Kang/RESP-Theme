@@ -41,7 +41,9 @@ array_push($container_classes, $order,  $column, "bd-box");
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes);  ?>">
   <div class="<?php echo implode(" ", $container_classes); ?>">
     <div class="imagetext__image center">
-      <img src="<?php echo esc_url($image['url']); ?>" alt="" />
+      <?php if ($image) : ?>
+        <?php echo wp_get_attachment_image($image, 'medium_large'); ?>
+      <?php endif ?>
     </div>
     <div class="imagetext__textbox flex flex-col">
       <?php if (!empty($text_content)) : ?>

@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_64e458cb3ef99",
+    "title": "RESP Theme Setting",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "RESP Theme Setting",
+    "menu_slug": "resp-theme-setting",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "",
+    "position": 61,
+    "redirect": 0,
+    "description": "",
+    "update_button": "Aktualisieren",
+    "updated_message": "Optionen aktualisiert",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1692686574
+}

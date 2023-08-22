@@ -27,7 +27,7 @@ array_push($module_classes, $graphic_type, $order);
             <?php $card_image = get_sub_field('card_image'); ?>
             <?php if ($card_image) : ?>
               <div class="card__image flex">
-                <img src="<?php echo esc_url($card_image['url']); ?>" alt="<?php echo esc_attr($card_image['alt']); ?>" />
+                <?php echo wp_get_attachment_image($card_image, ['180', '180']); ?>
               </div>
             <?php endif; ?>
             <div class="card__text-content flexible flex flex-col">
