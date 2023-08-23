@@ -62,7 +62,11 @@ function pe_theme_features()
   add_theme_support('post-thumbnails');
   add_image_size('logo-150', 150, 150, false);
   add_image_size('cardimage-200', 200, 200, false);
-  add_image_size('medium-500', 500, 0, false);
+  //medium 300
+  add_image_size('medium-550', 550, 0, false);
+  //medium-large 786
+  //large 1024
+
 
   // Editor style. add custom acf-aditor css and front end style https://www.billerickson.net/getting-your-theme-ready-for-gutenberg/
   add_theme_support('editor-styles');

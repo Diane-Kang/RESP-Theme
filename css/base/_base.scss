@@ -51,4 +51,8 @@ a {
   blockquote {
     margin: 1rem 2.5rem;
   }
+  a{
+    text-decoration: underline;
+    color: $c-blue-middle;
+  }
 }

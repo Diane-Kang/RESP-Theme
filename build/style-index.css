@@ -608,6 +608,10 @@ a {
 .editor-content blockquote {
   margin: 1rem 2.5rem;
 }
+.editor-content a {
+  text-decoration: underline;
+  color: #005b94;
+}
 
 .body-no-scroll {
   overflow: hidden;

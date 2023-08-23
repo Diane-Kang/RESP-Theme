@@ -4,7 +4,6 @@
       <a href="<?= esc_url(home_url('/')); ?>" rel="home" class="center">
         <?php $logo = get_field('logo', 'option'); ?>
         <?php if ($logo) : ?>
-          <!-- max width 300px -->
           <?php echo wp_get_attachment_image($logo, 'medium'); ?>
         <?php else : ?>
           <img 
