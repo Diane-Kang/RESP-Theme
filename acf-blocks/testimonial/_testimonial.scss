@@ -18,10 +18,10 @@
     overflow: hidden;
     position: relative;
     @include flex-center;
-    img {
-      position: absolute;
-      top: 0;
-    }
+    // img {
+    //   position: absolute;
+    //   top: 0;
+    // }
   }
   .content {
     margin-left: 40px;

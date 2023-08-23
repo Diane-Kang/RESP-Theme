@@ -590,6 +590,10 @@ body {
   margin: auto;
 }
 
+picture {
+  height: 100%;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -1789,10 +1793,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.testimonial .image img {
-  position: absolute;
-  top: 0;
 }
 .testimonial .content {
   margin-left: 40px;
