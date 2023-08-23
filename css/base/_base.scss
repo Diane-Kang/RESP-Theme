@@ -20,6 +20,7 @@ body {
 .module {
   // margin: 2rem auto;
   scroll-margin-top: 2rem;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1140px;
@@ -51,7 +52,7 @@ a {
   blockquote {
     margin: 1rem 2.5rem;
   }
-  a{
+  a {
     text-decoration: underline;
     color: $c-blue-middle;
   }

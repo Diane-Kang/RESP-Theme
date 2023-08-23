@@ -1,5 +1,8 @@
 html {
   //This defines what 1rem is
+  @media only screen and (min-width: $bp-largest) {
+    font-size: 18px;
+  }
   // 18px @ view point width 1250px $bp-largest
   // 14px @ view width 600px $bp-smallfont
   font-size: calc(14px + 4 / 640 * (100vw - $bp-smallfont));
