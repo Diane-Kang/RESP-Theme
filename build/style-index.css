@@ -1621,6 +1621,7 @@ a {
     max-width: 300px;
   }
   .imagetext .container > * {
+    order: unset !important;
     margin: unset !important;
   }
 }
