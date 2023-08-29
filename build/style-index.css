@@ -2216,12 +2216,23 @@ a {
   display: grid;
   grid-template-columns: 1fr auto;
 }
+.blog--header .breadcrumms {
+  display: flex;
+  align-items: center;
+}
 .blog--header .breadcrumms a {
   color: #0064a3;
 }
 .blog--header .breadcrumms > *:not(:first-child)::before {
   content: " / ";
   color: #000;
+}
+.blog--header .breadcrumms *:last-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 350px;
+  display: inline-block;
 }
 .blog--header .blog-meta-data {
   display: flex;
@@ -2333,21 +2344,27 @@ a {
 }
 
 .category-archive .category-navi.display--desktop {
-  display: flex;
-  justify-content: space-around;
   border-radius: 8px;
   background: #e3e3e3;
   line-height: 2.5em;
   font-size: 20px;
+  margin-bottom: 2rem;
 }
 .category-archive .category-navi.display--desktop a {
-  margin: 2px 2px;
-  text-align: center;
-  flex: 1;
-  position: relative;
   font-weight: 700;
 }
-.category-archive .category-navi.display--desktop a::after {
+.category-archive .category-navi.display--desktop .nav {
+  width: 100%;
+}
+.category-archive .category-navi.display--desktop .nav .main-menu {
+  display: flex;
+  justify-content: space-around;
+}
+.category-archive .category-navi.display--desktop li {
+  height: 100%;
+  position: relative;
+}
+.category-archive .category-navi.display--desktop li::after {
   content: "";
   height: 4px;
   width: 100px;
@@ -2358,10 +2375,10 @@ a {
   left: 50%;
   bottom: 0;
 }
-.category-archive .category-navi.display--desktop a.current-category::after {
+.category-archive .category-navi.display--desktop li.current-menu-item::after {
   visibility: visible;
 }
-.category-archive .category-navi.display--desktop a:hover {
+.category-archive .category-navi.display--desktop li:hover {
   color: #0064a3;
 }
 .category-archive .category-navi.display--mobile {
@@ -2370,7 +2387,7 @@ a {
   font-weight: 700;
   position: relative;
   max-width: 600px;
-  margin: auto;
+  margin: 2rem auto;
 }
 .category-archive .category-navi.display--mobile .checkbox {
   display: none;
@@ -2395,24 +2412,26 @@ a {
   width: 100%;
   border: 1px solid var(--common-gray-light, #e3e3e3);
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
   padding: 33px 24px;
   visibility: hidden;
   position: absolute;
   background: white;
   z-index: 2;
 }
-.category-archive .category-navi.display--mobile .options a {
+.category-archive .category-navi.display--mobile .options .nav .main-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.category-archive .category-navi.display--mobile .options li {
   line-height: 1em;
   padding-left: 16px;
   position: relative;
 }
-.category-archive .category-navi.display--mobile .options a:hover {
+.category-archive .category-navi.display--mobile .options li:hover {
   color: #0064a3;
 }
-.category-archive .category-navi.display--mobile .options a::before {
+.category-archive .category-navi.display--mobile .options li::before {
   content: "";
   margin-right: 16px;
   margin-left: -16px;
@@ -2426,7 +2445,7 @@ a {
 .category-archive .category-navi.display--mobile .checkbox:checked ~ .options {
   visibility: visible;
 }
-.category-archive .category-navi.display--mobile .checkbox:checked ~ .options a.current-category::before {
+.category-archive .category-navi.display--mobile .checkbox:checked ~ .options li.current-menu-item::before {
   visibility: visible;
 }
 .category-archive .category-navi.display--mobile .checkbox:checked + label .current-category .fa-xmark {
@@ -2435,15 +2454,11 @@ a {
 .category-archive .category-navi.display--mobile .checkbox:checked + label .current-category .fa-filter {
   visibility: hidden;
 }
-.category-archive .heading1 {
-  margin: 5rem auto;
-}
 .category-archive .intro {
   font-size: 22.5px;
   font-weight: 700;
-}
-.category-archive .intro-wrapper {
-  margin-bottom: 5rem;
+  margin: 2rem auto;
+  width: 80%;
 }
 .category-archive .post-item {
   grid-column: span 4;
@@ -2553,10 +2568,7 @@ a {
     padding-right: 2%;
   }
 }
-@media only screen and (max-width: 900px) {
-  .category-archive .category-navi.display--desktop {
-    display: none;
-  }
+@media only screen and (max-width: 1249px) {
   .category-archive .category-navi.display--mobile {
     display: block;
   }

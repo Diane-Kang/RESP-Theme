@@ -6,19 +6,26 @@
  *
  */
 
-//  we force to have only category archive
-// if (!is_category()) {
-//   wp_redirect('/blog/', 301);
-// }
+// we force to have only category archive
+if (!is_category()) {
+  wp_redirect('/digitalisierung-der-immobilienbranche', 301);
+}
 
 ?>
 
-
 <?php get_header(); ?>
 <div class="page blog-index category-archive">
+
   <div class="container ">
+    <div class="intro editor-content">
+      <?php the_field('text', 2170); ?>
+    </div>
+
+
     <div class="category-navi display--desktop">
-      <?php echo category_navi(); ?>
+      <?php //echo category_navi(); 
+      getMenu('blog-subnavi', 1, '');
+      ?>
     </div>
     <div class="category-navi display--mobile">
       <input type="checkbox" class="checkbox" id="cat-navi-toggle">
@@ -26,17 +33,11 @@
         <div class="current-category open"><?php echo single_cat_title('', false); ?><i class="fa-solid fa-filter"></i> <i class="fa-solid fa-xmark"></i></div>
       </label>
       <div class="options">
-        <?php echo category_navi(); ?>
-      </div>
-
-    </div>
-
-    <h1 class="heading1 text-center">Blog-Liste</h1>
-    <div class="intro-wrapper grid12">
-      <div class="intro grid12-10">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <?php //echo category_navi(); 
+        getMenu('blog-subnavi', 1, ''); ?>
       </div>
     </div>
+
 
     <?php
 

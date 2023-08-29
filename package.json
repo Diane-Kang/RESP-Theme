@@ -11,9 +11,8 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@wordpress/icons": "^7.0.1",
-    "@wordpress/scripts": "*",
-    "normalize.css": "^8.0.1"
+    "@wordpress/scripts": "*"
   }
 }

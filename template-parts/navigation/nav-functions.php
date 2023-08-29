@@ -5,7 +5,8 @@ register_nav_menus(array(
   'primary' => __('Hauptnavigation', 'reboot'),
   'meta' => __('Meta', 'reboot'),
   'footer' => __('Footer', 'reboot'),
-  'social' => __('Social', 'reboot')
+  'social' => __('Social', 'reboot'),
+  'blog-subnavi' => __('Blog Subnavi', 'reboot')
 ));
 
 function getMenu($menu_name = 'primary', $depth = 0, $nav_class = '', $container = 'nav')

@@ -6,12 +6,21 @@
     grid-template-columns: 1fr auto;
 
     .breadcrumms {
+      display: flex;
+      align-items: center;
       a {
         color: $color-blue-dark;
       }
       & > *:not(:first-child)::before {
         content: " / ";
         color: $color-black;
+      }
+      *:last-child {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 350px;
+        display: inline-block;
       }
     }
     .blog-meta-data {
