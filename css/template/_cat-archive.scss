@@ -149,6 +149,9 @@
       img {
         height: auto;
       }
+      picture {
+        height: unset;
+      }
     }
     .content-wrapper {
       padding: 40px 32px;
