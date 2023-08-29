@@ -39,7 +39,7 @@
       'paged' => $paged,
       'orderby' => 'publish_date',
       'order' => 'DESC'
-      // 'posts_per_page' => 3,
+
     );
 
     $custom_query = new WP_Query($args);
@@ -54,7 +54,7 @@
             if ($thumbnail) {
               echo $thumbnail;
             } else {
-              echo '<img decoding="async" width ="360px" height ="360px" src="http://reap-theme.local/wp-content/uploads/2023/05/1x1-495x495px.png" alt="">';
+              echo '<img decoding="async" width ="360px" height ="360px" src="" alt="">';
             }
             ?>
           </div>

@@ -45,8 +45,9 @@ if (!is_category()) {
     $args = array(
       'post_type' => 'post',
       'paged' => $paged,
-      // 'posts_per_page' => 3,
-      'cat' => get_cat_ID(single_cat_title('', false))
+      'cat' => get_cat_ID(single_cat_title('', false)),
+      'orderby' => 'publish_date',
+      'order' => 'DESC'
     );
 
     $custom_query = new WP_Query($args);
@@ -55,27 +56,26 @@ if (!is_category()) {
       <?php
       while ($custom_query->have_posts()) {
         $custom_query->the_post(); ?>
-        <div class="post-item">
+        <a class="post-item" href="<?php the_permalink(); ?>">
           <div class="thumbnail-wrapper">
             <?php $thumbnail = get_the_post_thumbnail();
             if ($thumbnail) {
               echo $thumbnail;
             } else {
-              echo '<img decoding="async" src="http://reap-theme.local/wp-content/uploads/2023/05/1x1-495x495px.png" alt="">';
+              echo '<img decoding="async" width ="360px" height ="360px" src="" alt="">';
             }
             ?>
           </div>
           <div class="content-wrapper">
             <div class="teaser">
-              <div class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+              <div class="title"><?php the_title(); ?></div>
               <div class="text"><?php the_field('teaser_text'); ?></div>
             </div>
             <div class="cta">
-              <a class="btn--underline" href="<?php the_permalink(); ?>">weiterlesen</a>
+              <p class="btn--underline">weiterlesen</p>
             </div>
-
           </div>
-        </div>
+        </a>
       <?php } ?>
     </div>
     <!-- pagination -->
@@ -101,6 +101,7 @@ if (!is_category()) {
     </div>
 
   </div>
+  <?php echo paginate_links(); ?>
   <?php wp_reset_postdata(); ?>
 </div>
 <?php get_footer(); ?>

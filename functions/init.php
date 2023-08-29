@@ -60,6 +60,7 @@ function pe_theme_features()
   */
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
+  set_post_thumbnail_size(360, 360, false);
   add_image_size('logo-150', 150, 150, false);
   add_image_size('cardimage-200', 200, 200, false);
   //medium 300
