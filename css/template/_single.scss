@@ -12,8 +12,9 @@
         color: $color-blue-dark;
       }
       & > *:not(:first-child)::before {
-        content: " / ";
+        content: "/";
         color: $color-black;
+        padding: 0 3px;
       }
       *:last-child {
         overflow: hidden;

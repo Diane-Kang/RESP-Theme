@@ -2224,8 +2224,9 @@ a {
   color: #0064a3;
 }
 .blog--header .breadcrumms > *:not(:first-child)::before {
-  content: " / ";
+  content: "/";
   color: #000;
+  padding: 0 3px;
 }
 .blog--header .breadcrumms *:last-child {
   overflow: hidden;

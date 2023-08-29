@@ -18,7 +18,7 @@ if (!is_category()) {
 
   <div class="container ">
     <div class="intro editor-content">
-      <?php the_field('text', 2170); ?>
+      <?php the_field('text', 736); ?>
     </div>
 
 

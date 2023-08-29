@@ -78,7 +78,7 @@ function get_toc($toc_headings)
 <div class="container blog">
   <div class="blog--header">
     <nav class="breadcrumms text-bold">
-      <a href="<?php echo home_url('blog'); ?>">Aktuelles</a>
+      <a href="/digitalisierung-der-immobilienbranche">Aktuelles</a>
       <?php $category = get_field('category'); ?>
       <?php if ($category) : ?>
         <a href="<?php echo esc_url(get_term_link($category)); ?>"><?php echo esc_html($category->name); ?></a>
@@ -87,7 +87,7 @@ function get_toc($toc_headings)
 
     </nav>
     <div class="blog-meta-data">
-      <div class="date">erstellt am <?php echo get_the_date('d.F.Y'); ?></div>
+      <div class="date">erstellt am <?php echo get_the_date('d. F Y'); ?></div>
       <div class="reading-time">Lesedauer: ca. <?php echo round(str_word_count(preg_replace('#<[^>]+>#', ' ', $blog_content)) / 100); ?> Minuten</div>
     </div>
     <h1 class="blog-title center"><?php the_title(); ?></h1>
