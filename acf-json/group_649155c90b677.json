@@ -190,12 +190,11 @@
         "comments",
         "author",
         "format",
-        "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693318230
+    "modified": 1703623910
 }
