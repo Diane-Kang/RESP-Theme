@@ -118,12 +118,12 @@
             "placeholder": ""
         },
         {
-            "key": "field_6461d4a43ff0c",
-            "label": "Titel(backup)",
+            "key": "field_65ccb942506d3",
+            "label": "Überschrift",
             "name": "block::imagetext:title",
             "aria-label": "",
-            "type": "text",
-            "instructions": "Bitte verwenden Sie den Texteditor mit entsprechendem Header-Tag.",
+            "type": "clone",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -131,11 +131,13 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Benutz Inhalt",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "clone": [
+                "group_65ccbe5ce2cc7"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_643adc99ed574",
@@ -201,5 +203,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692693961
+    "modified": 1707917715
 }

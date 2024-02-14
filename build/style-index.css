@@ -608,6 +608,10 @@ a {
   color: inherit;
 }
 
+.section-title {
+  text-align: center;
+}
+
 .editor-content ul {
   list-style: disc;
 }

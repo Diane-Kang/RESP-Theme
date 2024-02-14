@@ -95,6 +95,28 @@
             "placeholder": ""
         },
         {
+            "key": "field_65ccc60f5212b",
+            "label": "Überschrift",
+            "name": "block::cards:title",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_65ccbe5ce2cc7"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_64a11e6cf2cda",
             "label": "Kachel",
             "name": "block::cards:card",
@@ -264,5 +286,5 @@
     "active": true,
     "description": "Für 3 oder 4 Kacheln",
     "show_in_rest": 0,
-    "modified": 1692694892
+    "modified": 1707930169
 }
