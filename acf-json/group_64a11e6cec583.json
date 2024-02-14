@@ -96,7 +96,7 @@
         },
         {
             "key": "field_65ccc60f5212b",
-            "label": "Überschrift",
+            "label": "Sektionsüberschrift",
             "name": "block::cards:title",
             "aria-label": "",
             "type": "clone",
@@ -286,5 +286,5 @@
     "active": true,
     "description": "Für 3 oder 4 Kacheln",
     "show_in_rest": 0,
-    "modified": 1707930169
+    "modified": 1707930665
 }
