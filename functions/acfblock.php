@@ -35,6 +35,4 @@ new ACFblock("faq");
 new ACFBlock("logos");
 new ACFBlock("contact");
 new ACFBlock("icontext");
-new ACFBlock("scriptmodul");
-
 new ACFBlock("color-test");
