@@ -22,47 +22,22 @@ require(get_template_directory() . '/acf-blocks/module-classes.php');
 array_unshift($module_classes, "module", "textbox", "scriptmodule");
 array_unshift($container_classes, "container", "bd-box");
 
-// Buttons 
-$button1 = get_field('button1');
-if ($button1) {
-    $button1link = $button1['block::buttons:btn1-link'];
-    $button1type = $button1['block::buttons:btn1-type'];
-}
-$button2 = get_field('button2');
-if ($button2) {
-    $button2link = $button2['block::buttons:btn2-link'];
-    $button2type = $button2['block::buttons:btn2-type'];
-}
-
 ?>
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
     <div class="<?php echo implode(" ", $container_classes); ?>">
         <div class="textbox__text-container textbox_vor_code">
             <div class="textbox__text editor-content">
-                <?php the_field('block::textbox:content'); ?>
+                <?php the_field('text_vor_script'); ?>
             </div>
         </div>
-        <!-- only if button exist -->
-        <?php if (!empty($button1link) || !empty($button2link)): ?>
-            <div class="buttons--wrapper">
-                <?php echo acf_relative_path($button1link, $button1type); ?>
-                <?php echo acf_relative_path($button2link, $button2type); ?>
-            </div>
-        <?php endif; ?>
+
         <!-- Statt the_field('script_feld'); im Template zu verwenden,
         Nutze 'echo get_fiel() um html escaping zu umgehen, siehe https://wpfieldwork.com/diving-into-acfs-latest-security-release/ -->
         <?php echo get_field('script_feld'); ?>
         <div class="textbox__text-container textbox_nach_code">
             <div class="textbox__text editor-content">
-                <?php the_field('block::textbox:content'); ?>
+                <?php the_field('text_nach_script'); ?>
             </div>
         </div>
-        <!-- only if button exist -->
-        <?php if (!empty($button1link) || !empty($button2link)): ?>
-            <div class="buttons--wrapper">
-                <?php echo acf_relative_path($button1link, $button1type); ?>
-                <?php echo acf_relative_path($button2link, $button2type); ?>
-            </div>
-        <?php endif; ?>
     </div>
 </div>

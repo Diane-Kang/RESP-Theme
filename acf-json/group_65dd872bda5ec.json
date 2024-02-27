@@ -3,11 +3,11 @@
     "title": "Block: Scriptmodul",
     "fields": [
         {
-            "key": "field_65dde21b90a40",
-            "label": "Textbox vor Code",
-            "name": "textbox_vor_code",
+            "key": "field_65de0d9e9b2fe",
+            "label": "Text vor Script",
+            "name": "text_vor_script",
             "aria-label": "",
-            "type": "clone",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,13 +16,11 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_64476856564f8"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_65dde24c90a41",
@@ -45,11 +43,11 @@
             "append": ""
         },
         {
-            "key": "field_65ddee4bcc4a2",
-            "label": "Textbox nach Code",
-            "name": "textbox_nach_code",
+            "key": "field_65de0dc39b2ff",
+            "label": "Text nach Script",
+            "name": "text_nach_script",
             "aria-label": "",
-            "type": "clone",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -58,13 +56,11 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_64476856564f8"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -85,5 +81,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709043675
+    "modified": 1709051355
 }
