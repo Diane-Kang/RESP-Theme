@@ -1,0 +1,16 @@
+{
+"name": "acf/scriptmodul",
+"title": "scriptmodul",
+"description": "scriptmodul",
+"category": "",
+"icon": "align-left",
+"keywords": [""],
+"acf": {
+  "mode": "edit",
+  "renderTemplate": "scriptmodul.php"
+},
+"supports": {
+  "align": [""],
+  "customClassName": false
+}
+}
