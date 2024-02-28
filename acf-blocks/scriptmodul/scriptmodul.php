@@ -33,7 +33,11 @@ array_unshift($container_classes, "container", "bd-box");
 
         <!-- Statt the_field('script_feld'); im Template zu verwenden,
         Nutze 'echo get_fiel() um html escaping zu umgehen, siehe https://wpfieldwork.com/diving-into-acfs-latest-security-release/ -->
-        <?php echo get_field('script_feld'); ?>
+        <div class="textbox__text-container code">
+            <div class="textbox__text">
+                <?php echo get_field('script_feld'); ?>
+            </div>
+        </div>
         <div class="textbox__text-container textbox_nach_code">
             <div class="textbox__text editor-content">
                 <?php the_field('text_nach_script'); ?>
