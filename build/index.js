@@ -16,11 +16,11 @@ class PriceTable {
   // 1. describe and create/initiate our object
   constructor() {
     this.elements = {
-      $module_pricetable: document.querySelectorAll(".module.price-table"),
+      $module_pricetable: document.querySelectorAll(".toggle.module.price-table"),
       $price_toggle: document.querySelector("#price-toggle"),
       $target: document.querySelector(".price-table"),
       $highlight: document.querySelectorAll(".price-toggle-wrapper > span"),
-      $feature: document.querySelectorAll(".block-wrapper-mobile .feature")
+      $feature: document.querySelectorAll(".toggle .block-wrapper-mobile .feature")
     };
     // Toggle event for yealry/monthly price
     if (this.elements.$module_pricetable) {

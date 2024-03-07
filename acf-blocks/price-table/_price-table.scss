@@ -110,10 +110,10 @@
     }
   }
   // Option: Monthly or Yearly
-  .price-monthly {
+  .toggle .price-monthly {
     display: none;
   }
-  .price-yearly {
+  .toggle .price-yearly {
     display: block;
   }
   &.monthly {

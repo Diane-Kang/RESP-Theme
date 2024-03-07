@@ -2000,10 +2000,10 @@ a {
 .price-table .table li:not(:last-child) {
   border-bottom: 1px solid #e3e3e3;
 }
-.price-table .price-monthly {
+.price-table .toggle .price-monthly {
   display: none;
 }
-.price-table .price-yearly {
+.price-table .toggle .price-yearly {
   display: block;
 }
 .price-table.monthly .price-monthly {

@@ -19,7 +19,7 @@ $option = get_field('block::price-table:option');
 ?>
 <!-- TPQ Price Table starts-->
 <?php if ($option == 'tpq'): ?>
-    <div <?php echo $anchor; ?> class="notoggle <?php echo implode(" ", $module_classes); ?>">
+    <div <?php echo $anchor; ?> class="notoggle tpq <?php echo implode(" ", $module_classes); ?>">
         <div class="<?php echo implode(" ", $container_classes); ?>">
             <!-- <div class="price-toggle-wrapper fs--medium">
         <span>monatlich <span class="tiny-screen-hide">zahlen</span></span>
@@ -32,7 +32,9 @@ $option = get_field('block::price-table:option');
         <span class="checked">jährlich <span class="tiny-screen-hide">zahlen</span>
         </span>
       </div> -->
-            <!-- Desktop Price table -->
+            <!-- ----------------------------------------------------------------------------------- -->
+            <!-- Desktop Price table starts-->
+            <!-- ------------------------------------------------------------------------------------- -->
             <div class="block-wrapper grid12">
                 <div class="block block--label grid12-3 flex">
                     <div class="table flexible flex flex-col">
@@ -139,8 +141,9 @@ $option = get_field('block::price-table:option');
                         <div class="head flexible">
                             <div class="category">Economy Class</div>
                             <div class="price price-monthly">169 €</div>
-                            <div class="interval">pro Monat</div>
                             <!-- <div class="price price-yearly">1.690 €</div> -->
+                            <div class="interval">pro Monat</div>
+
                         </div>
                         <div class="feature">
                             <ul>
@@ -167,6 +170,8 @@ $option = get_field('block::price-table:option');
                             <div class="category">Business Class</div>
                             <div class="price price-monthly">329 €</div>
                             <!-- <div class="price price-yearly">3.290 €</div> -->
+                            <div class="interval">pro Monat</div>
+
                         </div>
                         <div class="feature">
                             <ul>
@@ -193,6 +198,8 @@ $option = get_field('block::price-table:option');
                             <div class="category">First Class</div>
                             <div class="price price-monthly">699 €</div>
                             <!-- <div class="price price-yearly">6.990 €</div> -->
+                            <div class="interval">pro Monat</div>
+
                         </div>
                         <div class="feature">
                             <ul>
@@ -216,6 +223,7 @@ $option = get_field('block::price-table:option');
             </div>
             <!-- --------------------------------------------------------------------------------- -->
             <!-- Mobile Price table TeamProQ starts-->
+            <!-- -------------------------------------------------------------------------------------- -->
             <div class="block-wrapper block-wrapper-mobile">
                 <div class="block block--item">
                     <div class="table flex flex-col">
@@ -223,6 +231,8 @@ $option = get_field('block::price-table:option');
                             <div class="category">Economy Class</div>
                             <div class="price price-monthly">169 €</div>
                             <!-- <div class="price price-yearly">1.690 €</div> -->
+                            <div class="interval">pro Monat</div>
+
                         </div>
                         <div class="feature">
                             <div class="feature-content">
@@ -260,7 +270,9 @@ $option = get_field('block::price-table:option');
                         <div class="head">
                             <div class="category">Business Class</div>
                             <div class="price price-monthly">329 €</div>
-                            <div class="price price-yearly">3.290 €</div>
+                            <!-- <div class="price price-yearly">3.290 €</div> -->
+                            <div class="interval">pro Monat</div>
+
                         </div>
                         <div class="feature">
                             <div class="feature-content">
@@ -300,6 +312,7 @@ $option = get_field('block::price-table:option');
                             <div class="category">First Class</div>
                             <div class="price price-monthly">699 €</div>
                             <!-- <div class="price price-yearly">6.990 €</div> -->
+                            <div class="interval">pro Monat</div>
                         </div>
                         <div class="feature">
                             <div class="feature-content">
@@ -339,11 +352,13 @@ $option = get_field('block::price-table:option');
             </div>
         </div>
     </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
     <!-- TeamProQ Ends -->
     <!-- ------------------------------------------------------------------------------------ -->
     <!-- Geomap Start -->
+    <!-- ------------------------------------------------------------------------------------------- -->
 <?php elseif ($option == 'geomap'): ?>
-    <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
+    <div <?php echo $anchor; ?> class="toggle geomap <?php echo implode(" ", $module_classes); ?>">
         <div class="<?php echo implode(" ", $container_classes); ?>">
             <div class="price-toggle-wrapper fs--medium">
                 <span>monatlich <span class="tiny-screen-hide">zahlen</span></span>
@@ -356,7 +371,9 @@ $option = get_field('block::price-table:option');
                 <span class="checked">jährlich <span class="tiny-screen-hide">zahlen</span>
                 </span>
             </div>
+            <!-- ------------------------------------------------------------------------------------ -->
             <!-- Desktop Price table Geomap starts -->
+            <!-- -------------------------------------------------------------------------------------------- -->
             <div class="block-wrapper grid12">
                 <div class="block block--label grid12-3 flex">
                     <div class="table flexible flex flex-col">
@@ -580,7 +597,9 @@ $option = get_field('block::price-table:option');
                     </div>
                 </div>
             </div>
+            <!-- -------------------------------------------------------------------------------------- -->
             <!-- Mobile Price table Geomap starts -->
+            <!-- --------------------------------------------------------------------------------------------- -->
             <div class="block-wrapper block-wrapper-mobile">
                 <div class="block block--item">
                     <div class="table flex flex-col">

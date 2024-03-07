@@ -2,16 +2,20 @@ export default class PriceTable {
   // 1. describe and create/initiate our object
   constructor() {
     this.elements = {
-      $module_pricetable: document.querySelectorAll(".module.price-table"), 
+      $module_pricetable: document.querySelectorAll(
+        ".toggle.module.price-table"
+      ),
       $price_toggle: document.querySelector("#price-toggle"),
       $target: document.querySelector(".price-table"),
       $highlight: document.querySelectorAll(".price-toggle-wrapper > span"),
-      $feature: document.querySelectorAll(".block-wrapper-mobile .feature"),
+      $feature: document.querySelectorAll(
+        ".toggle .block-wrapper-mobile .feature"
+      ),
     };
     // Toggle event for yealry/monthly price
     if (this.elements.$module_pricetable) {
       //show the yearly payment option as default
-      this.elements.$module_pricetable.forEach(($table)=> {
+      this.elements.$module_pricetable.forEach(($table) => {
         $table.querySelector("#price-toggle").checked = false;
       });
       // this.elements.$price_toggle.checked = false;
@@ -23,7 +27,7 @@ export default class PriceTable {
     }
   }
   changePrice() {
-    this.elements.$module_pricetable.forEach(($table)=>{
+    this.elements.$module_pricetable.forEach(($table) => {
       let $toggle = $table.querySelector("#price-toggle");
       let $highlight = $table.querySelectorAll(".price-toggle-wrapper > span");
       $toggle.addEventListener("change", () => {
@@ -33,12 +37,11 @@ export default class PriceTable {
           $table.classList.remove("monthly");
         }
         // highlight the text of the selected option
-       $highlight.forEach(($text) => {
+        $highlight.forEach(($text) => {
           $text.classList.toggle("checked");
         });
-      });  
+      });
     });
-
   }
   toggleFeature() {
     this.elements.$feature.forEach(($f) => {
