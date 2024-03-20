@@ -1895,6 +1895,18 @@ a {
   }
 }
 
+/*Quick & Dirty Fix - rule in line CSS 121 doesn't apply; couldn't find Bug*/
+.toggle .price-monthly {
+  display: none;
+}
+
+/*---------------------------*/
+.price-table {
+  /* basic struture */
+  /* table structure */
+  /*Option: Monthly or Yearly */
+  /* Media Queary */
+}
 .price-table .block-wrapper-mobile {
   display: none;
 }
@@ -1912,6 +1924,8 @@ a {
 .price-table .block {
   width: 100%;
   height: 100%;
+  /* block--label */
+  /* block--item */
 }
 .price-table .block--label {
   text-align: left;
@@ -2013,6 +2027,12 @@ a {
   display: none;
 }
 @media only screen and (max-width: 1250px) {
+  .price-table {
+    /* default */
+    /* open the dropdown */
+    /* feature style */
+    /* button style */
+  }
   .price-table .container {
     max-width: unset;
     padding-left: 2%;
