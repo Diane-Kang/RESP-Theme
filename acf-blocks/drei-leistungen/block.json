@@ -1,0 +1,16 @@
+{
+  "name": "acf/drei-leistungen",
+  "title": "drei-leistungen",
+  "description": "",
+  "category": "",
+  "icon": "plus",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "drei-leistungen.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

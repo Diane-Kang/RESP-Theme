@@ -1,3 +1,66 @@
-.module {
-  background-color: #000;
+.villa_true {
+  $primary-blue: #00b3ff;
+  $orange: #ffbe10;
+  $meetig-brown: #c63;
+  $coworking-green: #28bd98;
+  $dependence-blue: #4d90b2;
+
+  .buttons--wrapper {
+    min-width: min-content;
+  }
+
+  .btn--fill {
+    background-color: $primary-blue;
+  }
+
+  .btn--empty {
+    color: #fff;
+  }
+
+  .bg--coworking {
+    background-color: $coworking-green;
+    color: #fff;
+
+    .btn--empty {
+      color: #fff;
+      outline-color: #fff;
+    }
+  }
+
+  .bg--meeting {
+    background-color: $meetig-brown;
+    color: #fff;
+
+    .btn--empty {
+      color: #fff;
+      outline-color: #fff;
+    }
+  }
+
+  .bg--dependence {
+    background-color: $dependence-blue;
+    color: #fff;
+
+    .btn--empty {
+      color: #fff;
+      outline-color: #fff;
+    }
+  }
+
+  .textbox__text-container {
+    .textbox__text.editor-content {
+      grid-column: span 12;
+      p {
+        font-size: 24px;
+
+        @media only screen and (max-width: $bp-largest) {
+          font-size: 22px;
+        }
+      }
+
+      h2 {
+        font-size: 61px;
+      }
+    }
+  }
 }

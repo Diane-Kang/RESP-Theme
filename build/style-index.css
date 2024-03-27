@@ -2235,6 +2235,28 @@ a {
   }
 }
 
+.block-drei-leistungen {
+  display: flex;
+  width: 100%;
+}
+@media only screen and (max-width: 1250px) {
+  .block-drei-leistungen {
+    flex-direction: column;
+  }
+}
+.block-drei-leistungen .leistung {
+  width: 100%;
+  text-align: center;
+  font-size: 33px;
+  font-weight: 700;
+  padding: 33px 0;
+}
+@media only screen and (max-width: 1250px) {
+  .block-drei-leistungen .leistung {
+    padding: 16px;
+  }
+}
+
 .blog {
   padding-top: 3rem;
 }
@@ -2609,8 +2631,53 @@ a {
   }
 }
 
-.module {
-  background-color: #000;
+.villa_true .buttons--wrapper {
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+.villa_true .btn--fill {
+  background-color: #00b3ff;
+}
+.villa_true .btn--empty {
+  color: #fff;
+}
+.villa_true .bg--coworking {
+  background-color: #28bd98;
+  color: #fff;
+}
+.villa_true .bg--coworking .btn--empty {
+  color: #fff;
+  outline-color: #fff;
+}
+.villa_true .bg--meeting {
+  background-color: #c63;
+  color: #fff;
+}
+.villa_true .bg--meeting .btn--empty {
+  color: #fff;
+  outline-color: #fff;
+}
+.villa_true .bg--dependence {
+  background-color: #4d90b2;
+  color: #fff;
+}
+.villa_true .bg--dependence .btn--empty {
+  color: #fff;
+  outline-color: #fff;
+}
+.villa_true .textbox__text-container .textbox__text.editor-content {
+  grid-column: span 12;
+}
+.villa_true .textbox__text-container .textbox__text.editor-content p {
+  font-size: 24px;
+}
+@media only screen and (max-width: 1250px) {
+  .villa_true .textbox__text-container .textbox__text.editor-content p {
+    font-size: 22px;
+  }
+}
+.villa_true .textbox__text-container .textbox__text.editor-content h2 {
+  font-size: 61px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

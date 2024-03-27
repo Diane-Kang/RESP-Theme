@@ -37,3 +37,4 @@ new ACFBlock("contact");
 new ACFBlock("icontext");
 new ACFBlock("color-test");
 new ACFBlock("scriptmodul");
+new ACFBlock("drei-leistungen");

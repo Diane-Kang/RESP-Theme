@@ -1,10 +1,10 @@
 {
-    "key": "group_64e4590e698b7",
-    "title": "Logo",
+    "key": "group_660448e238fbc",
+    "title": "Options",
     "fields": [
         {
-            "key": "field_64e4590e06baf",
-            "label": "Logo",
+            "key": "field_660448e2a4e9c",
+            "label": "logo",
             "name": "logo",
             "aria-label": "",
             "type": "image",
@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "array",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -26,6 +26,31 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_6604490aa4e9d",
+            "label": "Villa Styles active",
+            "name": "villa_styles_active",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "villa_true": "yes",
+                "villa_false": "no"
+            },
+            "default_value": "yes",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -33,7 +58,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "resp-theme-setting"
+                "value": "theme-setting"
             }
         ]
     ],
@@ -46,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692686649
+    "modified": 1711558697
 }

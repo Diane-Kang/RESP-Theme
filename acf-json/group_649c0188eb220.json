@@ -127,6 +127,9 @@
                 "id": ""
             },
             "choices": {
+                "coworking": "coworking-green (#28bd98)",
+                "meeting": "meeting-brown (#c63)",
+                "dependence": "dependence-blue (#4d90b2)",
                 "none": "transparent",
                 "blue-light": "blau (hell)",
                 "blue-middle": "blau (mittel)",
@@ -195,5 +198,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691943527
+    "modified": 1711567679
 }

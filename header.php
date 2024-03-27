@@ -17,22 +17,27 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="<?php bloginfo('charset'); ?>" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- no more pingback at least since Twenty Twenty-One 1.0 and some recommends disable pingpack https://themeisle.com/blog/wordpress-pingbacks/#gref-->
-  <?php wp_head(); ?>
+    <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- no more pingback at least since Twenty Twenty-One 1.0 and some recommends disable pingpack https://themeisle.com/blog/wordpress-pingbacks/#gref-->
+    <?php wp_head(); ?>
 </head>
 
 
-<body <?php body_class(); ?>>
 
-  <?php
-  wp_body_open(); //do_action( 'wp_body_open' ); ex add_action( 'wp_body_open', 'google_tags_manager_body_open_scripts' );
-  ?>
+<?php
+$villa_template = (null !== get_field('villa_styles_active', 'option')) ? get_field('villa_styles_active', 'option') : "";
+?>
 
-  <!-- Header Before main  -->
-  <?php get_template_part('template-parts/header/header');
-  ?>
+<body <?php body_class($villa_template); ?>>
 
-  <!-- main  -->
-  <main class="main">
+    <?php
+    wp_body_open(); //do_action( 'wp_body_open' ); ex add_action( 'wp_body_open', 'google_tags_manager_body_open_scripts' );
+    ?>
+
+    <!-- Header Before main  -->
+    <?php get_template_part('template-parts/header/header');
+    ?>
+
+    <!-- main  -->
+    <main class="main">
