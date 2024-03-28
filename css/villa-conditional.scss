@@ -4,6 +4,7 @@
   $meetig-brown: #c63;
   $coworking-green: #28bd98;
   $dependence-blue: #4d90b2;
+  $grey: #e6e6e6;
 
   .buttons--wrapper {
     min-width: min-content;
@@ -47,6 +48,64 @@
     }
   }
 
+  /*******Header************/
+  .header--outer {
+    flex-direction: column;
+    .top-header {
+      background-color: $grey;
+      color: $c-gray-middle;
+      width: 100%;
+      padding: 8px 0;
+      display: flex;
+      position: absolute;
+      top: 0;
+      .container {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 100%;
+        }
+
+        &::before {
+          order: 1;
+        }
+
+        &::after {
+          order: 2;
+        }
+
+        .contact-bar {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          justify-content: center;
+          gap: 32px;
+          order: 3;
+
+          .contact {
+            font-size: 12px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            svg {
+              width: 14px;
+              height: 14px;
+              fill: $primary-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*********Start Module*************/
   .textbox__text-container {
     .textbox__text.editor-content {
       grid-column: span 12;
@@ -61,6 +120,15 @@
       h2 {
         font-size: 61px;
       }
+    }
+  }
+
+  .teaser .logo-wrapper {
+    width: 370px;
+    margin: 0 auto;
+    padding-bottom: 32px;
+    @media only screen and (max-width: $bp-largest) {
+      padding-bottom: 40px;
     }
   }
 }

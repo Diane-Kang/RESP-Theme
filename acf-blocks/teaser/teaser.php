@@ -45,33 +45,32 @@ array_push($container_classes, $teaser_height, $teaser_textcolor);
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
     <div class="<?php echo implode(" ", $container_classes); ?>">
         <?php if ($image): ?>
-          <?php echo wp_get_attachment_image($image, '1536x1536', false, ['class' => 'teaser__bg-image']); ?>
+        <?php echo wp_get_attachment_image($image, '1536x1536', false, ['class' => 'teaser__bg-image']); ?>
         <?php endif ?>
         <div class="teaser__bg-gradient"></div>
         <div class="teaser__content">
 
-            <!-- Logo conditional Villa starts -->
-            <?php $villa = get_field('villa_styles_active', 'option'); ?>
-            <?php if ($villa == "villa_true"): ?>
-              <div class="logo-wrapper">
-                  <?php $logo = get_field('logo', 'option'); ?>
-                  <?php if ($logo): ?>
-                    <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
-                  <?php endif; ?>
-                <?php endif; ?>
-            </div>
-            <!-- Logo conditional Villa Ends -->
-
-
             <div class="teaser__text editor-content">
+
+                <!-- Logo conditional Villa starts -->
+                <?php $villa = get_field('villa_styles_active', 'option'); ?>
+                <?php if ($villa == "villa_true"): ?>
+                <div class="logo-wrapper">
+                    <?php $logo = get_field('logo', 'option'); ?>
+                    <?php if ($logo): ?>
+                    <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+                    <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+                <!-- Logo conditional Villa Ends -->
                 <?php echo $text_content ?>
             </div>
             <?php if (!empty($button1link) || !empty($button1link)): ?>
-              <!-- only if button exist -->
-              <div class="buttons--wrapper">
-                  <?php echo acf_relative_path($button1link, $button1type); ?>
-                  <?php echo acf_relative_path($button2link, $button2type); ?>
-              </div>
+            <!-- only if button exist -->
+            <div class="buttons--wrapper">
+                <?php echo acf_relative_path($button1link, $button1type); ?>
+                <?php echo acf_relative_path($button2link, $button2type); ?>
+            </div>
             <?php endif; ?>
         </div>
     </div>
