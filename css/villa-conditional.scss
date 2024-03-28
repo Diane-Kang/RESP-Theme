@@ -67,6 +67,7 @@
   /*******Header************/
   .header--outer {
     flex-direction: column;
+    padding-top: 32px;
     .top-header {
       background-color: $grey;
       color: $c-gray-middle;
@@ -113,6 +114,11 @@
     padding: 72px 0;
     .villa-footer {
       display: flex;
+      align-items: end;
+      justify-content: space-between;
+      max-width: 1340px;
+      margin: 0 auto;
+
       img {
         width: 243px;
         padding-bottom: 33px;
@@ -129,39 +135,44 @@
         flex-direction: column;
         gap: 16px;
         padding-left: 80px;
+
+        .contact {
+          font-size: 16px;
+          line-height: 1;
+          color: $c-gray-middle;
+        }
       }
 
-      .contact {
-        font-size: 16px;
-        line-height: 1;
-        color: $c-gray-middle;
-      }
-    }
-    .sitemap {
-      display: flex;
-      .main-menu {
-        flex-direction: column;
-        align-items: flex-end;
+      .sitemap.villa {
+        display: flex;
+        padding: 0;
+        margin: 0;
 
-        .menu-item-depth-0 {
-          &:last-child > a {
-            background-image: none;
-            color: $c-gray-dark;
-            min-width: auto;
-            height: auto;
-          }
+        .main-menu {
+          flex-direction: column;
+          align-items: flex-end;
 
-          .menu-link {
-            font-size: 16px;
-            line-height: 24px;
-            text-align: right;
-            display: flex;
-            justify-content: center;
+          .menu-item-depth-0 {
+            &:last-child > a {
+              background-image: none;
+              color: $c-gray-dark;
+              max-height: 24px;
+              width: 100%;
+              display: flex;
+              justify-content: end;
+            }
+
+            .menu-link {
+              font-size: 16px;
+              line-height: 24px;
+              text-align: right;
+              display: flex;
+              justify-content: center;
+            }
           }
         }
       }
     }
-
     .sitemap {
       display: none;
     }

@@ -2685,6 +2685,7 @@ a {
 }
 .villa_true .header--outer {
   flex-direction: column;
+  padding-top: 32px;
 }
 .villa_true .header--outer .top-header {
   background-color: #e6e6e6;
@@ -2725,6 +2726,10 @@ a {
 }
 .villa_true .footer__main .villa-footer {
   display: flex;
+  align-items: end;
+  justify-content: space-between;
+  max-width: 1340px;
+  margin: 0 auto;
 }
 .villa_true .footer__main .villa-footer img {
   width: 243px;
@@ -2742,25 +2747,29 @@ a {
   gap: 16px;
   padding-left: 80px;
 }
-.villa_true .footer__main .villa-footer .contact {
+.villa_true .footer__main .villa-footer .contact-nav .contact {
   font-size: 16px;
   line-height: 1;
   color: #4d4d4d;
 }
-.villa_true .footer__main .sitemap {
+.villa_true .footer__main .villa-footer .sitemap.villa {
   display: flex;
+  padding: 0;
+  margin: 0;
 }
-.villa_true .footer__main .sitemap .main-menu {
+.villa_true .footer__main .villa-footer .sitemap.villa .main-menu {
   flex-direction: column;
   align-items: flex-end;
 }
-.villa_true .footer__main .sitemap .main-menu .menu-item-depth-0:last-child > a {
+.villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0:last-child > a {
   background-image: none;
   color: #262626;
-  min-width: auto;
-  height: auto;
+  max-height: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
-.villa_true .footer__main .sitemap .main-menu .menu-item-depth-0 .menu-link {
+.villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0 .menu-link {
   font-size: 16px;
   line-height: 24px;
   text-align: right;
