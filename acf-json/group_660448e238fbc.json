@@ -131,6 +131,26 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6605a4516783e",
+            "label": "Brand Text",
+            "name": "brand_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Die Villa Leipzig ist der Coworking Space in Leipzig. Arbeite mit bereits bestehenden Unternehmen im gleichen Gebäude und tausche Dich über wichtige Themen aus.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -151,5 +171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711609670
+    "modified": 1711645829
 }
