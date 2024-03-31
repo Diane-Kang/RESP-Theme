@@ -117,6 +117,26 @@
             "prefix_name": 0
         },
         {
+            "key": "field_660992a53fd48",
+            "label": "Three Color BG",
+            "name": "three_color_bg",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "3 Unterschiedliche Background Farben",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_64a11e6cf2cda",
             "label": "Kachel",
             "name": "block::cards:card",
@@ -286,5 +306,5 @@
     "active": true,
     "description": "Für 3 oder 4 Kacheln",
     "show_in_rest": 0,
-    "modified": 1707930665
+    "modified": 1711903485
 }

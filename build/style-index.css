@@ -2636,6 +2636,8 @@ a {
   /*******Header************/
   /****** Start Footer **************/
   /*********Start Module*************/
+  /********************/
+  /****************/
 }
 .villa_true .buttons--wrapper {
   min-width: -moz-min-content;
@@ -2684,6 +2686,7 @@ a {
   fill: #00b3ff;
 }
 .villa_true .header--outer {
+  margin: 0 auto;
   flex-direction: column;
   padding-top: 32px;
 }
@@ -2698,28 +2701,31 @@ a {
 }
 .villa_true .header--outer .top-header .container {
   width: 100%;
-  max-width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.villa_true .header--outer .top-header .container::before, .villa_true .header--outer .top-header .container::after {
-  content: "";
-  width: 100%;
-}
-.villa_true .header--outer .top-header .container::before {
-  order: 1;
-}
-.villa_true .header--outer .top-header .container::after {
-  order: 2;
 }
 .villa_true .header--outer .top-header .container .contact-bar {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 32px;
   order: 3;
+}
+.villa_true .header--outer .header {
+  padding: 0;
+  max-width: 1440px;
+}
+.villa_true .header--outer .header .header--container {
+  justify-content: flex-end;
+}
+.villa_true .header--outer .header .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before {
+  background: #ffbe10;
+}
+.villa_true .header--outer .header .header--container:not(.mobile-navi-open) .nav a:hover {
+  color: #ffbe10;
 }
 .villa_true .footer__main {
   padding: 72px 0;
@@ -2779,6 +2785,28 @@ a {
 .villa_true .footer__main .sitemap {
   display: none;
 }
+.villa_true .teaser.villa-subpage .container {
+  margin-left: 0;
+}
+.villa_true .teaser.villa-subpage .container .teaser__content {
+  max-width: 509px;
+  background-color: #fff;
+  padding: 40px 48px 82px 48px;
+  gap: 0;
+  align-items: flex-start;
+  border-radius: 8px;
+}
+.villa_true .teaser.villa-subpage .container .teaser__content h1 {
+  color: #ffbe10;
+  margin-bottom: 32px;
+}
+.villa_true .teaser.villa-subpage .container .teaser__content p {
+  text-align: left;
+}
+.villa_true .textbox__text-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
 .villa_true .textbox__text-container .textbox__text.editor-content {
   grid-column: span 12;
 }
@@ -2802,6 +2830,69 @@ a {
   .villa_true .teaser .logo-wrapper {
     padding-bottom: 40px;
   }
+}
+.villa_true .module.imagetext h2.section-title {
+  margin-bottom: 0;
+}
+.villa_true .module.cards.three-color-bg {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.villa_true .module.cards.three-color-bg .container {
+  max-width: 1440px;
+  gap: 0;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box {
+  width: 100%;
+  margin: 60px 0 0 0;
+  color: #fff;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box:nth-child(1) {
+  background-color: #f39200;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box.bd-box:nth-child(2) {
+  background-color: #0082ad;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box.bd-box:nth-child(3) {
+  background-color: #9fc51b;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner {
+  margin: 80px 68px;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner .card__image.flex {
+  max-width: 192px;
+  max-height: 80px;
+  margin: 0 auto;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner .heading {
+  display: none;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner a {
+  font-weight: 700;
+  font-size: 20px;
+}
+.villa_true .module.cards .container {
+  justify-content: center;
+}
+.villa_true .module.cards .container .bd-box {
+  width: 284px;
+  margin: 0 40px;
+}
+.villa_true .module.cards .container .bd-box .card--inner .card__image {
+  width: 284px;
+  height: 168px;
+}
+.villa_true .module.cards .container .bd-box .card--inner .card__text-content {
+  padding: 0 10px;
+}
+.villa_true .module.cards .container .bd-box .card--inner .card__text-content .heading {
+  color: #ffbe10;
+  font-size: 32px;
+  height: 2em;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

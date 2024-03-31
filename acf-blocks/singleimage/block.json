@@ -1,0 +1,16 @@
+{
+  "name": "acf/singleimage",
+  "title": "Single Image",
+  "description": "single_image",
+  "category": "",
+  "icon": "columns",
+  "keywords": ["text", "media"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "singleimage.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

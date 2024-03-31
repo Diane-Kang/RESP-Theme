@@ -20,13 +20,13 @@ array_unshift($container_classes, "container");
 // Buttons 
 $button1 = get_field('button1');
 if ($button1) {
-  $button1link = $button1['block::buttons:btn1-link'];
-  $button1type = $button1['block::buttons:btn1-type'];
+    $button1link = $button1['block::buttons:btn1-link'];
+    $button1type = $button1['block::buttons:btn1-type'];
 }
 $button2 = get_field('button2');
 if ($button2) {
-  $button2link = $button2['block::buttons:btn2-link'];
-  $button2type = $button2['block::buttons:btn2-type'];
+    $button2link = $button2['block::buttons:btn2-link'];
+    $button2type = $button2['block::buttons:btn2-type'];
 }
 
 // Teaser block options 
@@ -42,7 +42,12 @@ array_push($container_classes, $teaser_height, $teaser_textcolor);
 
 
 ?>
-<div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
+
+<?php $villa = get_field('villa_styles_active', 'option'); ?>
+
+
+<div <?php echo $anchor; ?>
+    class="<?php echo implode(" ", $module_classes); ?><?php if ($villa == "villa_true" && !(is_front_page())): echo "villa-subpage"; endif?>">
     <div class="<?php echo implode(" ", $container_classes); ?>">
         <?php if ($image): ?>
         <?php echo wp_get_attachment_image($image, '1536x1536', false, ['class' => 'teaser__bg-image']); ?>
@@ -51,10 +56,9 @@ array_push($container_classes, $teaser_height, $teaser_textcolor);
         <div class="teaser__content">
 
             <div class="teaser__text editor-content">
-
                 <!-- Logo conditional Villa starts -->
-                <?php $villa = get_field('villa_styles_active', 'option'); ?>
-                <?php if ($villa == "villa_true"): ?>
+
+                <?php if ($villa == "villa_true" && is_front_page()): ?>
                 <div class="logo-wrapper">
                     <?php $logo = get_field('logo', 'option'); ?>
                     <?php if ($logo): ?>
