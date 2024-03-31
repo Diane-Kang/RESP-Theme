@@ -1,0 +1,16 @@
+{
+  "name": "acf/gallery",
+  "title": "gallery",
+  "description": "gallery",
+  "category": "",
+  "icon": "",
+  "keywords": ["text", "media"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "gallery.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}
