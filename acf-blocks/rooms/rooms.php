@@ -29,7 +29,10 @@ array_unshift($container_classes, "container");
             <?php if (have_rows('room')): ?>   <?php while (have_rows('room')):
                     the_row(); ?>     <?php if (have_rows('card')): ?>       <?php while (have_rows('card')):
                                       the_row(); ?>
-                    <div class="card">
+                    <?php $kind = get_sub_field('cowork_or_meeting'); ?>
+
+                    <div class="card  <?php echo $kind; ?>">
+
                         <div class="image-wrapper">
                             <?php $bild = get_sub_field('bild'); ?>
                             <?php if ($bild): ?>
@@ -52,7 +55,7 @@ array_unshift($container_classes, "container");
                             <div class="personen"><?php the_sub_field('personen'); ?> Personen</div>
                         </div>
                         <div class="price">
-                            <?php $kind = get_sub_field('cowork_or_meeting'); ?>
+
                             <?php if ($kind == "cowork"): ?>
                               <div class="price_cowork">Arbeitsplatz: <?php the_sub_field('price_cowork'); ?> Euro / Monat</div>
                               <div class="price_office">Büro: <?php the_sub_field('price_office'); ?> Euro / Monat</div>
@@ -66,7 +69,7 @@ array_unshift($container_classes, "container");
                         <div class="buttons--wrapper">
 
                             <a href="#" class="btn btn--fill 
-                    <?php echo $kind ?>
+                    
                 <?php if ($from): ?>
                   active                            
                 <?php else: ?>
@@ -82,7 +85,7 @@ array_unshift($container_classes, "container");
 
               <?php endwhile; ?>
             <?php else: ?>
-              <?php // No rows found                              ?>
+              <?php // No rows found                               ?>
             <?php endif; ?>
         </div>
     </div>

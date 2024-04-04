@@ -2276,7 +2276,6 @@ a {
 }
 
 .rooms.module .container .section_title {
-  color: #28bd98;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -2294,38 +2293,35 @@ a {
   display: flex;
   flex-direction: column;
 }
-.rooms.module .container .wrapper-cards .image-wrapper {
+.rooms.module .container .wrapper-cards .card .image-wrapper {
   max-width: 381px;
 }
-.rooms.module .container .wrapper-cards .image-wrapper img {
+.rooms.module .container .wrapper-cards .card .image-wrapper img {
   border-radius: 8px;
 }
-.rooms.module .container .wrapper-cards .name {
+.rooms.module .container .wrapper-cards .card .name {
   font-size: 40px;
   font-weight: 800;
   padding-top: 40px;
 }
-.rooms.module .container .wrapper-cards .book-from {
+.rooms.module .container .wrapper-cards .card .book-from {
   font-size: 20px;
   line-height: 28px;
 }
-.rooms.module .container .wrapper-cards .wrapper {
+.rooms.module .container .wrapper-cards .card .wrapper {
   display: flex;
   font-size: 24px;
   line-height: 32px;
   justify-content: space-around;
   padding: 40px 0;
 }
-.rooms.module .container .wrapper-cards .price {
+.rooms.module .container .wrapper-cards .card .price {
   padding-bottom: 40px;
 }
-.rooms.module .container .wrapper-cards .btn.active {
-  background-color: #28bd98;
+.rooms.module .container .wrapper-cards .card .buttons--wrapper {
+  padding-bottom: 40px;
 }
-.rooms.module .container .wrapper-cards .btn.active.meeting {
-  background-color: #c63;
-}
-.rooms.module .container .wrapper-cards .btn.gone {
+.rooms.module .container .wrapper-cards .card .buttons--wrapper .btn.gone {
   color: #b3b3b3;
   background-color: #e6e6e6;
 }
