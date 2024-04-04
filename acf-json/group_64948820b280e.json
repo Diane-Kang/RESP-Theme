@@ -36,7 +36,8 @@
             },
             "choices": {
                 "tpq": "TeamProQ",
-                "geomap": "GeoMap"
+                "geomap": "GeoMap",
+                "villa": "villa"
             },
             "default_value": "tpq",
             "return_format": "value",
@@ -65,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690883833
+    "modified": 1712217049
 }

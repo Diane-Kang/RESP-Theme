@@ -198,6 +198,79 @@
   }
 
   /*********Start Module*************/
+  .villa.module.price-table {
+    .block-wrapper {
+      margin-top: 40px;
+      .feature-label {
+        font-size: 25px;
+      }
+
+      .price {
+        color: $primary-blue;
+
+        .unit {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+
+      .block {
+        border: 2px solid $grey;
+        border-radius: 16px;
+        height: 740px;
+
+        &.highlight {
+          background-color: transparent;
+          height: 820px;
+          border-color: $orange;
+
+          .category {
+            font-size: 31.25px;
+            line-height: 1;
+          }
+          .price {
+            color: $orange;
+            font-size: 40px;
+          }
+          .flex-col {
+            li:not(:last-child) {
+              border-bottom-color: $grey;
+            }
+
+            .btn--empty {
+              color: $orange;
+              outline-color: $orange;
+            }
+          }
+        }
+
+        &.block--label {
+          text-align: center;
+        }
+
+        .flex-col {
+          position: relative;
+          li {
+            line-height: 24px;
+            font-size: 16px;
+            margin: 0 16px;
+            padding: 16px 0;
+          }
+
+          .btn--empty {
+            color: $primary-blue;
+            outline-color: $primary-blue;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
   .teaser.villa-subpage .container {
     margin-left: 0;
     .teaser__content {

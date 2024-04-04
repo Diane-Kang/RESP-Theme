@@ -10,7 +10,7 @@
 
 
 // Common definition of $anchor, $module_classes, $container_classes
-require(get_template_directory() . '/acf-blocks/module-classes.php');
+require (get_template_directory() . '/acf-blocks/module-classes.php');
 array_unshift($module_classes, "module", "price-table");
 array_unshift($container_classes, "container");
 
@@ -770,6 +770,109 @@ $option = get_field('block::price-table:option');
             </div>
         </div>
     </div>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Geomap Prcing Ends -->
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Villa Pricing starts -->
+    <!-- ----------------------------------------------------------------------------------- -->
+<?php elseif ($option == 'villa'): ?>
+    <div <?php echo $anchor; ?> class="villa <?php echo implode(" ", $module_classes); ?>">
+        <div class="<?php echo implode(" ", $container_classes); ?>">
+
+            <!-- ------------------------------------------------------------------------------------ -->
+            <!-- Mobile & Desktop Price table villa starts -->
+            <!-- -------------------------------------------------------------------------------------------- -->
+            <h2 class="section-title">Das sind unsere Preise</h2>
+            <div class="block-wrapper grid12">
+                <div class="block block--label grid12-3 flex">
+                    <div class="table flex flex-col">
+                        <div class="head">
+                            <div class="feature-label">Eigenes Büro</div>
+                            <div class="price price-monthly">ab 447 € <div class="unit">pro Monat</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <ul>
+                                <li>Arbeitstisch & Stuhl</li>
+                                <li>Druck- und Scannerflatrate (Fair Use)</li>
+                                <li>Kaffee-, Tee- und Wasserflatrate</li>
+                                <li>24/7 Zugang</li>
+                                <li>Eine Stunde Fördermittelberatung kostenlos</li>
+                                <li>und vieles mehr...</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn--empty" target="_blank">Eigenes Büro anfragen</a>
+
+                    </div>
+                </div>
+                <div class="block block--item grid12-3 flex highlight">
+                    <div class="table flex flex-col">
+                        <div class="head">
+                            <div class="category">Arbeitsplatz</div>
+                            <div class="price price-monthly">149 €<div class="unit">pro Monat</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <ul>
+                                <li>Arbeitstisch & Stuhl</li>
+                                <li>Druck- und Scannerflatrate (Fair Use)</li>
+                                <li>Kaffee-, Tee- und Wasserflatrate</li>
+                                <li>24/7 Zugang</li>
+                                <li>fester Parkplatz (optional)</li>
+                                <li>und vieles mehr...</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn--empty" target="_blank">Arbeitsplatz anfragen</a>
+                    </div>
+                </div>
+                <div class="block block--item grid12-3 flex">
+                    <div class="table  flex flex-col">
+                        <div class="head">
+                            <div class="category">Meetingraum</div>
+                            <div class="price price-monthly">ab 20 €<div class="unit">pro Stunde</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <ul>
+                                <li>Bis zu 12 Personen</li>
+                                <li>Gute Lage im Norden Leipzigs</li>
+                                <li>Parkplätze direkt am Haus</li>
+                                <li>Whiteboard / Flipchart und Beamer</li>
+                                <li>Catering (optional)</li>
+                                <li>und vieles mehr...</li>
+
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn--empty" target="_blank">Meetingraum anfragen</a>
+                    </div>
+                </div>
+                <div class="block block--item  grid12-3 flex">
+                    <div class="table flex flex-col">
+                        <div class="head">
+                            <div class="category">Dependance</div>
+                            <div class="price price-monthly">ab 50 €<div class="unit">pro Monat</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <ul>
+                                <li>zum Beispiel:</br>Dependance Basic</li>
+                                <li>reine Postadresse in der Villa Leipzig</li>
+                                <li>wöchentlicher Postversand</li>
+
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn--empty" target="_blank">Dependance anfragen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- Price Table Villa Ends -->
+    <!-- --------------------------------------------------------------------- -->
 <?php else: ?>
     <h3>Somthing Wrong</h3>
 <?php endif; ?>

@@ -19,14 +19,16 @@ array_push($module_classes);
 ?>
 
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
-    <div class="container">
-        <?php $gallery_urls = get_field('gallery'); ?>
-        <?php if ($gallery_urls): ?>
-          <?php foreach ($gallery_urls as $gallery_url): ?>
-            <div class="image-wrapper">
-                <img src="<?php echo esc_url($gallery_url); ?>" />
-            </div>
-          <?php endforeach; ?>
-        <?php endif; ?>
+    <div class="outter-container <?php echo implode(" ", $margin_classes); ?>">
+        <div class="<?php echo implode(" ", $container_classes); ?> container">
+            <?php $gallery_urls = get_field('gallery'); ?>
+            <?php if ($gallery_urls): ?>
+              <?php foreach ($gallery_urls as $gallery_url): ?>
+                <div class="image-wrapper">
+                    <img src="<?php echo esc_url($gallery_url); ?>" />
+                </div>
+              <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </div>

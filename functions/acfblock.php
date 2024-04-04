@@ -40,3 +40,4 @@ new ACFBlock("scriptmodul");
 new ACFBlock("drei-leistungen");
 new ACFBlock("singleimage");
 new ACFBlock("gallery");
+new ACFBlock("rooms");

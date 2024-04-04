@@ -1,0 +1,16 @@
+{
+  "name": "acf/rooms",
+  "title": "Raum Buchen",
+  "description": "Kacheln mit Raumangaben, wie QM, Anzahl der Arbeitsplätze (Villa)",
+  "category": "",
+  "icon": "plus",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "rooms.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

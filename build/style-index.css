@@ -2275,6 +2275,13 @@ a {
   height: 100%;
 }
 
+.rooms .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+}
+
 .blog {
   padding-top: 3rem;
 }
@@ -2940,6 +2947,65 @@ a {
 }
 .villa_true .footer__main .sitemap {
   display: none;
+}
+.villa_true .villa.module.price-table .block-wrapper {
+  margin-top: 40px;
+}
+.villa_true .villa.module.price-table .block-wrapper .feature-label {
+  font-size: 25px;
+}
+.villa_true .villa.module.price-table .block-wrapper .price {
+  color: #00b3ff;
+}
+.villa_true .villa.module.price-table .block-wrapper .price .unit {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.villa_true .villa.module.price-table .block-wrapper .block {
+  border: 2px solid #e6e6e6;
+  border-radius: 16px;
+  height: 740px;
+}
+.villa_true .villa.module.price-table .block-wrapper .block.highlight {
+  background-color: transparent;
+  height: 820px;
+  border-color: #ffbe10;
+}
+.villa_true .villa.module.price-table .block-wrapper .block.highlight .category {
+  font-size: 31.25px;
+  line-height: 1;
+}
+.villa_true .villa.module.price-table .block-wrapper .block.highlight .price {
+  color: #ffbe10;
+  font-size: 40px;
+}
+.villa_true .villa.module.price-table .block-wrapper .block.highlight .flex-col li:not(:last-child) {
+  border-bottom-color: #e6e6e6;
+}
+.villa_true .villa.module.price-table .block-wrapper .block.highlight .flex-col .btn--empty {
+  color: #ffbe10;
+  outline-color: #ffbe10;
+}
+.villa_true .villa.module.price-table .block-wrapper .block.block--label {
+  text-align: center;
+}
+.villa_true .villa.module.price-table .block-wrapper .block .flex-col {
+  position: relative;
+}
+.villa_true .villa.module.price-table .block-wrapper .block .flex-col li {
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 16px;
+  padding: 16px 0;
+}
+.villa_true .villa.module.price-table .block-wrapper .block .flex-col .btn--empty {
+  color: #00b3ff;
+  outline-color: #00b3ff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  visibility: visible;
 }
 .villa_true .teaser.villa-subpage .container {
   margin-left: 0;
