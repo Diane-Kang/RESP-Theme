@@ -21,6 +21,48 @@
             "esc_html": 0
         },
         {
+            "key": "field_660ef6cc11e78",
+            "label": "Block: common Components - All",
+            "name": "block:_common_components_-_all",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_649c0188eb220"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_660ef790a3972",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_660ebf9c28294",
             "label": "Room",
             "name": "room",
@@ -312,5 +354,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712244203
+    "modified": 1712258022
 }

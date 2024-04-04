@@ -24,41 +24,66 @@ array_unshift($container_classes, "container");
 ?>
 <div <?php echo $anchor; ?> class="<?php echo implode(" ", $module_classes); ?>">
     <div class="<?php echo implode(" ", $container_classes); ?>">
-        <?php if (have_rows('room')): ?>
-        <?php while (have_rows('room')):
-            the_row(); ?>
-        <?php if (have_rows('card')): ?>
-        <?php while (have_rows('card')):
-                the_row(); ?>
-        <div class="card">
-            <div class="image-wrapper">
-                <?php $bild = get_sub_field('bild'); ?>
-                <?php if ($bild): ?>
-                <img src="<?php echo esc_url($bild['url']); ?>" alt="<?php echo esc_attr($bild['alt']); ?>" />
-                <?php endif; ?>
-                <div>
-                    <div class="name"><?php the_sub_field('name'); ?></div>
-                    <div class="book_froom"><?php the_sub_field('book_froom'); ?></div>
-                    <div class="wrapper">
-                        <div class="quadratmeter"><?php the_sub_field('quadratmeter'); ?></div>
-                        <div class="personen"><?php the_sub_field('personen'); ?></div>
-                    </div>
-                    <div class="price_cowork"><?php the_sub_field('price_cowork'); ?></div>
-                    <div class="price_office"><?php the_sub_field('price_office'); ?></div>
-                    <div class="price_hour"><?php the_sub_field('price_hour'); ?></div>
+        <h2 class="section_title"> <?php the_field('section_title'); ?></h2>
+        <div class="wrapper-cards">
+            <?php if (have_rows('room')): ?>   <?php while (have_rows('room')):
+                    the_row(); ?>     <?php if (have_rows('card')): ?>       <?php while (have_rows('card')):
+                                      the_row(); ?>
+                    <div class="card">
+                        <div class="image-wrapper">
+                            <?php $bild = get_sub_field('bild'); ?>
+                            <?php if ($bild): ?>
+                              <img src="<?php echo esc_url($bild['url']); ?>" alt="<?php echo esc_attr($bild['alt']); ?>" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="name"><?php the_sub_field('name'); ?></div>
+                        <div class="book_froom">
+                            <?php $from = get_sub_field('book_froom'); ?>
+                            <?php if ($from): ?>
+                              <?php the_sub_field('book_froom'); ?>
+                            <?php else: ?>
+                              <span class="gone">Bereits vermietet</span>
+                            <?php endif ?>
 
 
+                        </div>
+                        <div class="wrapper">
+                            <div class="quadratmeter"><?php the_sub_field('quadratmeter'); ?> Quadratmeter</div><span>•</span>
+                            <div class="personen"><?php the_sub_field('personen'); ?> Personen</div>
+                        </div>
+                        <div class="price">
+                            <?php $kind = get_sub_field('cowork_or_meeting'); ?>
+                            <?php if ($kind == "cowork"): ?>
+                              <div class="price_cowork">Arbeitsplatz: <?php the_sub_field('price_cowork'); ?> Euro / Monat</div>
+                              <div class="price_office">Büro: <?php the_sub_field('price_office'); ?> Euro / Monat</div>
+                            <?php elseif ($kind == "meeting"): ?>
+                              <div class="price_hour"><?php the_sub_field('price_hour'); ?> Euro / Stunde</div>
+                            <?php else: ?>
+                              Something wrong
+                            <?php endif ?>
+                        </div>
 
-                    <?php the_sub_field('cowork_or_meeting'); ?>
+                        <div class="buttons--wrapper">
 
-
-                </div>
-                <?php endwhile; ?>
-                <?php endif; ?>
-
-                <?php endwhile; ?>
+                            <a href="#" class="btn btn--fill 
+                    <?php echo $kind ?>
+                <?php if ($from): ?>
+                  active                            
                 <?php else: ?>
-                <?php // No rows found  ?>
+                  gone
+                  <?php endif ?>">
+
+                                <?php the_sub_field('name'); ?> anfragen</a>
+                        </div>
+
+                    </div>
+                  <?php endwhile; ?>
                 <?php endif; ?>
-            </div>
+
+              <?php endwhile; ?>
+            <?php else: ?>
+              <?php // No rows found                              ?>
+            <?php endif; ?>
         </div>
+    </div>
+</div>

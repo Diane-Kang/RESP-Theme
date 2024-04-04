@@ -1,8 +1,67 @@
-.rooms {
+.rooms.module {
   .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 1.5rem;
+    .section_title {
+      color: #28bd98;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .wrapper-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      .card {
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .image-wrapper {
+        max-width: 381px;
+
+        img {
+          border-radius: 8px;
+        }
+      }
+
+      .name {
+        font-size: 40px;
+        font-weight: 800;
+        padding-top: 40px;
+      }
+
+      .book-from {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .wrapper {
+        display: flex;
+        font-size: 24px;
+        line-height: 32px;
+        justify-content: space-around;
+        padding: 40px 0;
+      }
+
+      .price {
+        padding-bottom: 40px;
+      }
+
+      .btn.active {
+        background-color: #28bd98;
+      }
+
+      .btn.active.meeting {
+        background-color: #c63;
+      }
+      .btn.gone {
+        color: #b3b3b3;
+        background-color: #e6e6e6;
+      }
+    }
   }
 }
