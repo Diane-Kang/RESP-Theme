@@ -3,6 +3,7 @@
     .section_title {
       text-align: center;
       margin-bottom: 3rem;
+      font-size: 50px;
     }
 
     .wrapper-cards {
@@ -36,6 +37,10 @@
         .book-from {
           font-size: 20px;
           line-height: 28px;
+
+          .gone {
+            color: #808080;
+          }
         }
 
         .wrapper {

@@ -2278,6 +2278,7 @@ a {
 .rooms.module .container .section_title {
   text-align: center;
   margin-bottom: 3rem;
+  font-size: 50px;
 }
 .rooms.module .container .wrapper-cards {
   display: flex;
@@ -2307,6 +2308,9 @@ a {
 .rooms.module .container .wrapper-cards .card .book-from {
   font-size: 20px;
   line-height: 28px;
+}
+.rooms.module .container .wrapper-cards .card .book-from .gone {
+  color: #808080;
 }
 .rooms.module .container .wrapper-cards .card .wrapper {
   display: flex;
@@ -2880,6 +2884,30 @@ a {
 .villa_true .bg--orange {
   background-color: #ffbe10;
 }
+.villa_true.page:not(.home) .main .module h1, .villa_true.page:not(.home) .main .module .section_title, .villa_true.page:not(.home) .main .module h2, .villa_true.page .header--container:not(.mobile-navi-open) .nav a:hover {
+  color: #ffbe10;
+}
+.villa_true.page .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before {
+  background-color: #ffbe10;
+}
+.villa_true.cowork.page .main .module h1, .villa_true.cowork.page .main .module .section_title, .villa_true.cowork.page .main .module h2, .villa_true.cowork.page .header--container:not(.mobile-navi-open) .nav a:hover, .villa_true.cowork.page .book_froom {
+  color: #28bd98;
+}
+.villa_true.cowork.page .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before, .villa_true.cowork.page .btn--fill {
+  background-color: #28bd98;
+}
+.villa_true.meeting.page .main .module h1, .villa_true.meeting.page .main .module .section_title, .villa_true.meeting.page .main .module h2, .villa_true.meeting.page .header--container:not(.mobile-navi-open) .nav a:hover, .villa_true.meeting.page .book_froom {
+  color: #c63;
+}
+.villa_true.meeting.page .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before, .villa_true.meeting.page .btn--fill {
+  background-color: #c63;
+}
+.villa_true.dependence.page .main .module h1, .villa_true.dependence.page .main .module .section_title, .villa_true.dependence.page .main .module h2, .villa_true.dependence.page .header--container:not(.mobile-navi-open) .nav a:hover {
+  color: #4d90b2;
+}
+.villa_true.dependence.page .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before {
+  background-color: #4d90b2;
+}
 .villa_true .contact {
   font-size: 12px;
   line-height: 24px;
@@ -2927,12 +2955,6 @@ a {
 }
 .villa_true .header--outer .header .header--container {
   justify-content: flex-end;
-}
-.villa_true .header--outer .header .header--container:not(.mobile-navi-open) .nav .main-menu > li > a::before {
-  background: #ffbe10;
-}
-.villa_true .header--outer .header .header--container:not(.mobile-navi-open) .nav a:hover {
-  color: #ffbe10;
 }
 .villa_true .footer__main {
   padding: 72px 0;
@@ -3063,7 +3085,6 @@ a {
   border-radius: 8px;
 }
 .villa_true .teaser.villa-subpage .container .teaser__content h1 {
-  color: #ffbe10;
   margin-bottom: 32px;
 }
 .villa_true .teaser.villa-subpage .container .teaser__content p {

@@ -52,6 +52,74 @@
     background-color: $orange;
   }
 
+  &.page:not(.home) .main .module h1,
+  &.page:not(.home) .main .module .section_title,
+  &.page:not(.home) .main .module h2,
+  &.page .header--container:not(.mobile-navi-open) .nav a:hover {
+    color: $orange;
+  }
+
+  &.page
+    .header--container:not(.mobile-navi-open)
+    .nav
+    .main-menu
+    > li
+    > a::before {
+    background-color: $orange;
+  }
+
+  &.cowork.page .main .module h1,
+  &.cowork.page .main .module .section_title,
+  &.cowork.page .main .module h2,
+  &.cowork.page .header--container:not(.mobile-navi-open) .nav a:hover,
+  &.cowork.page .book_froom {
+    color: $coworking-green;
+  }
+
+  &.cowork.page
+    .header--container:not(.mobile-navi-open)
+    .nav
+    .main-menu
+    > li
+    > a::before,
+  &.cowork.page .btn--fill {
+    background-color: $coworking-green;
+  }
+
+  &.meeting.page .main .module h1,
+  &.meeting.page .main .module .section_title,
+  &.meeting.page .main .module h2,
+  &.meeting.page .header--container:not(.mobile-navi-open) .nav a:hover,
+  &.meeting.page .book_froom {
+    color: $meetig-brown;
+  }
+
+  &.meeting.page
+    .header--container:not(.mobile-navi-open)
+    .nav
+    .main-menu
+    > li
+    > a::before,
+  &.meeting.page .btn--fill {
+    background-color: $meetig-brown;
+  }
+
+  &.dependence.page .main .module h1,
+  &.dependence.page .main .module .section_title,
+  &.dependence.page .main .module h2,
+  &.dependence.page .header--container:not(.mobile-navi-open) .nav a:hover {
+    color: $dependence-blue;
+  }
+
+  &.dependence.page
+    .header--container:not(.mobile-navi-open)
+    .nav
+    .main-menu
+    > li
+    > a::before {
+    background-color: $dependence-blue;
+  }
+
   /*Kontakt Info & SVGs in Header & Footer*/
 
   .contact {
@@ -117,13 +185,6 @@
       max-width: 1440px;
       .header--container {
         justify-content: flex-end;
-
-        &:not(.mobile-navi-open) .nav .main-menu > li > a::before {
-          background: $orange;
-        }
-        &:not(.mobile-navi-open) .nav a:hover {
-          color: $orange;
-        }
       }
     }
   }
@@ -282,7 +343,6 @@
       border-radius: 8px;
 
       h1 {
-        color: $orange;
         margin-bottom: 32px;
       }
 

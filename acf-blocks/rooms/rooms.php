@@ -43,7 +43,7 @@ array_unshift($container_classes, "container");
                         <div class="book_froom">
                             <?php $from = get_sub_field('book_froom'); ?>
                             <?php if ($from): ?>
-                              <?php the_sub_field('book_froom'); ?>
+                              Verfügbar ab <?php the_sub_field('book_froom'); ?>
                             <?php else: ?>
                               <span class="gone">Bereits vermietet</span>
                             <?php endif ?>
@@ -85,7 +85,7 @@ array_unshift($container_classes, "container");
 
               <?php endwhile; ?>
             <?php else: ?>
-              <?php // No rows found                               ?>
+              <?php // No rows found                                 ?>
             <?php endif; ?>
         </div>
     </div>
