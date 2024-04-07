@@ -2262,6 +2262,7 @@ a {
   flex-wrap: wrap;
   gap: 24px;
   padding: 80px 0;
+  justify-content: center;
 }
 .gallery .container .image-wrapper {
   width: 364px;
@@ -2279,6 +2280,11 @@ a {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 50px;
+}
+@media only screen and (max-width: 900px) {
+  .rooms.module .container .section_title {
+    font-size: 40px;
+  }
 }
 .rooms.module .container .wrapper-cards {
   display: flex;
@@ -2305,11 +2311,11 @@ a {
   font-weight: 800;
   padding-top: 40px;
 }
-.rooms.module .container .wrapper-cards .card .book-from {
+.rooms.module .container .wrapper-cards .card .book_froom {
   font-size: 20px;
   line-height: 28px;
 }
-.rooms.module .container .wrapper-cards .card .book-from .gone {
+.rooms.module .container .wrapper-cards .card .book_froom .gone {
   color: #808080;
 }
 .rooms.module .container .wrapper-cards .card .wrapper {
@@ -2321,6 +2327,7 @@ a {
 }
 .rooms.module .container .wrapper-cards .card .price {
   padding-bottom: 40px;
+  font-size: 18px;
 }
 .rooms.module .container .wrapper-cards .card .buttons--wrapper {
   padding-bottom: 40px;
@@ -2950,14 +2957,14 @@ a {
   order: 3;
 }
 .villa_true .header--outer .header {
-  padding: 0;
+  padding: 0 16px;
   max-width: 1440px;
 }
 .villa_true .header--outer .header .header--container {
   justify-content: flex-end;
 }
 .villa_true .footer__main {
-  padding: 72px 0;
+  padding: 72px 32px;
 }
 .villa_true .footer__main .villa-footer {
   display: flex;
@@ -2965,6 +2972,14 @@ a {
   justify-content: space-between;
   max-width: 1340px;
   margin: 0 auto;
+  align-items: start;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer {
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px;
+  }
 }
 .villa_true .footer__main .villa-footer img {
   width: 243px;
@@ -2982,6 +2997,12 @@ a {
   gap: 16px;
   padding-left: 80px;
 }
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer .contact-nav {
+    padding-left: 0;
+    width: 100%;
+  }
+}
 .villa_true .footer__main .villa-footer .contact-nav .contact {
   font-size: 16px;
   line-height: 1;
@@ -2992,9 +3013,25 @@ a {
   padding: 0;
   margin: 0;
 }
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer .sitemap.villa {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
 .villa_true .footer__main .villa-footer .sitemap.villa .main-menu {
   flex-direction: column;
   align-items: flex-end;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer .sitemap.villa .main-menu {
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0 {
+    display: block;
+  }
 }
 .villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0:last-child > a {
   background-image: none;
@@ -3003,6 +3040,11 @@ a {
   width: 100%;
   display: flex;
   justify-content: end;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0:last-child > a {
+    justify-content: flex-start;
+  }
 }
 .villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0 .menu-link {
   font-size: 16px;
@@ -3016,6 +3058,10 @@ a {
 }
 .villa_true .villa.module.price-table .block-wrapper {
   margin-top: 40px;
+  display: block;
+}
+.villa_true .villa.module.price-table .block-wrapper .block {
+  justify-content: center;
 }
 .villa_true .villa.module.price-table .block-wrapper .feature-label {
   font-size: 25px;
@@ -3090,9 +3136,20 @@ a {
 .villa_true .teaser.villa-subpage .container .teaser__content p {
   text-align: left;
 }
+@media only screen and (max-width: 900px) {
+  .villa_true .teaser.villa-subpage .container .teaser__content p {
+    font-size: 18px;
+  }
+}
 .villa_true .textbox__text-container {
   max-width: 980px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .textbox__text-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 .villa_true .textbox__text-container .textbox__text.editor-content {
   grid-column: span 12;
@@ -3121,6 +3178,12 @@ a {
 .villa_true .module.imagetext h2.section-title {
   margin-bottom: 0;
 }
+@media only screen and (max-width: 900px) {
+  .villa_true .imagetext .container .buttons--wrapper {
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
 .villa_true .module.cards.three-color-bg {
   max-width: 1440px;
   margin: 0 auto;
@@ -3133,6 +3196,11 @@ a {
   width: 100%;
   margin: 60px 0 0 0;
   color: #fff;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .module.cards.three-color-bg .container .bd-box {
+    margin: 0;
+  }
 }
 .villa_true .module.cards.three-color-bg .container .bd-box:nth-child(1) {
   background-color: #f39200;
@@ -3165,9 +3233,27 @@ a {
 .villa_true .module.cards .container {
   justify-content: center;
 }
+@media only screen and (max-width: 900px) {
+  .villa_true .module.cards .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .villa_true .module.cards .container .bd-box {
   width: 284px;
   margin: 0 40px;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .module.cards .container .bd-box {
+    min-width: 284px;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .module.cards .container .bd-box .card--inner {
+    margin: 0;
+    padding-bottom: 80px;
+  }
 }
 .villa_true .module.cards .container .bd-box .card--inner .card__image {
   width: 284px;

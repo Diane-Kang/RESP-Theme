@@ -181,7 +181,7 @@
       }
     }
     .header {
-      padding: 0;
+      padding: 0 16px;
       max-width: 1440px;
       .header--container {
         justify-content: flex-end;
@@ -191,13 +191,20 @@
 
   /****** Start Footer **************/
   .footer__main {
-    padding: 72px 0;
+    padding: 72px 32px;
     .villa-footer {
       display: flex;
       align-items: end;
       justify-content: space-between;
       max-width: 1340px;
       margin: 0 auto;
+      align-items: start;
+
+      @media only screen and (max-width: $bp-tablet) {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px;
+      }
 
       img {
         width: 243px;
@@ -215,6 +222,10 @@
         flex-direction: column;
         gap: 16px;
         padding-left: 80px;
+        @media only screen and (max-width: $bp-tablet) {
+          padding-left: 0;
+          width: 100%;
+        }
 
         .contact {
           font-size: 16px;
@@ -227,12 +238,21 @@
         display: flex;
         padding: 0;
         margin: 0;
-
+        @media only screen and (max-width: $bp-tablet) {
+          width: 100%;
+          justify-content: flex-start;
+        }
         .main-menu {
           flex-direction: column;
           align-items: flex-end;
+          @media only screen and (max-width: $bp-tablet) {
+            align-items: flex-start;
+          }
 
           .menu-item-depth-0 {
+            @media only screen and (max-width: $bp-tablet) {
+              display: block;
+            }
             &:last-child > a {
               background-image: none;
               color: $c-gray-dark;
@@ -240,6 +260,10 @@
               width: 100%;
               display: flex;
               justify-content: end;
+
+              @media only screen and (max-width: $bp-tablet) {
+                justify-content: flex-start;
+              }
             }
 
             .menu-link {
@@ -259,9 +283,15 @@
   }
 
   /*********Start Module*************/
+
   .villa.module.price-table {
     .block-wrapper {
       margin-top: 40px;
+      display: block;
+
+      .block {
+        justify-content: center;
+      }
       .feature-label {
         font-size: 25px;
       }
@@ -348,6 +378,9 @@
 
       p {
         text-align: left;
+        @media only screen and (max-width: $bp-tablet) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -355,6 +388,11 @@
   .textbox__text-container {
     max-width: 980px;
     margin: 0 auto;
+
+    @media only screen and (max-width: $bp-tablet) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     .textbox__text.editor-content {
       grid-column: span 12;
       p {
@@ -385,6 +423,12 @@
     margin-bottom: 0;
   }
 
+  .imagetext .container .buttons--wrapper {
+    @media only screen and (max-width: $bp-tablet) {
+      width: max-content;
+    }
+  }
+
   /****************/
   .module.cards {
     &.three-color-bg {
@@ -397,6 +441,9 @@
           width: 100%;
           margin: 60px 0 0 0;
           color: #fff;
+          @media only screen and (max-width: $bp-tablet) {
+            margin: 0;
+          }
 
           &:nth-child(1) {
             background-color: #f39200;
@@ -434,12 +481,24 @@
 
     .container {
       justify-content: center;
+      @media only screen and (max-width: $bp-tablet) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       .bd-box {
         width: 284px;
         margin: 0 40px;
+        @media only screen and (max-width: $bp-tablet) {
+          min-width: 284px;
+          margin: 0;
+        }
 
         .card--inner {
+          @media only screen and (max-width: $bp-tablet) {
+            margin: 0;
+            padding-bottom: 80px;
+          }
           .card__image {
             width: 284px;
             height: 168px;

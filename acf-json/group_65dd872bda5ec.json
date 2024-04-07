@@ -3,6 +3,46 @@
     "title": "Block: Scriptmodul",
     "fields": [
         {
+            "key": "field_6612a4c00c1c6",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>Scriptmodul<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6612a458ec448",
+            "label": "Allgemeine Blockeinstellungen",
+            "name": "allgemeine_blockeinstellungen",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_649c0188eb220"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_65de0d9e9b2fe",
             "label": "Text vor Script",
             "name": "text_vor_script",
@@ -81,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709051355
+    "modified": 1712497899
 }
