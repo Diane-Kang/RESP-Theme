@@ -2986,7 +2986,6 @@ a {
   justify-content: space-between;
   max-width: 1340px;
   margin: 0 auto;
-  align-items: start;
 }
 @media only screen and (max-width: 900px) {
   .villa_true .footer__main .villa-footer {
@@ -3021,6 +3020,18 @@ a {
   font-size: 16px;
   line-height: 1;
   color: #4d4d4d;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .footer__main .villa-footer .contact-nav .contact.street {
+    flex-wrap: wrap;
+  }
+  .villa_true .footer__main .villa-footer .contact-nav .contact.street .sep {
+    display: none;
+  }
+  .villa_true .footer__main .villa-footer .contact-nav .contact.street .ort {
+    width: 100%;
+    padding-left: 23px;
+  }
 }
 .villa_true .footer__main .villa-footer .sitemap.villa {
   display: flex;
@@ -3138,6 +3149,9 @@ a {
   height: 506px;
   border-color: #4d90b2;
 }
+.villa_true .villa.module.price-table.dependence .block-wrapper .block.highlight {
+  height: 613px;
+}
 .villa_true .villa.module.price-table .block-wrapper {
   margin-top: 40px;
 }
@@ -3168,8 +3182,8 @@ a {
 }
 .villa_true .villa.module.price-table .block-wrapper .block.highlight {
   background-color: transparent;
-  height: 613px;
   border-color: #ffbe10;
+  height: 800px;
 }
 .villa_true .villa.module.price-table .block-wrapper .block.highlight .category {
   font-size: 31.25px;
@@ -3262,6 +3276,11 @@ a {
     padding-bottom: 40px;
   }
 }
+.villa_true .teaser .btn--empty {
+  outline: none;
+  background-color: #fff;
+  color: #00b3ff;
+}
 .villa_true .module.imagetext h2.section-title {
   margin-bottom: 0;
 }
@@ -3270,6 +3289,42 @@ a {
     width: -moz-max-content;
     width: max-content;
   }
+}
+.villa_true.page:not(.home) .module.cards .container {
+  max-width: 1180px;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 940px) {
+  .villa_true.page:not(.home) .module.cards .container {
+    overflow-x: hidden;
+  }
+}
+.villa_true.page:not(.home) .module.cards .container .bd-box {
+  margin: 0;
+  max-width: 260px;
+}
+.villa_true.page:not(.home) .module.cards .container .card--inner {
+  gap: 56px;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true.page:not(.home) .module.cards .container .card--inner {
+    gap: 40px;
+  }
+}
+.villa_true.page:not(.home) .module.cards .container .card--inner .card__image img {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+}
+.villa_true.page.home .module.cards .container .bd-box .card--inner {
+  flex-wrap: wrap;
+}
+.villa_true.page.home .module.cards .container .bd-box .card--inner .card__image img {
+  width: 284px;
+  height: 168px;
+}
+.villa_true.page.home .module.cards .container .bd-box .card--inner .card__text-content {
+  padding-top: 0;
 }
 .villa_true .module.cards.three-color-bg {
   max-width: 1440px;
@@ -3306,14 +3361,14 @@ a {
   max-height: 80px;
   margin: 0 auto;
 }
-.villa_true .module.cards.three-color-bg .container .bd-box .card--inner .heading {
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner .card__text-content .heading {
   display: none;
 }
-.villa_true .module.cards.three-color-bg .container .bd-box .card--inner p {
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner .card__text-content p {
   font-size: 16px;
   line-height: 24px;
 }
-.villa_true .module.cards.three-color-bg .container .bd-box .card--inner a {
+.villa_true .module.cards.three-color-bg .container .bd-box .card--inner .card__text-content a {
   font-weight: 700;
   font-size: 20px;
 }
@@ -3340,14 +3395,16 @@ a {
   .villa_true .module.cards .container .bd-box .card--inner {
     margin: 0;
     padding-bottom: 80px;
+    gap: 40px;
   }
-}
-.villa_true .module.cards .container .bd-box .card--inner .card__image {
-  width: 284px;
-  height: 168px;
 }
 .villa_true .module.cards .container .bd-box .card--inner .card__text-content {
   padding: 0 10px;
+}
+@media only screen and (max-width: 900px) {
+  .villa_true .module.cards .container .bd-box .card--inner .card__text-content {
+    padding: 40px 10px 0 10px;
+  }
 }
 .villa_true .module.cards .container .bd-box .card--inner .card__text-content .heading {
   color: #ffbe10;

@@ -204,7 +204,6 @@
       justify-content: space-between;
       max-width: 1340px;
       margin: 0 auto;
-      align-items: start;
 
       @media only screen and (max-width: $bp-tablet) {
         flex-direction: column;
@@ -237,6 +236,20 @@
           font-size: 16px;
           line-height: 1;
           color: $c-gray-middle;
+
+          &.street {
+            @media only screen and (max-width: $bp-tablet) {
+              flex-wrap: wrap;
+
+              .sep {
+                display: none;
+              }
+              .ort {
+                width: 100%;
+                padding-left: 23px;
+              }
+            }
+          }
         }
       }
 
@@ -369,6 +382,10 @@ Bild-Text nur für Dependence
         width: 364px;
         height: 506px;
         border-color: $dependence-blue;
+
+        &.highlight {
+          height: 613px;
+        }
       }
     }
   }
@@ -404,8 +421,8 @@ Bild-Text nur für Dependence
 
         &.highlight {
           background-color: transparent;
-          height: 613px;
           border-color: $orange;
+          height: 800px;
 
           .category {
             font-size: 31.25px;
@@ -500,12 +517,19 @@ Bild-Text nur für Dependence
     }
   }
 
-  .teaser .logo-wrapper {
-    width: 370px;
-    margin: 0 auto;
-    padding-bottom: 32px;
-    @media only screen and (max-width: $bp-largest) {
-      padding-bottom: 40px;
+  .teaser {
+    .logo-wrapper {
+      width: 370px;
+      margin: 0 auto;
+      padding-bottom: 32px;
+      @media only screen and (max-width: $bp-largest) {
+        padding-bottom: 40px;
+      }
+    }
+    .btn--empty {
+      outline: none;
+      background-color: #fff;
+      color: $primary-blue;
     }
   }
 
@@ -521,6 +545,43 @@ Bild-Text nur für Dependence
   }
 
   /****************/
+  &.page:not(.home) .module.cards .container {
+    max-width: 1180px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 940px) {
+      overflow-x: hidden;
+    }
+
+    .bd-box {
+      margin: 0;
+      max-width: 260px;
+    }
+
+    .card--inner {
+      gap: 56px;
+      @media only screen and (max-width: $bp-tablet) {
+        gap: 40px;
+      }
+
+      .card__image img {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+      }
+    }
+  }
+  &.page.home .module.cards .container .bd-box .card--inner {
+    flex-wrap: wrap;
+
+    .card__image img {
+      width: 284px;
+      height: 168px;
+    }
+
+    .card__text-content {
+      padding-top: 0;
+    }
+  }
   .module.cards {
     &.three-color-bg {
       max-width: 1440px;
@@ -553,17 +614,20 @@ Bild-Text nur für Dependence
               max-height: 80px;
               margin: 0 auto;
             }
-            .heading {
-              display: none;
-            }
 
-            p {
-              font-size: 16px;
-              line-height: 24px;
-            }
-            a {
-              font-weight: 700;
-              font-size: 20px;
+            .card__text-content {
+              .heading {
+                display: none;
+              }
+
+              p {
+                font-size: 16px;
+                line-height: 24px;
+              }
+              a {
+                font-weight: 700;
+                font-size: 20px;
+              }
             }
           }
         }
@@ -589,14 +653,14 @@ Bild-Text nur für Dependence
           @media only screen and (max-width: $bp-tablet) {
             margin: 0;
             padding-bottom: 80px;
-          }
-          .card__image {
-            width: 284px;
-            height: 168px;
+            gap: 40px;
           }
 
           .card__text-content {
             padding: 0 10px;
+            @media only screen and (max-width: $bp-tablet) {
+              padding: 40px 10px 0 10px;
+            }
             .heading {
               color: $orange;
               font-size: 32px;
