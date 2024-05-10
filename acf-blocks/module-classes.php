@@ -15,7 +15,7 @@ $distance_over      = 'p-top--' . get_field('block::distance:over');
 $distance_under     = 'p-bottom--' . get_field('block::distance:under');
 
 if (get_field('block::background:color')) {
-  $bg_color           = 'bg--' . get_field('block::background:color');
+  $bg_color           = 'bg--' . get_field('block::background:color'); 
 }
 if (get_field('block::background:gradient')) {
   $bg_gradient        = get_field('block::background:gradient') == "none" ? "" : "bg-g--" . get_field('block::background:gradient');
