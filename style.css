@@ -5,12 +5,5 @@
 
  Description: 
  Plugin ACF Pro required
- Plugin 
- ssh u110-2dmqy2tfyczs@ssh.resp.pe-dev.de -p 18765
-cd ~/www/resp.pe-dev.de/public_html/wp-content/themes/RESP-Theme
-git pull
-
-
-scp -P 18765 u110-2dmqy2tfyczs@ssh.resp.pe-dev.de: ~/www/staging2.resp.pe-dev.de/public_html/wp-content/updraft/backup_2023-08-09* /home/diane/Local\ Sites/reap-theme/app/public/wp-content/updraft/
-
+ 
  */
