@@ -14,5 +14,8 @@
   "devDependencies": {
     "@wordpress/icons": "^7.0.1",
     "@wordpress/scripts": "*"
+  },
+  "dependencies": {
+    "simple-lightbox": "^2.1.0"
   }
 }

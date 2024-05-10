@@ -34,21 +34,13 @@ function pe_theme_files()
 {
   //front end
   wp_enqueue_style('pe_theme_main_styles', get_theme_file_uri('/build/style-index.css'));
+  wp_enqueue_style('pe_theme_main_styles_2', get_theme_file_uri('/build/index.css'));
+
   // Javascript need to be loaded in footer: last variable need to be true
-  wp_enqueue_script('pe_theme_js', get_template_directory_uri() . '/build/index.js', array(), '', true);
+  wp_enqueue_script('pe_theme_js', get_template_directory_uri() . '/build/index.js', array('jquery'), '', true);
 }
 add_action('wp_enqueue_scripts', 'pe_theme_files');
 
-// following section replaced by the pe_theme_feature, add_editor_style
-// // Add custom acf block editor(backend) style
-// function enqueue_block_editor_custom_files()
-// {
-//   // apply frontend stlying in backend as well, for preview mode  
-//   // wp_enqueue_style('pe_theme_main_styles', get_theme_file_uri('/build/style-index.css'));
-//   // additional editor style
-//   // wp_enqueue_style('acf-block-editor-style', get_template_directory_uri() . '/css/acf-editor-style.css');
-// }
-// add_action('enqueue_block_editor_assets', 'enqueue_block_editor_custom_files');
 
 function pe_theme_features()
 {
@@ -72,6 +64,7 @@ function pe_theme_features()
   // Editor style. add custom acf-aditor css and front end style https://www.billerickson.net/getting-your-theme-ready-for-gutenberg/
   add_theme_support('editor-styles');
   add_editor_style(get_template_directory_uri() . '/css/acf-editor-style.css');
+  // add_editor_style(get_theme_file_uri('/build/index.css'));
   add_editor_style(get_theme_file_uri('/build/style-index.css'));
 }
 add_action('after_setup_theme', 'pe_theme_features');

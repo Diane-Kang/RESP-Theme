@@ -6,8 +6,8 @@
   }
   .card {
     width: 100%;
-    scroll-snap-align: start;
     display: flex;
+    scroll-snap-align: start;
   }
 
   .card--inner {

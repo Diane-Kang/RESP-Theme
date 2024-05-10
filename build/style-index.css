@@ -1311,27 +1311,6 @@ a {
 .teaser .fc--white {
   color: #fff;
 }
-.teaser .fc--white .btn--fill {
-  background-color: #fff;
-  color: #262626;
-}
-.teaser .fc--white .btn--fill:hover {
-  background-color: #f2f2f2;
-}
-.teaser .fc--white .btn--empty {
-  color: #fff;
-  outline-color: #fff;
-}
-.teaser .fc--white .btn--empty:hover {
-  color: #f2f2f2;
-  outline-color: #f2f2f2;
-}
-.teaser .fc--white .link--underline {
-  color: #fff;
-}
-.teaser .fc--white .link--underline:hover {
-  color: #f2f2f2;
-}
 .teaser .height--90vh {
   height: calc(90vh - 130px);
 }
@@ -1638,8 +1617,8 @@ a {
 }
 .cards .card {
   width: 100%;
-  scroll-snap-align: start;
   display: flex;
+  scroll-snap-align: start;
 }
 .cards .card--inner {
   margin: 10%;
@@ -1778,7 +1757,7 @@ a {
   align-items: center;
 }
 .testimonial .container {
-  align-items: start;
+  align-items: flex-start;
   display: grid;
   grid-template-columns: [center-start] repeat(12, [col-start] minmax(0px, 73px) [col-end]) [center-end];
   -moz-column-gap: 24px;
@@ -1886,7 +1865,7 @@ a {
   .testimonial .container.small .image {
     width: 80px;
     margin-right: 24px;
-    align-self: start;
+    align-self: flex-start;
   }
   .testimonial .container.small .content {
     width: calc(100% - 104px);
@@ -2219,7 +2198,7 @@ a {
   align-items: center;
 }
 .icontext-align-top .card {
-  align-items: start;
+  align-items: flex-start;
 }
 @media only screen and (max-width: 1250px) {
   .icontext .container {
@@ -2982,11 +2961,11 @@ a {
 }
 .villa_true .footer__main .villa-footer {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   max-width: 1340px;
   margin: 0 auto;
-  align-items: start;
+  align-items: flex-start;
 }
 @media only screen and (max-width: 900px) {
   .villa_true .footer__main .villa-footer {
@@ -3053,7 +3032,7 @@ a {
   max-height: 24px;
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 @media only screen and (max-width: 900px) {
   .villa_true .footer__main .villa-footer .sitemap.villa .main-menu .menu-item-depth-0:last-child > a {

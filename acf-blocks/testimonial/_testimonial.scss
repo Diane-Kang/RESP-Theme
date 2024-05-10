@@ -2,7 +2,7 @@
   @include flex-center;
   // Basic structure
   .container {
-    align-items: start;
+    align-items: flex-start;
     @include grid12;
   }
 
@@ -113,7 +113,7 @@
       .image {
         width: 80px;
         margin-right: 24px;
-        align-self: start;
+        align-self: flex-start;
       }
       .content {
         width: calc(100% - 104px);

@@ -200,11 +200,11 @@
     padding: 72px 32px;
     .villa-footer {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       justify-content: space-between;
       max-width: 1340px;
       margin: 0 auto;
-      align-items: start;
+      align-items: flex-start;
 
       @media only screen and (max-width: $bp-tablet) {
         flex-direction: column;
@@ -265,7 +265,7 @@
               max-height: 24px;
               width: 100%;
               display: flex;
-              justify-content: end;
+              justify-content: flex-end;
 
               @media only screen and (max-width: $bp-tablet) {
                 justify-content: flex-start;

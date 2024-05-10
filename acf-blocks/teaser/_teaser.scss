@@ -82,7 +82,7 @@
     .fc--#{$label} {
       color: map-get($map, f-color);
 
-      @if $label == white {
+      @if $label == "white" {
         @include button_color($c-white, $c-gray-dark, $c-gray-light);
       }
     }
