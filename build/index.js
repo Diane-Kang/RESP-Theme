@@ -282,49 +282,6 @@ class Helper {
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../template-parts/navigation/navigation */ "./template-parts/navigation/navigation.js");
-/* harmony import */ var _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../template-parts/blog/scrollup */ "./template-parts/blog/scrollup.js");
-/* harmony import */ var _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../acf-blocks/price-table/price-table */ "./acf-blocks/price-table/price-table.js");
-/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox */ "./node_modules/simple-lightbox/dist/simpleLightbox.js");
-/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox.css */ "./node_modules/simple-lightbox/dist/simpleLightbox.css");
-
-
-
-
-const navigation = new _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const scrollup = new _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const price_table = new _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__["default"]();
-
-//https://simplelightbox.com/ https://dbrekalo.github.io/simpleLightbox/
-
- // style
-
-// new SimpleLightbox({
-//   elements: ".light-box a",
-// });
-
-jQuery(document).ready(function ($) {
-  jQuery(".card > .image-wrapper , .card > .gallery").on("click", function (e) {
-    var $target = jQuery(e.target.parentNode.parentNode);
-    var $items = $target.find(".light-box a");
-    _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4___default().open({
-      items: $items
-    });
-  });
-});
-
-/***/ }),
-
 /***/ "./template-parts/blog/scrollup.js":
 /*!*****************************************!*\
   !*** ./template-parts/blog/scrollup.js ***!
@@ -507,12 +464,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************!*\
   !*** ./css/style.scss ***!
   \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nHookWebpackError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n    ╷\n208 │       align-items: flex-start;\n    │                              ^\n    ╵\n  css/villa-conditional.scss 208:30  @import\n  css/style.scss 45:9                root stylesheet\n    at tryRunOrWebpackError (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/HookWebpackError.js:88:9)\n    at __webpack_require_module__ (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5076:12)\n    at __webpack_require__ (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5033:18)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5104:20\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3485:9)\n    at done (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/Hook.js:18:14)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5011:43\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3463:5)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4976:16\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3463:5)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4944:15\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3485:9)\n    at done (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3527:9)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4890:8\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:3369:32\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/HookWebpackError.js:68:3\n    at Hook.eval [as callAsync] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:107:20)\n    at ItemCacheFacade.store (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:3369:11\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:91:34\n    at Array.<anonymous> (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:91:19\n    at Hook.eval [as callAsync] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:75:18)\n    at ItemCacheFacade.get (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:3338:9)\n    at codeGen (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4878:11)\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3463:5)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4908:14\n    at processQueue (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n-- inner error --\nError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n    ╷\n208 │       align-items: flex-start;\n    │                              ^\n    ╵\n  css/villa-conditional.scss 208:30  @import\n  css/style.scss 45:9                root stylesheet\n    at Object.<anonymous> (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/css/style.scss:1:7)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:452:10\n    at Hook.eval [as call] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:1)\n    at Hook.CALL_DELEGATE [as _call] (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/Hook.js:14:14)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5078:39\n    at tryRunOrWebpackError (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/HookWebpackError.js:83:7)\n    at __webpack_require_module__ (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5076:12)\n    at __webpack_require__ (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5033:18)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5104:20\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3485:9)\n    at done (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/Hook.js:18:14)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:5011:43\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3463:5)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4976:16\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3485:9)\n    at timesSync (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3463:5)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4944:15\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3485:9)\n    at done (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3527:9)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4890:8\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:3369:32\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/HookWebpackError.js:68:3\n    at Hook.eval [as callAsync] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Cache.store (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:107:20)\n    at ItemCacheFacade.store (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/CacheFacade.js:141:15)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:3369:11\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:91:34\n    at Array.<anonymous> (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/cache/MemoryCachePlugin.js:45:13)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:91:19\n    at Hook.eval [as callAsync] (eval at create (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:19:1)\n    at Cache.get (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Cache.js:75:18)\n    at ItemCacheFacade.get (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/CacheFacade.js:115:15)\n    at Compilation._codeGenerationModule (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:3338:9)\n    at codeGen (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4878:11)\n    at symbolIterator (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3482:9)\n    at timesSync (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:2297:7)\n    at Object.eachLimit (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/neo-async/async.js:3463:5)\n    at /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/Compilation.js:4908:14\n    at processQueue (/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/webpack/lib/util/processAsyncTree.js:61:4)\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)\n\nGenerated code for /home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!/home/diane/Local Sites/villa/app/public/wp-content/themes/RESP-Theme/css/style.scss\n1 | throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: expected \\\"{\\\".\\n    ╷\\n208 │       align-items: flex-start;\\n    │                              ^\\n    ╵\\n  css/villa-conditional.scss 208:30  @import\\n  css/style.scss 45:9                root stylesheet\");");
 
 /***/ }),
 
@@ -1083,42 +1037,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -1159,68 +1078,50 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"index": 0,
-/******/ 			"./style-index": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkreap_theme"] = globalThis["webpackChunkreap_theme"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-index"], () => (__webpack_require__("./src/index.js")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
+/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../template-parts/navigation/navigation */ "./template-parts/navigation/navigation.js");
+/* harmony import */ var _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../template-parts/blog/scrollup */ "./template-parts/blog/scrollup.js");
+/* harmony import */ var _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../acf-blocks/price-table/price-table */ "./acf-blocks/price-table/price-table.js");
+/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox */ "./node_modules/simple-lightbox/dist/simpleLightbox.js");
+/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox.css */ "./node_modules/simple-lightbox/dist/simpleLightbox.css");
+
+
+
+
+const navigation = new _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const scrollup = new _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const price_table = new _acf_blocks_price_table_price_table__WEBPACK_IMPORTED_MODULE_3__["default"]();
+
+//https://simplelightbox.com/ https://dbrekalo.github.io/simpleLightbox/
+
+ // style
+
+// new SimpleLightbox({
+//   elements: ".light-box a",
+// });
+
+jQuery(document).ready(function ($) {
+  jQuery(".card > .image-wrapper , .card > .gallery-link").on("click", function (e) {
+    var $target = jQuery(e.target.parentNode.parentNode);
+    var $items = $target.find(".light-box a");
+    _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_4___default().open({
+      items: $items
+    });
+  });
+});
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map

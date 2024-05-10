@@ -31,7 +31,11 @@
             border-radius: 8px;
           }
         }
-
+        .gallery-link {
+          &:hover {
+            transform: scale(1.02);
+          }
+        }
         .name {
           font-size: 40px;
           font-weight: 800;

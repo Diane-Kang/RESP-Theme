@@ -17,11 +17,14 @@ import "../node_modules/simple-lightbox/dist/simpleLightbox.css"; // style
 // });
 
 jQuery(document).ready(function ($) {
-  jQuery(".card > .image-wrapper , .card > .gallery").on("click", function (e) {
-    var $target = jQuery(e.target.parentNode.parentNode);
-    var $items = $target.find(".light-box a");
-    SimpleLightbox.open({
-      items: $items,
-    });
-  });
+  jQuery(".card > .image-wrapper , .card > .gallery-link").on(
+    "click",
+    function (e) {
+      var $target = jQuery(e.target.parentNode.parentNode);
+      var $items = $target.find(".light-box a");
+      SimpleLightbox.open({
+        items: $items,
+      });
+    }
+  );
 });

@@ -39,7 +39,10 @@ array_unshift($container_classes, "container");
                     <img src="<?php echo esc_url($bild['url']); ?>" alt="<?php echo esc_attr($bild['alt']); ?>" />
                   <?php endif; ?>
                 </div>
-                <p class="gallery" style="text-align:right">weitere Bilder</p>
+                <?php $gallery_images = get_sub_field('gallery'); ?>
+                <?php if ($gallery_images) : ?>
+                  <p class="gallery-link" style="text-align:right;">weitere Bilder</p>
+                <?php endif; ?>
                 <div class="name"><?php the_sub_field('name'); ?></div>
                 <div class="book_froom">
                   <?php $from = get_sub_field('book_froom'); ?>
@@ -79,7 +82,7 @@ array_unshift($container_classes, "container");
 
                     <?php the_sub_field('name'); ?> anfragen</a>
                 </div>
-                <div class="light-box" style="display:none">
+                <div class="light-box" style="display:none;">
                   <?php $gallery_images = get_sub_field('gallery'); ?>
                   <?php if ($gallery_images) : ?>
                     <?php $size = 'full'; ?>

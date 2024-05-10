@@ -32,32 +32,35 @@ array_push($module_classes, $graphic_type, $order);
   <?php endif; ?>">
     <div class="outter-container <?php echo implode(" ", $margin_classes); ?>">
         <?php if (isset($title_text)): ?>
-          <?php echo '<' . $title_tag . ' class ="section-title">' . $title_text . '</' . $title_tag . '>'; ?>
+        <?php echo '<' . $title_tag . ' class ="section-title">' . $title_text . '</' . $title_tag . '>'; ?>
         <?php endif ?>
         <div class="<?php echo implode(" ", $container_classes); ?>">
             <?php if (have_rows('block::cards:card')): ?>
-              <?php while (have_rows('block::cards:card')):
+            <?php while (have_rows('block::cards:card')):
                 the_row(); ?>
-                <div class="card bd-box">
-                    <div class="card--inner">
-                        <?php $card_image = get_sub_field('card_image'); ?>
-                        <?php if ($card_image): ?>
-                          <div class="card__image flex">
-                              <?php echo wp_get_attachment_image($card_image, 'cardimage-200'); ?>
-                          </div>
+            <div class="card bd-box">
+                <div class="card--inner">
+                    <?php $card_image = get_sub_field('card_image'); ?>
+                    <?php if ($card_image): ?>
+                    <div class="card__image flex">
+                        <?php echo wp_get_attachment_image($card_image, 'cardimage-200'); ?>
+                    </div>
+                    <?php endif; ?>
+                    <div class="card__text-content flexible flex flex-col">
+                        <?php $content = get_sub_field('content'); ?>
+                        <?php if ($content["title"]): ?>
+                        <h4 class="heading"><?php echo $content["title"] ?></h4>
                         <?php endif; ?>
-                        <div class="card__text-content flexible flex flex-col">
-                            <?php $content = get_sub_field('content'); ?>
-                            <h4 class="heading"><?php echo $content["title"] ?></h4>
-                            <div class="text flexible">
-                                <?php if (!empty($content["paragraph"])): ?>
-                                  <div class="text-editor">
-                                      <?php echo $content["paragraph"]; ?>
-                                  </div>
-                                <?php endif; ?>
+
+                        <div class="text flexible">
+                            <?php if (!empty($content["paragraph"])): ?>
+                            <div class="text-editor">
+                                <?php echo $content["paragraph"]; ?>
                             </div>
-                            <!-- only if button exist -->
-                            <?php if (!empty($content["buttons"])) {
+                            <?php endif; ?>
+                        </div>
+                        <!-- only if button exist -->
+                        <?php if (!empty($content["buttons"])) {
                               $buttons = $content["buttons"];
                               $button1link = $buttons["button1"]["block::buttons:btn1-link"];
                               $button1type = $buttons["button1"]["block::buttons:btn1-type"];
@@ -65,18 +68,18 @@ array_push($module_classes, $graphic_type, $order);
                               $button2type = $buttons["button2"]["block::buttons:btn2-type"];
                             } ?>
 
-                            <?php if (!empty($button1link) || !empty($button1link)): ?>
-                              <div class="buttons flex flex-col">
-                                  <?php echo acf_relative_path($button1link, $button1type); ?>
-                                  <?php echo acf_relative_path($button2link, $button2type); ?>
-                              </div>
-                            <?php endif; ?>
+                        <?php if (!empty($button1link) || !empty($button1link)): ?>
+                        <div class="buttons flex flex-col">
+                            <?php echo acf_relative_path($button1link, $button1type); ?>
+                            <?php echo acf_relative_path($button2link, $button2type); ?>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
-              <?php endwhile; ?>
+            </div>
+            <?php endwhile; ?>
             <?php else: ?>
-              <?php // No layouts found 
+            <?php // No layouts found 
                 ?>
             <?php endif; ?>
 
