@@ -570,7 +570,7 @@ Bild-Text nur für Dependence
       }
     }
   }
-  &.page.home .module.cards .container {
+  &.page.home .module.cards:not(.three-color-bg) .container {
     max-width: 1250px;
     flex-wrap: wrap;
 
