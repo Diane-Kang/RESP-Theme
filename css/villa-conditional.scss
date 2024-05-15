@@ -570,16 +570,29 @@ Bild-Text nur für Dependence
       }
     }
   }
-  &.page.home .module.cards .container .bd-box .card--inner {
+  &.page.home .module.cards .container {
+    max-width: 1250px;
     flex-wrap: wrap;
 
-    .card__image img {
-      width: 284px;
-      height: 168px;
+    .bd-box {
+      margin: 40px;
     }
+    .card--inner {
+      flex-wrap: wrap;
+      margin: 0;
 
-    .card__text-content {
-      padding-top: 0;
+      @media only screen and (max-width: $bp-tablet) {
+        padding-bottom: 0;
+      }
+
+      .card__image img {
+        width: 284px;
+        height: 168px;
+      }
+
+      .card__text-content {
+        padding-top: 0;
+      }
     }
   }
   .module.cards {

@@ -17,10 +17,10 @@ import "../node_modules/simple-lightbox/dist/simpleLightbox.css"; // style
 // });
 
 jQuery(document).ready(function ($) {
-  jQuery(".card > .image-wrapper , .card > .gallery-link").on(
+  jQuery(".card > .image-wrapper , .card > p.gallery-link").on(
     "click",
     function (e) {
-      var $target = jQuery(e.target.parentNode.parentNode);
+      var $target = jQuery(e.currentTarget.parentNode);
       var $items = $target.find(".light-box a");
       SimpleLightbox.open({
         items: $items,
