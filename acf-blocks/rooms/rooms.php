@@ -81,7 +81,7 @@ array_unshift($container_classes, "container");
                     <?php $status = "gone"; ?>
                     <?php endif; ?>
 
-                    <a href="#" class="btn btn--fill <?php echo $status; ?>">
+                    <a href="#kontakt" class="btn btn--fill <?php echo $status; ?>">
 
 
 
