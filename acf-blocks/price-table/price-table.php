@@ -894,7 +894,8 @@ $option = get_field('block::price-table:option');
                     <div class="feature">
                         <ul>
                             <li>reine Postadresse in der Villa Leipzig</li>
-                            <li>wöchentlicher Postversand</li>
+                            <li>wöchentliche Weiterleitung deiner Post digital oder analog</li>
+
                         </ul>
                     </div>
                     <!-- <a href="#" class="btn btn--empty" target="_blank">Eigenes Büro anfragen</a> -->
@@ -912,7 +913,7 @@ $option = get_field('block::price-table:option');
                         <ul>
                             <li>Geschäftsadresse zur Gewerbeanmeldung</li>
                             <li>Eigenes Briefkastenschild vor Ort</li>
-                            <li>Postversand an Sie in individuell anpassbaren Abständen oder digital</li>
+                            <li>Weiterleitung deiner Post digital oder analog in wählbaren Intervallen</li>
                         </ul>
                     </div>
                     <!-- <a href="#" class="btn btn--empty" target="_blank">Arbeitsplatz anfragen</a> -->
@@ -928,7 +929,6 @@ $option = get_field('block::price-table:option');
                     <div class="feature">
                         <ul>
                             <li>wie Dependance Premium</li>
-                            <li>zusätzlich Telefonannahme und Kundenempfang</li>
                             <li>zusätzlich 4 Stunden pro Monat Besprechungsraum vor Ort nutzen</li>
 
                         </ul>
