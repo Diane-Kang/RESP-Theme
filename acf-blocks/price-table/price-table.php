@@ -35,7 +35,7 @@ $option = get_field('block::price-table:option');
         <!-- ----------------------------------------------------------------------------------- -->
         <!-- Desktop Price table starts-->
         <!-- ------------------------------------------------------------------------------------- -->
-        <p><span class="please-note">Preise pro Monat bei jährlicher Zahlung (zzgl. 19% Mehrwertsteuer)</span></p>
+        <p><span class="please-note mwst">Preise pro Monat bei jährlicher Zahlung (zzgl. 19% Mehrwertsteuer)</span></p>
         <div class="block-wrapper grid12">
             <div class="block block--label grid12-3 flex">
                 <div class="table flexible flex flex-col">
@@ -784,6 +784,7 @@ $option = get_field('block::price-table:option');
         <!-- Mobile & Desktop Price table villa starts -->
         <!-- -------------------------------------------------------------------------------------------- -->
         <h2 class="section-title">Das sind unsere Preise</h2>
+        <p><span class="please-note mwst">alle Preise zzgl. 19% Mehrwertsteuer</span></p>
         <div class="block-wrapper grid12">
             <div class="block block--label grid12-3 flex">
                 <div class="table flex flex-col">
@@ -883,6 +884,7 @@ $option = get_field('block::price-table:option');
         <!-- Mobile & Desktop Price table villa starts -->
         <!-- -------------------------------------------------------------------------------------------- -->
         <h2 class="section-title">Das sind unsere Preise</h2>
+        <p><span class="please-note mwst">alle Preise zzgl. 19% Mehrwertsteuer</span></p>
         <div class="block-wrapper">
             <div class="block block--label flex">
                 <div class="table flex flex-col">

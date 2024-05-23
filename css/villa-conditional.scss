@@ -391,6 +391,13 @@ Bild-Text nur für Dependence
   }
 
   .villa.module.price-table {
+    .mwst {
+      font-size: 16px;
+      display: block;
+      text-align: center;
+      font-style: italic;
+    }
+
     .block-wrapper {
       margin-top: 40px;
       @media only screen and (max-width: $bp-largest) {
