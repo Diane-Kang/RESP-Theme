@@ -5,6 +5,15 @@
       margin-bottom: 3rem;
       font-size: 50px;
 
+      &::after {
+        content: "alle Preise zzgl. 19% Mehrwertsteuer";
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        font-style: italic;
+        font-weight: 400;
+      }
+
       @media only screen and (max-width: $bp-tablet) {
         font-size: 40px;
       }
