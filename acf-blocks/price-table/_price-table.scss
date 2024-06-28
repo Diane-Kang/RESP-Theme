@@ -103,6 +103,16 @@
       &-month {
         display: none;
       }
+
+      &::after {
+        content: "zzgl. 19% Mehrwertsteuer";
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        font-style: italic;
+        color: #4a4a4a;
+        font-weight: 400;
+      }
     }
 
     .btn {

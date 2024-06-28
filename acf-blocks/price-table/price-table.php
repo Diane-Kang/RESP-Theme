@@ -34,7 +34,6 @@ $option = get_field('block::price-table:option');
         <!-- ----------------------------------------------------------------------------------- -->
         <!-- Desktop Price table starts-->
         <!-- ------------------------------------------------------------------------------------- -->
-        <!-- <p><span class="please-note">Preise pro Monat bei jährlicher Zahlung (zzgl. 19% Mehrwertsteuer)</span></p> -->
         <div class="block-wrapper grid12">
             <div class="block block--label grid12-3 flex">
                 <div class="table flexible flex flex-col">
@@ -142,7 +141,7 @@ $option = get_field('block::price-table:option');
                         <div class="category">Economy Class</div>
                         <div class="price price-monthly">169 €</div>
                         <div class="price price-yearly">1.690 €</div>
-                        <div class="interval">pro Monat</div>
+                        <!-- <div class="interval">pro Monat</div> -->
 
                     </div>
                     <div class="feature">
@@ -170,8 +169,7 @@ $option = get_field('block::price-table:option');
                         <div class="category">Business Class</div>
                         <div class="price price-monthly">329 €</div>
                         <div class="price price-yearly">3.290 €</div>
-                        <div class="interval">pro Monat</div>
-
+                        <!-- <div class="interval">pro Monat</div> -->
                     </div>
                     <div class="feature">
                         <ul>
@@ -198,8 +196,7 @@ $option = get_field('block::price-table:option');
                         <div class="category">First Class</div>
                         <div class="price price-monthly">699 €</div>
                         <div class="price price-yearly">6.990 €</div>
-                        <div class="interval">pro Monat</div>
-
+                        <!-- <div class="interval">pro Monat</div> -->
                     </div>
                     <div class="feature">
                         <ul>
@@ -231,8 +228,7 @@ $option = get_field('block::price-table:option');
                         <div class="category">Economy Class</div>
                         <div class="price price-monthly">169 €</div>
                         <div class="price price-yearly">1.690 €</div>
-                        <div class="interval">pro Monat</div>
-
+                        <!-- <div class="interval">pro Monat</div> -->
                     </div>
                     <div class="feature">
                         <div class="feature-content">
@@ -271,8 +267,7 @@ $option = get_field('block::price-table:option');
                         <div class="category">Business Class</div>
                         <div class="price price-monthly">329 €</div>
                         <div class="price price-yearly">3.290 €</div>
-                        <div class="interval">pro Monat</div>
-
+                        <!-- <div class="interval">pro Monat</div> -->
                     </div>
                     <div class="feature">
                         <div class="feature-content">
@@ -312,7 +307,7 @@ $option = get_field('block::price-table:option');
                         <div class="category">First Class</div>
                         <div class="price price-monthly">699 €</div>
                         <div class="price price-yearly">6.990 €</div>
-                        <div class="interval">pro Monat</div>
+                        <!-- <div class="interval">pro Monat</div> -->
                     </div>
                     <div class="feature">
                         <div class="feature-content">
@@ -600,6 +595,7 @@ $option = get_field('block::price-table:option');
         <!-- -------------------------------------------------------------------------------------- -->
         <!-- Mobile Price table Geomap starts -->
         <!-- --------------------------------------------------------------------------------------------- -->
+
         <div class="block-wrapper block-wrapper-mobile">
             <div class="block block--item">
                 <div class="table flex flex-col">

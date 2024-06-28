@@ -2004,6 +2004,15 @@ a {
 .price-table .table .price-month {
   display: none;
 }
+.price-table .table .price::after {
+  content: "zzgl. 19% Mehrwertsteuer";
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  color: #4a4a4a;
+  font-weight: 400;
+}
 .price-table .table .btn {
   font-size: 18px;
   padding: unset;
